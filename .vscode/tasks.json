@@ -1,14 +1,17 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-      {
-          "label": "Build Main",
-          "type": "shell",
-          "command": "g++ -g ${fileDirname}/${fileBasenameNoExtension}.cpp -o ${fileDirname}/${fileBasenameNoExtension}.out",
-          "group": {
-              "kind": "build",
-              "isDefault": true
-          }
-      }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Main",
+            "type": "shell",
+            "command": "g++ -g ${fileDirname}/${fileBasenameNoExtension}.cpp -o ${fileDirname}/${fileBasenameNoExtension}.out",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
 }
