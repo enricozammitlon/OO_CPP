@@ -47,6 +47,6 @@ jobs:
           IMAGE_ID=enricozl/cpp_custom_environment
 
           # Use Docker `latest` tag convention
-          VERSION=latest
+          VERSION=dev
 
           docker push $IMAGE_ID:$VERSION
