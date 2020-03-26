@@ -21,7 +21,7 @@ jobs:
             docker-compose --file docker-compose.test.yml build
             docker-compose --file docker-compose.test.yml run sut
           else
-            docker build --f docker-compose.yml
+            docker-compose -f docker-compose.yml build
           fi
 
   # Push image to GitHub Packages.
@@ -37,7 +37,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker build --f docker-compose.yml --tag image
+        run: docker-compose -f docker-compose.yml --tag image build
 
       - name: Log into registry
         run: echo "${{ secrets.DOCKER_PASS }}" | docker login -u ${{ secrets.DOCKER_UNAME }} --password-stdin
