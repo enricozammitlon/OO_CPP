@@ -37,7 +37,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker-compose -f docker-compose.yml --tag image build
+        run: docker-compose -f docker-compose.yml enricozl/cpp_custom_environment build
 
       - name: Log into registry
         run: echo "${{ secrets.DOCKER_PASS }}" | docker login -u ${{ secrets.DOCKER_UNAME }} --password-stdin
@@ -49,5 +49,5 @@ jobs:
           # Use Docker `latest` tag convention
           VERSION=latest
 
-          docker tag image $IMAGE_ID:$VERSION
+          docker tag enricozl/cpp_custom_environment $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
