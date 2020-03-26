@@ -1,0 +1,7 @@
+version: '3.7'
+
+services:
+    cpp_env:
+        build:
+            context: .
+        image: enricozl/cpp_custom_environment:dev
