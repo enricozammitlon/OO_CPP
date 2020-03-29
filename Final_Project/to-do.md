@@ -1,0 +1,16 @@
+#To-Do List/Changelog
+- [ ] Change any access functions from (m,n) to using struct point
+- [ ] Rename point to coordinate
+- [ ] Rename x_begin and y_begin to appropriate names
+- [ ] Review has-a and is-a for all classes and change where appropriate
+- [ ] Add main menu
+- [ ] Add login
+- [ ] Add highscores screen
+- [ ] Add splitscreen view
+- [ ] Add game view and routine
+- [ ] Add new vessels
+- [ ] Add non-vessel pieces (decoys)
+- [ ] Add AI functionality
+- [ ] Refine imgs
+- [ ] Comment review
+- [ ] Extensions?

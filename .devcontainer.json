@@ -14,7 +14,9 @@
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"editor.formatOnSave": true,
 		"cmake.sourceDirectory": "${workspaceFolder}/Final_Project",
-		"cmake.buildDirectory": "${workspaceFolder}/Final_Project/build"
+		"cmake.buildDirectory": "${workspaceFolder}/Final_Project/build",
+		"C_Cpp.clang_format_style": "LLVM",
+		"clang-tidy.lintOnSave": true,
 	},
 	// Use 'appPort' to create a container with published ports. If the port isn't working, be sure
 	// your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
@@ -28,6 +30,7 @@
 	"extensions": [
 		"ms-vscode.cpptools",
 		"twxs.cmake",
-		"ms-vscode.cmake-tools"
+		"ms-vscode.cmake-tools",
+		"ryzngard.vscode-header-source"
 	]
 }
