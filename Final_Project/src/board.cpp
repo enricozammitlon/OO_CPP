@@ -13,24 +13,27 @@ battle_ship::board::board(std::size_t r, std::size_t c) {
   columns = c;
   board_data = new std::string[rows * columns];
   for (size_t i{1}; i <= rows; i += 1) {
-    for (size_t j{1}; j <= columns; j += 1) {
-      board_data[index(i, j)] = "~";
+    for (size_t j{size_t(battle_ship::x_axis::A)}; j <= columns; j += 1) {
+      battle_ship::coordinates current_coordinates{
+          static_cast<battle_ship::x_axis>(j), i};
+      board_data[index(current_coordinates)] = "~";
     }
   }
 };
 
 battle_ship::board::board(const board &b) {
   board_data = nullptr;
-  rows = b.rows;
-  columns = b.columns;
-  last_filled_row = b.last_filled_row;
+  rows = b.get_rows();
+  columns = b.get_rows();
   // Now copy size and declare new array
   if (rows * columns > 0) {
     board_data = new std::string[rows * columns];
     // Copy values into new array
     for (size_t i{1}; i <= rows; i += 1) {
-      for (size_t j{1}; j <= columns; j += 1) {
-        board_data[index(i, j)] = b.board_data[index(i, j)];
+      for (size_t j{size_t(battle_ship::x_axis::A)}; j <= columns; j += 1) {
+        battle_ship::coordinates current_coordinates{
+            static_cast<battle_ship::x_axis>(j), i};
+        board_data[index(current_coordinates)] = b(current_coordinates);
       }
     }
   }
@@ -44,54 +47,63 @@ battle_ship::board &battle_ship::board::operator=(const board &b) {
   board_data = nullptr;
   rows = b.get_rows();
   columns = b.get_cols();
-  last_filled_row = b.last_filled_row;
   // Now copy size and declare new array
   if (rows * columns > 0) {
     board_data = new std::string[rows * columns];
     // Copy values into new array
     for (size_t i{1}; i <= rows; i += 1) {
-      for (size_t j{1}; j <= columns; j += 1) {
-        board_data[index(i, j)] = b.board_data[index(i, j)];
+      for (size_t j{size_t(battle_ship::x_axis::A)}; j <= columns; j += 1) {
+        battle_ship::coordinates current_coordinates{
+            static_cast<battle_ship::x_axis>(j), i};
+        board_data[index(current_coordinates)] = b(current_coordinates);
       }
     }
   }
   return *this;
 }
 
-battle_ship::board::board(board &&arr) {
-  rows = arr.rows;
-  columns = arr.columns;
-  last_filled_row = arr.last_filled_row;
-  board_data = arr.board_data;
-  arr.rows = 0;
-  arr.columns = 0;
-  arr.last_filled_row = 0;
-  arr.board_data = nullptr;
+battle_ship::board::board(board &&b) {
+  rows = b.get_rows();
+  columns = b.get_cols();
+  board_data = b.board_data;
+  b.rows = 0;
+  b.columns = 0;
+  b.board_data = nullptr;
 }
 
-battle_ship::board &battle_ship::board::operator=(board &&arr) {
-  std::swap(rows, arr.rows);
-  std::swap(columns, arr.columns);
-  std::swap(last_filled_row, arr.last_filled_row);
-  std::swap(board_data, arr.board_data);
+battle_ship::board &battle_ship::board::operator=(board &&b) {
+  std::swap(rows, b.rows);
+  std::swap(columns, b.columns);
+  std::swap(board_data, b.board_data);
   return *this;
 }
-// Must be changed to accept a point instead of row column
-std::size_t battle_ship::board::index(std::size_t m, std::size_t n) const {
-  if (m > 0 && m <= rows && n > 0 && n <= columns)
-    return (n - 1) + (m - 1) * columns;
-  else {
+
+battle_ship::board::~board() {
+  for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
+       iterator++) {
+    delete *iterator;
+  }
+  all_pieces.clear();
+  delete[] board_data;
+};
+
+std::size_t battle_ship::board::index(const battle_ship::coordinates &p) const {
+  if (p.row > 0 && p.row <= rows && std::size_t(p.col) > 0 &&
+      std::size_t(p.col) <= columns) {
+    return (std::size_t(p.col) - 1) + (p.row - 1) * columns;
+  } else {
     throw "Error: out of range";
   }
 }
-std::string &battle_ship::board::operator()(battle_ship::x_axis m,
-                                            std::size_t n) const {
-  return board_data[index(size_t(m), n)];
+
+std::string &
+battle_ship::board::operator()(const battle_ship::coordinates &p) const {
+  return board_data[index(p)];
 };
 
 void battle_ship::board::operator<<(battle_ship::piece *p) {
-  if (size_t(p->get_start().x_begin) - 1 + p->get_length() > columns ||
-      p->get_start().y_begin - 1 + p->get_width() > rows) {
+  if (size_t(p->get_start().col) - 1 + p->get_length() > columns ||
+      p->get_start().row - 1 + p->get_width() > rows) {
     std::cerr << "This piece does not fit on the board!" << std::endl;
     return;
   }
@@ -107,31 +119,37 @@ void battle_ship::board::operator<<(battle_ship::piece *p) {
       return;
     }
   }
-  for (size_t i{}; i < p->get_width(); i += 1) {
-    for (size_t j{}; j < p->get_length(); j += 1) {
-      board_data[index(p->get_start().y_begin + i,
-                       size_t(p->get_start().x_begin) + j)] =
-          p->get_xy_representation()[i + j * p->get_width()];
+  std::size_t rep_i{};
+  for (size_t i{p->get_start().row}; i <= p->get_end().row; i += 1) {
+    std::size_t rep_j{};
+    for (size_t j{size_t(p->get_start().col)}; j <= size_t(p->get_end().col);
+         j += 1) {
+      battle_ship::coordinates current_coordinates{
+          static_cast<battle_ship::x_axis>(j), i};
+      board_data[index(current_coordinates)] =
+          p->get_xy_representation()[rep_j + rep_i * p->get_length()];
+      rep_j += 1;
     }
+    rep_i += 1;
   }
   all_pieces.push_back(p);
 }
 
-bool battle_ship::board::take_hit(battle_ship::point target_point) {
+bool battle_ship::board::receive_attempt_hit(
+    battle_ship::coordinates &target_coordinates) {
   for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
        iterator++) {
     battle_ship::piece *current_piece = *iterator;
 
-    if (battle_ship::rules::do_intersect(current_piece->get_start(),
-                                         current_piece->get_end(), target_point,
-                                         target_point)) {
-      board_data[index(target_point.y_begin, size_t(target_point.x_begin))] =
-          "H";
-      current_piece->hit(target_point);
+    if (battle_ship::rules::do_intersect(
+            current_piece->get_start(), current_piece->get_end(),
+            target_coordinates, target_coordinates)) {
+      board_data[index(target_coordinates)] = "H";
+      current_piece->hit(target_coordinates);
       return true;
     }
   }
-  board_data[index(target_point.y_begin, size_t(target_point.x_begin))] = "M";
+  board_data[index(target_coordinates)] = "M";
   return false;
 }
 
@@ -152,7 +170,10 @@ std::ostream &operator<<(std::ostream &os, const board &b) {
   }
   os << "|" << std::endl;
   for (size_t i{1}; i <= b.rows; i += 1) {
-    for (size_t j{1}; j <= b.columns; j += 1) {
+    for (size_t j{size_t(battle_ship::x_axis::A)}; j <= b.columns; j += 1) {
+      battle_ship::coordinates current_coordinates{
+          static_cast<battle_ship::x_axis>(j), i};
+
       std::string padding{"  "};
       if (i >= 10) {
         padding = " ";
@@ -160,7 +181,7 @@ std::ostream &operator<<(std::ostream &os, const board &b) {
       if (j == 1) {
         os << i << padding << "| ";
       }
-      std::string current_character{b.board_data[b.index(i, j)]};
+      std::string current_character{b(current_coordinates)};
       if (current_character == "~") {
         os << "\033[1;34m";
       } else if (current_character == "H") {

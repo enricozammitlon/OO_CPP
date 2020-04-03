@@ -1,6 +1,6 @@
-#include "vessel.h"
-#include "board.h"
-#include "rules.h"
+#include "../include/vessel.h"
+#include "../include/board.h"
+#include "../include/rules.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -19,9 +19,9 @@ void battle_ship::vessel::display_xy() {
 void battle_ship::vessel::attack(battle_ship::board *enemy_board) {
   for (size_t ap{}; ap < action_points; ap += 1) {
     std::cout << "Please input the coordinates of the target:" << std::endl;
-    battle_ship::point target_point;
-    std::cin >> target_point;
-    bool result = enemy_board->take_hit(target_point);
+    battle_ship::coordinates target_coordinates;
+    std::cin >> target_coordinates;
+    bool result = enemy_board->receive_attempt_hit(target_coordinates);
     if (result) {
       std::cout << "Well done, great hit commander!" << std::endl;
     } else {

@@ -1,13 +1,9 @@
 #ifndef BOARD_H
 #define BOARD_H
 
+#include "coordinates.h"
 #include "piece.h"
-#include "rules.h"
-#include <cmath>
 #include <iostream>
-#include <iterator>
-#include <regex>
-#include <string>
 #include <vector>
 namespace battle_ship {
 
@@ -18,7 +14,6 @@ private:
   std::string *board_data{nullptr};
   std::size_t rows{0};
   std::size_t columns{0};
-  std::size_t last_filled_row{0};
   std::vector<battle_ship::piece *> all_pieces;
 
 public:
@@ -28,14 +23,14 @@ public:
   board &operator=(const board &arr);
   board(board &&arr);
   board &operator=(board &&arr);
-  ~board() { delete[] board_data; };
+  ~board();
   std::size_t get_rows() const { return rows; }
   std::size_t get_cols() const { return columns; }
-  std::size_t index(size_t m, std::size_t n) const;
+  std::size_t index(const battle_ship::coordinates &p) const;
   std::size_t get_size() const { return rows * columns; };
-  bool take_hit(battle_ship::point target_point);
+  bool receive_attempt_hit(battle_ship::coordinates &target_coordinates);
   void operator<<(piece *p);
-  std::string &operator()(battle_ship::x_axis m, std::size_t n) const;
+  std::string &operator()(const battle_ship::coordinates &p) const;
 };
 } // namespace battle_ship
 #endif

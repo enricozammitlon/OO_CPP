@@ -1,12 +1,13 @@
 version: '3.7'
 
 services:
-    cpp_env:
+    test:
         build:
             context: .
             target: builder
-        command: /bin/sh -c "while sleep 1000; do :; done"
+        working_dir: /OO_CPP/Final_Project/src
         environment:
-          - BUILDPATH=../build
+          - BUILDPATH=/tmp/
+        command: make
         volumes:
             - .:/OO_CPP

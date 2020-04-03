@@ -17,14 +17,14 @@ int main() {
   battle_ship::board *computer_board =
       new battle_ship::board(board_size_x, board_size_y);
 
-  struct battle_ship::point p1 {
+  struct battle_ship::coordinates p1 {
     battle_ship::x_axis::J, 5
   };
   battle_ship::vessel *sloop_1 =
       new battle_ship::sloop(p1, battle_ship::orientation::vertical);
   *player_board << sloop_1;
 
-  struct battle_ship::point p2 {
+  struct battle_ship::coordinates p2 {
     battle_ship::x_axis::E, 7
   };
   battle_ship::vessel *sloop_2 =

@@ -1,33 +1,31 @@
-#include "piece.h"
+#include "../include/piece.h"
 #include <fstream>
 #include <iostream>
 #include <vector>
 
-battle_ship::piece::piece(std::string n, battle_ship::point p, std::size_t l,
-                          std::size_t w, std::string xy_rep_hor,
+battle_ship::piece::piece(std::string n, battle_ship::coordinates p,
+                          std::size_t l, std::size_t w, std::string xy_rep_hor,
                           std::string xy_rep_ver, std::string u,
                           battle_ship::orientation o) {
   name = n;
-  start_point = {p.x_begin, p.y_begin};
+  start_coordinates = {p.col, p.row};
   xy_representation_horizontal = xy_rep_hor;
   xy_representation_vertical = xy_rep_ver;
   orientation = o;
   uri = u;
-  hit_points = new bool[l * w]();
+  hit_coordinatess = new bool[l * w]();
   switch (o) {
   case (battle_ship::orientation::horizontal):
     length = l;
     width = w;
     current_xy_representation = xy_representation_horizontal;
-    end_point = {
-        static_cast<battle_ship::x_axis>(std::size_t(p.x_begin) + length - 1),
-        p.y_begin};
+    end_coordinates = start_coordinates.boosted_x(length - 1);
     break;
   case (battle_ship::orientation::vertical):
     length = w;
     width = l;
     current_xy_representation = xy_representation_vertical;
-    end_point = {p.x_begin, p.y_begin + width - 1};
+    end_coordinates = start_coordinates.boosted_y(width - 1);
     break;
   }
 };
