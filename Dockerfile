@@ -3,7 +3,8 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-FROM debian:9 AS builder
+FROM debian:9
+
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -20,17 +21,10 @@ RUN apt-get update \
   && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
   #
   # Verify git, process tools, lsb-release (useful for CLI installs) installed
-  && apt-get -y install git iproute2 procps lsb-release wget libssl-dev \
+  && apt-get -y install git iproute2 procps lsb-release \
   #
   # Install C++ tools
-  && apt-get -y install build-essential cppcheck valgrind clang clang-tidy gdb \
-  #&& wget http://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz  \
-  #&& tar xzvf cmake-3.17.0.tar.gz \
-  #&& cd cmake-3.17.0 \
-  #&& ./configure \
-  #&& make\
-  #&& make install \
-  #&& cd .. \
+  && apt-get -y install build-essential cmake cppcheck valgrind \
   #
   # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
   && groupadd --gid $USER_GID $USERNAME \
@@ -47,5 +41,4 @@ RUN apt-get update \
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
-WORKDIR /OO_CPP
-COPY . .
+ENV BUILDPATH=../build

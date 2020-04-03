@@ -6,7 +6,7 @@
     {
       "type": "shell",
       "label": "build",
-      "command": "make clean;make",
+      "command": "make",
       "options": {
         "cwd": "${workspaceFolder}/Final_Project/src"
       },

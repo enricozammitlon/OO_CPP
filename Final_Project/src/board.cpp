@@ -156,14 +156,15 @@ bool battle_ship::board::receive_attempt_hit(
 namespace battle_ship {
 std::ostream &operator<<(std::ostream &os, const board &b) {
   if (b.rows == 0 && b.columns == 0) {
-    os << "Board is empty!" << std::endl;
+    os << "Board is empty!"
+       << "\n";
     return os;
   }
   os << "     ";
   for (size_t j{0}; j < b.columns; j += 1) {
     os << char(65 + j) << " ";
   }
-  os << std::endl;
+  os << "\n";
   os << "___|_";
   for (size_t j{0}; j < b.columns; j += 1) {
     os << "__";
@@ -197,13 +198,14 @@ std::ostream &operator<<(std::ostream &os, const board &b) {
         os << "|";
       }
     }
-    os << std::endl;
+    os << "\n";
   }
   os << "___|";
   for (size_t j{0}; j < b.columns; j += 1) {
     os << "__";
   }
-  os << "_|" << std::endl;
+  os << "_|"
+     << "\n";
   return os;
 }
 

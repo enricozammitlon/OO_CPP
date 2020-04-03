@@ -7,8 +7,11 @@
 
 #include "board.h"
 #include "rules.h"
+#include "screen_manager.h"
 #include "sloop.h"
 #include <iostream>
+#include <sstream>
+
 int main() {
   const size_t board_size_x{10};
   const size_t board_size_y{10};
@@ -30,10 +33,15 @@ int main() {
   battle_ship::vessel *sloop_2 =
       new battle_ship::sloop(p2, battle_ship::orientation::horizontal);
   *player_board << sloop_2;
-
-  std::cout << *player_board;
-  sloop_1->display_yz();
-  sloop_1->attack(player_board);
-  std::cout << *player_board;
+  std::stringstream ss1;
+  ss1 << *player_board;
+  std::stringstream ss2;
+  ss2 << *computer_board;
+  std::stringstream ss3;
+  ss3 << "Notifications!\n*NEW NOTIF*";
+  battle_ship::screen_manager::side_by_side(ss1, ss2, ss3, 10);
+  // sloop_1->display_yz();
+  // sloop_1->attack(player_board);
+  // std::cout << *player_board;
   return 0;
 }

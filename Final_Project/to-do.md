@@ -3,10 +3,11 @@
 - [x] Rename point to coordinate
 - [x] Rename x_begin and y_begin to appropriate names
 - [x] Review has-a and is-a for all classes and change where appropriate
+- [ ] Add notifications/events class
 - [ ] Add main menu
 - [ ] Add login
 - [ ] Add highscores screen
-- [ ] Add splitscreen view
+- [x] Add splitscreen view
 - [ ] Add game view and routine
 - [ ] Add new vessels
 - [ ] Add non-vessel pieces (decoys)

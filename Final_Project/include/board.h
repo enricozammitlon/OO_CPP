@@ -4,6 +4,7 @@
 #include "coordinates.h"
 #include "piece.h"
 #include <iostream>
+#include <sstream>
 #include <vector>
 namespace battle_ship {
 
