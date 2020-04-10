@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+    test:
+        build:
+            context: .
+            target: builder
+        working_dir: /OO_CPP/Final_Project/src
+        environment:
+          - BUILDPATH=/tmp/
+        command: make
+        volumes:
+            - .:/OO_CPP

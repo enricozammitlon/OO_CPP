@@ -1,0 +1,52 @@
+name: Docker
+
+on:
+  push:
+    # Publish `master` as Docker `latest` image.
+    branches:
+      - master
+
+jobs:
+  # Run tests.
+  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run tests
+        run: |
+          if [ -f docker-compose.test.yml ]; then
+            docker-compose --file docker-compose.test.yml build
+            docker-compose --file docker-compose.test.yml run test
+          else
+            docker-compose -f docker-compose.yml build
+          fi
+
+  # Push image to GitHub Packages.
+  # See also https://docs.docker.com/docker-hub/builds/
+  #push:
+    # Ensure test job passes before pushing image.
+    #needs: test
+
+    #runs-on: ubuntu-latest
+    #if: github.event_name == 'push'
+
+    #steps:
+      #- uses: actions/checkout@v2
+
+      #- name: Build image
+        #run: docker-compose -f docker-compose.yml build
+
+      #- name: Log into registry
+        #run: echo "${{ secrets.DOCKER_PASS }}" | docker login -u ${{ secrets.DOCKER_UNAME }} --password-stdin
+
+      #- name: Push image
+        #run: |
+          #IMAGE_ID=enricozl/cpp_custom_environment
+
+          # Use Docker `latest` tag convention
+          #VERSION=dev
+
+          #docker push $IMAGE_ID:$VERSION
