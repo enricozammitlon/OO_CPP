@@ -1,5 +1,8 @@
 #include "rules.h"
 #include <algorithm>
+#include <string>
+
+std::string battle_ship::rules::current_turn{"Your"};
 
 bool battle_ship::rules::on_segment(coordinates p, coordinates q,
                                     coordinates r) {

@@ -160,11 +160,11 @@ std::ostream &operator<<(std::ostream &os, const board &b) {
        << "\n";
     return os;
   }
-  os << "     ";
+  os << std::string(5, ' ');
   for (size_t j{0}; j < b.columns; j += 1) {
     os << char(65 + j) << " ";
   }
-  os << "\n";
+  os << " " << std::endl;
   os << "___|_";
   for (size_t j{0}; j < b.columns; j += 1) {
     os << "__";
@@ -198,14 +198,13 @@ std::ostream &operator<<(std::ostream &os, const board &b) {
         os << "|";
       }
     }
-    os << "\n";
+    os << std::endl;
   }
   os << "___|";
   for (size_t j{0}; j < b.columns; j += 1) {
     os << "__";
   }
-  os << "_|"
-     << "\n";
+  os << "_|" << std::endl;
   return os;
 }
 

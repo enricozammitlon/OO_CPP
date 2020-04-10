@@ -6,11 +6,11 @@
 // And actually play the game
 
 #include "board.h"
+#include "notification_manager.h"
 #include "rules.h"
 #include "screen_manager.h"
 #include "sloop.h"
 #include <iostream>
-#include <sstream>
 
 int main() {
   const size_t board_size_x{10};
@@ -20,28 +20,29 @@ int main() {
   battle_ship::board *computer_board =
       new battle_ship::board(board_size_x, board_size_y);
 
-  struct battle_ship::coordinates p1 {
-    battle_ship::x_axis::J, 5
-  };
+  battle_ship::coordinates p1{battle_ship::x_axis::J, 5};
   battle_ship::vessel *sloop_1 =
       new battle_ship::sloop(p1, battle_ship::orientation::vertical);
   *player_board << sloop_1;
 
-  struct battle_ship::coordinates p2 {
-    battle_ship::x_axis::E, 7
-  };
+  battle_ship::coordinates p2{battle_ship::x_axis::E, 7};
   battle_ship::vessel *sloop_2 =
       new battle_ship::sloop(p2, battle_ship::orientation::horizontal);
   *player_board << sloop_2;
-  std::stringstream ss1;
-  ss1 << *player_board;
-  std::stringstream ss2;
-  ss2 << *computer_board;
-  std::stringstream ss3;
-  ss3 << "Notifications!\n*NEW NOTIF*";
-  battle_ship::screen_manager::side_by_side(ss1, ss2, ss3, 10);
+
+  battle_ship::coordinates p3{battle_ship::x_axis::B, 1};
+  battle_ship::vessel *sloop_3 =
+      new battle_ship::sloop(p3, battle_ship::orientation::horizontal);
+  *computer_board << sloop_3;
+
+  battle_ship::coordinates p4{battle_ship::x_axis::F, 7};
+  battle_ship::vessel *sloop_4 =
+      new battle_ship::sloop(p4, battle_ship::orientation::vertical);
+  *computer_board << sloop_4;
+
+  battle_ship::screen_manager::side_by_side(*player_board, *computer_board, 5);
   // sloop_1->display_yz();
-  // sloop_1->attack(player_board);
-  // std::cout << *player_board;
+  sloop_1->attack(computer_board);
+  battle_ship::screen_manager::side_by_side(*player_board, *computer_board, 5);
   return 0;
 }

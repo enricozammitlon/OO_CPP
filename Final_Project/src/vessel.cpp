@@ -1,10 +1,10 @@
 #include "../include/vessel.h"
 #include "../include/board.h"
 #include "../include/rules.h"
+#include "notification_manager.h"
 #include <iostream>
 #include <string>
 #include <vector>
-
 void battle_ship::vessel::display_yz() {
   std::vector<std::string> all_lines = battle_ship::piece::load_image(uri);
   for (auto iterator = all_lines.begin(); iterator != all_lines.end();
@@ -23,9 +23,9 @@ void battle_ship::vessel::attack(battle_ship::board *enemy_board) {
     std::cin >> target_coordinates;
     bool result = enemy_board->receive_attempt_hit(target_coordinates);
     if (result) {
-      std::cout << "Well done, great hit commander!" << std::endl;
+      notification_manager::add_notification("Well done, great hit commander!");
     } else {
-      std::cout << "Miss!" << std::endl;
+      notification_manager::add_notification("Miss!");
     }
   }
 }

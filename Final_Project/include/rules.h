@@ -1,9 +1,11 @@
 #ifndef RULES_H
 #define RULES_H
 #include "coordinates.h"
+#include <string>
 namespace battle_ship {
 class rules {
 public:
+  static std::string current_turn;
   static int orientation(battle_ship::coordinates p, battle_ship::coordinates q,
                          battle_ship::coordinates r);
   static bool on_segment(battle_ship::coordinates p, battle_ship::coordinates q,
