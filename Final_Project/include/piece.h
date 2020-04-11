@@ -36,7 +36,7 @@ public:
   std::string get_xy_representation() const {
     return current_xy_representation;
   };
-  void hit(battle_ship::coordinates target_coordinate) {
+  void take_hit(battle_ship::coordinates target_coordinate) {
     size_t pos_x =
         size_t(target_coordinate.col) - size_t(start_coordinates.col);
     size_t pos_y = target_coordinate.row - start_coordinates.row;

@@ -4,13 +4,10 @@
 // Final Project : Battle Ship
 // This class is to create a board and hold pieces for each user
 #include "board.h"
-#include "rules.h"
+#include "geometry.h"
 #include <iterator>
-#include <stdlib.h>
 
-battle_ship::board::board(std::size_t r, std::size_t c) {
-  rows = r;
-  columns = c;
+battle_ship::board::board() {
   board_data = new std::string[rows * columns];
   for (size_t i{1}; i <= rows; i += 1) {
     for (size_t j{size_t(battle_ship::x_axis::A)}; j <= columns; j += 1) {
@@ -111,9 +108,9 @@ void battle_ship::board::operator<<(battle_ship::piece *p) {
   for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
        iterator++) {
     battle_ship::piece *current_piece = *iterator;
-    if (battle_ship::rules::do_intersect(current_piece->get_start(),
-                                         current_piece->get_end(),
-                                         p->get_start(), p->get_end())) {
+    if (battle_ship::geometry::do_intersect(current_piece->get_start(),
+                                            current_piece->get_end(),
+                                            p->get_start(), p->get_end())) {
       std::cerr << "This piece intersects with pieces already on the board!"
                 << std::endl;
       return;
@@ -135,22 +132,9 @@ void battle_ship::board::operator<<(battle_ship::piece *p) {
   all_pieces.push_back(p);
 }
 
-bool battle_ship::board::receive_attempt_hit(
-    battle_ship::coordinates &target_coordinates) {
-  for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
-       iterator++) {
-    battle_ship::piece *current_piece = *iterator;
-
-    if (battle_ship::rules::do_intersect(
-            current_piece->get_start(), current_piece->get_end(),
-            target_coordinates, target_coordinates)) {
-      board_data[index(target_coordinates)] = "H";
-      current_piece->hit(target_coordinates);
-      return true;
-    }
-  }
-  board_data[index(target_coordinates)] = "M";
-  return false;
+void battle_ship::board::modify_coordinate(
+    battle_ship::coordinates &target_coordinates, std::string new_value) {
+  board_data[index(target_coordinates)] = new_value;
 }
 
 namespace battle_ship {

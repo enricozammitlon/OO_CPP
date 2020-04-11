@@ -1,5 +1,4 @@
 #include "notification_manager.h"
-#include "rules.h"
 #include <iostream>
 #include <iterator>
 #include <string>
@@ -9,8 +8,9 @@ namespace battle_ship {
 std::ostream &operator<<(std::ostream &os, const notification_manager &n) {
   for (auto iterator = notification_manager::all_notifications.begin();
        iterator != notification_manager::all_notifications.end(); iterator++) {
-    os << "[" << battle_ship::rules::current_turn << " turn] : " << *iterator
-       << std::endl;
+    os << "["
+       << ""
+       << " turn] : " << *iterator << std::endl;
   }
   return os;
 };

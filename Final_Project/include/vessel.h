@@ -1,9 +1,8 @@
 #ifndef VESSEL_H
 #define VESSEL_H
 
-#include "../include/board.h"
-#include "../include/piece.h"
-#include "../include/rules.h"
+#include "board.h"
+#include "piece.h"
 #include <iostream>
 #include <string>
 
@@ -22,7 +21,8 @@ public:
   };
   void display_yz();
   virtual void display_xy() = 0;
-  void attack(board *enemy_board);
+  void attack(battle_ship::board *player_board,
+              battle_ship::board *enemy_board);
   ~vessel(){};
 };
 } // namespace battle_ship
