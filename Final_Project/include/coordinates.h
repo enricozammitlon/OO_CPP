@@ -2,7 +2,7 @@
 #define COORS_H
 #include <iostream>
 namespace battle_ship {
-const enum class x_axis {
+enum class x_axis {
   A = 1,
   B = 2,
   C = 3,
@@ -14,8 +14,8 @@ const enum class x_axis {
   I = 9,
   J = 10
 };
-const enum class orientation { horizontal, vertical };
-const enum class y_axis { start = 1, end = 10 };
+enum class orientation { horizontal, vertical };
+enum class y_axis { start = 1, end = 10 };
 struct coordinates {
   friend std::ostream &operator<<(std::ostream &os, const coordinates &p);
   friend std::istream &operator>>(std::istream &is, coordinates &p);

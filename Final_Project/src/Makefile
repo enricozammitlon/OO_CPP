@@ -10,9 +10,9 @@ ODIR := ../build
 
 TARGET:= battleship
 TARGETS := $(patsubst %,$(ODIR)/%,$(TARGET))
-OBJ    := battle.o board.o piece.o rules.o coordinates.o vessel.o player.o screen_manager.o notification_manager.o geometry.o game.o
+OBJ    := battle.o board.o piece.o rules.o coordinates.o vessel.o player.o screen_manager.o notification_manager.o geometry.o game.o market.o
 OBJS := $(patsubst %,$(ODIR)/%,$(OBJ))
-DEP   := board.h coordinates.h piece.h player.h rules.h screen_manager.h sloop.h vessel.h notification_manager.h geometry.h game.h
+DEP   := board.h coordinates.h piece.h player.h rules.h screen_manager.h sloop.h vessel.h notification_manager.h geometry.h game.h market.h
 DEPS := $(patsubst %,$(IDIR)/%,$(DEP))
 
 .PHONY: all clean

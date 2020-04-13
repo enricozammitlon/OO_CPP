@@ -6,7 +6,7 @@
 #include "board.h"
 #include "geometry.h"
 #include <iterator>
-
+#include <vector>
 battle_ship::board::board() {
   board_data = new std::string[rows * columns];
   for (size_t i{1}; i <= rows; i += 1) {
@@ -44,6 +44,7 @@ battle_ship::board &battle_ship::board::operator=(const board &b) {
   board_data = nullptr;
   rows = b.get_rows();
   columns = b.get_cols();
+  all_pieces = b.get_pieces();
   // Now copy size and declare new array
   if (rows * columns > 0) {
     board_data = new std::string[rows * columns];
@@ -63,15 +64,18 @@ battle_ship::board::board(board &&b) {
   rows = b.get_rows();
   columns = b.get_cols();
   board_data = b.board_data;
+  all_pieces = b.all_pieces;
   b.rows = 0;
   b.columns = 0;
   b.board_data = nullptr;
+  b.all_pieces.clear(); // Memory Leak?
 }
 
 battle_ship::board &battle_ship::board::operator=(board &&b) {
   std::swap(rows, b.rows);
   std::swap(columns, b.columns);
   std::swap(board_data, b.board_data);
+  std::swap(all_pieces, b.all_pieces);
   return *this;
 }
 
@@ -132,9 +136,57 @@ void battle_ship::board::operator<<(battle_ship::piece *p) {
   all_pieces.push_back(p);
 }
 
+void battle_ship::board::remove_piece(battle_ship::piece *p, size_t pos) {
+  std::size_t rep_i{};
+  for (size_t i{p->get_start().row}; i <= p->get_end().row; i += 1) {
+    std::size_t rep_j{};
+    for (size_t j{size_t(p->get_start().col)}; j <= size_t(p->get_end().col);
+         j += 1) {
+      battle_ship::coordinates current_coordinates{
+          static_cast<battle_ship::x_axis>(j), i};
+      modify_coordinate(current_coordinates, "~");
+      rep_j += 1;
+    }
+    rep_i += 1;
+  }
+  all_pieces.erase(all_pieces.begin() + pos);
+  delete p;
+}
+
 void battle_ship::board::modify_coordinate(
     battle_ship::coordinates &target_coordinates, std::string new_value) {
   board_data[index(target_coordinates)] = new_value;
+}
+
+void battle_ship::board::edit_piece(battle_ship::piece *p, size_t pos,
+                                    battle_ship::coordinates new_coor,
+                                    battle_ship::orientation new_orientation) {
+  std::size_t rep_i{};
+  for (size_t i{p->get_start().row}; i <= p->get_end().row; i += 1) {
+    std::size_t rep_j{};
+    for (size_t j{size_t(p->get_start().col)}; j <= size_t(p->get_end().col);
+         j += 1) {
+      battle_ship::coordinates current_coordinates{
+          static_cast<battle_ship::x_axis>(j), i};
+      modify_coordinate(current_coordinates, "~");
+      rep_j += 1;
+    }
+    rep_i += 1;
+  }
+  p->modify_pose(new_coor, new_orientation);
+  rep_i = 0;
+  for (size_t i{p->get_start().row}; i <= p->get_end().row; i += 1) {
+    std::size_t rep_j{};
+    for (size_t j{size_t(p->get_start().col)}; j <= size_t(p->get_end().col);
+         j += 1) {
+      battle_ship::coordinates current_coordinates{
+          static_cast<battle_ship::x_axis>(j), i};
+      board_data[index(current_coordinates)] =
+          p->get_xy_representation()[rep_j + rep_i * p->get_length()];
+      rep_j += 1;
+    }
+    rep_i += 1;
+  }
 }
 
 namespace battle_ship {

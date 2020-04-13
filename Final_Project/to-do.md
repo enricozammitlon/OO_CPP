@@ -4,8 +4,10 @@
 - [x] Rename x_begin and y_begin to appropriate names
 - [x] Review has-a and is-a for all classes and change where appropriate
 - [x] Add notifications/events class
-- [ ] Add main menu
+- [x] Add main menu
+- [x] Add fleet editing screen
 - [ ] Add login
+- [x] Add transaction screen and market
 - [ ] Add highscores screen
 - [x] Add splitscreen view
 - [ ] Add game view and routine

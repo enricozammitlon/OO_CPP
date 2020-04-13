@@ -4,6 +4,7 @@
 #include "coordinates.h"
 #include "piece.h"
 #include <iostream>
+#include <iterator>
 #include <sstream>
 #include <vector>
 namespace battle_ship {
@@ -13,8 +14,8 @@ class board {
 
 private:
   std::string *board_data{nullptr};
-  const std::size_t rows{10};
-  const std::size_t columns{10};
+  std::size_t rows{10};
+  std::size_t columns{10};
   std::vector<battle_ship::piece *> all_pieces;
 
 public:
@@ -31,6 +32,10 @@ public:
   std::size_t get_size() const { return rows * columns; };
   void modify_coordinate(battle_ship::coordinates &target_coordinates,
                          std::string new_value);
+  void remove_piece(battle_ship::piece *p, size_t pos);
+  void edit_piece(battle_ship::piece *p, size_t pos,
+                  battle_ship::coordinates new_coor,
+                  battle_ship::orientation new_orientation);
   void operator<<(piece *p);
   std::string &operator()(const battle_ship::coordinates &p) const;
 };
