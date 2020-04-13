@@ -14,7 +14,8 @@ private:
 
 public:
   notification_manager() = default;
-  static void add_notification(std::string notification);
+  static void add_notification(std::string turn, std::string notification);
+  static void reset_notifiations() { all_notifications.clear(); };
   ~notification_manager() = default;
 };
 } // namespace battle_ship

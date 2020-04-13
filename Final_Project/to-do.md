@@ -6,14 +6,23 @@
 - [x] Add notifications/events class
 - [x] Add main menu
 - [x] Add fleet editing screen
+- [ ] Convert pointers to smart pointers
+- [ ] Add check fleet on fleet screen
+- [ ] Move fleet editing to its own class
+- [ ] Check memory leaks using deleaker
+- [ ] Sanitize all inputs
+- [ ] Fix ability to throw errors in docker
+- [ ] Convert all cerr to throw
 - [ ] Add login
 - [x] Add transaction screen and market
 - [ ] Add highscores screen
 - [x] Add splitscreen view
-- [ ] Add game view and routine
+- [x] Add game view and routine
 - [ ] Add new vessels
-- [ ] Add non-vessel pieces (decoys)
-- [ ] Add AI functionality
-- [ ] Refine imgs
 - [ ] Comment review
-- [ ] Extensions?
+- ##Extensions
+    - [ ] Add non-vessel pieces (decoys)
+    - [ ] Add AI functionality
+    - [ ] Refine imgs
+    - [ ] Add costs t ships
+    - [ ] Add random events

@@ -11,7 +11,7 @@ public:
   sloop() = default;
   sloop(battle_ship::coordinates p, battle_ship::orientation o)
       : vessel("Sloop", p, 3, 1, "<+>", "^+V", o, "Final_Project/img/sloop.txt",
-               2){};
+               1){};
   void display_xy(){};
   ~sloop(){};
 };

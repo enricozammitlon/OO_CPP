@@ -20,7 +20,8 @@ public:
   };
   battle_ship::player *get_player(std::size_t p);
   void toggle_turn() { whose_turn %= 1; };
-  void play();
+  battle_ship::player *play();
+  bool has_player_lost(battle_ship::player *p);
   ~game() = default;
 };
 } // namespace battle_ship

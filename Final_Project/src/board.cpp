@@ -93,7 +93,7 @@ std::size_t battle_ship::board::index(const battle_ship::coordinates &p) const {
       std::size_t(p.col) <= columns) {
     return (std::size_t(p.col) - 1) + (p.row - 1) * columns;
   } else {
-    throw "Error: out of range";
+    std::cerr << "Error: out of range" << std::endl;
   }
 }
 

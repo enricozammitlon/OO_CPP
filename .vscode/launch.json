@@ -11,7 +11,7 @@
       "program": "${workspaceFolder}/Final_Project/build/battleship",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workspaceFolder}/Final_Project/build",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
@@ -26,7 +26,7 @@
           "description": "Do not disable ASLR for WSL",
           "text": "set disable-randomization off",
           "ignoreFailures": true
-        },
+        }
       ]
     }
   ]

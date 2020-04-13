@@ -15,7 +15,7 @@
 
 int main() {
   battle_ship::rules *standard_rules = new battle_ship::rules();
-  battle_ship::player *current_user = new battle_ship::player("Enrico");
+  battle_ship::player *current_user = new battle_ship::player("Enrico", true);
 
   int input;
   do {
@@ -35,11 +35,28 @@ int main() {
     }
     switch (input) {
     case 1: {
-      battle_ship::player *ai_1 = new battle_ship::player("Pericles");
+      battle_ship::player *ai_1 = new battle_ship::player("Pericles", false);
+      battle_ship::vessel *sloop_1 = new battle_ship::sloop(
+          battle_ship::coordinates{battle_ship::x_axis::A, 1},
+          battle_ship::orientation::vertical);
+      ai_1->get_board() << sloop_1;
+      current_user->initial_setup();
+      battle_ship::notification_manager::reset_notifiations();
       battle_ship::game *game_1 =
           new battle_ship::game(0, current_user, ai_1, standard_rules);
-      game_1->play();
-
+      battle_ship::player *winner = game_1->play();
+      if (winner == nullptr) {
+        std::cout << "Please set up your fleet before playing." << std::endl;
+        break;
+      }
+      if (winner->is_human()) {
+        std::cout
+            << "Congratulations, commander! We have won the battle against "
+            << ai_1->get_uname() << "." << std::endl;
+      } else {
+        std::cout << "Commander...*cough*...we've been defated by "
+                  << ai_1->get_uname() << "." << std::endl;
+      }
     } break;
     case 2: {
       current_user->modify_fleet();
@@ -52,12 +69,6 @@ int main() {
       break;
     }
   } while (input != 5);
-  /*
-  battle_ship::coordinates p1{battle_ship::x_axis::J, 5};
-  battle_ship::vessel *sloop_1 =
-      new battle_ship::sloop(p1, battle_ship::orientation::vertical);
-  *player_board << sloop_1;
-  */
 
   // sloop_1->attack(player_board, computer_board);
   return 0;

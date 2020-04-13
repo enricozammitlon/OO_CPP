@@ -18,7 +18,7 @@ enum class orientation { horizontal, vertical };
 enum class y_axis { start = 1, end = 10 };
 struct coordinates {
   friend std::ostream &operator<<(std::ostream &os, const coordinates &p);
-  friend std::istream &operator>>(std::istream &is, coordinates &p);
+  friend bool operator>>(std::istream &is, coordinates &p);
   x_axis col;
   std::size_t row;
   coordinates() = default;

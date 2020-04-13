@@ -6,14 +6,14 @@
 battle_ship::piece::piece(std::string n, battle_ship::coordinates p,
                           std::size_t l, std::size_t w, std::string xy_rep_hor,
                           std::string xy_rep_ver, std::string u,
-                          battle_ship::orientation o) {
+                          battle_ship::orientation o, size_t a) {
   name = n;
   start_coordinates = {p.col, p.row};
   xy_representation_horizontal = xy_rep_hor;
   xy_representation_vertical = xy_rep_ver;
   orientation = o;
   uri = u;
-  hit_coordinates = new bool[l * w]();
+  action_points = a;
   switch (o) {
   case (battle_ship::orientation::horizontal):
     length = l;
@@ -36,8 +36,10 @@ battle_ship::piece::calculate_end(battle_ship::coordinates start,
   switch (o) {
   case (battle_ship::orientation::horizontal):
     return start_coordinates.boosted_x(distance - 1);
+    break;
   case (battle_ship::orientation::vertical):
     return start_coordinates.boosted_y(distance - 1);
+    break;
   }
 };
 
@@ -53,21 +55,12 @@ battle_ship::piece::piece(const piece &p) {
   orientation = p.orientation;
   cost = p.cost;
   uri = p.uri;
-  hit_coordinates = nullptr;
-  if (length * width > 0) {
-    hit_coordinates = new bool[length * width]();
-    for (size_t i{0}; i < width; i += 1) {
-      for (size_t j{0}; j < length; j += 1) {
-        hit_coordinates[j + i * length] = p.hit_coordinates[j + i * length];
-      }
-    }
-  }
+  hits = p.hits;
 }
 
 battle_ship::piece &battle_ship::piece::operator=(const piece &p) {
   if (&p == this)
     return *this;
-  delete[] hit_coordinates;
   name = p.name;
   start_coordinates = p.start_coordinates;
   end_coordinates = p.end_coordinates;
@@ -79,15 +72,7 @@ battle_ship::piece &battle_ship::piece::operator=(const piece &p) {
   orientation = p.orientation;
   cost = p.cost;
   uri = p.uri;
-  hit_coordinates = nullptr;
-  if (length * width > 0) {
-    hit_coordinates = new bool[length * width]();
-    for (size_t i{0}; i < width; i += 1) {
-      for (size_t j{0}; j < length; j += 1) {
-        hit_coordinates[j + i * length] = p.hit_coordinates[j + i * length];
-      }
-    }
-  }
+  hits = p.hits;
   return *this;
 }
 
@@ -103,15 +88,7 @@ battle_ship::piece::piece(piece &&p) {
   orientation = p.orientation;
   cost = p.cost;
   uri = p.uri;
-  hit_coordinates = nullptr;
-  if (length * width > 0) {
-    hit_coordinates = new bool[length * width]();
-    for (size_t i{0}; i < width; i += 1) {
-      for (size_t j{0}; j < length; j += 1) {
-        hit_coordinates[j + i * length] = p.hit_coordinates[j + i * length];
-      }
-    }
-  }
+  hits = p.hits;
   p.name = "";
   p.start_coordinates = {battle_ship::x_axis::A, 1};
   p.end_coordinates = {battle_ship::x_axis::A, 1};
@@ -123,7 +100,7 @@ battle_ship::piece::piece(piece &&p) {
   p.orientation = battle_ship::orientation::vertical;
   p.cost = 0;
   p.uri = "";
-  delete[] p.hit_coordinates;
+  p.hits = 0;
 }
 
 battle_ship::piece &battle_ship::piece::operator=(piece &&p) {
@@ -138,7 +115,7 @@ battle_ship::piece &battle_ship::piece::operator=(piece &&p) {
   std::swap(orientation, p.orientation);
   std::swap(cost, p.cost);
   std::swap(uri, p.uri);
-  std::swap(hit_coordinates, p.hit_coordinates);
+  std::swap(hits, p.hits);
   return *this;
 }
 
@@ -150,6 +127,7 @@ void battle_ship::piece::modify_pose(battle_ship::coordinates new_coors,
     length = width;
     width = old_length;
   }
+  orientation = new_orientation;
   switch (new_orientation) {
   case (battle_ship::orientation::horizontal):
     current_xy_representation = xy_representation_horizontal;
@@ -160,7 +138,6 @@ void battle_ship::piece::modify_pose(battle_ship::coordinates new_coors,
     end_coordinates = calculate_end(start_coordinates, width, orientation);
     break;
   }
-  orientation = new_orientation;
 };
 
 std::vector<std::string>

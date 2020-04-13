@@ -8,14 +8,13 @@ namespace battle_ship {
 std::ostream &operator<<(std::ostream &os, const coordinates &p) {
   os << "(";
   os << char(std::size_t(p.col) + 64);
-  os << ",";
   os << p.row;
-  os << ")" << std::endl;
+  os << ")";
   return os;
 };
-std::istream &operator>>(std::istream &is, coordinates &p) {
+bool operator>>(std::istream &is, coordinates &p) {
   std::string input;
-  std::getline(is, input);
+  is >> input;
   std::smatch match;
   const std::regex find_x{"[A-Z]"};
   const std::regex find_y{"[A-Z][0-9]*"};
@@ -33,14 +32,19 @@ std::istream &operator>>(std::istream &is, coordinates &p) {
       temp_stream >> y;
       p.col = x;
       p.row = y;
-      return is;
+      if (p.row <= 0 || p.row > 10 || std::size_t(p.col) <= 0 ||
+          std::size_t(p.col) > 10) {
+        std::cerr << "Coordinates out of range." << std::endl;
+        return true;
+      }
+      return false;
     } else {
-      // err
+      std::cerr << "Not a valid y coordinate." << std::endl;
     }
   } else {
-    // err
+    std::cerr << "Not a valid x coordinate." << std::endl;
   }
-  return is;
+  return true;
 }
 } // namespace battle_ship
 
