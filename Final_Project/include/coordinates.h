@@ -15,14 +15,11 @@ enum class x_axis {
   J = 10
 };
 enum class orientation { horizontal, vertical };
-enum class y_axis { start = 1, end = 10 };
 struct coordinates {
   friend std::ostream &operator<<(std::ostream &os, const coordinates &p);
   friend bool operator>>(std::istream &is, coordinates &p);
   x_axis col;
   std::size_t row;
-  coordinates() = default;
-  coordinates(x_axis x, std::size_t y) : col{x}, row{y} {};
   coordinates boosted_x(std::size_t length) const;
   coordinates boosted_y(std::size_t width) const;
 };

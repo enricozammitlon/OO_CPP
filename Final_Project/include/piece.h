@@ -27,10 +27,10 @@ public:
   piece(std::string n, battle_ship::coordinates p, std::size_t l, std::size_t w,
         std::string xy_rep_hor, std::string xy_rep_ver, std::string u,
         battle_ship::orientation o, size_t a);
-  piece(const piece &arr);
-  piece &operator=(const piece &arr);
-  piece(piece &&arr);
-  piece &operator=(piece &&arr);
+  piece(const piece &p);
+  piece &operator=(const piece &p);
+  piece(piece &&p);
+  piece &operator=(piece &&p);
   std::vector<std::string> load_image(std::string name_of_file);
   std::string get_name() const { return name; };
   battle_ship::coordinates get_start() const { return start_coordinates; };

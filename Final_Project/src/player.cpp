@@ -74,7 +74,7 @@ bool battle_ship::player::add_piece() {
   std::cout << "These are the available pieces to be added. Please select one:"
             << std::endl;
   std::vector<std::string> available_pieces =
-      battle_ship::market::get_available_pieces(this);
+      battle_ship::market::get_available_pieces(*this);
   for (auto iterator = available_pieces.begin();
        iterator != available_pieces.end(); iterator++) {
     std::cout << *iterator << std::endl;
@@ -101,7 +101,7 @@ bool battle_ship::player::add_piece() {
     orientation = battle_ship::orientation::horizontal;
   }
   std::tuple<bool, std::string> result =
-      battle_ship::market::buy_piece(this, order, coors, orientation);
+      battle_ship::market::buy_piece(*this, order, coors, orientation);
   std::cout << std::get<1>(result);
   return std::get<0>(result);
 }
@@ -110,18 +110,16 @@ bool battle_ship::player::remove_piece() {
   std::cout
       << "These are the available pieces to be removed. Please select one:"
       << std::endl;
-  std::vector<battle_ship::piece *> all_pieces = player_board->get_pieces();
-  for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
-       iterator++) {
-    battle_ship::piece *current_piece = *iterator;
-    std::cout << current_piece->get_name() << std::endl;
+  for (auto iterator = player_board->get_pieces().begin();
+       iterator != player_board->get_pieces().end(); iterator++) {
+    std::cout << (*iterator)->get_name() << std::endl;
   }
   std::cout << "Please enter the name of the piece you want:" << std::endl;
   std::cin.ignore();
   std::string order;
   std::cin >> order;
   std::tuple<bool, std::string> result =
-      battle_ship::market::sell_piece(this, order);
+      battle_ship::market::sell_piece(*this, order);
   std::cout << std::get<1>(result);
   return std::get<0>(result);
 }
@@ -129,11 +127,9 @@ bool battle_ship::player::remove_piece() {
 bool battle_ship::player::edit_piece() {
   std::cout << "These are the available pieces to be edited. Please select one:"
             << std::endl;
-  std::vector<battle_ship::piece *> all_pieces = player_board->get_pieces();
-  for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
-       iterator++) {
-    battle_ship::piece *current_piece = *iterator;
-    std::cout << current_piece->get_name() << std::endl;
+  for (auto iterator = player_board->get_pieces().begin();
+       iterator != player_board->get_pieces().end(); iterator++) {
+    std::cout << (*iterator)->get_name() << std::endl;
   }
   std::cout << "Please enter the name of the piece you want:" << std::endl;
   std::cin.ignore();
@@ -157,21 +153,19 @@ bool battle_ship::player::edit_piece() {
     new_orientation = battle_ship::orientation::horizontal;
   }
 
-  battle_ship::piece *element_to_edit;
   bool found = false;
   size_t position_in_vector{0};
-  for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
-       iterator++) {
+  for (auto iterator = player_board->get_pieces().begin();
+       iterator != player_board->get_pieces().end(); iterator++) {
     if (piece_name == (*iterator)->get_name()) {
-      element_to_edit = *iterator;
+      player_board->edit_piece(**iterator, position_in_vector, new_coor,
+                               new_orientation);
       found = true;
       break;
     }
     position_in_vector += 1;
   }
   if (found) {
-    player_board->edit_piece(element_to_edit, position_in_vector, new_coor,
-                             new_orientation);
     std::cout << "Transaction successful.";
     return true;
   } else {
@@ -180,9 +174,9 @@ bool battle_ship::player::edit_piece() {
   }
 }
 
-void battle_ship::player::attack(battle_ship::piece *attacking_piece,
-                                 battle_ship::player *enemy) {
-  for (size_t ap{}; ap < attacking_piece->get_action_points(); ap += 1) {
+void battle_ship::player::attack(battle_ship::piece &attacking_piece,
+                                 battle_ship::player &enemy) {
+  for (size_t ap{}; ap < attacking_piece.get_action_points(); ap += 1) {
     battle_ship::coordinates target_coordinates;
     bool err{false};
     do {
@@ -206,58 +200,53 @@ void battle_ship::player::attack(battle_ship::piece *attacking_piece,
     string_rep << target_coordinates;
     if (human) {
       notification_manager::add_notification(
-          username, "Your " + attacking_piece->get_name() +
+          username, "Your " + attacking_piece.get_name() +
                         " sends a torpedo to " + string_rep.str());
     } else {
       notification_manager::add_notification(
-          username, "His " + attacking_piece->get_name() +
+          username, "His " + attacking_piece.get_name() +
                         " sends a torpedo to " + string_rep.str());
     }
 
     bool result{false};
-    std::vector<battle_ship::piece *> enemy_pieces =
-        enemy->get_board().get_pieces();
 
-    for (auto iterator = enemy_pieces.begin(); iterator != enemy_pieces.end();
-         iterator++) {
-      battle_ship::piece *current_piece = *iterator;
-
+    for (auto iterator = enemy.get_board().get_pieces().begin();
+         iterator != enemy.get_board().get_pieces().end(); iterator++) {
       if (battle_ship::geometry::do_intersect(
-              current_piece->get_start(), current_piece->get_end(),
+              (*iterator)->get_start(), (*iterator)->get_end(),
               target_coordinates, target_coordinates)) {
-        current_piece->take_hit();
+        (*iterator)->take_hit();
         result = true;
         break;
       }
     }
     if (result) {
       if (human) {
-        enemy->get_board().modify_coordinate(target_coordinates, "H");
+        enemy.get_board().modify_coordinate(target_coordinates, "H");
         notification_manager::add_notification(
             username, "Well done, great hit commander!");
       } else {
-        enemy->get_board().modify_coordinate(target_coordinates, "H");
+        enemy.get_board().modify_coordinate(target_coordinates, "H");
         notification_manager::add_notification(
             username, "Arggh,we've been hit commander!");
       }
 
     } else {
-      enemy->get_board().modify_coordinate(target_coordinates, "M");
+      enemy.get_board().modify_coordinate(target_coordinates, "M");
       notification_manager::add_notification(username, "Splash...Miss!");
     }
   }
 }
 
-void battle_ship::player::initial_setup() {
-  delete player_board;
+void battle_ship::player::clean_up() {
   budget = 100;
   already_targeted.clear();
   std::ifstream fleet_configuration;
   fleet_configuration.open("../saves/" + username + ".fleet");
   if (!fleet_configuration.good()) {
-    player_board = new battle_ship::board();
+    player_board = std::make_unique<battle_ship::board>();
   } else {
-    player_board = new battle_ship::board();
+    player_board = std::make_unique<battle_ship::board>();
     size_t counter{0};
     std::string order;
     battle_ship::coordinates coors;
@@ -286,7 +275,7 @@ void battle_ship::player::initial_setup() {
       }
     }
     std::tuple<bool, std::string> result =
-        battle_ship::market::buy_piece(this, order, coors, orientation);
+        battle_ship::market::buy_piece(*this, order, coors, orientation);
     if (budget == 0) {
       ready_to_play = true;
     } else {
@@ -299,13 +288,12 @@ void battle_ship::player::initial_setup() {
 void battle_ship::player::save_fleet() {
   std::ofstream fleet_configuration;
   fleet_configuration.open("../saves/" + username + ".fleet");
-  std::vector<battle_ship::piece *> all_pieces = player_board->get_pieces();
   auto output_orientation = [](battle_ship::orientation o) {
     return o == battle_ship::orientation::vertical ? "v" : "h";
   };
 
-  for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
-       iterator++) {
+  for (auto iterator = player_board->get_pieces().begin();
+       iterator != player_board->get_pieces().end(); iterator++) {
     fleet_configuration << (*iterator)->get_name() << " "
                         << (*iterator)->get_start() << " "
                         << output_orientation((*iterator)->get_orientation())

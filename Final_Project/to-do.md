@@ -6,11 +6,12 @@
 - [x] Add notifications/events class
 - [x] Add main menu
 - [x] Add fleet editing screen
-- [ ] Convert pointers to smart pointers
-- [ ] Add check fleet on fleet screen
+- [x] Convert pointers to smart pointers
+- [x] Add check fleet on fleet screen
 - ~~ [ ] Move fleet editing to its own class ~~
 - [ ] Check memory leaks using deleaker
 - [ ] Sanitize all inputs
+- [ ] Fix issue with copy constructor of a board
 - [ ] Fix ability to throw errors in docker
 - [ ] Convert all cerr to throw
 - [x] Add login

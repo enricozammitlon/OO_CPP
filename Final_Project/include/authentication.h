@@ -5,8 +5,8 @@
 namespace battle_ship {
 class authentication {
 public:
-  static battle_ship::player *signup();
-  static battle_ship::player *signin();
+  static void signup(std::shared_ptr<battle_ship::player> &p);
+  static void signin(std::shared_ptr<battle_ship::player> &p);
 };
 } // namespace battle_ship
 #endif

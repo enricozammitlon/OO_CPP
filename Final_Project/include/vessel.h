@@ -17,7 +17,7 @@ public:
       : piece(n, p, l, w, xy_rep_hor, xy_rep_ver, u, o, ap){};
   void display_yz();
   virtual void display_xy() = 0;
-  ~vessel(){};
+  ~vessel() = default;
 };
 } // namespace battle_ship
 #endif

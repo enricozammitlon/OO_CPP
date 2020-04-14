@@ -16,7 +16,7 @@
 #include <tuple>
 int main() {
   int input;
-  battle_ship::player *current_user = nullptr;
+  std::shared_ptr<battle_ship::player> current_user = nullptr;
   do {
     std::cout << "Welcome to the Battleship registration! Please enter "
                  "one of the numbers below to start."
@@ -32,17 +32,18 @@ int main() {
     }
     switch (input) {
     case 1:
-      current_user = battle_ship::authentication::signup();
+      battle_ship::authentication::signup(current_user);
       break;
     case 2:
-      current_user = battle_ship::authentication::signin();
+      battle_ship::authentication::signin(current_user);
       break;
     case 3:
       return 0;
     }
   } while (current_user == nullptr);
 
-  battle_ship::rules *standard_rules = new battle_ship::rules();
+  std::unique_ptr<battle_ship::rules> standard_rules =
+      std::make_unique<battle_ship::rules>();
   do {
     std::cout << "Welcome to your Battleship terminal commander! Please enter "
                  "one of the numbers below to start."
@@ -60,16 +61,21 @@ int main() {
     }
     switch (input) {
     case 1: {
-      battle_ship::player *ai_1 = new battle_ship::player("Pericles", false);
-      battle_ship::vessel *sloop_1 = new battle_ship::sloop(
-          battle_ship::coordinates{battle_ship::x_axis::A, 1},
-          battle_ship::orientation::vertical);
-      ai_1->get_board() << sloop_1;
-      current_user->initial_setup();
+      std::shared_ptr<battle_ship::player> ai_1 =
+          std::make_shared<battle_ship::player>("Pericles", false);
+
+      std::unique_ptr<battle_ship::piece> sloop_1 =
+          std::make_unique<battle_ship::sloop>(
+              battle_ship::coordinates{battle_ship::x_axis::A, 1},
+              battle_ship::orientation::vertical);
+      ai_1->get_board() << std::move(sloop_1);
       battle_ship::notification_manager::reset_notifiations();
-      battle_ship::game *game_1 =
-          new battle_ship::game(0, current_user, ai_1, standard_rules);
-      battle_ship::player *winner = game_1->play();
+      std::unique_ptr<battle_ship::game> game_1 =
+          std::make_unique<battle_ship::game>(0, current_user, ai_1,
+                                              std::move(standard_rules));
+      std::shared_ptr<battle_ship::player> winner{nullptr};
+      game_1->play(winner);
+      current_user->clean_up();
       if (winner == nullptr) {
         std::cout << "Please set up your fleet before playing." << std::endl;
         break;
