@@ -7,6 +7,7 @@ namespace battle_ship {
 class player {
 protected:
   std::string username;
+  size_t password_hash;
   bool human{false};
   std::size_t highscore{0};
   battle_ship::board *player_board{};
@@ -17,7 +18,8 @@ protected:
 
 public:
   player() = default;
-  player(std::string uname, bool h) : username{uname}, human{h} {
+  player(std::string uname, bool h, size_t pass = 0)
+      : username{uname}, password_hash{pass}, human{h} {
     initial_setup();
   };
   std::string get_uname() { return username; };

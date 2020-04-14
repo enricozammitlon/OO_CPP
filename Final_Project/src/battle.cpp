@@ -5,6 +5,7 @@
 // This is the main method to create the boards and initial configurations
 // And actually play the game
 
+#include "authentication.h"
 #include "game.h"
 #include "notification_manager.h"
 #include "player.h"
@@ -12,12 +13,36 @@
 #include "screen_manager.h"
 #include "sloop.h"
 #include <iostream>
-
+#include <tuple>
 int main() {
-  battle_ship::rules *standard_rules = new battle_ship::rules();
-  battle_ship::player *current_user = new battle_ship::player("Enrico", true);
-
   int input;
+  battle_ship::player *current_user = nullptr;
+  do {
+    std::cout << "Welcome to the Battleship registration! Please enter "
+                 "one of the numbers below to start."
+              << std::endl;
+    std::cout << "[1] Sign up" << std::endl;
+    std::cout << "[2] Sign in" << std::endl;
+    std::cout << "[3] Exit" << std::endl;
+    std::cin >> input;
+    if (std::cin.fail() || input > 3 || input < 1) {
+      std::cout << "Please enter a number 1-3." << std::endl;
+      std::cin.clear();
+      std::cin.ignore(512, '\n');
+    }
+    switch (input) {
+    case 1:
+      current_user = battle_ship::authentication::signup();
+      break;
+    case 2:
+      current_user = battle_ship::authentication::signin();
+      break;
+    case 3:
+      return 0;
+    }
+  } while (current_user == nullptr);
+
+  battle_ship::rules *standard_rules = new battle_ship::rules();
   do {
     std::cout << "Welcome to your Battleship terminal commander! Please enter "
                  "one of the numbers below to start."
@@ -69,7 +94,5 @@ int main() {
       break;
     }
   } while (input != 5);
-
-  // sloop_1->attack(player_board, computer_board);
   return 0;
 }

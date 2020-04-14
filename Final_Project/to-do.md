@@ -1,4 +1,4 @@
-#To-Do List/Changelog
+# To-Do List/Changelog
 - [x] Change any access functions from (m,n) to using struct point
 - [x] Rename point to coordinate
 - [x] Rename x_begin and y_begin to appropriate names
@@ -8,19 +8,19 @@
 - [x] Add fleet editing screen
 - [ ] Convert pointers to smart pointers
 - [ ] Add check fleet on fleet screen
-- [ ] Move fleet editing to its own class
+- ~~ [ ] Move fleet editing to its own class ~~
 - [ ] Check memory leaks using deleaker
 - [ ] Sanitize all inputs
 - [ ] Fix ability to throw errors in docker
 - [ ] Convert all cerr to throw
-- [ ] Add login
+- [x] Add login
 - [x] Add transaction screen and market
 - [ ] Add highscores screen
 - [x] Add splitscreen view
 - [x] Add game view and routine
 - [ ] Add new vessels
 - [ ] Comment review
-- ##Extensions
+    ## Extensions
     - [ ] Add non-vessel pieces (decoys)
     - [ ] Add AI functionality
     - [ ] Refine imgs
