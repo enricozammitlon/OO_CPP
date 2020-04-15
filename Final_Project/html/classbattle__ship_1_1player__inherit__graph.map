@@ -1,0 +1,4 @@
+<map id="battle_ship::player" name="battle_ship::player">
+<area shape="rect" id="node2" href="$classbattle__ship_1_1human.html" title="battle_ship::human" alt="" coords="5,80,151,107"/>
+<area shape="rect" id="node3" href="$classbattle__ship_1_1npc.html" title="battle_ship::npc" alt="" coords="175,80,298,107"/>
+</map>

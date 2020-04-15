@@ -1,12 +1,7 @@
 <map id="src/player.cpp" name="src/player.cpp">
-<area shape="rect" id="node2" href="$player_8h.html" title="player.h" alt="" coords="608,229,680,256"/>
-<area shape="rect" id="node13" href="$geometry_8h.html" title="geometry.h" alt="" coords="387,379,482,405"/>
-<area shape="rect" id="node14" href="$market_8h.html" title="market.h" alt="" coords="504,155,584,181"/>
-<area shape="rect" id="node16" href="$notification__manager_8h.html" title="notification_manager.h" alt="" coords="93,379,261,405"/>
-<area shape="rect" id="node17" href="$screen__manager_8h.html" title="screen_manager.h" alt="" coords="209,80,351,107"/>
-<area shape="rect" id="node3" href="$board_8h.html" title="board.h" alt="" coords="909,304,979,331"/>
-<area shape="rect" id="node4" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="963,453,1072,480"/>
-<area shape="rect" id="node6" href="$piece_8h.html" title="piece.h" alt="" coords="983,379,1051,405"/>
-<area shape="rect" id="node18" href="$game_8h.html" title="game.h" alt="" coords="245,155,315,181"/>
-<area shape="rect" id="node19" href="$rules_8h.html" title="rules.h" alt="" coords="246,304,311,331"/>
+<area shape="rect" id="node2" href="$player_8h.html" title="player.h" alt="" coords="369,155,441,181"/>
+<area shape="rect" id="node13" href="$market_8h.html" title="market.h" alt="" coords="602,80,682,107"/>
+<area shape="rect" id="node3" href="$board_8h.html" title="board.h" alt="" coords="218,229,288,256"/>
+<area shape="rect" id="node4" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="373,379,482,405"/>
+<area shape="rect" id="node6" href="$piece_8h.html" title="piece.h" alt="" coords="516,304,584,331"/>
 </map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['screen_5fmanager',['screen_manager',['../classbattle__ship_1_1screen__manager.html',1,'battle_ship']]],
-  ['sloop',['sloop',['../classbattle__ship_1_1sloop.html',1,'battle_ship']]]
+  ['raft',['raft',['../classbattle__ship_1_1raft.html',1,'battle_ship']]],
+  ['rules',['rules',['../classbattle__ship_1_1rules.html',1,'battle_ship']]]
 ];

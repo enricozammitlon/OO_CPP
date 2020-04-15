@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['end_5fcoordinates',['end_coordinates',['../classbattle__ship_1_1piece.html#afe29d6aca1dfa4f9f3f14f0228a6090c',1,'battle_ship::piece']]],
-  ['enemy',['enemy',['../classbattle__ship_1_1player.html#aa2ebaf963d19dc6b72157e64119e2751',1,'battle_ship::player']]]
+  ['end_5fcoordinates',['end_coordinates',['../classbattle__ship_1_1vessel.html#a90baf292572ee968095c107ec656db32',1,'battle_ship::vessel']]],
+  ['enemy',['enemy',['../classbattle__ship_1_1player.html#af01292346caaf209039b6490ae18d8aa',1,'battle_ship::player']]]
 ];

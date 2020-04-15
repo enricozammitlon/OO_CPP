@@ -1,4 +1,8 @@
 <map id="battle_ship::piece" name="battle_ship::piece">
-<area shape="rect" id="node2" href="$classbattle__ship_1_1vessel.html" title="battle_ship::vessel" alt="" coords="5,80,145,107"/>
-<area shape="rect" id="node3" href="$classbattle__ship_1_1sloop.html" title="battle_ship::sloop" alt="" coords="8,155,143,181"/>
+<area shape="rect" id="node2" href="$classbattle__ship_1_1vessel.html" title="battle_ship::vessel" alt="" coords="188,107,328,133"/>
+<area shape="rect" id="node3" href="$classbattle__ship_1_1carrier.html" title="battle_ship::carrier" alt="" coords="389,5,531,32"/>
+<area shape="rect" id="node4" href="$classbattle__ship_1_1cruiser.html" title="battle_ship::cruiser" alt="" coords="389,56,531,83"/>
+<area shape="rect" id="node5" href="$classbattle__ship_1_1destroyer.html" title="battle_ship::destroyer" alt="" coords="379,107,541,133"/>
+<area shape="rect" id="node6" href="$classbattle__ship_1_1raft.html" title="battle_ship::raft" alt="" coords="399,157,521,184"/>
+<area shape="rect" id="node7" href="$classbattle__ship_1_1submarine.html" title="battle_ship::submarine" alt="" coords="376,208,544,235"/>
 </map>

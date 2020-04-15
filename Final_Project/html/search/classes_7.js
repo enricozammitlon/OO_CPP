@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['piece',['piece',['../classbattle__ship_1_1piece.html',1,'battle_ship']]],
-  ['player',['player',['../classbattle__ship_1_1player.html',1,'battle_ship']]]
+  ['notification_5fmanager',['notification_manager',['../classbattle__ship_1_1notification__manager.html',1,'battle_ship']]],
+  ['npc',['npc',['../classbattle__ship_1_1npc.html',1,'battle_ship']]]
 ];

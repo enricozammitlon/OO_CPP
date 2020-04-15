@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['password_5fhash',['password_hash',['../classbattle__ship_1_1player.html#ae8c566b4c37fda79fcc712088f7adf2b',1,'battle_ship::player']]],
-  ['player_5fboard',['player_board',['../classbattle__ship_1_1player.html#a13008c5d6e7464b312c04ac00e18c2fb',1,'battle_ship::player']]]
+  ['ready_5fto_5fplay',['ready_to_play',['../classbattle__ship_1_1player.html#a48a3f8c692c7ea1def384c39b9b65e85',1,'battle_ship::player']]],
+  ['row',['row',['../structbattle__ship_1_1coordinates.html#a436b0722a4b7244c5cbdcaefb2a76f0f',1,'battle_ship::coordinates']]]
 ];

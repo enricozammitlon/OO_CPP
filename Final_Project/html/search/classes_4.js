@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['highscore_5fmanager',['highscore_manager',['../classbattle__ship_1_1highscore__manager.html',1,'battle_ship']]]
+  ['game',['game',['../classbattle__ship_1_1game.html',1,'battle_ship']]],
+  ['geometry',['geometry',['../classbattle__ship_1_1geometry.html',1,'battle_ship']]]
 ];

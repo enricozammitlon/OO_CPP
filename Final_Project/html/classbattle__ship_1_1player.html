@@ -68,46 +68,51 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classbattle__ship_1_1player-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">battle_ship::player Class Reference</div>  </div>
+<div class="title">battle_ship::player Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="player_8h_source.html">player.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for battle_ship::player:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbattle__ship_1_1player__inherit__graph.png" border="0" usemap="#battle__ship_1_1player_inherit__map" alt="Inheritance graph"/></div>
+<map name="battle__ship_1_1player_inherit__map" id="battle__ship_1_1player_inherit__map">
+<area shape="rect" id="node2" href="classbattle__ship_1_1human.html" title="battle_ship::human" alt="" coords="5,80,151,107"/>
+<area shape="rect" id="node3" href="classbattle__ship_1_1npc.html" title="battle_ship::npc" alt="" coords="175,80,298,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a54df3c03653a24049b9629ce5c55fafa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a54df3c03653a24049b9629ce5c55fafa">player</a> ()=default</td></tr>
 <tr class="separator:a54df3c03653a24049b9629ce5c55fafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aeba726c496f2304b8f6b9fb811f94d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a7aeba726c496f2304b8f6b9fb811f94d">player</a> (std::string uname, bool h, size_t pass=0)</td></tr>
-<tr class="separator:a7aeba726c496f2304b8f6b9fb811f94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5da318ece63c6bdd3825cfa6ea9b4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a9c5da318ece63c6bdd3825cfa6ea9b4f">player</a> (std::string uname, bool ready, std::string sub)</td></tr>
+<tr class="separator:a9c5da318ece63c6bdd3825cfa6ea9b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a5406b436812664cb706c31b745239b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a4a5406b436812664cb706c31b745239b">get_uname</a> ()</td></tr>
 <tr class="separator:a4a5406b436812664cb706c31b745239b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5373e08a637e9c21b3751eb02e07540"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#af5373e08a637e9c21b3751eb02e07540">is_ready_to_play</a> ()</td></tr>
-<tr class="separator:af5373e08a637e9c21b3751eb02e07540"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada39f5a20a89ffdf7218108a7dbe47c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ada39f5a20a89ffdf7218108a7dbe47c0">assign_enemy</a> (std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a> &gt; e)</td></tr>
-<tr class="separator:ada39f5a20a89ffdf7218108a7dbe47c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62535f933925992eb689c2a5c2b99dd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a62535f933925992eb689c2a5c2b99dd6">get_enemy</a> ()</td></tr>
-<tr class="separator:a62535f933925992eb689c2a5c2b99dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a186596fe9c9f9703b2b90ec1773d5e49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a186596fe9c9f9703b2b90ec1773d5e49">is_human</a> ()</td></tr>
-<tr class="separator:a186596fe9c9f9703b2b90ec1773d5e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3525c2934ea6a4bd7600385cb5fa6bfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a3525c2934ea6a4bd7600385cb5fa6bfa">assign_enemy</a> (std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt; e)</td></tr>
+<tr class="separator:a3525c2934ea6a4bd7600385cb5fa6bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5224958feae654d622f56523dc45ab83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a5224958feae654d622f56523dc45ab83">get_enemy</a> ()</td></tr>
+<tr class="separator:a5224958feae654d622f56523dc45ab83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade02279db7265558659c40f16c482df7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ade02279db7265558659c40f16c482df7">modify_budget</a> (int money)</td></tr>
 <tr class="separator:ade02279db7265558659c40f16c482df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace54ae4286cbbaca8a8f4b6fe2a75de0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ace54ae4286cbbaca8a8f4b6fe2a75de0">clean_up</a> ()</td></tr>
-<tr class="separator:ace54ae4286cbbaca8a8f4b6fe2a75de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad11ef5cd2b1623b3e69c578643cffd03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ad11ef5cd2b1623b3e69c578643cffd03">modify_fleet</a> ()</td></tr>
-<tr class="separator:ad11ef5cd2b1623b3e69c578643cffd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a627ee6df10bc666f9941452c2a603dec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a627ee6df10bc666f9941452c2a603dec">save_fleet</a> ()</td></tr>
-<tr class="separator:a627ee6df10bc666f9941452c2a603dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a704897da96d9e2d956bb75fc73c84508"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a704897da96d9e2d956bb75fc73c84508">add_piece</a> ()</td></tr>
-<tr class="separator:a704897da96d9e2d956bb75fc73c84508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ccc70a9f00546f42a4bc7332ba0cfd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a9ccc70a9f00546f42a4bc7332ba0cfd4">remove_piece</a> ()</td></tr>
-<tr class="separator:a9ccc70a9f00546f42a4bc7332ba0cfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7524f337fabec20fe8f0ae3288cf9bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#af7524f337fabec20fe8f0ae3288cf9bb">edit_piece</a> ()</td></tr>
-<tr class="separator:af7524f337fabec20fe8f0ae3288cf9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefb7ecb4869022d06472b9a9f961020c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#aefb7ecb4869022d06472b9a9f961020c">attack</a> (<a class="el" href="classbattle__ship_1_1piece.html">battle_ship::piece</a> &amp;attacking_piece, <a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a> &amp;<a class="el" href="classbattle__ship_1_1player.html#aa2ebaf963d19dc6b72157e64119e2751">enemy</a>)</td></tr>
-<tr class="separator:aefb7ecb4869022d06472b9a9f961020c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b896d17e51345a138ba997903b347f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbattle__ship_1_1board.html">battle_ship::board</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a8b896d17e51345a138ba997903b347f1">get_board</a> ()</td></tr>
-<tr class="separator:a8b896d17e51345a138ba997903b347f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21fefa953f6a3a0476cabfae7084bbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ae21fefa953f6a3a0476cabfae7084bbf">reset</a> ()</td></tr>
+<tr class="separator:ae21fefa953f6a3a0476cabfae7084bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5373e08a637e9c21b3751eb02e07540"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#af5373e08a637e9c21b3751eb02e07540">is_ready_to_play</a> ()</td></tr>
+<tr class="separator:af5373e08a637e9c21b3751eb02e07540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e25657d2330845c3770a75d107fef5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ac2e25657d2330845c3770a75d107fef5">get_budget</a> ()</td></tr>
+<tr class="separator:ac2e25657d2330845c3770a75d107fef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3110ec708fd8fc7e02a6e88a63d57d2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a3110ec708fd8fc7e02a6e88a63d57d2f">winning_line</a> ()=0</td></tr>
+<tr class="separator:a3110ec708fd8fc7e02a6e88a63d57d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86be2256620cd5e20da6db7be8afdbc8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a86be2256620cd5e20da6db7be8afdbc8">attack</a> (<a class="el" href="classbattle__ship_1_1piece.html">piece</a> &amp;attacking_piece, <a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;<a class="el" href="classbattle__ship_1_1player.html#af01292346caaf209039b6490ae18d8aa">enemy</a>)=0</td></tr>
+<tr class="separator:a86be2256620cd5e20da6db7be8afdbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b74e59f4b120d38ad591dba6a1d1ba7"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a9b74e59f4b120d38ad591dba6a1d1ba7">get_highscore</a> ()=0</td></tr>
+<tr class="separator:a9b74e59f4b120d38ad591dba6a1d1ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a928538249678aea5402f8c673671e995"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a928538249678aea5402f8c673671e995">save_highscore</a> (size_t h)=0</td></tr>
+<tr class="separator:a928538249678aea5402f8c673671e995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57dacb55b2c506191d3d8426097c3c6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbattle__ship_1_1board.html">board</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a57dacb55b2c506191d3d8426097c3c6a">get_board</a> ()</td></tr>
+<tr class="separator:a57dacb55b2c506191d3d8426097c3c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbb6b6e880864bf7a36f21a95665a6c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#afbb6b6e880864bf7a36f21a95665a6c7">~player</a> ()=default</td></tr>
 <tr class="separator:afbb6b6e880864bf7a36f21a95665a6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -115,22 +120,18 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aed786567891bcafecb8610e12fb5d413"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#aed786567891bcafecb8610e12fb5d413">username</a></td></tr>
 <tr class="separator:aed786567891bcafecb8610e12fb5d413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8c566b4c37fda79fcc712088f7adf2b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ae8c566b4c37fda79fcc712088f7adf2b">password_hash</a></td></tr>
-<tr class="separator:ae8c566b4c37fda79fcc712088f7adf2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a890870a47a67c3be92b1807b861ec1b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a890870a47a67c3be92b1807b861ec1b7">human</a> {false}</td></tr>
-<tr class="separator:a890870a47a67c3be92b1807b861ec1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa005c81fe9bd05f05cd54be0207b8c40"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#aa005c81fe9bd05f05cd54be0207b8c40">highscore</a> {0}</td></tr>
-<tr class="separator:aa005c81fe9bd05f05cd54be0207b8c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13008c5d6e7464b312c04ac00e18c2fb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classbattle__ship_1_1board.html">battle_ship::board</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a13008c5d6e7464b312c04ac00e18c2fb">player_board</a></td></tr>
-<tr class="separator:a13008c5d6e7464b312c04ac00e18c2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2ebaf963d19dc6b72157e64119e2751"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#aa2ebaf963d19dc6b72157e64119e2751">enemy</a></td></tr>
-<tr class="separator:aa2ebaf963d19dc6b72157e64119e2751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01f047aac5fcca92ff1e42d4d1e398c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a01f047aac5fcca92ff1e42d4d1e398c9">budget</a> {100}</td></tr>
+<tr class="memitem:a7a463dddbc0cd8e9dfa3d2c41687e59e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classbattle__ship_1_1board.html">board</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a7a463dddbc0cd8e9dfa3d2c41687e59e">player_board</a></td></tr>
+<tr class="separator:a7a463dddbc0cd8e9dfa3d2c41687e59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01292346caaf209039b6490ae18d8aa"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#af01292346caaf209039b6490ae18d8aa">enemy</a></td></tr>
+<tr class="separator:af01292346caaf209039b6490ae18d8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f047aac5fcca92ff1e42d4d1e398c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a01f047aac5fcca92ff1e42d4d1e398c9">budget</a> {500}</td></tr>
 <tr class="separator:a01f047aac5fcca92ff1e42d4d1e398c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48a3f8c692c7ea1def384c39b9b65e85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a48a3f8c692c7ea1def384c39b9b65e85">ready_to_play</a> {false}</td></tr>
+<tr class="memitem:ac0905b76a660cd06e5fd45f4960d48f9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ac0905b76a660cd06e5fd45f4960d48f9">already_targeted</a></td></tr>
+<tr class="separator:ac0905b76a660cd06e5fd45f4960d48f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a3f8c692c7ea1def384c39b9b65e85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a48a3f8c692c7ea1def384c39b9b65e85">ready_to_play</a></td></tr>
 <tr class="separator:a48a3f8c692c7ea1def384c39b9b65e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63d66b930a6048dac566f79a644c2d7a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structbattle__ship_1_1coordinates.html">battle_ship::coordinates</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a63d66b930a6048dac566f79a644c2d7a">already_targeted</a></td></tr>
-<tr class="separator:a63d66b930a6048dac566f79a644c2d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb155ee3d722244c44bf71e5e2440c4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a5cb155ee3d722244c44bf71e5e2440c4">subdir</a></td></tr>
+<tr class="separator:a5cb155ee3d722244c44bf71e5e2440c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -161,8 +162,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7aeba726c496f2304b8f6b9fb811f94d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7aeba726c496f2304b8f6b9fb811f94d">&#9670;&nbsp;</a></span>player() <span class="overload">[2/2]</span></h2>
+<a id="a9c5da318ece63c6bdd3825cfa6ea9b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5da318ece63c6bdd3825cfa6ea9b4f">&#9670;&nbsp;</a></span>player() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,13 +181,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramname"><em>ready</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>pass</em> = <code>0</code>&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sub</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -201,7 +202,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00021">21</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00019">19</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
 
 </div>
 </div>
@@ -231,27 +232,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a704897da96d9e2d956bb75fc73c84508"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a704897da96d9e2d956bb75fc73c84508">&#9670;&nbsp;</a></span>add_piece()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool battle_ship::player::add_piece </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8cpp_source.html#l00073">73</a> of file <a class="el" href="player_8cpp_source.html">player.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ada39f5a20a89ffdf7218108a7dbe47c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada39f5a20a89ffdf7218108a7dbe47c0">&#9670;&nbsp;</a></span>assign_enemy()</h2>
+<a id="a3525c2934ea6a4bd7600385cb5fa6bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3525c2934ea6a4bd7600385cb5fa6bfa">&#9670;&nbsp;</a></span>assign_enemy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,7 +244,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void battle_ship::player::assign_enemy </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt;&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
           <td></td>
         </tr>
@@ -274,26 +256,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00027">27</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00024">24</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
 
 </div>
 </div>
-<a id="aefb7ecb4869022d06472b9a9f961020c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefb7ecb4869022d06472b9a9f961020c">&#9670;&nbsp;</a></span>attack()</h2>
+<a id="a86be2256620cd5e20da6db7be8afdbc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86be2256620cd5e20da6db7be8afdbc8">&#9670;&nbsp;</a></span>attack()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void battle_ship::player::attack </td>
+          <td class="memname">virtual void battle_ship::player::attack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classbattle__ship_1_1piece.html">battle_ship::piece</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classbattle__ship_1_1piece.html">piece</a> &amp;&#160;</td>
           <td class="paramname"><em>attacking_piece</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;&#160;</td>
           <td class="paramname"><em>enemy</em>&#160;</td>
         </tr>
         <tr>
@@ -302,52 +287,19 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8cpp_source.html#l00177">177</a> of file <a class="el" href="player_8cpp_source.html">player.cpp</a>.</p>
+<p>Implemented in <a class="el" href="classbattle__ship_1_1human.html#ad89701f0c4dd688c564b14a015059386">battle_ship::human</a>, and <a class="el" href="classbattle__ship_1_1npc.html#abe6ec844c73c5410c2c4887fd50fac06">battle_ship::npc</a>.</p>
 
 </div>
 </div>
-<a id="ace54ae4286cbbaca8a8f4b6fe2a75de0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace54ae4286cbbaca8a8f4b6fe2a75de0">&#9670;&nbsp;</a></span>clean_up()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void battle_ship::player::clean_up </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8cpp_source.html#l00241">241</a> of file <a class="el" href="player_8cpp_source.html">player.cpp</a>.</p>
-
-</div>
-</div>
-<a id="af7524f337fabec20fe8f0ae3288cf9bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7524f337fabec20fe8f0ae3288cf9bb">&#9670;&nbsp;</a></span>edit_piece()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool battle_ship::player::edit_piece </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8cpp_source.html#l00127">127</a> of file <a class="el" href="player_8cpp_source.html">player.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a8b896d17e51345a138ba997903b347f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b896d17e51345a138ba997903b347f1">&#9670;&nbsp;</a></span>get_board()</h2>
+<a id="a57dacb55b2c506191d3d8426097c3c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57dacb55b2c506191d3d8426097c3c6a">&#9670;&nbsp;</a></span>get_board()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +308,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classbattle__ship_1_1board.html">battle_ship::board</a>&amp; battle_ship::player::get_board </td>
+          <td class="memname"><a class="el" href="classbattle__ship_1_1board.html">board</a>&amp; battle_ship::player::get_board </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -369,12 +321,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00038">38</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00034">34</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
 
 </div>
 </div>
-<a id="a62535f933925992eb689c2a5c2b99dd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62535f933925992eb689c2a5c2b99dd6">&#9670;&nbsp;</a></span>get_enemy()</h2>
+<a id="ac2e25657d2330845c3770a75d107fef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e25657d2330845c3770a75d107fef5">&#9670;&nbsp;</a></span>get_budget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +335,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a>&amp; battle_ship::player::get_enemy </td>
+          <td class="memname">int battle_ship::player::get_budget </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -396,7 +348,61 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00028">28</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00029">29</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+
+</div>
+</div>
+<a id="a5224958feae654d622f56523dc45ab83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5224958feae654d622f56523dc45ab83">&#9670;&nbsp;</a></span>get_enemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbattle__ship_1_1player.html">player</a>&amp; battle_ship::player::get_enemy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00025">25</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+
+</div>
+</div>
+<a id="a9b74e59f4b120d38ad591dba6a1d1ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b74e59f4b120d38ad591dba6a1d1ba7">&#9670;&nbsp;</a></span>get_highscore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t battle_ship::player::get_highscore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classbattle__ship_1_1npc.html#acb3ad1c27c948ae968697c795f10a6b9">battle_ship::npc</a>, and <a class="el" href="classbattle__ship_1_1human.html#ac3529c252376938ce6b62ac40f8df3b3">battle_ship::human</a>.</p>
 
 </div>
 </div>
@@ -423,34 +429,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00025">25</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
-
-</div>
-</div>
-<a id="a186596fe9c9f9703b2b90ec1773d5e49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a186596fe9c9f9703b2b90ec1773d5e49">&#9670;&nbsp;</a></span>is_human()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool battle_ship::player::is_human </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00029">29</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00023">23</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
 
 </div>
 </div>
@@ -477,7 +456,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00026">26</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00028">28</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
 
 </div>
 </div>
@@ -505,18 +484,18 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00030">30</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00026">26</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
 
 </div>
 </div>
-<a id="ad11ef5cd2b1623b3e69c578643cffd03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad11ef5cd2b1623b3e69c578643cffd03">&#9670;&nbsp;</a></span>modify_fleet()</h2>
+<a id="ae21fefa953f6a3a0476cabfae7084bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21fefa953f6a3a0476cabfae7084bbf">&#9670;&nbsp;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void battle_ship::player::modify_fleet </td>
+          <td class="memname">void battle_ship::player::reset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -524,51 +503,68 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8cpp_source.html#l00011">11</a> of file <a class="el" href="player_8cpp_source.html">player.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8cpp_source.html#l00007">7</a> of file <a class="el" href="player_8cpp_source.html">player.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a9ccc70a9f00546f42a4bc7332ba0cfd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ccc70a9f00546f42a4bc7332ba0cfd4">&#9670;&nbsp;</a></span>remove_piece()</h2>
+<a id="a928538249678aea5402f8c673671e995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a928538249678aea5402f8c673671e995">&#9670;&nbsp;</a></span>save_highscore()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool battle_ship::player::remove_piece </td>
+          <td class="memname">virtual void battle_ship::player::save_highscore </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classbattle__ship_1_1npc.html#ab81843d30e5f8801a8fe479d44ead157">battle_ship::npc</a>, and <a class="el" href="classbattle__ship_1_1human.html#a5b7e6cad4d1f187907a205b767a2fd7d">battle_ship::human</a>.</p>
+
+</div>
+</div>
+<a id="a3110ec708fd8fc7e02a6e88a63d57d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3110ec708fd8fc7e02a6e88a63d57d2f">&#9670;&nbsp;</a></span>winning_line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void battle_ship::player::winning_line </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8cpp_source.html#l00109">109</a> of file <a class="el" href="player_8cpp_source.html">player.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a627ee6df10bc666f9941452c2a603dec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a627ee6df10bc666f9941452c2a603dec">&#9670;&nbsp;</a></span>save_fleet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void battle_ship::player::save_fleet </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8cpp_source.html#l00288">288</a> of file <a class="el" href="player_8cpp_source.html">player.cpp</a>.</p>
+<p>Implemented in <a class="el" href="classbattle__ship_1_1human.html#a583d0a9dd05c16f700d0d1825916faa3">battle_ship::human</a>, and <a class="el" href="classbattle__ship_1_1npc.html#a10c65edd38e75ac6be91ecd2dc9c9866">battle_ship::npc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a63d66b930a6048dac566f79a644c2d7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63d66b930a6048dac566f79a644c2d7a">&#9670;&nbsp;</a></span>already_targeted</h2>
+<a id="ac0905b76a660cd06e5fd45f4960d48f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0905b76a660cd06e5fd45f4960d48f9">&#9670;&nbsp;</a></span>already_targeted</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -577,151 +573,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="structbattle__ship_1_1coordinates.html">battle_ship::coordinates</a>&gt; battle_ship::player::already_targeted</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00017">17</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
-
-</div>
-</div>
-<a id="a01f047aac5fcca92ff1e42d4d1e398c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01f047aac5fcca92ff1e42d4d1e398c9">&#9670;&nbsp;</a></span>budget</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int battle_ship::player::budget {100}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00015">15</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
-
-</div>
-</div>
-<a id="aa2ebaf963d19dc6b72157e64119e2751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2ebaf963d19dc6b72157e64119e2751">&#9670;&nbsp;</a></span>enemy</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::weak_ptr&lt;<a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a>&gt; battle_ship::player::enemy</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00014">14</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
-
-</div>
-</div>
-<a id="aa005c81fe9bd05f05cd54be0207b8c40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa005c81fe9bd05f05cd54be0207b8c40">&#9670;&nbsp;</a></span>highscore</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t battle_ship::player::highscore {0}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00012">12</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
-
-</div>
-</div>
-<a id="a890870a47a67c3be92b1807b861ec1b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a890870a47a67c3be92b1807b861ec1b7">&#9670;&nbsp;</a></span>human</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool battle_ship::player::human {false}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00011">11</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
-
-</div>
-</div>
-<a id="ae8c566b4c37fda79fcc712088f7adf2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8c566b4c37fda79fcc712088f7adf2b">&#9670;&nbsp;</a></span>password_hash</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t battle_ship::player::password_hash</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00010">10</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
-
-</div>
-</div>
-<a id="a13008c5d6e7464b312c04ac00e18c2fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13008c5d6e7464b312c04ac00e18c2fb">&#9670;&nbsp;</a></span>player_board</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classbattle__ship_1_1board.html">battle_ship::board</a>&gt; battle_ship::player::player_board</td>
+          <td class="memname">std::vector&lt;<a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a>&gt; battle_ship::player::already_targeted</td>
         </tr>
       </table>
   </td>
@@ -735,6 +587,78 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a01f047aac5fcca92ff1e42d4d1e398c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f047aac5fcca92ff1e42d4d1e398c9">&#9670;&nbsp;</a></span>budget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int battle_ship::player::budget {500}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00012">12</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+
+</div>
+</div>
+<a id="af01292346caaf209039b6490ae18d8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01292346caaf209039b6490ae18d8aa">&#9670;&nbsp;</a></span>enemy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="classbattle__ship_1_1player.html">player</a>&gt; battle_ship::player::enemy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00011">11</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+
+</div>
+</div>
+<a id="a7a463dddbc0cd8e9dfa3d2c41687e59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a463dddbc0cd8e9dfa3d2c41687e59e">&#9670;&nbsp;</a></span>player_board</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classbattle__ship_1_1board.html">board</a>&gt; battle_ship::player::player_board</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00010">10</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+
+</div>
+</div>
 <a id="a48a3f8c692c7ea1def384c39b9b65e85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48a3f8c692c7ea1def384c39b9b65e85">&#9670;&nbsp;</a></span>ready_to_play</h2>
 
@@ -745,7 +669,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool battle_ship::player::ready_to_play {false}</td>
+          <td class="memname">bool battle_ship::player::ready_to_play</td>
         </tr>
       </table>
   </td>
@@ -755,7 +679,31 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00016">16</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00014">14</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
+
+</div>
+</div>
+<a id="a5cb155ee3d722244c44bf71e5e2440c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb155ee3d722244c44bf71e5e2440c4">&#9670;&nbsp;</a></span>subdir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string battle_ship::player::subdir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="player_8h_source.html#l00015">15</a> of file <a class="el" href="player_8h_source.html">player.h</a>.</p>
 
 </div>
 </div>

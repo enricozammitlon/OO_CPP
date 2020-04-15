@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length',['length',['../classbattle__ship_1_1piece.html#a005c795af8c941cea2b74f0acbeacb3c',1,'battle_ship::piece']]]
+  ['length',['length',['../classbattle__ship_1_1vessel.html#a90930f7a8a9a45cb29ca434afa5e34ec',1,'battle_ship::vessel']]]
 ];

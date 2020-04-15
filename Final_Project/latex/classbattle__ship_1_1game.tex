@@ -9,15 +9,15 @@
 \item 
 \hyperlink{classbattle__ship_1_1game_a3a98cd01dec3c29d91d057049c421c89}{game} ()=default
 \item 
-\hyperlink{classbattle__ship_1_1game_ab798a2291e0ef511be6d613cc48d26bb}{game} (std\+::size\+\_\+t starting\+\_\+turn, std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ p1, std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ p2, std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1rules}{battle\+\_\+ship\+::rules} $>$ r)
+\hyperlink{classbattle__ship_1_1game_a172670fffc6e5b3942ddcd41b2f2840a}{game} (std\+::size\+\_\+t starting\+\_\+turn, std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{player} $>$ p1, std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{player} $>$ p2, std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1rules}{rules} $>$ r)
 \item 
-\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \& \hyperlink{classbattle__ship_1_1game_abdbbd12c9a8b272e2a9fabed8ea90922}{get\+\_\+player} (std\+::size\+\_\+t p)
+\hyperlink{classbattle__ship_1_1player}{player} \& \hyperlink{classbattle__ship_1_1game_abdbbd12c9a8b272e2a9fabed8ea90922}{get\+\_\+player} (std\+::size\+\_\+t p)
 \item 
 void \hyperlink{classbattle__ship_1_1game_a0e5a85f6c1f0cff5e1104545b5222026}{toggle\+\_\+turn} ()
 \item 
-void \hyperlink{classbattle__ship_1_1game_a2cfee3f6969a0b01243e65870058fb07}{play} (std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ \&winner)
+void \hyperlink{classbattle__ship_1_1game_a8bd311ac1aaab0a16c06b4f1b9664af4}{play} (std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{player} $>$ \&winner)
 \item 
-bool \hyperlink{classbattle__ship_1_1game_ac63820a8659c24ad4d69cb5ddd96c6e6}{has\+\_\+player\+\_\+lost} (\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&p)
+bool \hyperlink{classbattle__ship_1_1game_a2f6eceb02db97507f52e08c1dafcf5e4}{has\+\_\+player\+\_\+lost} (\hyperlink{classbattle__ship_1_1player}{player} \&p)
 \item 
 \hyperlink{classbattle__ship_1_1game_aa95dac5c30c567ae407a3b67ceae324d}{$\sim$game} ()=default
 \end{DoxyCompactItemize}
@@ -37,11 +37,11 @@ Definition at line 6 of file game.\+h.
 \subsubsection{\texorpdfstring{game()}{game()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily battle\+\_\+ship\+::game\+::game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\mbox{\Hypertarget{classbattle__ship_1_1game_ab798a2291e0ef511be6d613cc48d26bb}\label{classbattle__ship_1_1game_ab798a2291e0ef511be6d613cc48d26bb}} 
+\mbox{\Hypertarget{classbattle__ship_1_1game_a172670fffc6e5b3942ddcd41b2f2840a}\label{classbattle__ship_1_1game_a172670fffc6e5b3942ddcd41b2f2840a}} 
 \index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!game@{game}}
 \index{game@{game}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
 \subsubsection{\texorpdfstring{game()}{game()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily battle\+\_\+ship\+::game\+::game (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{starting\+\_\+turn,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$}]{p1,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$}]{p2,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1rules}{battle\+\_\+ship\+::rules} $>$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::game\+::game (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{starting\+\_\+turn,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{player} $>$}]{p1,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{player} $>$}]{p2,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1rules}{rules} $>$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -64,9 +64,9 @@ Definition at line 15 of file game.\+h.
 
 
 
-Definition at line 7 of file game.\+cpp.
+Definition at line 8 of file game.\+cpp.
 
-\mbox{\Hypertarget{classbattle__ship_1_1game_ac63820a8659c24ad4d69cb5ddd96c6e6}\label{classbattle__ship_1_1game_ac63820a8659c24ad4d69cb5ddd96c6e6}} 
+\mbox{\Hypertarget{classbattle__ship_1_1game_a2f6eceb02db97507f52e08c1dafcf5e4}\label{classbattle__ship_1_1game_a2f6eceb02db97507f52e08c1dafcf5e4}} 
 \index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!has\+\_\+player\+\_\+lost@{has\+\_\+player\+\_\+lost}}
 \index{has\+\_\+player\+\_\+lost@{has\+\_\+player\+\_\+lost}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
 \subsubsection{\texorpdfstring{has\+\_\+player\+\_\+lost()}{has\_player\_lost()}}
@@ -74,17 +74,17 @@ Definition at line 7 of file game.\+cpp.
 
 
 
-Definition at line 51 of file game.\+cpp.
+Definition at line 59 of file game.\+cpp.
 
-\mbox{\Hypertarget{classbattle__ship_1_1game_a2cfee3f6969a0b01243e65870058fb07}\label{classbattle__ship_1_1game_a2cfee3f6969a0b01243e65870058fb07}} 
+\mbox{\Hypertarget{classbattle__ship_1_1game_a8bd311ac1aaab0a16c06b4f1b9664af4}\label{classbattle__ship_1_1game_a8bd311ac1aaab0a16c06b4f1b9664af4}} 
 \index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!play@{play}}
 \index{play@{play}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
 \subsubsection{\texorpdfstring{play()}{play()}}
-{\footnotesize\ttfamily void battle\+\_\+ship\+::game\+::play (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ \&}]{winner }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::game\+::play (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{player} $>$ \&}]{winner }\end{DoxyParamCaption})}
 
 
 
-Definition at line 19 of file game.\+cpp.
+Definition at line 20 of file game.\+cpp.
 
 \mbox{\Hypertarget{classbattle__ship_1_1game_a0e5a85f6c1f0cff5e1104545b5222026}\label{classbattle__ship_1_1game_a0e5a85f6c1f0cff5e1104545b5222026}} 
 \index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!toggle\+\_\+turn@{toggle\+\_\+turn}}
@@ -94,7 +94,7 @@ Definition at line 19 of file game.\+cpp.
 
 
 
-Definition at line 24 of file game.\+h.
+Definition at line 23 of file game.\+h.
 
 
 

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['piece_2ecpp',['piece.cpp',['../piece_8cpp.html',1,'']]],
-  ['piece_2eh',['piece.h',['../piece_8h.html',1,'']]],
-  ['player_2ecpp',['player.cpp',['../player_8cpp.html',1,'']]],
-  ['player_2eh',['player.h',['../player_8h.html',1,'']]]
+  ['notification_5fmanager_2ecpp',['notification_manager.cpp',['../notification__manager_8cpp.html',1,'']]],
+  ['notification_5fmanager_2eh',['notification_manager.h',['../notification__manager_8h.html',1,'']]],
+  ['npc_2ecpp',['npc.cpp',['../npc_8cpp.html',1,'']]],
+  ['npc_2eh',['npc.h',['../npc_8h.html',1,'']]]
 ];
