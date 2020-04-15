@@ -10,10 +10,12 @@
 - [x] Add check fleet on fleet screen
 - [ ] ~~Move fleet editing to its own class~~
 - [x] Check memory leaks using ~~deleaker~~ valgrind
-- [ ] Sanitize all inputs
+- [x] Sanitize all inputs
 - [ ] Fix issue with copy constructor of a board
-- [ ] Fix ability to throw errors in docker
-- [ ] Convert all cerr to throw
+- [ ] Add show images in fleet editing screen
+- [ ] Add new AI and Human classes, base Player
+- [ ] Fix ability to throw errors in docker?
+- [ ] Convert all cerr to throw?
 - [x] Add login
 - [x] Add transaction screen and market
 - [x] Add highscores screen

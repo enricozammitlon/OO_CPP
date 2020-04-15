@@ -1,5 +1,6 @@
 #include "player.h"
 #include "geometry.h"
+#include "highscore_manager.h"
 #include "market.h"
 #include "notification_manager.h"
 #include "screen_manager.h"
@@ -237,6 +238,16 @@ void battle_ship::player::attack(battle_ship::piece &attacking_piece,
     }
   }
 }
+
+void battle_ship::player::save_highscore(size_t h) {
+  highscore = h;
+  battle_ship::highscore_manager::add_highscore(
+      std::make_tuple(username, highscore));
+  std::ofstream save_file;
+  save_file.open("../saves/" + username + ".profile");
+  save_file << password_hash << " " << highscore << std::endl;
+  save_file.close();
+};
 
 void battle_ship::player::clean_up() {
   budget = 100;

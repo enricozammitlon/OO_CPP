@@ -9,7 +9,7 @@ protected:
   std::string username;
   size_t password_hash;
   bool human{false};
-  std::size_t highscore{0};
+  std::size_t highscore{std::string::npos};
   std::unique_ptr<board> player_board;
   std::weak_ptr<player> enemy;
   int budget{100};
@@ -18,8 +18,8 @@ protected:
 
 public:
   player() = default;
-  player(std::string uname, bool h, size_t pass = 0)
-      : username{uname}, password_hash{pass}, human{h} {
+  player(std::string uname, bool h, size_t high, size_t pass = 0)
+      : username{uname}, password_hash{pass}, human{h}, highscore{high} {
     clean_up();
   };
   std::string get_uname() { return username; };
@@ -28,6 +28,8 @@ public:
   player &get_enemy() { return *(enemy.lock()); };
   bool is_human() { return human; };
   void modify_budget(int money) { budget += money; };
+  size_t get_highscore() const { return highscore; };
+  void save_highscore(size_t h);
   void clean_up();
   void modify_fleet();
   void save_fleet();

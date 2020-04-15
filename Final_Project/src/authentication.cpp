@@ -32,10 +32,10 @@ void battle_ship::authentication::signup(
   }
   std::ofstream profile_file;
   profile_file.open("../saves/" + uname + ".profile");
-  profile_file << std::hash<std::string>{}(pass) << " " << 0;
+  profile_file << std::hash<std::string>{}(pass) << " " << std::string::npos;
   profile_file.close();
   p.reset();
-  p = std::make_shared<battle_ship::player>(uname, true,
+  p = std::make_shared<battle_ship::player>(uname, true, std::string::npos,
                                             std::hash<std::string>{}(pass));
   return;
 }
@@ -63,9 +63,10 @@ void battle_ship::authentication::signin(
     size_t pass_hash;
     size_t highscore;
     profile_file >> pass_hash >> highscore;
+    profile_file.close();
     if (pass_hash == std::hash<std::string>{}(pass)) {
       p.reset();
-      p = std::make_shared<battle_ship::player>(uname, true,
+      p = std::make_shared<battle_ship::player>(uname, true, highscore,
                                                 std::hash<std::string>{}(pass));
       return;
     } else {

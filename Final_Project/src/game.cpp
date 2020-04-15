@@ -1,4 +1,5 @@
 #include "game.h"
+#include "notification_manager.h"
 #include "screen_manager.h"
 #include "vessel.h"
 #include <iterator>
@@ -22,6 +23,7 @@ void battle_ship::game::play(std::shared_ptr<battle_ship::player> &winner) {
   }
   std::weak_ptr<battle_ship::player> current_player;
   battle_ship::screen_manager::side_by_side(*this);
+  size_t turns{1};
   do {
     if (!current_player.owner_before(player_1) &&
         !player_1.owner_before(current_player)) {
@@ -41,7 +43,14 @@ void battle_ship::game::play(std::shared_ptr<battle_ship::player> &winner) {
     }
     if (has_player_lost(current_player.lock()->get_enemy())) {
       winner = current_player.lock();
+      turns = turns / 2 + turns % 2;
+      if (turns < winner->get_highscore()) {
+        winner->save_highscore(turns);
+        battle_ship::notification_manager::add_notification(
+            current_player.lock()->get_uname(), "***NEW HIGHSCORE***");
+      }
     }
+    turns += 1;
     battle_ship::screen_manager::side_by_side(*this);
   } while (winner == nullptr);
   return;

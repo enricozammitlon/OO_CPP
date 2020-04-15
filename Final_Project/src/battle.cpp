@@ -66,8 +66,8 @@ int main() {
     switch (input) {
     case 1: {
       std::shared_ptr<battle_ship::player> ai_1 =
-          std::make_shared<battle_ship::player>("Pericles", false);
-
+          std::make_shared<battle_ship::player>("Pericles", false,
+                                                std::string::npos);
       std::unique_ptr<battle_ship::piece> sloop_1 =
           std::make_unique<battle_ship::sloop>(
               battle_ship::coordinates{battle_ship::x_axis::A, 1},
@@ -98,14 +98,14 @@ int main() {
     } break;
     case 3:
       std::cout << "These are the top 10 commanders of all time!" << std::endl;
-      std::cout << "Commander" << std::setw(10) << "Turns Needed" << std::endl;
+      std::cout << "Commander" << std::setw(20) << "Turns" << std::endl;
       for (auto iterator =
                battle_ship::highscore_manager::all_highscores.begin();
            iterator != battle_ship::highscore_manager::all_highscores.end();
            iterator++) {
         std::cout << std::get<0>(*iterator)
                   << std::setw(
-                         10 +
+                         20 +
                          std::max(0, 9 - static_cast<int>(
                                              std::get<0>(*iterator).size())))
                   << std::get<1>(*iterator) << std::endl;

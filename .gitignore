@@ -1,4 +1,5 @@
 .DS_Store
 *.o
 *.out
-build/
+Final_Project/build/battleship
+!Final_Project/build/valgrind.log
