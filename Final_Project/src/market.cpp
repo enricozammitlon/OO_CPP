@@ -1,11 +1,16 @@
 #include "market.h"
+#include "carrier.h"
+#include "cruiser.h"
+#include "destroyer.h"
 #include "piece.h"
-#include "sloop.h"
+#include "raft.h"
+#include "submarine.h"
 #include <string>
 #include <tuple>
 #include <vector>
 
-std::vector<std::string> battle_ship::market::all_pieces = {"Sloop"};
+std::vector<std::string> battle_ship::market::all_pieces = {
+    "Submarine", "Carrier", "Raft", "Cruiser", "Destroyer"};
 
 // Return the subset of all the available pieces, which includes pieces
 // the player does not have already and are affordable given their budget
@@ -29,14 +34,26 @@ std::tuple<bool, std::string>
 battle_ship::market::buy_piece(battle_ship::player &p, std::string piece_name,
                                battle_ship::coordinates coors,
                                battle_ship::orientation orientation) {
-  if (piece_name == "Sloop") {
-    std::unique_ptr<battle_ship::piece> piece_to_add =
-        std::make_unique<battle_ship::sloop>(coors, orientation);
-    p.get_board() << std::move(piece_to_add);
-    p.modify_budget(-100);
-    return std::make_tuple(true, "Transaction successful.");
+  std::unique_ptr<battle_ship::piece> piece_to_add;
+  if (piece_name == "Raft") {
+    piece_to_add = std::make_unique<battle_ship::raft>(coors, orientation);
+  } else if (piece_name == "Destroyer") {
+    piece_to_add = std::make_unique<battle_ship::destroyer>(coors, orientation);
+  } else if (piece_name == "Cruiser") {
+    piece_to_add = std::make_unique<battle_ship::cruiser>(coors, orientation);
+  } else if (piece_name == "Carrier") {
+    piece_to_add = std::make_unique<battle_ship::carrier>(coors, orientation);
+  } else if (piece_name == "Submarine") {
+    piece_to_add = std::make_unique<battle_ship::submarine>(coors, orientation);
   } else {
     return std::make_tuple(false, "Unknown piece name.");
+  }
+  if (p.get_budget() - piece_to_add->get_cost() >= 0) {
+    p.modify_budget(-piece_to_add->get_cost());
+    p.get_board() << std::move(piece_to_add);
+    return std::make_tuple(true, "Transaction successful.");
+  } else {
+    return std::make_tuple(false, "No money left,sir.");
   }
 }
 
@@ -54,8 +71,8 @@ battle_ship::market::sell_piece(battle_ship::player &p,
     position += 1;
   }
   if (found) {
+    p.modify_budget(p.get_board().get_pieces()[position]->get_cost());
     p.get_board().remove_piece(position);
-    p.modify_budget(100);
     return std::make_tuple(true, "Transaction successful.");
   } else {
     return std::make_tuple(false, "Unknown piece name.");

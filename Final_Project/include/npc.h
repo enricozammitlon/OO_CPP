@@ -4,7 +4,7 @@
 #include <string>
 
 namespace battle_ship {
-class npc : public player {
+class npc : public virtual player {
 private:
   size_t difficulty{1};
 

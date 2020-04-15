@@ -203,7 +203,6 @@ void battle_ship::human::attack(battle_ship::piece &attacking_piece,
     notification_manager::add_notification(
         username, "Your " + attacking_piece.get_name() +
                       " sends a torpedo to " + string_rep.str());
-    bool result{false};
 
     for (auto iterator = enemy.get_board().get_pieces().begin();
          iterator != enemy.get_board().get_pieces().end(); iterator++) {
@@ -211,18 +210,18 @@ void battle_ship::human::attack(battle_ship::piece &attacking_piece,
               (*iterator)->get_start(), (*iterator)->get_end(),
               target_coordinates, target_coordinates)) {
         (*iterator)->take_hit();
-        result = true;
-        break;
+        enemy.get_board().modify_coordinate(target_coordinates, "H");
+        notification_manager::add_notification(
+            username, "Well done, great hit commander!");
+        if ((*iterator)->has_sunk()) {
+          notification_manager::add_notification(
+              username, "Enemy " + (*iterator)->get_name() + " has been sunk!");
+        }
+        return;
       }
     }
-    if (result) {
-      enemy.get_board().modify_coordinate(target_coordinates, "H");
-      notification_manager::add_notification(username,
-                                             "Well done, great hit commander!");
-    } else {
-      enemy.get_board().modify_coordinate(target_coordinates, "M");
-      notification_manager::add_notification(username, "Splash...Miss!");
-    }
+    enemy.get_board().modify_coordinate(target_coordinates, "M");
+    notification_manager::add_notification(username, "Splash...Miss!");
   }
 }
 
@@ -247,10 +246,12 @@ void battle_ship::human::save_fleet() {
        iterator != player_board->get_pieces().end(); iterator++) {
     fleet_configuration << (*iterator)->get_name() << " "
                         << (*iterator)->get_start() << " "
-                        << output_orientation((*iterator)->get_orientation())
-                        << "\n";
+                        << output_orientation((*iterator)->get_orientation());
+    if (iterator != player_board->get_pieces().end() - 1) {
+      fleet_configuration << std::endl;
+    }
+    fleet_configuration.close();
   }
-  fleet_configuration.close();
 }
 
 void battle_ship::human::winning_line() {

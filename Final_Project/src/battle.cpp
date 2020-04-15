@@ -14,7 +14,6 @@
 #include "player.h"
 #include "rules.h"
 #include "screen_manager.h"
-#include "sloop.h"
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
@@ -69,11 +68,6 @@ int main() {
     case 1: {
       std::shared_ptr<battle_ship::player> ai_1 =
           std::make_shared<battle_ship::npc>("Pericles", 1);
-      std::unique_ptr<battle_ship::piece> sloop_1 =
-          std::make_unique<battle_ship::sloop>(
-              battle_ship::coordinates{battle_ship::x_axis::A, 1},
-              battle_ship::orientation::vertical);
-      ai_1->get_board() << std::move(sloop_1);
       battle_ship::notification_manager::reset_notifiations();
       std::unique_ptr<battle_ship::game> game_1 =
           std::make_unique<battle_ship::game>(0, current_user, ai_1,

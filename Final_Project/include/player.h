@@ -9,7 +9,7 @@ protected:
   std::string username;
   std::unique_ptr<board> player_board;
   std::weak_ptr<player> enemy;
-  int budget{100};
+  int budget{500};
   std::vector<coordinates> already_targeted;
   bool ready_to_play;
   std::string subdir;
@@ -26,6 +26,7 @@ public:
   void modify_budget(int money) { budget += money; };
   void reset();
   bool is_ready_to_play() { return ready_to_play; };
+  int get_budget() { return budget; }
   virtual void winning_line() = 0;
   virtual void attack(piece &attacking_piece, player &enemy) = 0;
   virtual size_t get_highscore() = 0;

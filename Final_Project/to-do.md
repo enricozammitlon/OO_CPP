@@ -12,9 +12,9 @@
 - [x] Check memory leaks using ~~deleaker~~ valgrind
 - [x] Sanitize all inputs
 - [ ] Fix issue with copy constructor of a board
-- [ ] Delete the redundant vessel class
+- [x] ~~Delete~~ Modify the ~~redundant~~ wrongly implemented vessel class
 - [ ] Add show images in fleet editing screen
-- [ ] Add new AI and Human classes, base Player
+- [x] Add new AI and Human classes, base Player
 - [ ] Fix ability to throw errors in docker?
 - [ ] Convert all cerr to throw?
 - [x] Add login
@@ -22,11 +22,11 @@
 - [x] Add highscores screen
 - [x] Add splitscreen view
 - [x] Add game view and routine
-- [ ] Add new vessels
+- [x] Add new vessels
 - [ ] Comment review
     ## Extensions
     - [ ] Add non-vessel pieces (decoys)
     - [ ] Add AI functionality
     - [ ] Refine imgs
-    - [ ] Add costs t ships
+    - [ ] Add costs of ships
     - [ ] Add random events
