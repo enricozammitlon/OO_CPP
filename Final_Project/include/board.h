@@ -19,7 +19,7 @@ private:
   std::size_t columns{10};
   std::unique_ptr<std::string[]> board_data =
       std::make_unique<std::string[]>(rows * columns);
-  std::vector<std::unique_ptr<battle_ship::piece>> all_pieces;
+  std::vector<std::unique_ptr<piece>> all_pieces;
 
 public:
   board();
@@ -30,19 +30,16 @@ public:
   ~board() = default;
   std::size_t get_rows() const { return rows; }
   std::size_t get_cols() const { return columns; }
-  std::vector<std::unique_ptr<battle_ship::piece>> const &get_pieces() {
-    return all_pieces;
-  }
-  std::size_t index(const battle_ship::coordinates &p) const;
+  std::vector<std::unique_ptr<piece>> const &get_pieces() { return all_pieces; }
+  std::size_t index(const coordinates &p) const;
   std::size_t get_size() const { return rows * columns; };
-  void modify_coordinate(battle_ship::coordinates &target_coordinates,
+  void modify_coordinate(coordinates &target_coordinates,
                          std::string new_value);
   void remove_piece(size_t pos);
-  void edit_piece(battle_ship::piece &p, size_t pos,
-                  battle_ship::coordinates new_coor,
-                  battle_ship::orientation new_orientation);
-  void operator<<(std::unique_ptr<battle_ship::piece> p);
-  std::string operator()(const battle_ship::coordinates &p) const;
+  void edit_piece(piece &p, size_t pos, coordinates new_coor,
+                  orientation new_orientation);
+  void operator<<(std::unique_ptr<piece> p);
+  std::string operator()(const coordinates &p) const;
 };
 } // namespace battle_ship
 #endif

@@ -1,0 +1,19 @@
+<map id="include/piece.h" name="include/piece.h">
+<area shape="rect" id="node2" href="$market_8cpp.html" title="src/market.cpp" alt="" coords="902,304,1021,331"/>
+<area shape="rect" id="node3" href="$piece_8cpp.html" title="src/piece.cpp" alt="" coords="660,80,767,107"/>
+<area shape="rect" id="node4" href="$board_8h.html" title="include/board.h" alt="" coords="399,80,519,107"/>
+<area shape="rect" id="node16" href="$market_8h.html" title="include/market.h" alt="" coords="953,229,1082,256"/>
+<area shape="rect" id="node17" href="$vessel_8h.html" title="include/vessel.h" alt="" coords="397,155,520,181"/>
+<area shape="rect" id="node5" href="$board_8cpp.html" title="src/board.cpp" alt="" coords="264,155,373,181"/>
+<area shape="rect" id="node6" href="$vessel_8cpp.html" title="src/vessel.cpp" alt="" coords="5,229,117,256"/>
+<area shape="rect" id="node7" href="$player_8h.html" title="include/player.h" alt="" coords="545,155,666,181"/>
+<area shape="rect" id="node8" href="$authentication_8cpp.html" title="src/authentication.cpp" alt="" coords="510,304,674,331"/>
+<area shape="rect" id="node9" href="$battle_8cpp.html" title="src/battle.cpp" alt="" coords="657,379,767,405"/>
+<area shape="rect" id="node10" href="$player_8cpp.html" title="src/player.cpp" alt="" coords="809,379,919,405"/>
+<area shape="rect" id="node11" href="$authentication_8h.html" title="include/authentication.h" alt="" coords="459,229,634,256"/>
+<area shape="rect" id="node12" href="$game_8h.html" title="include/game.h" alt="" coords="264,229,384,256"/>
+<area shape="rect" id="node13" href="$game_8cpp.html" title="src/game.cpp" alt="" coords="217,379,327,405"/>
+<area shape="rect" id="node14" href="$screen__manager_8cpp.html" title="src/screen_manager.cpp" alt="" coords="15,379,193,405"/>
+<area shape="rect" id="node15" href="$screen__manager_8h.html" title="include/screen_manager.h" alt="" coords="243,304,434,331"/>
+<area shape="rect" id="node18" href="$sloop_8h.html" title="include/sloop.h" alt="" coords="659,229,776,256"/>
+</map>

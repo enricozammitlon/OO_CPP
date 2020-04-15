@@ -29,7 +29,6 @@ void battle_ship::game::play(std::shared_ptr<battle_ship::player> &winner) {
     } else {
       current_player = player_1;
     }
-    battle_ship::piece *attacking_piece;
     const std::vector<std::unique_ptr<battle_ship::piece>> &all_pieces =
         current_player.lock()->get_board().get_pieces();
     for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();

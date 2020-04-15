@@ -1,0 +1,338 @@
+\hypertarget{classbattle__ship_1_1player}{}\section{battle\+\_\+ship\+:\+:player Class Reference}
+\label{classbattle__ship_1_1player}\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbattle__ship_1_1player_a54df3c03653a24049b9629ce5c55fafa}{player} ()=default
+\item 
+\hyperlink{classbattle__ship_1_1player_a7aeba726c496f2304b8f6b9fb811f94d}{player} (std\+::string uname, bool h, size\+\_\+t pass=0)
+\item 
+std\+::string \hyperlink{classbattle__ship_1_1player_a4a5406b436812664cb706c31b745239b}{get\+\_\+uname} ()
+\item 
+bool \hyperlink{classbattle__ship_1_1player_af5373e08a637e9c21b3751eb02e07540}{is\+\_\+ready\+\_\+to\+\_\+play} ()
+\item 
+void \hyperlink{classbattle__ship_1_1player_ada39f5a20a89ffdf7218108a7dbe47c0}{assign\+\_\+enemy} (std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ e)
+\item 
+\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \& \hyperlink{classbattle__ship_1_1player_a62535f933925992eb689c2a5c2b99dd6}{get\+\_\+enemy} ()
+\item 
+bool \hyperlink{classbattle__ship_1_1player_a186596fe9c9f9703b2b90ec1773d5e49}{is\+\_\+human} ()
+\item 
+void \hyperlink{classbattle__ship_1_1player_ade02279db7265558659c40f16c482df7}{modify\+\_\+budget} (int money)
+\item 
+void \hyperlink{classbattle__ship_1_1player_ace54ae4286cbbaca8a8f4b6fe2a75de0}{clean\+\_\+up} ()
+\item 
+void \hyperlink{classbattle__ship_1_1player_ad11ef5cd2b1623b3e69c578643cffd03}{modify\+\_\+fleet} ()
+\item 
+void \hyperlink{classbattle__ship_1_1player_a627ee6df10bc666f9941452c2a603dec}{save\+\_\+fleet} ()
+\item 
+bool \hyperlink{classbattle__ship_1_1player_a704897da96d9e2d956bb75fc73c84508}{add\+\_\+piece} ()
+\item 
+bool \hyperlink{classbattle__ship_1_1player_a9ccc70a9f00546f42a4bc7332ba0cfd4}{remove\+\_\+piece} ()
+\item 
+bool \hyperlink{classbattle__ship_1_1player_af7524f337fabec20fe8f0ae3288cf9bb}{edit\+\_\+piece} ()
+\item 
+void \hyperlink{classbattle__ship_1_1player_aefb7ecb4869022d06472b9a9f961020c}{attack} (\hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece} \&attacking\+\_\+piece, \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&\hyperlink{classbattle__ship_1_1player_aa2ebaf963d19dc6b72157e64119e2751}{enemy})
+\item 
+\hyperlink{classbattle__ship_1_1board}{battle\+\_\+ship\+::board} \& \hyperlink{classbattle__ship_1_1player_a8b896d17e51345a138ba997903b347f1}{get\+\_\+board} ()
+\item 
+\hyperlink{classbattle__ship_1_1player_afbb6b6e880864bf7a36f21a95665a6c7}{$\sim$player} ()=default
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classbattle__ship_1_1player_aed786567891bcafecb8610e12fb5d413}{username}
+\item 
+size\+\_\+t \hyperlink{classbattle__ship_1_1player_ae8c566b4c37fda79fcc712088f7adf2b}{password\+\_\+hash}
+\item 
+bool \hyperlink{classbattle__ship_1_1player_a890870a47a67c3be92b1807b861ec1b7}{human} \{false\}
+\item 
+std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1player_aa005c81fe9bd05f05cd54be0207b8c40}{highscore} \{0\}
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1board}{battle\+\_\+ship\+::board} $>$ \hyperlink{classbattle__ship_1_1player_a13008c5d6e7464b312c04ac00e18c2fb}{player\+\_\+board}
+\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ \hyperlink{classbattle__ship_1_1player_aa2ebaf963d19dc6b72157e64119e2751}{enemy}
+\item 
+int \hyperlink{classbattle__ship_1_1player_a01f047aac5fcca92ff1e42d4d1e398c9}{budget} \{100\}
+\item 
+bool \hyperlink{classbattle__ship_1_1player_a48a3f8c692c7ea1def384c39b9b65e85}{ready\+\_\+to\+\_\+play} \{false\}
+\item 
+std\+::vector$<$ \hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} $>$ \hyperlink{classbattle__ship_1_1player_a63d66b930a6048dac566f79a644c2d7a}{already\+\_\+targeted}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file player.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1player_a54df3c03653a24049b9629ce5c55fafa}\label{classbattle__ship_1_1player_a54df3c03653a24049b9629ce5c55fafa}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!player@{player}}
+\index{player@{player}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{player()}{player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::player\+::player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a7aeba726c496f2304b8f6b9fb811f94d}\label{classbattle__ship_1_1player_a7aeba726c496f2304b8f6b9fb811f94d}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!player@{player}}
+\index{player@{player}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{player()}{player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::player\+::player (\begin{DoxyParamCaption}\item[{std\+::string}]{uname,  }\item[{bool}]{h,  }\item[{size\+\_\+t}]{pass = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 21 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_afbb6b6e880864bf7a36f21a95665a6c7}\label{classbattle__ship_1_1player_afbb6b6e880864bf7a36f21a95665a6c7}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!````~player@{$\sim$player}}
+\index{````~player@{$\sim$player}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{$\sim$player()}{~player()}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::player\+::$\sim$player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1player_a704897da96d9e2d956bb75fc73c84508}\label{classbattle__ship_1_1player_a704897da96d9e2d956bb75fc73c84508}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!add\+\_\+piece@{add\+\_\+piece}}
+\index{add\+\_\+piece@{add\+\_\+piece}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{add\+\_\+piece()}{add\_piece()}}
+{\footnotesize\ttfamily bool battle\+\_\+ship\+::player\+::add\+\_\+piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file player.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_ada39f5a20a89ffdf7218108a7dbe47c0}\label{classbattle__ship_1_1player_ada39f5a20a89ffdf7218108a7dbe47c0}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!assign\+\_\+enemy@{assign\+\_\+enemy}}
+\index{assign\+\_\+enemy@{assign\+\_\+enemy}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{assign\+\_\+enemy()}{assign\_enemy()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::player\+::assign\+\_\+enemy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 27 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_aefb7ecb4869022d06472b9a9f961020c}\label{classbattle__ship_1_1player_aefb7ecb4869022d06472b9a9f961020c}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!attack@{attack}}
+\index{attack@{attack}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::player\+::attack (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece} \&}]{attacking\+\_\+piece,  }\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{enemy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file player.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_ace54ae4286cbbaca8a8f4b6fe2a75de0}\label{classbattle__ship_1_1player_ace54ae4286cbbaca8a8f4b6fe2a75de0}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!clean\+\_\+up@{clean\+\_\+up}}
+\index{clean\+\_\+up@{clean\+\_\+up}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{clean\+\_\+up()}{clean\_up()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::player\+::clean\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 241 of file player.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_af7524f337fabec20fe8f0ae3288cf9bb}\label{classbattle__ship_1_1player_af7524f337fabec20fe8f0ae3288cf9bb}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!edit\+\_\+piece@{edit\+\_\+piece}}
+\index{edit\+\_\+piece@{edit\+\_\+piece}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{edit\+\_\+piece()}{edit\_piece()}}
+{\footnotesize\ttfamily bool battle\+\_\+ship\+::player\+::edit\+\_\+piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 127 of file player.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a8b896d17e51345a138ba997903b347f1}\label{classbattle__ship_1_1player_a8b896d17e51345a138ba997903b347f1}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!get\+\_\+board@{get\+\_\+board}}
+\index{get\+\_\+board@{get\+\_\+board}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{get\+\_\+board()}{get\_board()}}
+{\footnotesize\ttfamily \hyperlink{classbattle__ship_1_1board}{battle\+\_\+ship\+::board}\& battle\+\_\+ship\+::player\+::get\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a62535f933925992eb689c2a5c2b99dd6}\label{classbattle__ship_1_1player_a62535f933925992eb689c2a5c2b99dd6}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!get\+\_\+enemy@{get\+\_\+enemy}}
+\index{get\+\_\+enemy@{get\+\_\+enemy}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{get\+\_\+enemy()}{get\_enemy()}}
+{\footnotesize\ttfamily \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player}\& battle\+\_\+ship\+::player\+::get\+\_\+enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 28 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a4a5406b436812664cb706c31b745239b}\label{classbattle__ship_1_1player_a4a5406b436812664cb706c31b745239b}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!get\+\_\+uname@{get\+\_\+uname}}
+\index{get\+\_\+uname@{get\+\_\+uname}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{get\+\_\+uname()}{get\_uname()}}
+{\footnotesize\ttfamily std\+::string battle\+\_\+ship\+::player\+::get\+\_\+uname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 25 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a186596fe9c9f9703b2b90ec1773d5e49}\label{classbattle__ship_1_1player_a186596fe9c9f9703b2b90ec1773d5e49}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!is\+\_\+human@{is\+\_\+human}}
+\index{is\+\_\+human@{is\+\_\+human}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{is\+\_\+human()}{is\_human()}}
+{\footnotesize\ttfamily bool battle\+\_\+ship\+::player\+::is\+\_\+human (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 29 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_af5373e08a637e9c21b3751eb02e07540}\label{classbattle__ship_1_1player_af5373e08a637e9c21b3751eb02e07540}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!is\+\_\+ready\+\_\+to\+\_\+play@{is\+\_\+ready\+\_\+to\+\_\+play}}
+\index{is\+\_\+ready\+\_\+to\+\_\+play@{is\+\_\+ready\+\_\+to\+\_\+play}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{is\+\_\+ready\+\_\+to\+\_\+play()}{is\_ready\_to\_play()}}
+{\footnotesize\ttfamily bool battle\+\_\+ship\+::player\+::is\+\_\+ready\+\_\+to\+\_\+play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 26 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_ade02279db7265558659c40f16c482df7}\label{classbattle__ship_1_1player_ade02279db7265558659c40f16c482df7}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!modify\+\_\+budget@{modify\+\_\+budget}}
+\index{modify\+\_\+budget@{modify\+\_\+budget}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{modify\+\_\+budget()}{modify\_budget()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::player\+::modify\+\_\+budget (\begin{DoxyParamCaption}\item[{int}]{money }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_ad11ef5cd2b1623b3e69c578643cffd03}\label{classbattle__ship_1_1player_ad11ef5cd2b1623b3e69c578643cffd03}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!modify\+\_\+fleet@{modify\+\_\+fleet}}
+\index{modify\+\_\+fleet@{modify\+\_\+fleet}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{modify\+\_\+fleet()}{modify\_fleet()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::player\+::modify\+\_\+fleet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file player.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a9ccc70a9f00546f42a4bc7332ba0cfd4}\label{classbattle__ship_1_1player_a9ccc70a9f00546f42a4bc7332ba0cfd4}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!remove\+\_\+piece@{remove\+\_\+piece}}
+\index{remove\+\_\+piece@{remove\+\_\+piece}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{remove\+\_\+piece()}{remove\_piece()}}
+{\footnotesize\ttfamily bool battle\+\_\+ship\+::player\+::remove\+\_\+piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 109 of file player.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a627ee6df10bc666f9941452c2a603dec}\label{classbattle__ship_1_1player_a627ee6df10bc666f9941452c2a603dec}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!save\+\_\+fleet@{save\+\_\+fleet}}
+\index{save\+\_\+fleet@{save\+\_\+fleet}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{save\+\_\+fleet()}{save\_fleet()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::player\+::save\+\_\+fleet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 288 of file player.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1player_a63d66b930a6048dac566f79a644c2d7a}\label{classbattle__ship_1_1player_a63d66b930a6048dac566f79a644c2d7a}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!already\+\_\+targeted@{already\+\_\+targeted}}
+\index{already\+\_\+targeted@{already\+\_\+targeted}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{already\+\_\+targeted}{already\_targeted}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates}$>$ battle\+\_\+ship\+::player\+::already\+\_\+targeted\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a01f047aac5fcca92ff1e42d4d1e398c9}\label{classbattle__ship_1_1player_a01f047aac5fcca92ff1e42d4d1e398c9}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!budget@{budget}}
+\index{budget@{budget}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{budget}{budget}}
+{\footnotesize\ttfamily int battle\+\_\+ship\+::player\+::budget \{100\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_aa2ebaf963d19dc6b72157e64119e2751}\label{classbattle__ship_1_1player_aa2ebaf963d19dc6b72157e64119e2751}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!enemy@{enemy}}
+\index{enemy@{enemy}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{enemy}{enemy}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player}$>$ battle\+\_\+ship\+::player\+::enemy\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_aa005c81fe9bd05f05cd54be0207b8c40}\label{classbattle__ship_1_1player_aa005c81fe9bd05f05cd54be0207b8c40}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!highscore@{highscore}}
+\index{highscore@{highscore}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{highscore}{highscore}}
+{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::player\+::highscore \{0\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 12 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a890870a47a67c3be92b1807b861ec1b7}\label{classbattle__ship_1_1player_a890870a47a67c3be92b1807b861ec1b7}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!human@{human}}
+\index{human@{human}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{human}{human}}
+{\footnotesize\ttfamily bool battle\+\_\+ship\+::player\+::human \{false\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_ae8c566b4c37fda79fcc712088f7adf2b}\label{classbattle__ship_1_1player_ae8c566b4c37fda79fcc712088f7adf2b}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!password\+\_\+hash@{password\+\_\+hash}}
+\index{password\+\_\+hash@{password\+\_\+hash}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{password\+\_\+hash}{password\_hash}}
+{\footnotesize\ttfamily size\+\_\+t battle\+\_\+ship\+::player\+::password\+\_\+hash\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 10 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a13008c5d6e7464b312c04ac00e18c2fb}\label{classbattle__ship_1_1player_a13008c5d6e7464b312c04ac00e18c2fb}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!player\+\_\+board@{player\+\_\+board}}
+\index{player\+\_\+board@{player\+\_\+board}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{player\+\_\+board}{player\_board}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{classbattle__ship_1_1board}{battle\+\_\+ship\+::board}$>$ battle\+\_\+ship\+::player\+::player\+\_\+board\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_a48a3f8c692c7ea1def384c39b9b65e85}\label{classbattle__ship_1_1player_a48a3f8c692c7ea1def384c39b9b65e85}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!ready\+\_\+to\+\_\+play@{ready\+\_\+to\+\_\+play}}
+\index{ready\+\_\+to\+\_\+play@{ready\+\_\+to\+\_\+play}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{ready\+\_\+to\+\_\+play}{ready\_to\_play}}
+{\footnotesize\ttfamily bool battle\+\_\+ship\+::player\+::ready\+\_\+to\+\_\+play \{false\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 16 of file player.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1player_aed786567891bcafecb8610e12fb5d413}\label{classbattle__ship_1_1player_aed786567891bcafecb8610e12fb5d413}} 
+\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!username@{username}}
+\index{username@{username}!battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
+\subsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily std\+::string battle\+\_\+ship\+::player\+::username\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 9 of file player.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{player_8h}{player.\+h}\item 
+src/\hyperlink{player_8cpp}{player.\+cpp}\end{DoxyCompactItemize}

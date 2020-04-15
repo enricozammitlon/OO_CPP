@@ -1,0 +1,7 @@
+<map id="include/vessel.h" name="include/vessel.h">
+<area shape="rect" id="node2" href="$game_8cpp.html" title="src/game.cpp" alt="" coords="5,80,115,107"/>
+<area shape="rect" id="node3" href="$vessel_8cpp.html" title="src/vessel.cpp" alt="" coords="139,80,251,107"/>
+<area shape="rect" id="node4" href="$sloop_8h.html" title="include/sloop.h" alt="" coords="275,80,392,107"/>
+<area shape="rect" id="node5" href="$battle_8cpp.html" title="src/battle.cpp" alt="" coords="209,155,319,181"/>
+<area shape="rect" id="node6" href="$market_8cpp.html" title="src/market.cpp" alt="" coords="343,155,462,181"/>
+</map>

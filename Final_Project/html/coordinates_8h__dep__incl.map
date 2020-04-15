@@ -1,0 +1,23 @@
+<map id="include/coordinates.h" name="include/coordinates.h">
+<area shape="rect" id="node2" href="$coordinates_8cpp.html" title="src/coordinates.cpp" alt="" coords="271,80,417,107"/>
+<area shape="rect" id="node3" href="$board_8h.html" title="include/board.h" alt="" coords="432,155,552,181"/>
+<area shape="rect" id="node18" href="$sloop_8h.html" title="include/sloop.h" alt="" coords="823,304,940,331"/>
+<area shape="rect" id="node19" href="$piece_8h.html" title="include/piece.h" alt="" coords="568,80,685,107"/>
+<area shape="rect" id="node21" href="$geometry_8h.html" title="include/geometry.h" alt="" coords="237,155,379,181"/>
+<area shape="rect" id="node4" href="$board_8cpp.html" title="src/board.cpp" alt="" coords="253,229,363,256"/>
+<area shape="rect" id="node5" href="$vessel_8cpp.html" title="src/vessel.cpp" alt="" coords="687,304,799,331"/>
+<area shape="rect" id="node6" href="$player_8h.html" title="include/player.h" alt="" coords="387,229,509,256"/>
+<area shape="rect" id="node17" href="$vessel_8h.html" title="include/vessel.h" alt="" coords="728,229,851,256"/>
+<area shape="rect" id="node7" href="$authentication_8cpp.html" title="src/authentication.cpp" alt="" coords="47,379,211,405"/>
+<area shape="rect" id="node8" href="$battle_8cpp.html" title="src/battle.cpp" alt="" coords="347,453,456,480"/>
+<area shape="rect" id="node9" href="$player_8cpp.html" title="src/player.cpp" alt="" coords="74,453,185,480"/>
+<area shape="rect" id="node10" href="$authentication_8h.html" title="include/authentication.h" alt="" coords="138,304,313,331"/>
+<area shape="rect" id="node11" href="$game_8h.html" title="include/game.h" alt="" coords="388,304,508,331"/>
+<area shape="rect" id="node15" href="$market_8h.html" title="include/market.h" alt="" coords="533,304,662,331"/>
+<area shape="rect" id="node12" href="$game_8cpp.html" title="src/game.cpp" alt="" coords="715,453,824,480"/>
+<area shape="rect" id="node13" href="$screen__manager_8cpp.html" title="src/screen_manager.cpp" alt="" coords="496,453,675,480"/>
+<area shape="rect" id="node14" href="$screen__manager_8h.html" title="include/screen_manager.h" alt="" coords="439,379,630,405"/>
+<area shape="rect" id="node16" href="$market_8cpp.html" title="src/market.cpp" alt="" coords="821,379,939,405"/>
+<area shape="rect" id="node20" href="$piece_8cpp.html" title="src/piece.cpp" alt="" coords="677,155,784,181"/>
+<area shape="rect" id="node22" href="$geometry_8cpp.html" title="src/geometry.cpp" alt="" coords="97,229,229,256"/>
+</map>

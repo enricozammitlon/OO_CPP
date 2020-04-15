@@ -1,0 +1,12 @@
+<map id="include/player.h" name="include/player.h">
+<area shape="rect" id="node2" href="$authentication_8cpp.html" title="src/authentication.cpp" alt="" coords="5,155,169,181"/>
+<area shape="rect" id="node3" href="$battle_8cpp.html" title="src/battle.cpp" alt="" coords="277,229,386,256"/>
+<area shape="rect" id="node4" href="$player_8cpp.html" title="src/player.cpp" alt="" coords="747,229,857,256"/>
+<area shape="rect" id="node5" href="$authentication_8h.html" title="include/authentication.h" alt="" coords="123,80,297,107"/>
+<area shape="rect" id="node6" href="$game_8h.html" title="include/game.h" alt="" coords="374,80,494,107"/>
+<area shape="rect" id="node10" href="$market_8h.html" title="include/market.h" alt="" coords="789,80,919,107"/>
+<area shape="rect" id="node7" href="$game_8cpp.html" title="src/game.cpp" alt="" coords="410,229,519,256"/>
+<area shape="rect" id="node8" href="$screen__manager_8cpp.html" title="src/screen_manager.cpp" alt="" coords="543,229,722,256"/>
+<area shape="rect" id="node9" href="$screen__manager_8h.html" title="include/screen_manager.h" alt="" coords="472,155,663,181"/>
+<area shape="rect" id="node11" href="$market_8cpp.html" title="src/market.cpp" alt="" coords="840,155,959,181"/>
+</map>

@@ -11,7 +11,7 @@ battle_ship::piece::piece(std::string n, battle_ship::coordinates p,
   start_coordinates = {p.col, p.row};
   xy_representation_horizontal = xy_rep_hor;
   xy_representation_vertical = xy_rep_ver;
-  orientation = o;
+  current_orientation = o;
   uri = u;
   action_points = a;
   switch (o) {
@@ -19,13 +19,15 @@ battle_ship::piece::piece(std::string n, battle_ship::coordinates p,
     length = l;
     width = w;
     current_xy_representation = xy_representation_horizontal;
-    end_coordinates = calculate_end(start_coordinates, length, orientation);
+    end_coordinates =
+        calculate_end(start_coordinates, length, current_orientation);
     break;
   case (battle_ship::orientation::vertical):
     length = w;
     width = l;
     current_xy_representation = xy_representation_vertical;
-    end_coordinates = calculate_end(start_coordinates, width, orientation);
+    end_coordinates =
+        calculate_end(start_coordinates, width, current_orientation);
     break;
   }
 };
@@ -40,6 +42,9 @@ battle_ship::piece::calculate_end(battle_ship::coordinates start,
   case (battle_ship::orientation::vertical):
     return start_coordinates.boosted_y(distance - 1);
     break;
+  default:
+    return start_coordinates;
+    break;
   }
 };
 
@@ -52,7 +57,7 @@ battle_ship::piece::piece(const piece &p) {
   xy_representation_horizontal = p.xy_representation_horizontal;
   xy_representation_vertical = p.xy_representation_vertical;
   current_xy_representation = p.current_xy_representation;
-  orientation = p.orientation;
+  current_orientation = p.current_orientation;
   cost = p.cost;
   uri = p.uri;
   hits = p.hits;
@@ -69,7 +74,7 @@ battle_ship::piece &battle_ship::piece::operator=(const piece &p) {
   xy_representation_horizontal = p.xy_representation_horizontal;
   xy_representation_vertical = p.xy_representation_vertical;
   current_xy_representation = p.current_xy_representation;
-  orientation = p.orientation;
+  current_orientation = p.current_orientation;
   cost = p.cost;
   uri = p.uri;
   hits = p.hits;
@@ -85,7 +90,7 @@ battle_ship::piece::piece(piece &&p) {
   xy_representation_horizontal = p.xy_representation_horizontal;
   xy_representation_vertical = p.xy_representation_vertical;
   current_xy_representation = p.current_xy_representation;
-  orientation = p.orientation;
+  current_orientation = p.current_orientation;
   cost = p.cost;
   uri = p.uri;
   hits = p.hits;
@@ -97,7 +102,7 @@ battle_ship::piece::piece(piece &&p) {
   p.xy_representation_horizontal = "";
   p.xy_representation_vertical = "";
   p.current_xy_representation = "";
-  p.orientation = battle_ship::orientation::vertical;
+  p.current_orientation = battle_ship::orientation::vertical;
   p.cost = 0;
   p.uri = "";
   p.hits = 0;
@@ -112,7 +117,7 @@ battle_ship::piece &battle_ship::piece::operator=(piece &&p) {
   std::swap(xy_representation_horizontal, p.xy_representation_horizontal);
   std::swap(xy_representation_vertical, p.xy_representation_vertical);
   std::swap(current_xy_representation, p.current_xy_representation);
-  std::swap(orientation, p.orientation);
+  std::swap(current_orientation, p.current_orientation);
   std::swap(cost, p.cost);
   std::swap(uri, p.uri);
   std::swap(hits, p.hits);
@@ -122,20 +127,22 @@ battle_ship::piece &battle_ship::piece::operator=(piece &&p) {
 void battle_ship::piece::modify_pose(battle_ship::coordinates new_coors,
                                      battle_ship::orientation new_orientation) {
   start_coordinates = new_coors;
-  if (new_orientation != orientation) {
+  if (new_orientation != current_orientation) {
     size_t old_length = length;
     length = width;
     width = old_length;
   }
-  orientation = new_orientation;
+  current_orientation = new_orientation;
   switch (new_orientation) {
   case (battle_ship::orientation::horizontal):
     current_xy_representation = xy_representation_horizontal;
-    end_coordinates = calculate_end(start_coordinates, length, orientation);
+    end_coordinates =
+        calculate_end(start_coordinates, length, current_orientation);
     break;
   case (battle_ship::orientation::vertical):
     current_xy_representation = xy_representation_vertical;
-    end_coordinates = calculate_end(start_coordinates, width, orientation);
+    end_coordinates =
+        calculate_end(start_coordinates, width, current_orientation);
     break;
   }
 };

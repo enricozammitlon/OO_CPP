@@ -1,0 +1,14 @@
+<map id="src/battle.cpp" name="src/battle.cpp">
+<area shape="rect" id="node2" href="$authentication_8h.html" title="authentication.h" alt="" coords="711,155,838,181"/>
+<area shape="rect" id="node3" href="$player_8h.html" title="player.h" alt="" coords="739,229,811,256"/>
+<area shape="rect" id="node14" href="$game_8h.html" title="game.h" alt="" coords="1197,155,1267,181"/>
+<area shape="rect" id="node15" href="$rules_8h.html" title="rules.h" alt="" coords="1199,229,1265,256"/>
+<area shape="rect" id="node16" href="$highscore__manager_8h.html" title="highscore_manager.h" alt="" coords="908,80,1068,107"/>
+<area shape="rect" id="node18" href="$notification__manager_8h.html" title="notification_manager.h" alt="" coords="964,379,1132,405"/>
+<area shape="rect" id="node19" href="$screen__manager_8h.html" title="screen_manager.h" alt="" coords="1193,80,1335,107"/>
+<area shape="rect" id="node20" href="$sloop_8h.html" title="sloop.h" alt="" coords="159,155,227,181"/>
+<area shape="rect" id="node4" href="$board_8h.html" title="board.h" alt="" coords="390,304,461,331"/>
+<area shape="rect" id="node5" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="195,453,304,480"/>
+<area shape="rect" id="node7" href="$piece_8h.html" title="piece.h" alt="" coords="246,379,314,405"/>
+<area shape="rect" id="node21" href="$vessel_8h.html" title="vessel.h" alt="" coords="243,229,317,256"/>
+</map>

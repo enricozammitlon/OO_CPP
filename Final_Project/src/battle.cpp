@@ -7,11 +7,14 @@
 
 #include "authentication.h"
 #include "game.h"
+#include "highscore_manager.h"
 #include "notification_manager.h"
 #include "player.h"
 #include "rules.h"
 #include "screen_manager.h"
 #include "sloop.h"
+#include <algorithm>
+#include <iomanip>
 #include <iostream>
 #include <tuple>
 int main() {
@@ -44,6 +47,7 @@ int main() {
 
   std::unique_ptr<battle_ship::rules> standard_rules =
       std::make_unique<battle_ship::rules>();
+  battle_ship::highscore_manager::initialise_highscores();
   do {
     std::cout << "Welcome to your Battleship terminal commander! Please enter "
                  "one of the numbers below to start."
@@ -93,10 +97,24 @@ int main() {
       current_user->modify_fleet();
     } break;
     case 3:
-      std::cout << "Highscores here..." << std::endl;
+      std::cout << "These are the top 10 commanders of all time!" << std::endl;
+      std::cout << "Commander" << std::setw(10) << "Turns Needed" << std::endl;
+      for (auto iterator =
+               battle_ship::highscore_manager::all_highscores.begin();
+           iterator != battle_ship::highscore_manager::all_highscores.end();
+           iterator++) {
+        std::cout << std::get<0>(*iterator)
+                  << std::setw(
+                         10 +
+                         std::max(0, 9 - static_cast<int>(
+                                             std::get<0>(*iterator).size())))
+                  << std::get<1>(*iterator) << std::endl;
+      }
       break;
     case 4:
-      std::cout << "Credits here..." << std::endl;
+      std::cout << "This program was made by Enrico Zammit Lonardelli for the "
+                   "PHYS30762 course in Object Oriented C++."
+                << std::endl;
       break;
     }
   } while (input != 5);

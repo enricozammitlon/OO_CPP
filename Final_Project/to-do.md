@@ -8,15 +8,15 @@
 - [x] Add fleet editing screen
 - [x] Convert pointers to smart pointers
 - [x] Add check fleet on fleet screen
-- ~~ [ ] Move fleet editing to its own class ~~
-- [ ] Check memory leaks using deleaker
+- [ ] ~~Move fleet editing to its own class~~
+- [x] Check memory leaks using ~~deleaker~~ valgrind
 - [ ] Sanitize all inputs
 - [ ] Fix issue with copy constructor of a board
 - [ ] Fix ability to throw errors in docker
 - [ ] Convert all cerr to throw
 - [x] Add login
 - [x] Add transaction screen and market
-- [ ] Add highscores screen
+- [x] Add highscores screen
 - [x] Add splitscreen view
 - [x] Add game view and routine
 - [ ] Add new vessels

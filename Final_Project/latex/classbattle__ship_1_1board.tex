@@ -1,0 +1,234 @@
+\hypertarget{classbattle__ship_1_1board}{}\section{battle\+\_\+ship\+:\+:board Class Reference}
+\label{classbattle__ship_1_1board}\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+
+
+{\ttfamily \#include $<$board.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbattle__ship_1_1board_a4d561505fe0c5d355e70bbd2bde1b00e}{board} ()
+\item 
+\hyperlink{classbattle__ship_1_1board_a72bdef4b84b4c2d8241b4307cae2cb9e}{board} (const \hyperlink{classbattle__ship_1_1board}{board} \&b)
+\item 
+\hyperlink{classbattle__ship_1_1board}{board} \& \hyperlink{classbattle__ship_1_1board_a4349c045147f686d09cdc47690f15e34}{operator=} (const \hyperlink{classbattle__ship_1_1board}{board} \&b)
+\item 
+\hyperlink{classbattle__ship_1_1board_aae7ac9e7bbd44c1b2d7a745721936ee2}{board} (\hyperlink{classbattle__ship_1_1board}{board} \&\&b)
+\item 
+\hyperlink{classbattle__ship_1_1board}{board} \& \hyperlink{classbattle__ship_1_1board_ae6dc011dea24157e59e2b3a6f34af586}{operator=} (\hyperlink{classbattle__ship_1_1board}{board} \&\&b)
+\item 
+\hyperlink{classbattle__ship_1_1board_a06d4ef9b5cb2dbb7aa4516464ff1ec52}{$\sim$board} ()=default
+\item 
+std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1board_a74cf4399466cad172160f005da6d45fa}{get\+\_\+rows} () const
+\item 
+std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1board_ad3d5995d4b8a0af0cfc802a1731f6a6d}{get\+\_\+cols} () const
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece} $>$ $>$ const  \& \hyperlink{classbattle__ship_1_1board_a12358d2f6eabd200d7f4e8f7276ffc96}{get\+\_\+pieces} ()
+\item 
+std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1board_a6469025697317ca96be621908464a2c0}{index} (const \hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} \&p) const
+\item 
+std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1board_aea7bba93d5c16b0c550b5874e0ce04a7}{get\+\_\+size} () const
+\item 
+void \hyperlink{classbattle__ship_1_1board_a9dd8f7b3681cc8ed1c5309a796f377e2}{modify\+\_\+coordinate} (\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} \&target\+\_\+coordinates, std\+::string new\+\_\+value)
+\item 
+void \hyperlink{classbattle__ship_1_1board_a19d236125f444778e5789109d9c1093b}{remove\+\_\+piece} (size\+\_\+t pos)
+\item 
+void \hyperlink{classbattle__ship_1_1board_a3f6a458721d6f0cfbf167f5568539296}{edit\+\_\+piece} (\hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece} \&p, size\+\_\+t pos, \hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} new\+\_\+coor, \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{battle\+\_\+ship\+::orientation} new\+\_\+orientation)
+\item 
+void \hyperlink{classbattle__ship_1_1board_a9afa4baeef0df47e4a2efe05de9cb8eb}{operator$<$$<$} (std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece} $>$ p)
+\item 
+std\+::string \hyperlink{classbattle__ship_1_1board_ade89ae8272e10d6c47a8d4f2c2927d0a}{operator()} (const \hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} \&p) const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classbattle__ship_1_1board_a1a31fc970cf43cac6d5b1a44e3831f5d}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classbattle__ship_1_1board}{board} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file board.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1board_a4d561505fe0c5d355e70bbd2bde1b00e}\label{classbattle__ship_1_1board_a4d561505fe0c5d355e70bbd2bde1b00e}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!board@{board}}
+\index{board@{board}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{board()}{board()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::board\+::board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a72bdef4b84b4c2d8241b4307cae2cb9e}\label{classbattle__ship_1_1board_a72bdef4b84b4c2d8241b4307cae2cb9e}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!board@{board}}
+\index{board@{board}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{board()}{board()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::board\+::board (\begin{DoxyParamCaption}\item[{const \hyperlink{classbattle__ship_1_1board}{board} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_aae7ac9e7bbd44c1b2d7a745721936ee2}\label{classbattle__ship_1_1board_aae7ac9e7bbd44c1b2d7a745721936ee2}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!board@{board}}
+\index{board@{board}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{board()}{board()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::board\+::board (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1board}{board} \&\&}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a06d4ef9b5cb2dbb7aa4516464ff1ec52}\label{classbattle__ship_1_1board_a06d4ef9b5cb2dbb7aa4516464ff1ec52}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!````~board@{$\sim$board}}
+\index{````~board@{$\sim$board}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{$\sim$board()}{~board()}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::board\+::$\sim$board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1board_a3f6a458721d6f0cfbf167f5568539296}\label{classbattle__ship_1_1board_a3f6a458721d6f0cfbf167f5568539296}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!edit\+\_\+piece@{edit\+\_\+piece}}
+\index{edit\+\_\+piece@{edit\+\_\+piece}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{edit\+\_\+piece()}{edit\_piece()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::board\+::edit\+\_\+piece (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece} \&}]{p,  }\item[{size\+\_\+t}]{pos,  }\item[{\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates}}]{new\+\_\+coor,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{battle\+\_\+ship\+::orientation}}]{new\+\_\+orientation }\end{DoxyParamCaption})}
+
+
+
+Definition at line 157 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_ad3d5995d4b8a0af0cfc802a1731f6a6d}\label{classbattle__ship_1_1board_ad3d5995d4b8a0af0cfc802a1731f6a6d}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!get\+\_\+cols@{get\+\_\+cols}}
+\index{get\+\_\+cols@{get\+\_\+cols}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{get\+\_\+cols()}{get\_cols()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::board\+::get\+\_\+cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 32 of file board.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a12358d2f6eabd200d7f4e8f7276ffc96}\label{classbattle__ship_1_1board_a12358d2f6eabd200d7f4e8f7276ffc96}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!get\+\_\+pieces@{get\+\_\+pieces}}
+\index{get\+\_\+pieces@{get\+\_\+pieces}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{get\+\_\+pieces()}{get\_pieces()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece}$>$ $>$ const\& battle\+\_\+ship\+::board\+::get\+\_\+pieces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 33 of file board.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a74cf4399466cad172160f005da6d45fa}\label{classbattle__ship_1_1board_a74cf4399466cad172160f005da6d45fa}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!get\+\_\+rows@{get\+\_\+rows}}
+\index{get\+\_\+rows@{get\+\_\+rows}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{get\+\_\+rows()}{get\_rows()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::board\+::get\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file board.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_aea7bba93d5c16b0c550b5874e0ce04a7}\label{classbattle__ship_1_1board_aea7bba93d5c16b0c550b5874e0ce04a7}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{get\+\_\+size()}{get\_size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::board\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file board.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a6469025697317ca96be621908464a2c0}\label{classbattle__ship_1_1board_a6469025697317ca96be621908464a2c0}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!index@{index}}
+\index{index@{index}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::board\+::index (\begin{DoxyParamCaption}\item[{const \hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 87 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a9dd8f7b3681cc8ed1c5309a796f377e2}\label{classbattle__ship_1_1board_a9dd8f7b3681cc8ed1c5309a796f377e2}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!modify\+\_\+coordinate@{modify\+\_\+coordinate}}
+\index{modify\+\_\+coordinate@{modify\+\_\+coordinate}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{modify\+\_\+coordinate()}{modify\_coordinate()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::board\+::modify\+\_\+coordinate (\begin{DoxyParamCaption}\item[{\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} \&}]{target\+\_\+coordinates,  }\item[{std\+::string}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 152 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_ade89ae8272e10d6c47a8d4f2c2927d0a}\label{classbattle__ship_1_1board_ade89ae8272e10d6c47a8d4f2c2927d0a}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!operator()@{operator()}}
+\index{operator()@{operator()}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily std\+::string battle\+\_\+ship\+::board\+::operator() (\begin{DoxyParamCaption}\item[{const \hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 97 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a9afa4baeef0df47e4a2efe05de9cb8eb}\label{classbattle__ship_1_1board_a9afa4baeef0df47e4a2efe05de9cb8eb}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::board\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece} $>$}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a4349c045147f686d09cdc47690f15e34}\label{classbattle__ship_1_1board_a4349c045147f686d09cdc47690f15e34}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!operator=@{operator=}}
+\index{operator=@{operator=}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classbattle__ship_1_1board}{battle\+\_\+ship\+::board} \& battle\+\_\+ship\+::board\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classbattle__ship_1_1board}{board} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_ae6dc011dea24157e59e2b3a6f34af586}\label{classbattle__ship_1_1board_ae6dc011dea24157e59e2b3a6f34af586}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!operator=@{operator=}}
+\index{operator=@{operator=}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classbattle__ship_1_1board}{battle\+\_\+ship\+::board} \& battle\+\_\+ship\+::board\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1board}{board} \&\&}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 79 of file board.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1board_a19d236125f444778e5789109d9c1093b}\label{classbattle__ship_1_1board_a19d236125f444778e5789109d9c1093b}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!remove\+\_\+piece@{remove\+\_\+piece}}
+\index{remove\+\_\+piece@{remove\+\_\+piece}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{remove\+\_\+piece()}{remove\_piece()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::board\+::remove\+\_\+piece (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file board.\+cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1board_a1a31fc970cf43cac6d5b1a44e3831f5d}\label{classbattle__ship_1_1board_a1a31fc970cf43cac6d5b1a44e3831f5d}} 
+\index{battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!battle\+\_\+ship\+::board@{battle\+\_\+ship\+::board}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classbattle__ship_1_1board}{board} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 189 of file board.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{board_8h}{board.\+h}\item 
+src/\hyperlink{board_8cpp}{board.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classbattle__ship_1_1game}{}\section{battle\+\_\+ship\+:\+:game Class Reference}
+\label{classbattle__ship_1_1game}\index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbattle__ship_1_1game_a3a98cd01dec3c29d91d057049c421c89}{game} ()=default
+\item 
+\hyperlink{classbattle__ship_1_1game_ab798a2291e0ef511be6d613cc48d26bb}{game} (std\+::size\+\_\+t starting\+\_\+turn, std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ p1, std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ p2, std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1rules}{battle\+\_\+ship\+::rules} $>$ r)
+\item 
+\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \& \hyperlink{classbattle__ship_1_1game_abdbbd12c9a8b272e2a9fabed8ea90922}{get\+\_\+player} (std\+::size\+\_\+t p)
+\item 
+void \hyperlink{classbattle__ship_1_1game_a0e5a85f6c1f0cff5e1104545b5222026}{toggle\+\_\+turn} ()
+\item 
+void \hyperlink{classbattle__ship_1_1game_a2cfee3f6969a0b01243e65870058fb07}{play} (std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ \&winner)
+\item 
+bool \hyperlink{classbattle__ship_1_1game_ac63820a8659c24ad4d69cb5ddd96c6e6}{has\+\_\+player\+\_\+lost} (\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&p)
+\item 
+\hyperlink{classbattle__ship_1_1game_aa95dac5c30c567ae407a3b67ceae324d}{$\sim$game} ()=default
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file game.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1game_a3a98cd01dec3c29d91d057049c421c89}\label{classbattle__ship_1_1game_a3a98cd01dec3c29d91d057049c421c89}} 
+\index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!game@{game}}
+\index{game@{game}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
+\subsubsection{\texorpdfstring{game()}{game()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::game\+::game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classbattle__ship_1_1game_ab798a2291e0ef511be6d613cc48d26bb}\label{classbattle__ship_1_1game_ab798a2291e0ef511be6d613cc48d26bb}} 
+\index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!game@{game}}
+\index{game@{game}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
+\subsubsection{\texorpdfstring{game()}{game()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::game\+::game (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{starting\+\_\+turn,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$}]{p1,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$}]{p2,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1rules}{battle\+\_\+ship\+::rules} $>$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 15 of file game.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1game_aa95dac5c30c567ae407a3b67ceae324d}\label{classbattle__ship_1_1game_aa95dac5c30c567ae407a3b67ceae324d}} 
+\index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!````~game@{$\sim$game}}
+\index{````~game@{$\sim$game}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
+\subsubsection{\texorpdfstring{$\sim$game()}{~game()}}
+{\footnotesize\ttfamily battle\+\_\+ship\+::game\+::$\sim$game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1game_abdbbd12c9a8b272e2a9fabed8ea90922}\label{classbattle__ship_1_1game_abdbbd12c9a8b272e2a9fabed8ea90922}} 
+\index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!get\+\_\+player@{get\+\_\+player}}
+\index{get\+\_\+player@{get\+\_\+player}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
+\subsubsection{\texorpdfstring{get\+\_\+player()}{get\_player()}}
+{\footnotesize\ttfamily \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \& battle\+\_\+ship\+::game\+::get\+\_\+player (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file game.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1game_ac63820a8659c24ad4d69cb5ddd96c6e6}\label{classbattle__ship_1_1game_ac63820a8659c24ad4d69cb5ddd96c6e6}} 
+\index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!has\+\_\+player\+\_\+lost@{has\+\_\+player\+\_\+lost}}
+\index{has\+\_\+player\+\_\+lost@{has\+\_\+player\+\_\+lost}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
+\subsubsection{\texorpdfstring{has\+\_\+player\+\_\+lost()}{has\_player\_lost()}}
+{\footnotesize\ttfamily bool battle\+\_\+ship\+::game\+::has\+\_\+player\+\_\+lost (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file game.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1game_a2cfee3f6969a0b01243e65870058fb07}\label{classbattle__ship_1_1game_a2cfee3f6969a0b01243e65870058fb07}} 
+\index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!play@{play}}
+\index{play@{play}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::game\+::play (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} $>$ \&}]{winner }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file game.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1game_a0e5a85f6c1f0cff5e1104545b5222026}\label{classbattle__ship_1_1game_a0e5a85f6c1f0cff5e1104545b5222026}} 
+\index{battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}!toggle\+\_\+turn@{toggle\+\_\+turn}}
+\index{toggle\+\_\+turn@{toggle\+\_\+turn}!battle\+\_\+ship\+::game@{battle\+\_\+ship\+::game}}
+\subsubsection{\texorpdfstring{toggle\+\_\+turn()}{toggle\_turn()}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::game\+::toggle\+\_\+turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 24 of file game.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{game_8h}{game.\+h}\item 
+src/\hyperlink{game_8cpp}{game.\+cpp}\end{DoxyCompactItemize}

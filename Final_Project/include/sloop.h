@@ -9,7 +9,7 @@ class sloop : public vessel {
 
 public:
   sloop() = default;
-  sloop(battle_ship::coordinates p, battle_ship::orientation o)
+  sloop(coordinates p, orientation o)
       : vessel("Sloop", p, 3, 1, "<+>", "^+V", o, "Final_Project/img/sloop.txt",
                1){};
   void display_xy(){};
