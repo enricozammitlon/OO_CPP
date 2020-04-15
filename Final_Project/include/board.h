@@ -35,6 +35,7 @@ public:
   std::size_t get_size() const { return rows * columns; };
   void modify_coordinate(coordinates &target_coordinates,
                          std::string new_value);
+  board mask() const;
   void remove_piece(size_t pos);
   void edit_piece(piece &p, size_t pos, coordinates new_coor,
                   orientation new_orientation);

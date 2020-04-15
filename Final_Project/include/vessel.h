@@ -16,7 +16,7 @@ public:
          std::string u, std::size_t ap)
       : piece(n, p, l, w, xy_rep_hor, xy_rep_ver, u, o, ap){};
   void display_yz();
-  virtual void display_xy() = 0;
+  void display_xy();
   ~vessel() = default;
 };
 } // namespace battle_ship

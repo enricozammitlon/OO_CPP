@@ -39,8 +39,10 @@ void battle_ship::highscore_manager::add_highscore(
   for (auto iterator = battle_ship::highscore_manager::all_highscores.begin();
        (iterator != battle_ship::highscore_manager::all_highscores.end());
        iterator++) {
-    highscores_file << std::get<0>(*iterator) << " " << std::get<1>(*iterator)
-                    << std::endl;
+    highscores_file << std::get<0>(*iterator) << " " << std::get<1>(*iterator);
+    if (iterator != battle_ship::highscore_manager::all_highscores.end() - 1) {
+      highscores_file << std::endl;
+    }
   }
   highscores_file.close();
 }

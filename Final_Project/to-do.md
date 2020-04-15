@@ -12,6 +12,7 @@
 - [x] Check memory leaks using ~~deleaker~~ valgrind
 - [x] Sanitize all inputs
 - [ ] Fix issue with copy constructor of a board
+- [ ] Delete the redundant vessel class
 - [ ] Add show images in fleet editing screen
 - [ ] Add new AI and Human classes, base Player
 - [ ] Fix ability to throw errors in docker?

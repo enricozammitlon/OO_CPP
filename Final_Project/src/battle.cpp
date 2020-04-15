@@ -8,7 +8,9 @@
 #include "authentication.h"
 #include "game.h"
 #include "highscore_manager.h"
+#include "human.h"
 #include "notification_manager.h"
+#include "npc.h"
 #include "player.h"
 #include "rules.h"
 #include "screen_manager.h"
@@ -19,7 +21,7 @@
 #include <tuple>
 int main() {
   int input;
-  std::shared_ptr<battle_ship::player> current_user = nullptr;
+  std::shared_ptr<battle_ship::human> current_user = nullptr;
   do {
     std::cout << "Welcome to the Battleship registration! Please enter "
                  "one of the numbers below to start."
@@ -66,8 +68,7 @@ int main() {
     switch (input) {
     case 1: {
       std::shared_ptr<battle_ship::player> ai_1 =
-          std::make_shared<battle_ship::player>("Pericles", false,
-                                                std::string::npos);
+          std::make_shared<battle_ship::npc>("Pericles", 1);
       std::unique_ptr<battle_ship::piece> sloop_1 =
           std::make_unique<battle_ship::sloop>(
               battle_ship::coordinates{battle_ship::x_axis::A, 1},
@@ -79,19 +80,12 @@ int main() {
                                               std::move(standard_rules));
       std::shared_ptr<battle_ship::player> winner{nullptr};
       game_1->play(winner);
-      current_user->clean_up();
+      current_user->reset();
       if (winner == nullptr) {
         std::cout << "Please set up your fleet before playing." << std::endl;
         break;
       }
-      if (winner->is_human()) {
-        std::cout
-            << "Congratulations, commander! We have won the battle against "
-            << ai_1->get_uname() << "." << std::endl;
-      } else {
-        std::cout << "Commander...*cough*...we've been defated by "
-                  << ai_1->get_uname() << "." << std::endl;
-      }
+      winner->winning_line();
     } break;
     case 2: {
       current_user->modify_fleet();

@@ -7,36 +7,29 @@ namespace battle_ship {
 class player {
 protected:
   std::string username;
-  size_t password_hash;
-  bool human{false};
-  std::size_t highscore{std::string::npos};
   std::unique_ptr<board> player_board;
   std::weak_ptr<player> enemy;
   int budget{100};
-  bool ready_to_play{false};
   std::vector<coordinates> already_targeted;
+  bool ready_to_play;
+  std::string subdir;
 
 public:
   player() = default;
-  player(std::string uname, bool h, size_t high, size_t pass = 0)
-      : username{uname}, password_hash{pass}, human{h}, highscore{high} {
-    clean_up();
+  player(std::string uname, bool ready, std::string sub)
+      : username{uname}, ready_to_play{ready}, subdir{sub} {
+    reset();
   };
   std::string get_uname() { return username; };
-  bool is_ready_to_play() { return ready_to_play; };
   void assign_enemy(std::shared_ptr<player> e) { enemy = e; };
   player &get_enemy() { return *(enemy.lock()); };
-  bool is_human() { return human; };
   void modify_budget(int money) { budget += money; };
-  size_t get_highscore() const { return highscore; };
-  void save_highscore(size_t h);
-  void clean_up();
-  void modify_fleet();
-  void save_fleet();
-  bool add_piece();
-  bool remove_piece();
-  bool edit_piece();
-  void attack(piece &attacking_piece, player &enemy);
+  void reset();
+  bool is_ready_to_play() { return ready_to_play; };
+  virtual void winning_line() = 0;
+  virtual void attack(piece &attacking_piece, player &enemy) = 0;
+  virtual size_t get_highscore() = 0;
+  virtual void save_highscore(size_t h) = 0;
   board &get_board() { return *player_board; };
   ~player() = default;
 };

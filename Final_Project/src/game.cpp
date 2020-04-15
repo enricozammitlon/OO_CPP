@@ -47,7 +47,7 @@ void battle_ship::game::play(std::shared_ptr<battle_ship::player> &winner) {
       if (turns < winner->get_highscore()) {
         winner->save_highscore(turns);
         battle_ship::notification_manager::add_notification(
-            current_player.lock()->get_uname(), "***NEW HIGHSCORE***");
+            current_player.lock()->get_uname(), "***NEW PERSONAL HIGHSCORE***");
       }
     }
     turns += 1;

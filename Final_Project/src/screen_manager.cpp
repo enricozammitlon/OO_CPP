@@ -13,7 +13,7 @@ void battle_ship::screen_manager::side_by_side(battle_ship::game &current_game,
   std::stringstream player_stream;
   player_stream << current_game.get_player(0).get_board();
   std::stringstream enemy_stream;
-  enemy_stream << current_game.get_player(1).get_board();
+  enemy_stream << current_game.get_player(1).get_board().mask();
   std::stringstream notification_stream;
   notification_stream << current_notifications;
 

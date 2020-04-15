@@ -47,7 +47,7 @@ battle_ship::board &battle_ship::board::operator=(const board &b) {
       for (size_t j{size_t(battle_ship::x_axis::A)}; j <= columns; j += 1) {
         battle_ship::coordinates current_coordinates{
             static_cast<battle_ship::x_axis>(j), i};
-        board_data[index(current_coordinates)] = b(current_coordinates);
+        modify_coordinate(current_coordinates, b(current_coordinates));
       }
     }
   }
@@ -73,7 +73,7 @@ battle_ship::board::board(board &&b) {
   b.rows = 0;
   b.columns = 0;
   b.board_data = nullptr;
-  b.all_pieces.clear(); // Memory Leak?
+  b.all_pieces.clear();
 }
 
 battle_ship::board &battle_ship::board::operator=(board &&b) {
@@ -184,6 +184,27 @@ void battle_ship::board::edit_piece(battle_ship::piece &p, size_t pos,
     }
     rep_i += 1;
   }
+}
+
+battle_ship::board battle_ship::board::mask() const {
+  std::unique_ptr<battle_ship::board> masked_board =
+      std::make_unique<battle_ship::board>(*this);
+  for (size_t i{1}; i <= rows; i += 1) {
+    for (size_t j{size_t(battle_ship::x_axis::A)}; j <= columns; j += 1) {
+      battle_ship::coordinates current_coordinates{
+          static_cast<battle_ship::x_axis>(j), i};
+      if ((*this)(current_coordinates) == "H" ||
+          (*this)(current_coordinates) == "M" ||
+          (*this)(current_coordinates) == "~") {
+        masked_board->modify_coordinate(current_coordinates,
+                                        (*this)(current_coordinates));
+      } else {
+        masked_board->modify_coordinate(current_coordinates, "~");
+      }
+    }
+  }
+  std::cout << *masked_board;
+  return *masked_board;
 }
 
 namespace battle_ship {
