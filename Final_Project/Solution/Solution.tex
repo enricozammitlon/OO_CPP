@@ -1,0 +1,89 @@
+\documentclass[11pt]{article} %This sets the font size and the document class of your report. In this case we use 'article' as that is ideal for shorter reports.
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{subcaption}
+% LaTeX can be enhanced by the use of packages. These packages can do many things, a few of the most common and useful are used here. They are declared before the document proper, in what is known as the 'preamble'. Packages need to be installed when a .tex file compiles into a .pdf, but should do so automatically.
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.75cm, right=1.75cm]{geometry} %This sets the margins of the report.
+
+\usepackage{graphicx} % A package allowing insertion of images into the text.
+\usepackage{caption}
+
+% Choose your citations style by commenting out one of the following groups. If you decide to change style, you should also delete the .bbl file that you will find in the same folder as your .tex and .pdf files.
+
+% IEEE style citation:
+\usepackage[style=ieee]{biblatex}
+\addbibresource{Solution.bib}
+
+\usepackage{enumerate}
+%% Author-date style citation:
+%\usepackage[round]{natbib} % A package that creates references in the author-date style, with round brackets
+%\renewcommand{\cite}{\citep} % For use with natbib only: comment out for the cite package.
+%\bibliographystyle{plainnat} % Author-date referencing (use in conjunction with the natbib package)
+\usepackage{color} % Allows the colour of the font to be changed by using the '\color' command: This is just to support the blue comments in this template...use standard (black) text in your report.
+\usepackage{float}
+\usepackage{subdepth}
+\usepackage{mathtools}
+\usepackage{tabularx}
+\usepackage{makecell}
+\linespread{1} % Sets the spacing between lines of text.
+\setlength{\parindent}{0cm}  % Suppresses indentation of text at the start of a paragraph
+\pagenumbering{arabic} % sets the style of page numbering for the report
+
+
+\begin{document} % This begins the document proper and ends the pre-amble
+
+% The last } finishes the chunk of text opening with {\color{blue}..., so all of the above appears as blue text. A common LaTeX error is to forget to close such a chunk of text, so if the formatting goes wrong look for a missing }.
+
+% To get rid of the blue text, select and delete everything from '{\color' to '}', inclusive, leaving \ begin{titlepage} as the first command  after \begin{document}
+
+\begin{center} % Starts the beginning of an environment where all text is centered.
+
+{\Huge Battleship Board Game}\\[0.5cm] % [0.5cm] sets the distance between this line and the next.
+\vspace{5mm}
+\textit{Enrico Zammit Lonardelli}
+\\
+\vspace{5mm}
+\text{9910821}
+\\
+\vspace{5mm}
+\text{School of Physics and Astronomy}
+\\
+\vspace{5mm}
+\text{The University of Manchester}
+\\
+\vspace{5mm}
+\text{PHYS30782: Object-Oriented Programming in C++}
+\\
+\vspace{5mm}
+\text{May 2020}
+\\
+\end{center}
+\vspace{10mm}
+\section{Introduction}
+\subsection{Choice of game motivation}
+The board game Battleship I chose to reproduce digitally is inspired from the early 20th century pencil and paper game which later
+became a success board game hit in the early 1960s.
+This board game in particular has always had a connection with the computer world, in fact being one of the world's ever
+computer games being released in 1979 on the Z80 Compucolor.
+Since then this game has been reproduced on many digital consoles and as a standalone game on PC and is a game I have personally played many
+times as a child so I decided it would be a good idea to reproduce a command-line version of it in C++.
+\subsection{Rules}
+The game is played by two players.
+Each player has two grids representing their positioning of ships and the opponents' guess positions.
+At the start of the game each player has access to the following ships:
+\begin{enumerate}[1)]
+  \item
+\end{enumerate}
+\subsection{Program Requirements}
+
+\newpage
+\section*{Appendix 1: Impact of COVID19 on the work completed and report}
+\subsection{Time lost travelling home}
+Some of you may have had substantial difficulties travelling home, and lost a lot of time on the way. Please give details here
+\subsection{Lack of access to computers and the internet}
+We understand that not all students have access to sufficient IT resources. Please specify what the limitation of resources is.
+\subsection{Limitation in the outcome}
+Please describe how this has impacted both the extent of the results presented, and the quality of the report.
+%\printbibliography
+
+\end{document}
