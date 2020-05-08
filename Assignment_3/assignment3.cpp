@@ -71,7 +71,7 @@ int main()
       std::regex r1{"[0-9][^(a-zA-Z0-9)]"};
       int first_delimeter_pos{custom_search(course_details,r1)};
       //Substring to get the course code
-      int course_code{std::stoi(course_details.substr(0,first_delimeter_pos))};
+      int course_code{std::stoi(course_details.substr(0,first_delimeter_pos+1))};
 
       //Search for index of non alphanumeric char followed by an alphanumeric
       std::regex r2{"[^(a-zA-Z0-9)][(a-zA-Z0-9)]"};

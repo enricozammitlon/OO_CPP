@@ -1,23 +1,38 @@
-#ifndef VESSEL_H
-#define VESSEL_H
+#ifndef PLAYER_H
+#define PLAYER_H
 #include "board.h"
-#include "player.h"
-#include "rules.h"
 #include <string>
+#include <vector>
 namespace battle_ship {
 class player {
 protected:
   std::string username;
-  std::size_t highscore{0};
-  battle_ship::board *player_board;
-  battle_ship::board *enemy_board;
-  std::size_t budget{battle_ship::rules::initial_budget};
+  std::unique_ptr<board> player_board;
+  std::weak_ptr<player> enemy;
+  int budget{500};
+  std::vector<coordinates> already_targeted;
+  bool ready_to_play;
+  std::string subdir;
 
 public:
   player() = default;
-  player(std::string uname, battle_ship::board *pb, battle_ship::board *eb)
-      : username{uname}, player_board{pb}, enemy_board{eb} {};
-  virtual ~player(){};
+  player(std::string uname, bool ready, std::string sub)
+      : username{uname}, ready_to_play{ready}, subdir{sub} {
+    reset();
+  };
+  std::string get_uname() { return username; };
+  void assign_enemy(std::shared_ptr<player> e) { enemy = e; };
+  player &get_enemy() { return *(enemy.lock()); };
+  void modify_budget(int money) { budget += money; };
+  void reset();
+  bool is_ready_to_play() { return ready_to_play; };
+  int get_budget() { return budget; }
+  virtual void winning_line() = 0;
+  virtual void attack(piece &attacking_piece, player &enemy) = 0;
+  virtual size_t get_highscore() = 0;
+  virtual void save_highscore(size_t h) = 0;
+  board &get_board() { return *player_board; };
+  ~player() = default;
 };
 } // namespace battle_ship
 #endif

@@ -8,39 +8,37 @@ namespace battle_ship {
 std::ostream &operator<<(std::ostream &os, const coordinates &p) {
   os << "(";
   os << char(std::size_t(p.col) + 64);
-  os << ",";
   os << p.row;
-  os << ")" << std::endl;
+  os << ")";
   return os;
 };
-std::istream &operator>>(std::istream &is, coordinates &p) {
+bool operator>>(std::istream &is, coordinates &p) {
   std::string input;
-  std::getline(is, input);
+  is >> input;
   std::smatch match;
-  const std::regex find_x{"[A-Z]"};
-  const std::regex find_y{"[A-Z][0-9]*"};
+  const std::regex find_coor{"[A-J]\\d{1,2}"};
   std::string real_part;
 
-  if (std::regex_search(input, match, find_x)) {
-    battle_ship::x_axis x{
-        static_cast<battle_ship::x_axis>(match[0].str().at(0) - 64)};
-    if (std::regex_search(input, match, find_y)) {
-      std::string digits_part{
-          match[0].str().substr(1, match[0].str().length())};
-      std::stringstream temp_stream;
-      temp_stream << digits_part;
-      std::size_t y;
-      temp_stream >> y;
-      p.col = x;
-      p.row = y;
-      return is;
-    } else {
-      // err
+  if (std::regex_search(input, match, find_coor)) {
+    std::string x_coor{match[0].str()[0]};
+    battle_ship::x_axis x{static_cast<battle_ship::x_axis>(x_coor.at(0) - 64)};
+    std::string y_coor{match[0].str().substr(1)};
+    std::stringstream temp_stream;
+    temp_stream << y_coor;
+    std::size_t y;
+    temp_stream >> y;
+    p.col = x;
+    p.row = y;
+    if (p.row <= 0 || p.row > 10 || std::size_t(p.col) <= 0 ||
+        std::size_t(p.col) > 10) {
+      std::cerr << "Coordinates out of range." << std::endl;
+      return true;
     }
+    return false;
   } else {
-    // err
+    std::cerr << "Not valid coordinates." << std::endl;
   }
-  return is;
+  return true;
 }
 } // namespace battle_ship
 

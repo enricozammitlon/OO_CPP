@@ -1,0 +1,8 @@
+<map id="include/rules.h" name="include/rules.h">
+<area shape="rect" id="node2" href="$battle_8cpp.html" title="src/battle.cpp" alt="" coords="5,229,115,256"/>
+<area shape="rect" id="node3" href="$game_8h.html" title="include/game.h" alt="" coords="129,80,249,107"/>
+<area shape="rect" id="node4" href="$game_8cpp.html" title="src/game.cpp" alt="" coords="139,229,248,256"/>
+<area shape="rect" id="node5" href="$screen__manager_8cpp.html" title="src/screen_manager.cpp" alt="" coords="413,229,592,256"/>
+<area shape="rect" id="node6" href="$screen__manager_8h.html" title="include/screen_manager.h" alt="" coords="227,155,418,181"/>
+<area shape="rect" id="node7" href="$human_8cpp.html" title="src/human.cpp" alt="" coords="272,229,389,256"/>
+</map>

@@ -1,0 +1,84 @@
+\hypertarget{classbattle__ship_1_1market}{}\section{battle\+\_\+ship\+:\+:market Class Reference}
+\label{classbattle__ship_1_1market}\index{battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}}
+
+
+{\ttfamily \#include $<$market.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classbattle__ship_1_1market_a0da0b4d6279e2b07a900eaf76d23c691}{get\+\_\+available\+\_\+pieces} (\hyperlink{classbattle__ship_1_1player}{player} \&p)
+\item 
+static std\+::tuple$<$ bool, std\+::string $>$ \hyperlink{classbattle__ship_1_1market_ab8bfb830477cdb9fc361a13306c14859}{buy\+\_\+piece} (\hyperlink{classbattle__ship_1_1player}{player} \&p, std\+::string piece\+\_\+name, \hyperlink{structbattle__ship_1_1coordinates}{coordinates} coors, \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation} \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation})
+\item 
+static std\+::tuple$<$ bool, std\+::string $>$ \hyperlink{classbattle__ship_1_1market_a9f0233812e846d7c2f111c2d1721a2a1}{sell\+\_\+piece} (\hyperlink{classbattle__ship_1_1player}{player} \&p, std\+::string piece\+\_\+name)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classbattle__ship_1_1market_a1bc7fb6748d38524516703c171a7041d}{all\+\_\+pieces}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file market.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1market_ab8bfb830477cdb9fc361a13306c14859}\label{classbattle__ship_1_1market_ab8bfb830477cdb9fc361a13306c14859}} 
+\index{battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}!buy\+\_\+piece@{buy\+\_\+piece}}
+\index{buy\+\_\+piece@{buy\+\_\+piece}!battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}}
+\subsubsection{\texorpdfstring{buy\+\_\+piece()}{buy\_piece()}}
+{\footnotesize\ttfamily std\+::tuple$<$ bool, std\+::string $>$ battle\+\_\+ship\+::market\+::buy\+\_\+piece (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{p,  }\item[{std\+::string}]{piece\+\_\+name,  }\item[{\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates}}]{coors,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{battle\+\_\+ship\+::orientation}}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 34 of file market.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1market_a0da0b4d6279e2b07a900eaf76d23c691}\label{classbattle__ship_1_1market_a0da0b4d6279e2b07a900eaf76d23c691}} 
+\index{battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}!get\+\_\+available\+\_\+pieces@{get\+\_\+available\+\_\+pieces}}
+\index{get\+\_\+available\+\_\+pieces@{get\+\_\+available\+\_\+pieces}!battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}}
+\subsubsection{\texorpdfstring{get\+\_\+available\+\_\+pieces()}{get\_available\_pieces()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ battle\+\_\+ship\+::market\+::get\+\_\+available\+\_\+pieces (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 18 of file market.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1market_a9f0233812e846d7c2f111c2d1721a2a1}\label{classbattle__ship_1_1market_a9f0233812e846d7c2f111c2d1721a2a1}} 
+\index{battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}!sell\+\_\+piece@{sell\+\_\+piece}}
+\index{sell\+\_\+piece@{sell\+\_\+piece}!battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}}
+\subsubsection{\texorpdfstring{sell\+\_\+piece()}{sell\_piece()}}
+{\footnotesize\ttfamily std\+::tuple$<$ bool, std\+::string $>$ battle\+\_\+ship\+::market\+::sell\+\_\+piece (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{p,  }\item[{std\+::string}]{piece\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 61 of file market.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1market_a1bc7fb6748d38524516703c171a7041d}\label{classbattle__ship_1_1market_a1bc7fb6748d38524516703c171a7041d}} 
+\index{battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}!all\+\_\+pieces@{all\+\_\+pieces}}
+\index{all\+\_\+pieces@{all\+\_\+pieces}!battle\+\_\+ship\+::market@{battle\+\_\+ship\+::market}}
+\subsubsection{\texorpdfstring{all\+\_\+pieces}{all\_pieces}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ battle\+\_\+ship\+::market\+::all\+\_\+pieces\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \textcolor{stringliteral}{"Submarine"}, \textcolor{stringliteral}{"Carrier"}, \textcolor{stringliteral}{"Raft"}, \textcolor{stringliteral}{"Cruiser"}, \textcolor{stringliteral}{"Destroyer"}\}
+\end{DoxyCode}
+
+
+Definition at line 11 of file market.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{market_8h}{market.\+h}\item 
+src/\hyperlink{market_8cpp}{market.\+cpp}\end{DoxyCompactItemize}

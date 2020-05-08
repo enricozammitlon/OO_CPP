@@ -1,0 +1,8 @@
+<map id="include/notification_manager.h" name="include/notification_manager.h">
+<area shape="rect" id="node2" href="$battle_8cpp.html" title="src/battle.cpp" alt="" coords="5,95,115,121"/>
+<area shape="rect" id="node3" href="$game_8cpp.html" title="src/game.cpp" alt="" coords="139,95,248,121"/>
+<area shape="rect" id="node4" href="$human_8cpp.html" title="src/human.cpp" alt="" coords="272,95,389,121"/>
+<area shape="rect" id="node5" href="$notification__manager_8cpp.html" title="src/notification_manager.cpp" alt="" coords="414,95,621,121"/>
+<area shape="rect" id="node6" href="$screen__manager_8cpp.html" title="src/screen_manager.cpp" alt="" coords="645,95,824,121"/>
+<area shape="rect" id="node7" href="$vessel_8cpp.html" title="src/vessel.cpp" alt="" coords="848,95,960,121"/>
+</map>

@@ -44,7 +44,7 @@ int main()
     std::cerr <<"Error: File "<<name_of_file<<" could not be opened."<<std::endl;
     return 1;
   }
-  double *data_points; //Holds pointer to array which will hold the data
+  double *data_points=new double[0]; //Holds pointer to array which will hold the data
 
   // Read data from file, ignoring any additional bad data
   while(!data_file.eof()) {

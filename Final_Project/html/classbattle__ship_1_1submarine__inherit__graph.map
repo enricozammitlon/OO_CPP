@@ -1,0 +1,4 @@
+<map id="battle_ship::submarine" name="battle_ship::submarine">
+<area shape="rect" id="node2" href="$classbattle__ship_1_1vessel.html" title="battle_ship::vessel" alt="" coords="19,80,159,107"/>
+<area shape="rect" id="node3" href="$classbattle__ship_1_1piece.html" title="battle_ship::piece" alt="" coords="22,5,157,32"/>
+</map>

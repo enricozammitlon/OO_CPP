@@ -46,6 +46,17 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "iomanip": "cpp"
+    "iomanip": "cpp",
+    "filesystem": "cpp",
+    "chrono": "cpp",
+    "codecvt": "cpp",
+    "ratio": "cpp",
+    "string_view": "cpp",
+    "set": "cpp",
+    "cinttypes": "cpp",
+    "condition_variable": "cpp",
+    "list": "cpp",
+    "mutex": "cpp",
+    "thread": "cpp"
   }
 }

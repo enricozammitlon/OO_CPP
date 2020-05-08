@@ -1,0 +1,264 @@
+==19330== Memcheck, a memory error detector
+==19330== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==19330== Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info
+==19330== Command: ./battleship
+==19330== Parent PID: 2777
+==19330== 
+--19330-- 
+--19330-- Valgrind options:
+--19330--    -v
+--19330--    --tool=memcheck
+--19330--    --leak-check=full
+--19330--    --num-callers=40
+--19330--    --log-file=valgrind.log
+--19330-- Contents of /proc/version:
+--19330--   Linux version 4.15.0-88-generic (buildd@lgw01-amd64-036) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020
+--19330-- 
+--19330-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--19330-- Page sizes: currently 4096, max supported 4096
+--19330-- Valgrind library directory: /usr/lib/valgrind
+--19330-- Reading syms from /workspaces/OO_CPP/Final_Project/build/battleship
+--19330-- Reading syms from /lib/x86_64-linux-gnu/ld-2.24.so
+--19330--   Considering /usr/lib/debug/.build-id/60/6df9c355103e82140d513bc7a25a635591c153.debug ..
+--19330--   .. build-id is valid
+--19330-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--19330--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--19330--   .. CRC mismatch (computed db5b2ec5 wanted 0eae776b)
+--19330--   Considering /usr/lib/debug/usr/lib/valgrind/memcheck-amd64-linux ..
+--19330--   .. CRC is valid
+--19330--    object doesn't have a dynamic symbol table
+--19330-- Scheduler: using generic scheduler lock implementation.
+--19330-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==19330== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-19330-by-???-on-6b77b2fcdc5b
+==19330== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-19330-by-???-on-6b77b2fcdc5b
+==19330== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-19330-by-???-on-6b77b2fcdc5b
+==19330== 
+==19330== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==19330== don't want to do, unless you know exactly what you're doing,
+==19330== or are doing some strange experiment):
+==19330==   /usr/lib/valgrind/../../bin/vgdb --pid=19330 ...command...
+==19330== 
+==19330== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==19330==   /path/to/gdb ./battleship
+==19330== and then give GDB the following command
+==19330==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=19330
+==19330== --pid is optional if only one valgrind process is running
+==19330== 
+--19330-- REDIR: 0x401aec0 (ld-linux-x86-64.so.2:strlen) redirected to 0x3809de81 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--19330-- REDIR: 0x4019770 (ld-linux-x86-64.so.2:index) redirected to 0x3809de9b (vgPlain_amd64_linux_REDIR_FOR_index)
+--19330-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--19330--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--19330--   .. CRC mismatch (computed 74a069fa wanted 84d99202)
+--19330--   Considering /usr/lib/debug/usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--19330--   .. CRC is valid
+--19330-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--19330--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--19330--   .. CRC mismatch (computed 88f2547e wanted 8a7a4459)
+--19330--   Considering /usr/lib/debug/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--19330--   .. CRC is valid
+==19330== WARNING: new redirection conflicts with existing -- ignoring it
+--19330--     old: 0x0401aec0 (strlen              ) R-> (0000.0) 0x3809de81 vgPlain_amd64_linux_REDIR_FOR_strlen
+--19330--     new: 0x0401aec0 (strlen              ) R-> (2007.0) 0x04c2ee60 strlen
+--19330-- REDIR: 0x4019990 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2ff60 (strcmp)
+--19330-- REDIR: 0x401b9d0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c33330 (mempcpy)
+--19330-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22
+--19330--    object doesn't have a symbol table
+--19330-- Reading syms from /lib/x86_64-linux-gnu/libm-2.24.so
+--19330--   Considering /usr/lib/debug/.build-id/4e/49714c557ce0472c798f39365ca10f9c0e1933.debug ..
+--19330--   .. build-id is valid
+--19330-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--19330--    object doesn't have a symbol table
+--19330-- Reading syms from /lib/x86_64-linux-gnu/libc-2.24.so
+--19330--   Considering /usr/lib/debug/.build-id/77/5143e680ff0cd4cd51cce1ce8ca216e635a1d6.debug ..
+--19330--   .. build-id is valid
+--19330-- REDIR: 0x5759710 (libc.so.6:strcasecmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x57551b0 (libc.so.6:strcspn) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x575ba00 (libc.so.6:strncasecmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x5757620 (libc.so.6:strpbrk) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x57579b0 (libc.so.6:strspn) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x5758d80 (libc.so.6:memmove) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x5757330 (libc.so.6:rindex) redirected to 0x4c2e7f0 (rindex)
+--19330-- REDIR: 0x574ff10 (libc.so.6:malloc) redirected to 0x4c2bb40 (malloc)
+--19330-- REDIR: 0x5755650 (libc.so.6:strlen) redirected to 0x4c2eda0 (strlen)
+--19330-- REDIR: 0x5758980 (libc.so.6:__GI_memcmp) redirected to 0x4c31b40 (__GI_memcmp)
+--19330-- REDIR: 0x5753c00 (libc.so.6:strcmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x5764520 (libc.so.6:__strcmp_sse2_unaligned) redirected to 0x4c2fe20 (strcmp)
+--19330-- REDIR: 0x4ec7790 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4c2c1b0 (operator new(unsigned long))
+--19330-- REDIR: 0x575e100 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x57fe020 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4c325c0 (memmove)
+--19330-- REDIR: 0x5758940 (libc.so.6:bcmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x5818f80 (libc.so.6:__memcmp_sse4_1) redirected to 0x4c31ca0 (__memcmp_sse4_1)
+--19330-- REDIR: 0x5758e70 (libc.so.6:__GI_mempcpy) redirected to 0x4c33060 (__GI_mempcpy)
+--19330-- REDIR: 0x4ec58c0 (libstdc++.so.6:operator delete(void*)) redirected to 0x4c2d270 (operator delete(void*))
+--19330-- REDIR: 0x5757f50 (libc.so.6:__GI_strstr) redirected to 0x4c33590 (__strstr_sse2)
+--19330-- REDIR: 0x4ec7850 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x4c2c8d0 (operator new[](unsigned long))
+--19330-- REDIR: 0x4ec58f0 (libstdc++.so.6:operator delete[](void*)) redirected to 0x4c2d770 (operator delete[](void*))
+--19330-- REDIR: 0x5750510 (libc.so.6:free) redirected to 0x4c2cd70 (free)
+--19330-- REDIR: 0x57539b0 (libc.so.6:index) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x57539e0 (libc.so.6:__GI_strchr) redirected to 0x4c2e950 (__GI_strchr)
+--19330-- REDIR: 0x57557f0 (libc.so.6:strnlen) redirected to 0x4c2ed40 (strnlen)
+--19330-- REDIR: 0x5758e90 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4c300c0 (memcpy@GLIBC_2.2.5)
+--19330-- REDIR: 0x5759230 (libc.so.6:memset) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--19330-- REDIR: 0x57fe470 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x4c324c0 (memset)
+--19330-- REDIR: 0x57585f0 (libc.so.6:memchr) redirected to 0x4c30000 (memchr)
+==19330== 
+==19330== Process terminating with default action of signal 2 (SIGINT)
+==19330==    at 0x57B0910: __read_nocancel (syscall-template.S:84)
+==19330==    by 0x5748A2F: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:600)
+==19330==    by 0x5749B31: _IO_default_uflow (genops.c:413)
+==19330==    by 0x574451F: getc (getc.c:38)
+==19330==    by 0x4F2130C: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x4F2E350: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x4EE04E2: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x119730: battle_ship::operator>>(std::istream&, battle_ship::coordinates&) (coordinates.cpp:17)
+==19330==    by 0x14BB68: battle_ship::human::attack(battle_ship::piece&, battle_ship::player&) (human.cpp:186)
+==19330==    by 0x14196B: battle_ship::game::play(std::shared_ptr<battle_ship::player>&) (game.cpp:40)
+==19330==    by 0x112B06: main (battle.cpp:76)
+==19330== 
+==19330== HEAP SUMMARY:
+==19330==     in use at exit: 10,515 bytes in 43 blocks
+==19330==   total heap usage: 21,297 allocs, 21,254 frees, 582,124 bytes allocated
+==19330== 
+==19330== Searching for pointers to 43 not-freed blocks
+==19330== Checked 112,624 bytes
+==19330== 
+==19330== 31 bytes in 1 blocks are definitely lost in loss record 7 of 41
+==19330==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==19330==    by 0x4F55A46: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x4F55D98: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x13EEAD: battle_ship::vessel::vessel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::orientation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (vessel.cpp:20)
+==19330==    by 0x142F5A: battle_ship::carrier::carrier(battle_ship::coordinates, battle_ship::orientation) (carrier.h:14)
+==19330==    by 0x1445A1: std::_MakeUniq<battle_ship::carrier>::__single_object std::make_unique<battle_ship::carrier, battle_ship::coordinates&, battle_ship::orientation&>(battle_ship::coordinates&, battle_ship::orientation&) (unique_ptr.h:791)
+==19330==    by 0x14265E: battle_ship::market::buy_piece(battle_ship::player&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, battle_ship::orientation) (market.cpp:45)
+==19330==    by 0x14002F: battle_ship::player::reset() (player.cpp:35)
+==19330==    by 0x113129: battle_ship::player::player(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (player.h:21)
+==19330==    by 0x14629E: battle_ship::human::human(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, unsigned long) (human.h:13)
+==19330==    by 0x147CAA: void __gnu_cxx::new_allocator<battle_ship::human>::construct<battle_ship::human, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long>(battle_ship::human*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long&&) (new_allocator.h:120)
+==19330==    by 0x147A77: void std::allocator_traits<std::allocator<battle_ship::human> >::construct<battle_ship::human, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long>(std::allocator<battle_ship::human>&, battle_ship::human*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long&&) (alloc_traits.h:475)
+==19330==    by 0x14782D: std::_Sp_counted_ptr_inplace<battle_ship::human, std::allocator<battle_ship::human>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long>(std::allocator<battle_ship::human>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long&&) (shared_ptr_base.h:520)
+==19330==    by 0x14747F: std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<battle_ship::human, std::allocator<battle_ship::human>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long>(std::_Sp_make_shared_tag, battle_ship::human*, std::allocator<battle_ship::human> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long&&) (shared_ptr_base.h:615)
+==19330==    by 0x14713A: std::__shared_ptr<battle_ship::human, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<battle_ship::human>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long>(std::_Sp_make_shared_tag, std::allocator<battle_ship::human> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long&&) (shared_ptr_base.h:1100)
+==19330==    by 0x146DC9: std::shared_ptr<battle_ship::human>::shared_ptr<std::allocator<battle_ship::human>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long>(std::_Sp_make_shared_tag, std::allocator<battle_ship::human> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long&&) (shared_ptr.h:319)
+==19330==    by 0x146AC0: std::shared_ptr<battle_ship::human> std::allocate_shared<battle_ship::human, std::allocator<battle_ship::human>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long>(std::allocator<battle_ship::human> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long&&) (shared_ptr.h:620)
+==19330==    by 0x1466F0: std::shared_ptr<battle_ship::human> std::make_shared<battle_ship::human, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long&, unsigned long&&) (shared_ptr.h:636)
+==19330==    by 0x146028: battle_ship::authentication::signin(std::shared_ptr<battle_ship::human>&) (authentication.cpp:69)
+==19330==    by 0x11286C: main (battle.cpp:42)
+==19330== 
+==19330== 31 bytes in 1 blocks are definitely lost in loss record 8 of 41
+==19330==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==19330==    by 0x4F55A46: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x4F55D98: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x13EEAD: battle_ship::vessel::vessel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::orientation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (vessel.cpp:20)
+==19330==    by 0x142F5A: battle_ship::carrier::carrier(battle_ship::coordinates, battle_ship::orientation) (carrier.h:14)
+==19330==    by 0x1445A1: std::_MakeUniq<battle_ship::carrier>::__single_object std::make_unique<battle_ship::carrier, battle_ship::coordinates&, battle_ship::orientation&>(battle_ship::coordinates&, battle_ship::orientation&) (unique_ptr.h:791)
+==19330==    by 0x14265E: battle_ship::market::buy_piece(battle_ship::player&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, battle_ship::orientation) (market.cpp:45)
+==19330==    by 0x14002F: battle_ship::player::reset() (player.cpp:35)
+==19330==    by 0x113129: battle_ship::player::player(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (player.h:21)
+==19330==    by 0x113448: battle_ship::npc::npc(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (npc.h:14)
+==19330==    by 0x1159DC: void __gnu_cxx::new_allocator<battle_ship::npc>::construct<battle_ship::npc, char const (&) [9], int>(battle_ship::npc*, char const (&) [9], int&&) (new_allocator.h:120)
+==19330==    by 0x1157D7: void std::allocator_traits<std::allocator<battle_ship::npc> >::construct<battle_ship::npc, char const (&) [9], int>(std::allocator<battle_ship::npc>&, battle_ship::npc*, char const (&) [9], int&&) (alloc_traits.h:475)
+==19330==    by 0x11555D: std::_Sp_counted_ptr_inplace<battle_ship::npc, std::allocator<battle_ship::npc>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<char const (&) [9], int>(std::allocator<battle_ship::npc>, char const (&) [9], int&&) (shared_ptr_base.h:520)
+==19330==    by 0x1151A3: std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, battle_ship::npc*, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:615)
+==19330==    by 0x114F8A: std::__shared_ptr<battle_ship::npc, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:1100)
+==19330==    by 0x114D3F: std::shared_ptr<battle_ship::npc>::shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:319)
+==19330==    by 0x11475E: std::shared_ptr<battle_ship::npc> std::allocate_shared<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:620)
+==19330==    by 0x113D3B: std::shared_ptr<battle_ship::npc> std::make_shared<battle_ship::npc, char const (&) [9], int>(char const (&) [9], int&&) (shared_ptr.h:636)
+==19330==    by 0x112A74: main (battle.cpp:70)
+==19330== 
+==19330== 31 bytes in 1 blocks are definitely lost in loss record 9 of 41
+==19330==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==19330==    by 0x4F55A46: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x4F55D98: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x13EEAD: battle_ship::vessel::vessel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::orientation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (vessel.cpp:20)
+==19330==    by 0x1431A2: battle_ship::cruiser::cruiser(battle_ship::coordinates, battle_ship::orientation) (cruiser.h:14)
+==19330==    by 0x1443BF: std::_MakeUniq<battle_ship::cruiser>::__single_object std::make_unique<battle_ship::cruiser, battle_ship::coordinates&, battle_ship::orientation&>(battle_ship::coordinates&, battle_ship::orientation&) (unique_ptr.h:791)
+==19330==    by 0x1425FA: battle_ship::market::buy_piece(battle_ship::player&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, battle_ship::orientation) (market.cpp:43)
+==19330==    by 0x14002F: battle_ship::player::reset() (player.cpp:35)
+==19330==    by 0x113129: battle_ship::player::player(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (player.h:21)
+==19330==    by 0x113448: battle_ship::npc::npc(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (npc.h:14)
+==19330==    by 0x1159DC: void __gnu_cxx::new_allocator<battle_ship::npc>::construct<battle_ship::npc, char const (&) [9], int>(battle_ship::npc*, char const (&) [9], int&&) (new_allocator.h:120)
+==19330==    by 0x1157D7: void std::allocator_traits<std::allocator<battle_ship::npc> >::construct<battle_ship::npc, char const (&) [9], int>(std::allocator<battle_ship::npc>&, battle_ship::npc*, char const (&) [9], int&&) (alloc_traits.h:475)
+==19330==    by 0x11555D: std::_Sp_counted_ptr_inplace<battle_ship::npc, std::allocator<battle_ship::npc>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<char const (&) [9], int>(std::allocator<battle_ship::npc>, char const (&) [9], int&&) (shared_ptr_base.h:520)
+==19330==    by 0x1151A3: std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, battle_ship::npc*, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:615)
+==19330==    by 0x114F8A: std::__shared_ptr<battle_ship::npc, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:1100)
+==19330==    by 0x114D3F: std::shared_ptr<battle_ship::npc>::shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:319)
+==19330==    by 0x11475E: std::shared_ptr<battle_ship::npc> std::allocate_shared<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:620)
+==19330==    by 0x113D3B: std::shared_ptr<battle_ship::npc> std::make_shared<battle_ship::npc, char const (&) [9], int>(char const (&) [9], int&&) (shared_ptr.h:636)
+==19330==    by 0x112A74: main (battle.cpp:70)
+==19330== 
+==19330== 31 bytes in 1 blocks are definitely lost in loss record 10 of 41
+==19330==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==19330==    by 0x4F55A46: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x4F55D98: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x13EEAD: battle_ship::vessel::vessel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::orientation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (vessel.cpp:20)
+==19330==    by 0x143632: battle_ship::raft::raft(battle_ship::coordinates, battle_ship::orientation) (raft.h:14)
+==19330==    by 0x143FFB: std::_MakeUniq<battle_ship::raft>::__single_object std::make_unique<battle_ship::raft, battle_ship::coordinates&, battle_ship::orientation&>(battle_ship::coordinates&, battle_ship::orientation&) (unique_ptr.h:791)
+==19330==    by 0x14252C: battle_ship::market::buy_piece(battle_ship::player&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, battle_ship::orientation) (market.cpp:39)
+==19330==    by 0x14002F: battle_ship::player::reset() (player.cpp:35)
+==19330==    by 0x113129: battle_ship::player::player(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (player.h:21)
+==19330==    by 0x113448: battle_ship::npc::npc(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (npc.h:14)
+==19330==    by 0x1159DC: void __gnu_cxx::new_allocator<battle_ship::npc>::construct<battle_ship::npc, char const (&) [9], int>(battle_ship::npc*, char const (&) [9], int&&) (new_allocator.h:120)
+==19330==    by 0x1157D7: void std::allocator_traits<std::allocator<battle_ship::npc> >::construct<battle_ship::npc, char const (&) [9], int>(std::allocator<battle_ship::npc>&, battle_ship::npc*, char const (&) [9], int&&) (alloc_traits.h:475)
+==19330==    by 0x11555D: std::_Sp_counted_ptr_inplace<battle_ship::npc, std::allocator<battle_ship::npc>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<char const (&) [9], int>(std::allocator<battle_ship::npc>, char const (&) [9], int&&) (shared_ptr_base.h:520)
+==19330==    by 0x1151A3: std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, battle_ship::npc*, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:615)
+==19330==    by 0x114F8A: std::__shared_ptr<battle_ship::npc, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:1100)
+==19330==    by 0x114D3F: std::shared_ptr<battle_ship::npc>::shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:319)
+==19330==    by 0x11475E: std::shared_ptr<battle_ship::npc> std::allocate_shared<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:620)
+==19330==    by 0x113D3B: std::shared_ptr<battle_ship::npc> std::make_shared<battle_ship::npc, char const (&) [9], int>(char const (&) [9], int&&) (shared_ptr.h:636)
+==19330==    by 0x112A74: main (battle.cpp:70)
+==19330== 
+==19330== 32 bytes in 1 blocks are definitely lost in loss record 15 of 41
+==19330==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==19330==    by 0x4F55A46: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x4F55D98: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x13EEAD: battle_ship::vessel::vessel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::orientation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (vessel.cpp:20)
+==19330==    by 0x1433EA: battle_ship::destroyer::destroyer(battle_ship::coordinates, battle_ship::orientation) (destroyer.h:14)
+==19330==    by 0x1441DD: std::_MakeUniq<battle_ship::destroyer>::__single_object std::make_unique<battle_ship::destroyer, battle_ship::coordinates&, battle_ship::orientation&>(battle_ship::coordinates&, battle_ship::orientation&) (unique_ptr.h:791)
+==19330==    by 0x142593: battle_ship::market::buy_piece(battle_ship::player&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, battle_ship::orientation) (market.cpp:41)
+==19330==    by 0x14002F: battle_ship::player::reset() (player.cpp:35)
+==19330==    by 0x113129: battle_ship::player::player(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (player.h:21)
+==19330==    by 0x113448: battle_ship::npc::npc(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (npc.h:14)
+==19330==    by 0x1159DC: void __gnu_cxx::new_allocator<battle_ship::npc>::construct<battle_ship::npc, char const (&) [9], int>(battle_ship::npc*, char const (&) [9], int&&) (new_allocator.h:120)
+==19330==    by 0x1157D7: void std::allocator_traits<std::allocator<battle_ship::npc> >::construct<battle_ship::npc, char const (&) [9], int>(std::allocator<battle_ship::npc>&, battle_ship::npc*, char const (&) [9], int&&) (alloc_traits.h:475)
+==19330==    by 0x11555D: std::_Sp_counted_ptr_inplace<battle_ship::npc, std::allocator<battle_ship::npc>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<char const (&) [9], int>(std::allocator<battle_ship::npc>, char const (&) [9], int&&) (shared_ptr_base.h:520)
+==19330==    by 0x1151A3: std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, battle_ship::npc*, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:615)
+==19330==    by 0x114F8A: std::__shared_ptr<battle_ship::npc, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:1100)
+==19330==    by 0x114D3F: std::shared_ptr<battle_ship::npc>::shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:319)
+==19330==    by 0x11475E: std::shared_ptr<battle_ship::npc> std::allocate_shared<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:620)
+==19330==    by 0x113D3B: std::shared_ptr<battle_ship::npc> std::make_shared<battle_ship::npc, char const (&) [9], int>(char const (&) [9], int&&) (shared_ptr.h:636)
+==19330==    by 0x112A74: main (battle.cpp:70)
+==19330== 
+==19330== 32 bytes in 1 blocks are definitely lost in loss record 16 of 41
+==19330==    at 0x4C2C21F: operator new(unsigned long) (vg_replace_malloc.c:334)
+==19330==    by 0x4F55A46: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x4F55D98: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+==19330==    by 0x13EEAD: battle_ship::vessel::vessel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::orientation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (vessel.cpp:20)
+==19330==    by 0x14387A: battle_ship::submarine::submarine(battle_ship::coordinates, battle_ship::orientation) (submarine.h:14)
+==19330==    by 0x144783: std::_MakeUniq<battle_ship::submarine>::__single_object std::make_unique<battle_ship::submarine, battle_ship::coordinates&, battle_ship::orientation&>(battle_ship::coordinates&, battle_ship::orientation&) (unique_ptr.h:791)
+==19330==    by 0x1426BC: battle_ship::market::buy_piece(battle_ship::player&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, battle_ship::coordinates, battle_ship::orientation) (market.cpp:47)
+==19330==    by 0x14002F: battle_ship::player::reset() (player.cpp:35)
+==19330==    by 0x113129: battle_ship::player::player(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (player.h:21)
+==19330==    by 0x113448: battle_ship::npc::npc(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long) (npc.h:14)
+==19330==    by 0x1159DC: void __gnu_cxx::new_allocator<battle_ship::npc>::construct<battle_ship::npc, char const (&) [9], int>(battle_ship::npc*, char const (&) [9], int&&) (new_allocator.h:120)
+==19330==    by 0x1157D7: void std::allocator_traits<std::allocator<battle_ship::npc> >::construct<battle_ship::npc, char const (&) [9], int>(std::allocator<battle_ship::npc>&, battle_ship::npc*, char const (&) [9], int&&) (alloc_traits.h:475)
+==19330==    by 0x11555D: std::_Sp_counted_ptr_inplace<battle_ship::npc, std::allocator<battle_ship::npc>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<char const (&) [9], int>(std::allocator<battle_ship::npc>, char const (&) [9], int&&) (shared_ptr_base.h:520)
+==19330==    by 0x1151A3: std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, battle_ship::npc*, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:615)
+==19330==    by 0x114F8A: std::__shared_ptr<battle_ship::npc, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr_base.h:1100)
+==19330==    by 0x114D3F: std::shared_ptr<battle_ship::npc>::shared_ptr<std::allocator<battle_ship::npc>, char const (&) [9], int>(std::_Sp_make_shared_tag, std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:319)
+==19330==    by 0x11475E: std::shared_ptr<battle_ship::npc> std::allocate_shared<battle_ship::npc, std::allocator<battle_ship::npc>, char const (&) [9], int>(std::allocator<battle_ship::npc> const&, char const (&) [9], int&&) (shared_ptr.h:620)
+==19330==    by 0x113D3B: std::shared_ptr<battle_ship::npc> std::make_shared<battle_ship::npc, char const (&) [9], int>(char const (&) [9], int&&) (shared_ptr.h:636)
+==19330==    by 0x112A74: main (battle.cpp:70)
+==19330== 
+==19330== LEAK SUMMARY:
+==19330==    definitely lost: 188 bytes in 6 blocks
+==19330==    indirectly lost: 0 bytes in 0 blocks
+==19330==      possibly lost: 0 bytes in 0 blocks
+==19330==    still reachable: 10,327 bytes in 37 blocks
+==19330==                       of which reachable via heuristic:
+==19330==                         newarray           : 6,416 bytes in 2 blocks
+==19330==         suppressed: 0 bytes in 0 blocks
+==19330== Reachable blocks (those to which a pointer was found) are not shown.
+==19330== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==19330== 
+==19330== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)
+==19330== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)

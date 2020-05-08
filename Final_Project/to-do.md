@@ -1,17 +1,32 @@
-#To-Do List/Changelog
+# To-Do List/Changelog
 - [x] Change any access functions from (m,n) to using struct point
 - [x] Rename point to coordinate
 - [x] Rename x_begin and y_begin to appropriate names
 - [x] Review has-a and is-a for all classes and change where appropriate
-- [ ] Add notifications/events class
-- [ ] Add main menu
-- [ ] Add login
-- [ ] Add highscores screen
+- [x] Add notifications/events class
+- [x] Add main menu
+- [x] Add fleet editing screen
+- [x] Convert pointers to smart pointers
+- [x] Add check fleet on fleet screen
+- [ ] ~~Move fleet editing to its own class~~
+- [x] Check memory leaks using ~~deleaker~~ valgrind
+- [x] Sanitize all inputs
+- [ ] Fix issue with copy constructor of a board
+- [x] ~~Delete~~ Modify the ~~redundant~~ wrongly implemented vessel class
+- [ ] Add show images in fleet editing screen
+- [x] Add new AI and Human classes, base Player
+- [ ] Fix ability to throw errors in docker?
+- [ ] Convert all cerr to throw?
+- [x] Add login
+- [x] Add transaction screen and market
+- [x] Add highscores screen
 - [x] Add splitscreen view
-- [ ] Add game view and routine
-- [ ] Add new vessels
-- [ ] Add non-vessel pieces (decoys)
-- [ ] Add AI functionality
-- [ ] Refine imgs
+- [x] Add game view and routine
+- [x] Add new vessels
 - [ ] Comment review
-- [ ] Extensions?
+    ## Extensions
+    - [ ] Add non-vessel pieces (decoys)
+    - [ ] Add AI functionality
+    - [ ] Refine imgs
+    - [ ] Add costs of ships
+    - [ ] Add random events

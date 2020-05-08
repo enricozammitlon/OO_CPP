@@ -1,0 +1,10 @@
+<map id="src/screen_manager.cpp" name="src/screen_manager.cpp">
+<area shape="rect" id="node2" href="$screen__manager_8h.html" title="screen_manager.h" alt="" coords="592,80,733,107"/>
+<area shape="rect" id="node3" href="$game_8h.html" title="game.h" alt="" coords="450,155,521,181"/>
+<area shape="rect" id="node16" href="$notification__manager_8h.html" title="notification_manager.h" alt="" coords="832,379,1000,405"/>
+<area shape="rect" id="node4" href="$player_8h.html" title="player.h" alt="" coords="421,229,493,256"/>
+<area shape="rect" id="node15" href="$rules_8h.html" title="rules.h" alt="" coords="43,304,109,331"/>
+<area shape="rect" id="node5" href="$board_8h.html" title="board.h" alt="" coords="409,304,479,331"/>
+<area shape="rect" id="node6" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="175,453,284,480"/>
+<area shape="rect" id="node8" href="$piece_8h.html" title="piece.h" alt="" coords="215,379,283,405"/>
+</map>
