@@ -1,8 +1,3 @@
-// PHYS 30762 Programming in C++
-// Author: Enrico Zammit Lonardelli
-// Date: 26/03/2020
-// Final Project : Battle Ship
-// This class is to create a board and hold pieces for each user
 #include "board.h"
 #include "geometry.h"
 #include <array>
@@ -51,17 +46,6 @@ battle_ship::board &battle_ship::board::operator=(const board &b) {
       }
     }
   }
-  /*
-  This is a problem see
-  https://online.manchester.ac.uk/webapps/discussionboard/do/message?action=list_messages&course_id=_59326_1&nav=discussion_board&conf_id=_275926_1&forum_id=_318657_1&message_id=_1383196_1
-
-  for (auto iterator = b.get_pieces().begin(); iterator != b.get_pieces().end();
-       iterator++) {
-    std::unique_ptr<battle_ship::piece> current_piece =
-        std::make_unique<battle_ship::piece>(**iterator);
-    all_pieces.push_back(std::move(current_piece));
-  }
-  */
   return *this;
 }
 
@@ -83,7 +67,7 @@ battle_ship::board &battle_ship::board::operator=(board &&b) {
   std::swap(all_pieces, b.all_pieces);
   return *this;
 }
-
+/// Returns the index needed to access a coordinate in a flat array structure
 size_t battle_ship::board::index(const battle_ship::coordinates &p) const {
   if (p.row > 0 && p.row <= rows && size_t(p.col) > 0 &&
       size_t(p.col) <= columns) {
@@ -116,6 +100,10 @@ void battle_ship::board::operator<<(std::unique_ptr<battle_ship::piece> p) {
       return;
     }
   }
+  /*
+  This nested loop adds the actual character representation to the board
+  in the coordinates of the point so the user can see it on their terminal later
+  */
   size_t rep_i{};
   for (size_t i{p->get_start().row}; i <= p->get_end().row; i += 1) {
     size_t rep_j{};
@@ -129,12 +117,16 @@ void battle_ship::board::operator<<(std::unique_ptr<battle_ship::piece> p) {
     }
     rep_i += 1;
   }
-  // add_item(p);
   all_pieces.push_back(std::move(p));
 }
 
 void battle_ship::board::remove_piece(size_t pos) {
   size_t rep_i{};
+  /*
+  This nested loop removes the actual character representation to the board
+  in the coordinates of the point to revert it to the empty coordinate
+  representation
+  */
   for (size_t i{all_pieces[pos]->get_start().row};
        i <= all_pieces[pos]->get_end().row; i += 1) {
     size_t rep_j{};
@@ -155,7 +147,12 @@ void battle_ship::board::modify_coordinate(
     battle_ship::coordinates &target_coordinates, std::string new_value) {
   board_data[index(target_coordinates)] = new_value;
 }
-
+/*
+  This method works by first removing the representation the piece
+  was showing on the board and then adding it in the new pose.
+  This is different than removing and adding a piece since it would be
+  inefficient and would actually delete the piece only to recreate it
+  */
 void battle_ship::board::edit_piece(battle_ship::piece &p, size_t pos,
                                     battle_ship::coordinates new_coor,
                                     battle_ship::orientation new_orientation) {
@@ -186,7 +183,7 @@ void battle_ship::board::edit_piece(battle_ship::piece &p, size_t pos,
     rep_i += 1;
   }
 }
-
+/// Does not show the enemy the piece positions that have not been hit
 battle_ship::board battle_ship::board::mask() const {
   std::unique_ptr<battle_ship::board> masked_board =
       std::make_unique<battle_ship::board>(*this);
@@ -208,6 +205,9 @@ battle_ship::board battle_ship::board::mask() const {
 }
 
 namespace battle_ship {
+/**Mostly self explanatory, the method used ANSI escape characters to display
+ * different colours to show a coordinate which is hit, miss, empty or poulated
+ */
 std::ostream &operator<<(std::ostream &os, const board &b) {
   if (b.rows == 0 && b.columns == 0) {
     os << "Board is empty!"

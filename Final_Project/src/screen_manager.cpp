@@ -5,7 +5,7 @@
 #include <sstream>
 #include <string>
 
-// read each input stream line by line, printing them side by side
+/// Reads each input stream line by line, printing them side by side
 void battle_ship::screen_manager::side_by_side(battle_ship::game &current_game,
                                                size_t width) {
 
@@ -27,11 +27,11 @@ void battle_ship::screen_manager::side_by_side(battle_ship::game &current_game,
             << "Events:" << std::endl;
   while (std::getline(player_stream, line1)) {
     pad = std::string(width, ' ');
-    // get same line from second stream
     std::getline(enemy_stream, line2);
     std::getline(notification_stream, line3);
 
-    // print them size by the side the correct distance (pad)
+    // The correct distance (pad) was calculated empirically, might need
+    // changing on different screens
     std::cout << line1 << pad << line2 << pad << line3 << std::endl;
   }
   std::cout << std::endl;

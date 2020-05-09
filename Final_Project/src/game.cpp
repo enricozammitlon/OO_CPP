@@ -31,6 +31,8 @@ void battle_ship::game::play(std::shared_ptr<battle_ship::player> &winner) {
     } else {
       current_player = player_1;
     }
+    // Here get the current players unsunk pieces and use the first one to
+    // attack
     const std::vector<std::unique_ptr<battle_ship::piece>> &all_pieces =
         current_player.lock()->get_board().get_pieces();
     for (auto iterator = all_pieces.begin(); iterator != all_pieces.end();
@@ -43,6 +45,7 @@ void battle_ship::game::play(std::shared_ptr<battle_ship::player> &winner) {
     }
     if (has_player_lost(current_player.lock()->get_enemy())) {
       winner = current_player.lock();
+      // Calculate the number of turns elapsed for highscore reasons
       turns = turns / 2 + turns % 2;
       if (turns < winner->get_highscore()) {
         winner->save_highscore(turns);
@@ -55,7 +58,8 @@ void battle_ship::game::play(std::shared_ptr<battle_ship::player> &winner) {
   } while (winner == nullptr);
   return;
 }
-
+// This method loops through all the hitpoints for all the player's pieces to
+// check if they have all been hit
 bool battle_ship::game::has_player_lost(battle_ship::player &p) {
   size_t sunken_counter{0};
   const std::vector<std::unique_ptr<battle_ship::piece>> &all_pieces =

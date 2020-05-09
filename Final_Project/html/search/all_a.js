@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['length',['length',['../classbattle__ship_1_1vessel.html#a90930f7a8a9a45cb29ca434afa5e34ec',1,'battle_ship::vessel']]],
-  ['load_5fimage',['load_image',['../classbattle__ship_1_1piece.html#aad848540970833ae5eadd115cc531b6b',1,'battle_ship::piece::load_image()'],['../classbattle__ship_1_1vessel.html#a36278b899be319a57cb728e8ecd2f340',1,'battle_ship::vessel::load_image()']]]
+  ['length',['length',['../classbattle__ship_1_1vessel.html#a51d62e0235c1c5b8116618a864d82929',1,'battle_ship::vessel']]]
 ];

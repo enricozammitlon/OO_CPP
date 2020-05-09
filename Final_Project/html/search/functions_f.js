@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['take_5fhit',['take_hit',['../classbattle__ship_1_1piece.html#a77642906503e12eb22fcfbc3eab98cb5',1,'battle_ship::piece::take_hit()'],['../classbattle__ship_1_1vessel.html#ab0da3c305902d55594b7aa5d20b69509',1,'battle_ship::vessel::take_hit()']]],
-  ['toggle_5fturn',['toggle_turn',['../classbattle__ship_1_1game.html#a0e5a85f6c1f0cff5e1104545b5222026',1,'battle_ship::game']]]
+  ['vessel',['vessel',['../classbattle__ship_1_1vessel.html#a6f3be9c2343940c262fb7add97402311',1,'battle_ship::vessel::vessel()=default'],['../classbattle__ship_1_1vessel.html#ade7f1d4ee4b458a715a0259e5211db20',1,'battle_ship::vessel::vessel(std::string n, coordinates p, size_t l, size_t w, std::string xy_rep_hor, std::string xy_rep_ver, orientation o, size_t ap)']]]
 ];

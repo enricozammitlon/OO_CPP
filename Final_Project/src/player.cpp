@@ -31,10 +31,10 @@ void battle_ship::player::reset() {
         fleet_configuration.ignore(512, '\n');
         continue;
       }
-      // Act on result
-      std::tuple<bool, std::string> result =
-          battle_ship::market_manager::buy_piece(*this, order, coors,
-                                                 orientation);
+      // Although there is a returned transaction success here, this is
+      // guaranteed to work because when it was saved the first time this state
+      // was checked elsewhere in the code (The edit fleet screen).
+      battle_ship::market_manager::buy_piece(*this, order, coors, orientation);
     }
     fleet_configuration.close();
   }

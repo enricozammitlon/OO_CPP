@@ -1,14 +1,13 @@
 <map id="src/battle.cpp" name="src/battle.cpp">
-<area shape="rect" id="node2" href="$authentication_8h.html" title="authentication.h" alt="" coords="695,80,822,107"/>
-<area shape="rect" id="node3" href="$human_8h.html" title="human.h" alt="" coords="678,155,757,181"/>
-<area shape="rect" id="node4" href="$player_8h.html" title="player.h" alt="" coords="681,229,753,256"/>
-<area shape="rect" id="node15" href="$game_8h.html" title="game.h" alt="" coords="949,155,1019,181"/>
-<area shape="rect" id="node16" href="$rules_8h.html" title="rules.h" alt="" coords="1011,229,1077,256"/>
-<area shape="rect" id="node17" href="$highscore__manager_8h.html" title="highscore_manager.h" alt="" coords="1215,80,1375,107"/>
-<area shape="rect" id="node19" href="$notification__manager_8h.html" title="notification_manager.h" alt="" coords="763,379,931,405"/>
-<area shape="rect" id="node20" href="$npc_8h.html" title="npc.h" alt="" coords="815,155,873,181"/>
-<area shape="rect" id="node21" href="$screen__manager_8h.html" title="screen_manager.h" alt="" coords="1049,80,1191,107"/>
-<area shape="rect" id="node5" href="$board_8h.html" title="board.h" alt="" coords="325,304,395,331"/>
-<area shape="rect" id="node6" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="316,453,425,480"/>
-<area shape="rect" id="node8" href="$piece_8h.html" title="piece.h" alt="" coords="619,379,687,405"/>
+<area shape="rect" id="node2" href="$authentication_8h.html" title="authentication.h" alt="" coords="596,80,711,107"/>
+<area shape="rect" id="node3" href="$human_8h.html" title="human.h" alt="" coords="545,155,617,181"/>
+<area shape="rect" id="node4" href="$player_8h.html" title="player.h" alt="" coords="487,229,555,256"/>
+<area shape="rect" id="node15" href="$game_8h.html" title="game.h" alt="" coords="405,155,470,181"/>
+<area shape="rect" id="node16" href="$highscore__manager_8h.html" title="highscore_manager.h" alt="" coords="785,80,932,107"/>
+<area shape="rect" id="node18" href="$notification__manager_8h.html" title="notification_manager.h" alt="" coords="43,379,197,405"/>
+<area shape="rect" id="node19" href="$npc_8h.html" title="npc.h" alt="" coords="693,155,747,181"/>
+<area shape="rect" id="node20" href="$screen__manager_8h.html" title="screen_manager.h" alt="" coords="290,80,419,107"/>
+<area shape="rect" id="node5" href="$board_8h.html" title="board.h" alt="" coords="489,304,554,331"/>
+<area shape="rect" id="node6" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="542,453,642,480"/>
+<area shape="rect" id="node8" href="$piece_8h.html" title="piece.h" alt="" coords="773,379,837,405"/>
 </map>

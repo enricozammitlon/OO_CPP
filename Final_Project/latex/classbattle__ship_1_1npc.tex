@@ -2,6 +2,11 @@
 \label{classbattle__ship_1_1npc}\index{battle\+\_\+ship\+::npc@{battle\+\_\+ship\+::npc}}
 
 
+A type of player, implements methods targeted for non-\/playable characters (computer controlled)  
+
+
+
+
 {\ttfamily \#include $<$npc.\+h$>$}
 
 
@@ -11,7 +16,7 @@ Inheritance diagram for battle\+\_\+ship\+:\+:npc\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=184pt]{classbattle__ship_1_1npc__inherit__graph}
+\includegraphics[width=176pt]{classbattle__ship_1_1npc__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -21,7 +26,7 @@ Collaboration diagram for battle\+\_\+ship\+:\+:npc\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=184pt]{classbattle__ship_1_1npc__coll__graph}
+\includegraphics[width=176pt]{classbattle__ship_1_1npc__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -32,11 +37,11 @@ Collaboration diagram for battle\+\_\+ship\+:\+:npc\+:
 \hyperlink{classbattle__ship_1_1npc_a6a5c77aa108694177865edb9c2d06947}{npc} (std\+::string uname, size\+\_\+t diff)
 \item 
 void \hyperlink{classbattle__ship_1_1npc_a10c65edd38e75ac6be91ecd2dc9c9866}{winning\+\_\+line} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns a line to be outputted when the user effectively loses. \end{DoxyCompactList}\item 
 size\+\_\+t \hyperlink{classbattle__ship_1_1npc_acb3ad1c27c948ae968697c795f10a6b9}{get\+\_\+highscore} ()
-\item 
+\begin{DoxyCompactList}\small\item\em The N\+PC should not be saved in the all time highscores. \end{DoxyCompactList}\item 
 void \hyperlink{classbattle__ship_1_1npc_ab81843d30e5f8801a8fe479d44ead157}{save\+\_\+highscore} (size\+\_\+t h)
-\item 
+\begin{DoxyCompactList}\small\item\em The N\+PC should not be saved in the all time highscores. \end{DoxyCompactList}\item 
 void \hyperlink{classbattle__ship_1_1npc_abe6ec844c73c5410c2c4887fd50fac06}{attack} (\hyperlink{classbattle__ship_1_1piece}{piece} \&attacking\+\_\+piece, \hyperlink{classbattle__ship_1_1player}{player} \&\hyperlink{classbattle__ship_1_1player_af01292346caaf209039b6490ae18d8aa}{enemy})
 \item 
 \hyperlink{classbattle__ship_1_1npc_ab548776b810769c0af009f1db0df4ede}{$\sim$npc} ()=default
@@ -45,9 +50,16 @@ void \hyperlink{classbattle__ship_1_1npc_abe6ec844c73c5410c2c4887fd50fac06}{atta
 
 
 \subsection{Detailed Description}
+A type of player, implements methods targeted for non-\/playable characters (computer controlled) 
 
+\begin{DoxyAuthor}{Author}
+Enrico Zammit Lonardelli
+\end{DoxyAuthor}
+Contact\+: \href{mailto:enrico.zammitl@gmail.com}{\tt enrico.\+zammitl@gmail.\+com}
 
-Definition at line 7 of file npc.\+h.
+Created on\+: Wed, 15 Apr 2020 17\+:55\+:28 
+
+Definition at line 19 of file npc.\+h.
 
 
 
@@ -66,7 +78,7 @@ Definition at line 7 of file npc.\+h.
 
 
 
-Definition at line 13 of file npc.\+h.
+Definition at line 26 of file npc.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1npc_ab548776b810769c0af009f1db0df4ede}\label{classbattle__ship_1_1npc_ab548776b810769c0af009f1db0df4ede}} 
 \index{battle\+\_\+ship\+::npc@{battle\+\_\+ship\+::npc}!````~npc@{$\sim$npc}}
@@ -81,7 +93,7 @@ Definition at line 13 of file npc.\+h.
 \index{battle\+\_\+ship\+::npc@{battle\+\_\+ship\+::npc}!attack@{attack}}
 \index{attack@{attack}!battle\+\_\+ship\+::npc@{battle\+\_\+ship\+::npc}}
 \subsubsection{\texorpdfstring{attack()}{attack()}}
-{\footnotesize\ttfamily void battle\+\_\+ship\+::npc\+::attack (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1piece}{piece} \&}]{attacking\+\_\+piece,  }\item[{\hyperlink{classbattle__ship_1_1player}{player} \&}]{enemy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::npc\+::attack (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1piece}{battle\+\_\+ship\+::piece} \&}]{attacking\+\_\+piece,  }\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{enemy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -89,7 +101,7 @@ Implements \hyperlink{classbattle__ship_1_1player_a86be2256620cd5e20da6db7be8afd
 
 
 
-Definition at line 18 of file npc.\+h.
+Definition at line 15 of file npc.\+cpp.
 
 \mbox{\Hypertarget{classbattle__ship_1_1npc_acb3ad1c27c948ae968697c795f10a6b9}\label{classbattle__ship_1_1npc_acb3ad1c27c948ae968697c795f10a6b9}} 
 \index{battle\+\_\+ship\+::npc@{battle\+\_\+ship\+::npc}!get\+\_\+highscore@{get\+\_\+highscore}}
@@ -99,11 +111,15 @@ Definition at line 18 of file npc.\+h.
 
 
 
+The N\+PC should not be saved in the all time highscores. 
+
+
+
 Implements \hyperlink{classbattle__ship_1_1player_a9b74e59f4b120d38ad591dba6a1d1ba7}{battle\+\_\+ship\+::player}.
 
 
 
-Definition at line 16 of file npc.\+h.
+Definition at line 31 of file npc.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1npc_ab81843d30e5f8801a8fe479d44ead157}\label{classbattle__ship_1_1npc_ab81843d30e5f8801a8fe479d44ead157}} 
 \index{battle\+\_\+ship\+::npc@{battle\+\_\+ship\+::npc}!save\+\_\+highscore@{save\+\_\+highscore}}
@@ -113,11 +129,15 @@ Definition at line 16 of file npc.\+h.
 
 
 
+The N\+PC should not be saved in the all time highscores. 
+
+
+
 Implements \hyperlink{classbattle__ship_1_1player_a928538249678aea5402f8c673671e995}{battle\+\_\+ship\+::player}.
 
 
 
-Definition at line 17 of file npc.\+h.
+Definition at line 33 of file npc.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1npc_a10c65edd38e75ac6be91ecd2dc9c9866}\label{classbattle__ship_1_1npc_a10c65edd38e75ac6be91ecd2dc9c9866}} 
 \index{battle\+\_\+ship\+::npc@{battle\+\_\+ship\+::npc}!winning\+\_\+line@{winning\+\_\+line}}
@@ -127,11 +147,15 @@ Definition at line 17 of file npc.\+h.
 
 
 
+Returns a line to be outputted when the user effectively loses. 
+
+The notifications are always addressing the user so npc winning is a negative message 
+
 Implements \hyperlink{classbattle__ship_1_1player_a3110ec708fd8fc7e02a6e88a63d57d2f}{battle\+\_\+ship\+::player}.
 
 
 
-Definition at line 4 of file npc.\+cpp.
+Definition at line 11 of file npc.\+cpp.
 
 
 

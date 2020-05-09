@@ -2,6 +2,11 @@
 \label{classbattle__ship_1_1player}\index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}}
 
 
+Abstract class for a player.  
+
+
+
+
 {\ttfamily \#include $<$player.\+h$>$}
 
 
@@ -11,7 +16,7 @@ Inheritance diagram for battle\+\_\+ship\+:\+:player\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=300pt]{classbattle__ship_1_1player__inherit__graph}
+\includegraphics[width=284pt]{classbattle__ship_1_1player__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -26,11 +31,11 @@ std\+::string \hyperlink{classbattle__ship_1_1player_a4a5406b436812664cb706c31b7
 void \hyperlink{classbattle__ship_1_1player_a3525c2934ea6a4bd7600385cb5fa6bfa}{assign\+\_\+enemy} (std\+::shared\+\_\+ptr$<$ \hyperlink{classbattle__ship_1_1player}{player} $>$ e)
 \item 
 \hyperlink{classbattle__ship_1_1player}{player} \& \hyperlink{classbattle__ship_1_1player_a5224958feae654d622f56523dc45ab83}{get\+\_\+enemy} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Since enemy is a weak pointer it must be locked before using it. \end{DoxyCompactList}\item 
 void \hyperlink{classbattle__ship_1_1player_ade02279db7265558659c40f16c482df7}{modify\+\_\+budget} (int money)
 \item 
 void \hyperlink{classbattle__ship_1_1player_ae21fefa953f6a3a0476cabfae7084bbf}{reset} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Used to reset states between multiple battles. \end{DoxyCompactList}\item 
 bool \hyperlink{classbattle__ship_1_1player_af5373e08a637e9c21b3751eb02e07540}{is\+\_\+ready\+\_\+to\+\_\+play} ()
 \item 
 int \hyperlink{classbattle__ship_1_1player_ac2e25657d2330845c3770a75d107fef5}{get\+\_\+budget} ()
@@ -63,13 +68,22 @@ std\+::vector$<$ \hyperlink{structbattle__ship_1_1coordinates}{coordinates} $>$ 
 bool \hyperlink{classbattle__ship_1_1player_a48a3f8c692c7ea1def384c39b9b65e85}{ready\+\_\+to\+\_\+play}
 \item 
 std\+::string \hyperlink{classbattle__ship_1_1player_a5cb155ee3d722244c44bf71e5e2440c4}{subdir}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Used to store subdirectory for saves, different for N\+P\+Cs and Humans. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Abstract class for a player. 
 
+\begin{DoxyAuthor}{Author}
+Enrico Zammit Lonardelli
+\end{DoxyAuthor}
+This class implements some of the methods used by players in the game. For more specific methods such as attack the implementation is left to the derived classes.
 
-Definition at line 7 of file player.\+h.
+Contact\+: \href{mailto:enrico.zammitl@gmail.com}{\tt enrico.\+zammitl@gmail.\+com}
+
+Created on\+: Sun, 29 Mar 2020 21\+:50\+:33 
+
+Definition at line 22 of file player.\+h.
 
 
 
@@ -88,7 +102,7 @@ Definition at line 7 of file player.\+h.
 
 
 
-Definition at line 19 of file player.\+h.
+Definition at line 35 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_afbb6b6e880864bf7a36f21a95665a6c7}\label{classbattle__ship_1_1player_afbb6b6e880864bf7a36f21a95665a6c7}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!````~player@{$\sim$player}}
@@ -107,7 +121,7 @@ Definition at line 19 of file player.\+h.
 
 
 
-Definition at line 24 of file player.\+h.
+Definition at line 40 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_a86be2256620cd5e20da6db7be8afdbc8}\label{classbattle__ship_1_1player_a86be2256620cd5e20da6db7be8afdbc8}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!attack@{attack}}
@@ -127,7 +141,7 @@ Implemented in \hyperlink{classbattle__ship_1_1human_ad89701f0c4dd688c564b14a015
 
 
 
-Definition at line 34 of file player.\+h.
+Definition at line 52 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_ac2e25657d2330845c3770a75d107fef5}\label{classbattle__ship_1_1player_ac2e25657d2330845c3770a75d107fef5}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!get\+\_\+budget@{get\+\_\+budget}}
@@ -137,7 +151,7 @@ Definition at line 34 of file player.\+h.
 
 
 
-Definition at line 29 of file player.\+h.
+Definition at line 47 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_a5224958feae654d622f56523dc45ab83}\label{classbattle__ship_1_1player_a5224958feae654d622f56523dc45ab83}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!get\+\_\+enemy@{get\+\_\+enemy}}
@@ -147,7 +161,11 @@ Definition at line 29 of file player.\+h.
 
 
 
-Definition at line 25 of file player.\+h.
+Since enemy is a weak pointer it must be locked before using it. 
+
+
+
+Definition at line 42 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_a9b74e59f4b120d38ad591dba6a1d1ba7}\label{classbattle__ship_1_1player_a9b74e59f4b120d38ad591dba6a1d1ba7}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!get\+\_\+highscore@{get\+\_\+highscore}}
@@ -167,7 +185,7 @@ Implemented in \hyperlink{classbattle__ship_1_1npc_acb3ad1c27c948ae968697c795f10
 
 
 
-Definition at line 23 of file player.\+h.
+Definition at line 39 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_af5373e08a637e9c21b3751eb02e07540}\label{classbattle__ship_1_1player_af5373e08a637e9c21b3751eb02e07540}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!is\+\_\+ready\+\_\+to\+\_\+play@{is\+\_\+ready\+\_\+to\+\_\+play}}
@@ -177,7 +195,7 @@ Definition at line 23 of file player.\+h.
 
 
 
-Definition at line 28 of file player.\+h.
+Definition at line 46 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_ade02279db7265558659c40f16c482df7}\label{classbattle__ship_1_1player_ade02279db7265558659c40f16c482df7}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!modify\+\_\+budget@{modify\+\_\+budget}}
@@ -187,7 +205,7 @@ Definition at line 28 of file player.\+h.
 
 
 
-Definition at line 26 of file player.\+h.
+Definition at line 43 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_ae21fefa953f6a3a0476cabfae7084bbf}\label{classbattle__ship_1_1player_ae21fefa953f6a3a0476cabfae7084bbf}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!reset@{reset}}
@@ -197,7 +215,11 @@ Definition at line 26 of file player.\+h.
 
 
 
-Definition at line 7 of file player.\+cpp.
+Used to reset states between multiple battles. 
+
+
+
+Definition at line 8 of file player.\+cpp.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_a928538249678aea5402f8c673671e995}\label{classbattle__ship_1_1player_a928538249678aea5402f8c673671e995}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!save\+\_\+highscore@{save\+\_\+highscore}}
@@ -230,7 +252,7 @@ Implemented in \hyperlink{classbattle__ship_1_1human_a583d0a9dd05c16f700d0d18259
 
 
 
-Definition at line 13 of file player.\+h.
+Definition at line 28 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_a01f047aac5fcca92ff1e42d4d1e398c9}\label{classbattle__ship_1_1player_a01f047aac5fcca92ff1e42d4d1e398c9}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!budget@{budget}}
@@ -240,7 +262,7 @@ Definition at line 13 of file player.\+h.
 
 
 
-Definition at line 12 of file player.\+h.
+Definition at line 27 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_af01292346caaf209039b6490ae18d8aa}\label{classbattle__ship_1_1player_af01292346caaf209039b6490ae18d8aa}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!enemy@{enemy}}
@@ -250,7 +272,7 @@ Definition at line 12 of file player.\+h.
 
 
 
-Definition at line 11 of file player.\+h.
+Definition at line 26 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_a7a463dddbc0cd8e9dfa3d2c41687e59e}\label{classbattle__ship_1_1player_a7a463dddbc0cd8e9dfa3d2c41687e59e}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!player\+\_\+board@{player\+\_\+board}}
@@ -260,7 +282,7 @@ Definition at line 11 of file player.\+h.
 
 
 
-Definition at line 10 of file player.\+h.
+Definition at line 25 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_a48a3f8c692c7ea1def384c39b9b65e85}\label{classbattle__ship_1_1player_a48a3f8c692c7ea1def384c39b9b65e85}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!ready\+\_\+to\+\_\+play@{ready\+\_\+to\+\_\+play}}
@@ -270,7 +292,7 @@ Definition at line 10 of file player.\+h.
 
 
 
-Definition at line 14 of file player.\+h.
+Definition at line 29 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_a5cb155ee3d722244c44bf71e5e2440c4}\label{classbattle__ship_1_1player_a5cb155ee3d722244c44bf71e5e2440c4}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!subdir@{subdir}}
@@ -280,7 +302,11 @@ Definition at line 14 of file player.\+h.
 
 
 
-Definition at line 15 of file player.\+h.
+Used to store subdirectory for saves, different for N\+P\+Cs and Humans. 
+
+
+
+Definition at line 31 of file player.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1player_aed786567891bcafecb8610e12fb5d413}\label{classbattle__ship_1_1player_aed786567891bcafecb8610e12fb5d413}} 
 \index{battle\+\_\+ship\+::player@{battle\+\_\+ship\+::player}!username@{username}}
@@ -290,7 +316,7 @@ Definition at line 15 of file player.\+h.
 
 
 
-Definition at line 9 of file player.\+h.
+Definition at line 24 of file player.\+h.
 
 
 

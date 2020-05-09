@@ -1,6 +1,6 @@
 <map id="include/npc.h" name="include/npc.h">
-<area shape="rect" id="node2" href="$player_8h.html" title="player.h" alt="" coords="67,80,139,107"/>
-<area shape="rect" id="node3" href="$board_8h.html" title="board.h" alt="" coords="389,155,459,181"/>
-<area shape="rect" id="node4" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="435,304,544,331"/>
-<area shape="rect" id="node6" href="$piece_8h.html" title="piece.h" alt="" coords="305,229,373,256"/>
+<area shape="rect" id="node2" href="$player_8h.html" title="player.h" alt="" coords="65,80,133,107"/>
+<area shape="rect" id="node3" href="$board_8h.html" title="board.h" alt="" coords="375,155,441,181"/>
+<area shape="rect" id="node4" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="421,304,521,331"/>
+<area shape="rect" id="node6" href="$piece_8h.html" title="piece.h" alt="" coords="295,229,359,256"/>
 </map>

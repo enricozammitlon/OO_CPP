@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Battleships: battle_ship::piece Class Reference</title>
+<title>Battleship: battle_ship::piece Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Battleships
+   <div id="projectname">Battleship
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">A C++ implementation of the Battleship board game</div>
   </td>
  </tr>
  </tbody>
@@ -71,45 +72,46 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract/Interface for classes of type piece.  
+ <a href="classbattle__ship_1_1piece.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="piece_8h_source.html">piece.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for battle_ship::piece:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbattle__ship_1_1piece__inherit__graph.png" border="0" usemap="#battle__ship_1_1piece_inherit__map" alt="Inheritance graph"/></div>
 <map name="battle__ship_1_1piece_inherit__map" id="battle__ship_1_1piece_inherit__map">
-<area shape="rect" id="node2" href="classbattle__ship_1_1vessel.html" title="battle_ship::vessel" alt="" coords="188,107,328,133"/>
-<area shape="rect" id="node3" href="classbattle__ship_1_1carrier.html" title="battle_ship::carrier" alt="" coords="389,5,531,32"/>
-<area shape="rect" id="node4" href="classbattle__ship_1_1cruiser.html" title="battle_ship::cruiser" alt="" coords="389,56,531,83"/>
-<area shape="rect" id="node5" href="classbattle__ship_1_1destroyer.html" title="battle_ship::destroyer" alt="" coords="379,107,541,133"/>
-<area shape="rect" id="node6" href="classbattle__ship_1_1raft.html" title="battle_ship::raft" alt="" coords="399,157,521,184"/>
-<area shape="rect" id="node7" href="classbattle__ship_1_1submarine.html" title="battle_ship::submarine" alt="" coords="376,208,544,235"/>
+<area shape="rect" id="node2" href="classbattle__ship_1_1vessel.html" title="Implements the methods for the abstract piece class. " alt="" coords="177,107,308,133"/>
+<area shape="rect" id="node3" href="classbattle__ship_1_1carrier.html" title="A type of vessel. " alt="" coords="368,5,497,32"/>
+<area shape="rect" id="node4" href="classbattle__ship_1_1cruiser.html" title="A type of vessel. " alt="" coords="367,56,499,83"/>
+<area shape="rect" id="node5" href="classbattle__ship_1_1destroyer.html" title="A type of vessel. " alt="" coords="359,107,506,133"/>
+<area shape="rect" id="node6" href="classbattle__ship_1_1raft.html" title="A type of vessel. " alt="" coords="377,157,489,184"/>
+<area shape="rect" id="node7" href="classbattle__ship_1_1submarine.html" title="A type of vessel. " alt="" coords="356,208,509,235"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aad848540970833ae5eadd115cc531b6b"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#aad848540970833ae5eadd115cc531b6b">load_image</a> () const =0</td></tr>
-<tr class="separator:aad848540970833ae5eadd115cc531b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58092f7b1d663471204d7e51e68bbb2d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a58092f7b1d663471204d7e51e68bbb2d">calculate_end</a> (<a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a> start, size_t distance, <a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a> o)=0</td></tr>
+<tr class="memdesc:a58092f7b1d663471204d7e51e68bbb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a start coordinate calculate the end coordinate.  <a href="#a58092f7b1d663471204d7e51e68bbb2d">More...</a><br /></td></tr>
 <tr class="separator:a58092f7b1d663471204d7e51e68bbb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a052305c855625732d3e5ba96d0fca5f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a052305c855625732d3e5ba96d0fca5f9">modify_pose</a> (<a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a> new_coors, <a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a> new_orientation)=0</td></tr>
+<tr class="memdesc:a052305c855625732d3e5ba96d0fca5f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies position and orientation.  <a href="#a052305c855625732d3e5ba96d0fca5f9">More...</a><br /></td></tr>
 <tr class="separator:a052305c855625732d3e5ba96d0fca5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af22bd781f4206decd0beed89b014d1cc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#af22bd781f4206decd0beed89b014d1cc">has_sunk</a> () const =0</td></tr>
 <tr class="separator:af22bd781f4206decd0beed89b014d1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77642906503e12eb22fcfbc3eab98cb5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a77642906503e12eb22fcfbc3eab98cb5">take_hit</a> ()=0</td></tr>
 <tr class="separator:a77642906503e12eb22fcfbc3eab98cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad46ddc76d6e682a4f1fc8965a0c7813c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#ad46ddc76d6e682a4f1fc8965a0c7813c">display_yz</a> ()=0</td></tr>
-<tr class="separator:ad46ddc76d6e682a4f1fc8965a0c7813c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f900b13641277ae9e809e4baa5c8c10"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a0f900b13641277ae9e809e4baa5c8c10">display_xy</a> ()=0</td></tr>
+<tr class="memdesc:a0f900b13641277ae9e809e4baa5c8c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays what the top down view of this piece is.  <a href="#a0f900b13641277ae9e809e4baa5c8c10">More...</a><br /></td></tr>
 <tr class="separator:a0f900b13641277ae9e809e4baa5c8c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08cfb1d99d1804f42f87878bef19e7ff"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a08cfb1d99d1804f42f87878bef19e7ff">get_length</a> () const =0</td></tr>
-<tr class="separator:a08cfb1d99d1804f42f87878bef19e7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a680897abc6ae9c5e187003a1c24fc9a1"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a680897abc6ae9c5e187003a1c24fc9a1">get_width</a> () const =0</td></tr>
-<tr class="separator:a680897abc6ae9c5e187003a1c24fc9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeba6c5083cb05200850cee7578a81d09"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#aeba6c5083cb05200850cee7578a81d09">get_uri</a> () const =0</td></tr>
-<tr class="separator:aeba6c5083cb05200850cee7578a81d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27116e62c4ee91796349bbcb284e446d"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a27116e62c4ee91796349bbcb284e446d">get_hits</a> () const =0</td></tr>
-<tr class="separator:a27116e62c4ee91796349bbcb284e446d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0188cda34ef90374396c52595761ef08"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a0188cda34ef90374396c52595761ef08">get_length</a> () const =0</td></tr>
+<tr class="separator:a0188cda34ef90374396c52595761ef08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd5b9073f2fa6201c4dbc35b43942d2f"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#abd5b9073f2fa6201c4dbc35b43942d2f">get_width</a> () const =0</td></tr>
+<tr class="separator:abd5b9073f2fa6201c4dbc35b43942d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51123474a964caa97a4c29b053ac0fad"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a51123474a964caa97a4c29b053ac0fad">get_hits</a> () const =0</td></tr>
+<tr class="memdesc:a51123474a964caa97a4c29b053ac0fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of hits already received from attacks.  <a href="#a51123474a964caa97a4c29b053ac0fad">More...</a><br /></td></tr>
+<tr class="separator:a51123474a964caa97a4c29b053ac0fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cc01b1ec66bfb91df048401233e9618"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a2cc01b1ec66bfb91df048401233e9618">get_orientation</a> () const =0</td></tr>
 <tr class="separator:a2cc01b1ec66bfb91df048401233e9618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad589faff3ce07b5130bfdd89da4269c1"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#ad589faff3ce07b5130bfdd89da4269c1">get_xy_representation</a> () const =0</td></tr>
@@ -124,11 +126,48 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4f7ac17a3ba66f104d2c5110e0fe51d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63f00d666a65cd41a11b592d55411b7f"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a63f00d666a65cd41a11b592d55411b7f">get_action_points</a> ()=0</td></tr>
 <tr class="separator:a63f00d666a65cd41a11b592d55411b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935d8c078457ff4327d83cc8fb43b06c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a935d8c078457ff4327d83cc8fb43b06c">~piece</a> ()</td></tr>
+<tr class="memdesc:a935d8c078457ff4327d83cc8fb43b06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needed since derived classes will call destructor at the end.  <a href="#a935d8c078457ff4327d83cc8fb43b06c">More...</a><br /></td></tr>
+<tr class="separator:a935d8c078457ff4327d83cc8fb43b06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="piece_8h_source.html#l00008">8</a> of file <a class="el" href="piece_8h_source.html">piece.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Abstract/Interface for classes of type piece. </p>
+<dl class="section author"><dt>Author</dt><dd>Enrico Zammit Lonardelli</dd></dl>
+<p>Contact: <a href="#" onclick="location.href='mai'+'lto:'+'enr'+'ic'+'o.z'+'am'+'mit'+'l@'+'gma'+'il'+'.co'+'m'; return false;">enric<span style="display: none;">.nosp@m.</span>o.za<span style="display: none;">.nosp@m.</span>mmitl<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a></p>
+<p>Created on: Sun, 29 Mar 2020 21:50:33 </p>
+
+<p class="definition">Definition at line <a class="el" href="piece_8h_source.html#l00019">19</a> of file <a class="el" href="piece_8h_source.html">piece.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a935d8c078457ff4327d83cc8fb43b06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a935d8c078457ff4327d83cc8fb43b06c">&#9670;&nbsp;</a></span>~piece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual battle_ship::piece::~piece </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Needed since derived classes will call destructor at the end. </p>
+
+<p class="definition">Definition at line <a class="el" href="piece_8h_source.html#l00044">44</a> of file <a class="el" href="piece_8h_source.html">piece.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a58092f7b1d663471204d7e51e68bbb2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58092f7b1d663471204d7e51e68bbb2d">&#9670;&nbsp;</a></span>calculate_end()</h2>
 
@@ -169,6 +208,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Given a start coordinate calculate the end coordinate. </p>
+
 <p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a9b99c5ed2629203985b25338df585234">battle_ship::vessel</a>.</p>
 
 </div>
@@ -196,34 +237,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Displays what the top down view of this piece is. </p>
+
 <p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a60924b058d686ebf545ae8f4d9f42d76">battle_ship::vessel</a>.</p>
-
-</div>
-</div>
-<a id="ad46ddc76d6e682a4f1fc8965a0c7813c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad46ddc76d6e682a4f1fc8965a0c7813c">&#9670;&nbsp;</a></span>display_yz()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void battle_ship::piece::display_yz </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#aa4f50939cb109b09c6b300313e193198">battle_ship::vessel</a>.</p>
 
 </div>
 </div>
@@ -308,8 +324,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a27116e62c4ee91796349bbcb284e446d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27116e62c4ee91796349bbcb284e446d">&#9670;&nbsp;</a></span>get_hits()</h2>
+<a id="a51123474a964caa97a4c29b053ac0fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51123474a964caa97a4c29b053ac0fad">&#9670;&nbsp;</a></span>get_hits()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,7 +334,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::size_t battle_ship::piece::get_hits </td>
+          <td class="memname">virtual size_t battle_ship::piece::get_hits </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -331,12 +347,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a1d7fb8fe8e4454850c1cd7dbb4c70d49">battle_ship::vessel</a>.</p>
+<p>Returns the amount of hits already received from attacks. </p>
+
+<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a549dc0f3fc45f3b3f7fa247316900a9a">battle_ship::vessel</a>.</p>
 
 </div>
 </div>
-<a id="a08cfb1d99d1804f42f87878bef19e7ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08cfb1d99d1804f42f87878bef19e7ff">&#9670;&nbsp;</a></span>get_length()</h2>
+<a id="a0188cda34ef90374396c52595761ef08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0188cda34ef90374396c52595761ef08">&#9670;&nbsp;</a></span>get_length()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,7 +363,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::size_t battle_ship::piece::get_length </td>
+          <td class="memname">virtual size_t battle_ship::piece::get_length </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -358,7 +376,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a96d84d8ad107db77ae601d4e29471dde">battle_ship::vessel</a>.</p>
+<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#ae166b521339b6a7b8c0be1a9d7861131">battle_ship::vessel</a>.</p>
 
 </div>
 </div>
@@ -443,8 +461,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aeba6c5083cb05200850cee7578a81d09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeba6c5083cb05200850cee7578a81d09">&#9670;&nbsp;</a></span>get_uri()</h2>
+<a id="abd5b9073f2fa6201c4dbc35b43942d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd5b9073f2fa6201c4dbc35b43942d2f">&#9670;&nbsp;</a></span>get_width()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,7 +471,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string battle_ship::piece::get_uri </td>
+          <td class="memname">virtual size_t battle_ship::piece::get_width </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -466,34 +484,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a3ab0850a3ccedf7e6083c7b494284289">battle_ship::vessel</a>.</p>
-
-</div>
-</div>
-<a id="a680897abc6ae9c5e187003a1c24fc9a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a680897abc6ae9c5e187003a1c24fc9a1">&#9670;&nbsp;</a></span>get_width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::size_t battle_ship::piece::get_width </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a625d8f457a7afdafea7422ad89648123">battle_ship::vessel</a>.</p>
+<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a84716baaafee9839292f67b03abc7272">battle_ship::vessel</a>.</p>
 
 </div>
 </div>
@@ -551,33 +542,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aad848540970833ae5eadd115cc531b6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad848540970833ae5eadd115cc531b6b">&#9670;&nbsp;</a></span>load_image()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::vector&lt;std::string&gt; battle_ship::piece::load_image </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#a36278b899be319a57cb728e8ecd2f340">battle_ship::vessel</a>.</p>
-
-</div>
-</div>
 <a id="a052305c855625732d3e5ba96d0fca5f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a052305c855625732d3e5ba96d0fca5f9">&#9670;&nbsp;</a></span>modify_pose()</h2>
 
@@ -611,6 +575,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Modifies position and orientation. </p>
 
 <p>Implemented in <a class="el" href="classbattle__ship_1_1vessel.html#ace0ec527147243b1fa6fa920d5a32a1f">battle_ship::vessel</a>.</p>
 

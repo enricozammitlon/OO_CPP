@@ -8,25 +8,25 @@
 - [x] Add fleet editing screen
 - [x] Convert pointers to smart pointers
 - [x] Add check fleet on fleet screen
-- [ ] ~~Move fleet editing to its own class~~
+- [x] ~~Move fleet editing to its own class~~
 - [x] Check memory leaks using ~~deleaker~~ valgrind
 - [x] Sanitize all inputs
-- [ ] Fix issue with copy constructor of a board
+- [x] Fix issue with copy constructor of a board
 - [x] ~~Delete~~ Modify the ~~redundant~~ wrongly implemented vessel class
-- [ ] Add show images in fleet editing screen
+- [x] ~~Add show images in fleet editing screen~~
 - [x] Add new AI and Human classes, base Player
-- [ ] Fix ability to throw errors in docker?
-- [ ] Convert all cerr to throw?
+- [x] ~~Fix ability to throw errors in docker?~~
+- [x] ~~Convert all cerr to throw?~~
 - [x] Add login
 - [x] Add transaction screen and market
 - [x] Add highscores screen
 - [x] Add splitscreen view
 - [x] Add game view and routine
 - [x] Add new vessels
-- [ ] Comment review
+- [x] Comment review
     ## Extensions
     - [ ] Add non-vessel pieces (decoys)
-    - [ ] Add AI functionality
-    - [ ] Refine imgs
-    - [ ] Add costs of ships
+    - [x] Add AI functionality
+    - [ ] ~~Refine imgs~~
+    - [x] Add costs of ships
     - [ ] Add random events

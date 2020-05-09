@@ -1,6 +1,6 @@
 <map id="include/human.h" name="include/human.h">
-<area shape="rect" id="node2" href="$battle_8cpp.html" title="src/battle.cpp" alt="" coords="5,155,115,181"/>
-<area shape="rect" id="node3" href="$human_8cpp.html" title="src/human.cpp" alt="" coords="45,80,163,107"/>
-<area shape="rect" id="node4" href="$authentication_8h.html" title="include/authentication.h" alt="" coords="187,80,362,107"/>
-<area shape="rect" id="node5" href="$authentication_8cpp.html" title="src/authentication.cpp" alt="" coords="193,155,357,181"/>
+<area shape="rect" id="node2" href="$battle_8cpp.html" title="src/battle.cpp" alt="" coords="5,155,107,181"/>
+<area shape="rect" id="node3" href="$human_8cpp.html" title="src/human.cpp" alt="" coords="45,80,153,107"/>
+<area shape="rect" id="node4" href="$authentication_8h.html" title="include/authentication.h" alt="" coords="177,80,335,107"/>
+<area shape="rect" id="node5" href="$authentication_8cpp.html" title="src/authentication.cpp" alt="" coords="181,155,331,181"/>
 </map>

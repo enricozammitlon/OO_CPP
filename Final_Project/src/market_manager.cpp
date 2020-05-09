@@ -13,8 +13,8 @@
 std::vector<std::string> battle_ship::market_manager::all_pieces = {
     "Submarine", "Carrier", "Raft", "Cruiser", "Destroyer"};
 
-// Return the subset of all the available pieces, which includes pieces
-// the player does not have already and are affordable given their budget
+/// Return the subset of all the available pieces, which includes pieces
+/// the player does not have already and are affordable given their budget
 std::vector<std::string>
 battle_ship::market_manager::get_available_pieces(battle_ship::player &p) {
   std::vector<std::string> available_pieces = all_pieces;
@@ -31,13 +31,14 @@ battle_ship::market_manager::get_available_pieces(battle_ship::player &p) {
                                          *secondary_iterator));
       }
     }
-    // Later,here check the price of the current piece before making it
-    // available
+    // In the future, here check the price of the current piece before making it
+    // available. Currently a transaction will fail anyways if the user does
+    // not have the budget to buy a piece anyways.
   }
 
   return available_pieces;
 }
-
+/// Here the returned tuple contains (Success in transaction?,Reason)
 std::tuple<bool, std::string> battle_ship::market_manager::buy_piece(
     battle_ship::player &p, std::string piece_name,
     battle_ship::coordinates coors, battle_ship::orientation orientation) {
@@ -63,7 +64,7 @@ std::tuple<bool, std::string> battle_ship::market_manager::buy_piece(
     return std::make_tuple(false, "No money left,sir.");
   }
 }
-
+/// Here the returned tuple contains (Success in transaction?,Reason)
 std::tuple<bool, std::string>
 battle_ship::market_manager::sell_piece(battle_ship::player &p,
                                         std::string piece_name) {

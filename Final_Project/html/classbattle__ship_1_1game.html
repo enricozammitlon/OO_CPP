@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Battleships: battle_ship::game Class Reference</title>
+<title>Battleship: battle_ship::game Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Battleships
+   <div id="projectname">Battleship
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">A C++ implementation of the Battleship board game</div>
   </td>
  </tr>
  </tbody>
@@ -71,16 +72,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Holds the current battle state.  
+ <a href="classbattle__ship_1_1game.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="game_8h_source.html">game.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a98cd01dec3c29d91d057049c421c89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1game.html#a3a98cd01dec3c29d91d057049c421c89">game</a> ()=default</td></tr>
 <tr class="separator:a3a98cd01dec3c29d91d057049c421c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a172670fffc6e5b3942ddcd41b2f2840a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1game.html#a172670fffc6e5b3942ddcd41b2f2840a">game</a> (std::size_t starting_turn, std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt; p1, std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt; p2, std::unique_ptr&lt; <a class="el" href="classbattle__ship_1_1rules.html">rules</a> &gt; r)</td></tr>
-<tr class="separator:a172670fffc6e5b3942ddcd41b2f2840a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdbbd12c9a8b272e2a9fabed8ea90922"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1game.html#abdbbd12c9a8b272e2a9fabed8ea90922">get_player</a> (std::size_t p)</td></tr>
-<tr class="separator:abdbbd12c9a8b272e2a9fabed8ea90922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932962ce40fffb1c8008a353971afa4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1game.html#a932962ce40fffb1c8008a353971afa4c">game</a> (size_t starting_turn, std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt; p1, std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt; p2)</td></tr>
+<tr class="separator:a932962ce40fffb1c8008a353971afa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a93475d1fae5c83ae58182376f1292c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1game.html#a6a93475d1fae5c83ae58182376f1292c">get_player</a> (size_t p)</td></tr>
+<tr class="separator:a6a93475d1fae5c83ae58182376f1292c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5a85f6c1f0cff5e1104545b5222026"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1game.html#a0e5a85f6c1f0cff5e1104545b5222026">toggle_turn</a> ()</td></tr>
 <tr class="separator:a0e5a85f6c1f0cff5e1104545b5222026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bd311ac1aaab0a16c06b4f1b9664af4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1game.html#a8bd311ac1aaab0a16c06b4f1b9664af4">play</a> (std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt; &amp;winner)</td></tr>
@@ -91,8 +95,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa95dac5c30c567ae407a3b67ceae324d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="game_8h_source.html#l00006">6</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
+<div class="textblock"><p>Holds the current battle state. </p>
+<dl class="section author"><dt>Author</dt><dd>Enrico Zammit Lonardelli</dd></dl>
+<p>This class controls the logic of taking turns and holds state about each player. Also holds the logic to check whether end game conditions have been met</p>
+<p>Contact: <a href="#" onclick="location.href='mai'+'lto:'+'enr'+'ic'+'o.z'+'am'+'mit'+'l@'+'gma'+'il'+'.co'+'m'; return false;">enric<span style="display: none;">.nosp@m.</span>o.za<span style="display: none;">.nosp@m.</span>mmitl<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a></p>
+<p>Created on: Sat, 11 Apr 2020 09:49:03 </p>
+
+<p class="definition">Definition at line <a class="el" href="game_8h_source.html#l00020">20</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3a98cd01dec3c29d91d057049c421c89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a98cd01dec3c29d91d057049c421c89">&#9670;&nbsp;</a></span>game() <span class="overload">[1/2]</span></h2>
@@ -119,8 +128,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a172670fffc6e5b3942ddcd41b2f2840a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a172670fffc6e5b3942ddcd41b2f2840a">&#9670;&nbsp;</a></span>game() <span class="overload">[2/2]</span></h2>
+<a id="a932962ce40fffb1c8008a353971afa4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932962ce40fffb1c8008a353971afa4c">&#9670;&nbsp;</a></span>game() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,7 +140,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">battle_ship::game::game </td>
           <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>starting_turn</em>, </td>
         </tr>
         <tr>
@@ -144,13 +153,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt;&#160;</td>
-          <td class="paramname"><em>p2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classbattle__ship_1_1rules.html">rules</a> &gt;&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -165,7 +168,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game_8h_source.html#l00015">15</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game_8h_source.html#l00028">28</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
 
 </div>
 </div>
@@ -195,8 +198,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abdbbd12c9a8b272e2a9fabed8ea90922"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdbbd12c9a8b272e2a9fabed8ea90922">&#9670;&nbsp;</a></span>get_player()</h2>
+<a id="a6a93475d1fae5c83ae58182376f1292c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a93475d1fae5c83ae58182376f1292c">&#9670;&nbsp;</a></span>get_player()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +207,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a> &amp; battle_ship::game::get_player </td>
           <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -231,7 +234,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game_8cpp_source.html#l00059">59</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game_8cpp_source.html#l00063">63</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
 
 </div>
 </div>
@@ -278,7 +281,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game_8h_source.html#l00023">23</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game_8h_source.html#l00035">35</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
 
 </div>
 </div>

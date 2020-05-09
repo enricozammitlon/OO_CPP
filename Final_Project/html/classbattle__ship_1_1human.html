@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Battleships: battle_ship::human Class Reference</title>
+<title>Battleship: battle_ship::human Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Battleships
+   <div id="projectname">Battleship
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">A C++ implementation of the Battleship board game</div>
   </td>
  </tr>
  </tbody>
@@ -71,13 +72,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A type of player Implements methods targeted for playable characters (human controlled)  
+ <a href="classbattle__ship_1_1human.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="human_8h_source.html">human.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for battle_ship::human:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbattle__ship_1_1human__inherit__graph.png" border="0" usemap="#battle__ship_1_1human_inherit__map" alt="Inheritance graph"/></div>
 <map name="battle__ship_1_1human_inherit__map" id="battle__ship_1_1human_inherit__map">
-<area shape="rect" id="node2" href="classbattle__ship_1_1player.html" title="battle_ship::player" alt="" coords="9,5,147,32"/>
+<area shape="rect" id="node2" href="classbattle__ship_1_1player.html" title="Abstract class for a player. " alt="" coords="7,5,135,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -85,7 +89,7 @@ Collaboration diagram for battle_ship::human:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbattle__ship_1_1human__coll__graph.png" border="0" usemap="#battle__ship_1_1human_coll__map" alt="Collaboration graph"/></div>
 <map name="battle__ship_1_1human_coll__map" id="battle__ship_1_1human_coll__map">
-<area shape="rect" id="node2" href="classbattle__ship_1_1player.html" title="battle_ship::player" alt="" coords="9,5,147,32"/>
+<area shape="rect" id="node2" href="classbattle__ship_1_1player.html" title="Abstract class for a player. " alt="" coords="7,5,135,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -125,10 +129,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3525c2934ea6a4bd7600385cb5fa6bfa inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a3525c2934ea6a4bd7600385cb5fa6bfa">assign_enemy</a> (std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt; e)</td></tr>
 <tr class="separator:a3525c2934ea6a4bd7600385cb5fa6bfa inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5224958feae654d622f56523dc45ab83 inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a5224958feae654d622f56523dc45ab83">get_enemy</a> ()</td></tr>
+<tr class="memdesc:a5224958feae654d622f56523dc45ab83 inherit pub_methods_classbattle__ship_1_1player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Since enemy is a weak pointer it must be locked before using it.  <a href="classbattle__ship_1_1player.html#a5224958feae654d622f56523dc45ab83">More...</a><br /></td></tr>
 <tr class="separator:a5224958feae654d622f56523dc45ab83 inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade02279db7265558659c40f16c482df7 inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ade02279db7265558659c40f16c482df7">modify_budget</a> (int money)</td></tr>
 <tr class="separator:ade02279db7265558659c40f16c482df7 inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae21fefa953f6a3a0476cabfae7084bbf inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ae21fefa953f6a3a0476cabfae7084bbf">reset</a> ()</td></tr>
+<tr class="memdesc:ae21fefa953f6a3a0476cabfae7084bbf inherit pub_methods_classbattle__ship_1_1player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to reset states between multiple battles.  <a href="classbattle__ship_1_1player.html#ae21fefa953f6a3a0476cabfae7084bbf">More...</a><br /></td></tr>
 <tr class="separator:ae21fefa953f6a3a0476cabfae7084bbf inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5373e08a637e9c21b3751eb02e07540 inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#af5373e08a637e9c21b3751eb02e07540">is_ready_to_play</a> ()</td></tr>
 <tr class="separator:af5373e08a637e9c21b3751eb02e07540 inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,11 +161,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a48a3f8c692c7ea1def384c39b9b65e85 inherit pro_attribs_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a48a3f8c692c7ea1def384c39b9b65e85">ready_to_play</a></td></tr>
 <tr class="separator:a48a3f8c692c7ea1def384c39b9b65e85 inherit pro_attribs_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cb155ee3d722244c44bf71e5e2440c4 inherit pro_attribs_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a5cb155ee3d722244c44bf71e5e2440c4">subdir</a></td></tr>
+<tr class="memdesc:a5cb155ee3d722244c44bf71e5e2440c4 inherit pro_attribs_classbattle__ship_1_1player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to store subdirectory for saves, different for NPCs and Humans.  <a href="classbattle__ship_1_1player.html#a5cb155ee3d722244c44bf71e5e2440c4">More...</a><br /></td></tr>
 <tr class="separator:a5cb155ee3d722244c44bf71e5e2440c4 inherit pro_attribs_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="human_8h_source.html#l00005">5</a> of file <a class="el" href="human_8h_source.html">human.h</a>.</p>
+<div class="textblock"><p>A type of player Implements methods targeted for playable characters (human controlled) </p>
+<dl class="section author"><dt>Author</dt><dd>Enrico Zammit Lonardelli</dd></dl>
+<p>Contact: <a href="#" onclick="location.href='mai'+'lto:'+'enr'+'ic'+'o.z'+'am'+'mit'+'l@'+'gma'+'il'+'.co'+'m'; return false;">enric<span style="display: none;">.nosp@m.</span>o.za<span style="display: none;">.nosp@m.</span>mmitl<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a></p>
+<p>Created on: Wed, 15 Apr 2020 17:55:28 </p>
+
+<p class="definition">Definition at line <a class="el" href="human_8h_source.html#l00017">17</a> of file <a class="el" href="human_8h_source.html">human.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abf9adbf70e2b5cec288c900f337f4c56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf9adbf70e2b5cec288c900f337f4c56">&#9670;&nbsp;</a></span>human() <span class="overload">[1/2]</span></h2>
@@ -226,7 +237,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="human_8h_source.html#l00012">12</a> of file <a class="el" href="human_8h_source.html">human.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8h_source.html#l00024">24</a> of file <a class="el" href="human_8h_source.html">human.h</a>.</p>
 
 </div>
 </div>
@@ -271,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00075">75</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00078">78</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +322,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1player.html#a86be2256620cd5e20da6db7be8afdbc8">battle_ship::player</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00179">179</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00195">195</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +341,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00129">129</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00132">132</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
 
 </div>
 </div>
@@ -359,7 +370,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1player.html#a9b74e59f4b120d38ad591dba6a1d1ba7">battle_ship::player</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="human_8h_source.html#l00014">14</a> of file <a class="el" href="human_8h_source.html">human.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8h_source.html#l00026">26</a> of file <a class="el" href="human_8h_source.html">human.h</a>.</p>
 
 </div>
 </div>
@@ -397,7 +408,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00111">111</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00114">114</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
 
 </div>
 </div>
@@ -416,7 +427,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00238">238</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00254">254</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +457,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1player.html#a928538249678aea5402f8c673671e995">battle_ship::player</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00228">228</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00244">244</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
 
 </div>
 </div>
@@ -475,7 +486,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1player.html#a3110ec708fd8fc7e02a6e88a63d57d2f">battle_ship::player</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00257">257</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="human_8cpp_source.html#l00273">273</a> of file <a class="el" href="human_8cpp_source.html">human.cpp</a>.</p>
 
 </div>
 </div>

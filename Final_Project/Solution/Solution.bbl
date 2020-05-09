@@ -19,6 +19,40 @@
 
 \refsection{0}
   \sortlist[entry]{none/global/}
+    \entry{hinebaugh2009board}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0e938747c10068050f5842e1cdd89da1}{%
+           family={Hinebaugh},
+           familyi={H\bibinitperiod},
+           given={J.P.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {R\&L Education}%
+      }
+      \strng{namehash}{0e938747c10068050f5842e1cdd89da1}
+      \strng{fullhash}{0e938747c10068050f5842e1cdd89da1}
+      \strng{authornamehash}{0e938747c10068050f5842e1cdd89da1}
+      \strng{authorfullhash}{0e938747c10068050f5842e1cdd89da1}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781607092612}
+      \field{title}{A Board Game Education}
+      \field{year}{2009}
+      \verb{url}
+      \verb https://books.google.com.mt/books?id=nvqw9vK0R8sC
+      \endverb
+    \endentry
+    \entry{rules}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.hasbro.com/common/instruct/battleship.pdf}}
+      \field{note}{Accessed: 2020-05-09}
+      \field{title}{Hasbro Battleship Rules}
+    \endentry
     \entry{patpro}{article}{}
       \name{author}{1}{}{%
         {{hash=da5acf5e4e626ea44e5df13f0af47eae}{%
@@ -34,8 +68,8 @@
       \strng{fullhash}{da5acf5e4e626ea44e5df13f0af47eae}
       \strng{authornamehash}{da5acf5e4e626ea44e5df13f0af47eae}
       \strng{authorfullhash}{da5acf5e4e626ea44e5df13f0af47eae}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Geometric Algorithms Slides}

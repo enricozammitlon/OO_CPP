@@ -1,9 +1,18 @@
-// PHYS 30762 Programming in C++
-// Author: Enrico Zammit Lonardelli
-// Date: 26/03/2020
-// Final Project : Battle Ship
-// This is the main method to create the boards and initial configurations
-// And actually play the game
+/*!
+ * \author Enrico Zammit Lonardelli
+ *
+ * \brief This is where the main method resides
+ *
+ * This project was made for the PHYS30762 course in Object Oriented C++.
+ * Inspired by the early 20th Centruy board game Battleship, this
+ * is a c digital playable game for a human to play against a computer
+ * character. Its main aim is to showcase C++ advanced features and object
+ * oriented programming best practices.
+ *
+ * Contact: enrico.zammitl@gmail.com
+ *
+ * Created on: Sun, 29 Mar 2020 21:50:33
+ */
 
 #include "authentication.h"
 #include "game.h"
@@ -12,12 +21,12 @@
 #include "notification_manager.h"
 #include "npc.h"
 #include "player.h"
-#include "rules.h"
 #include "screen_manager.h"
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
 #include <tuple>
+
 int main() {
   int input;
   std::shared_ptr<battle_ship::human> current_user = nullptr;
@@ -46,8 +55,6 @@ int main() {
     }
   } while (current_user == nullptr);
 
-  std::unique_ptr<battle_ship::rules> standard_rules =
-      std::make_unique<battle_ship::rules>();
   battle_ship::highscore_manager::initialise_highscores();
   do {
     std::cout << "Welcome to your Battleship terminal commander! Please enter "
@@ -68,10 +75,10 @@ int main() {
     case 1: {
       std::shared_ptr<battle_ship::player> ai_1 =
           std::make_shared<battle_ship::npc>("Nemo", 1);
+      // Empty earlier notifications if there from a previous game
       battle_ship::notification_manager::reset_notifiations();
       std::unique_ptr<battle_ship::game> game_1 =
-          std::make_unique<battle_ship::game>(0, current_user, ai_1,
-                                              std::move(standard_rules));
+          std::make_unique<battle_ship::game>(0, current_user, ai_1);
       std::shared_ptr<battle_ship::player> winner{nullptr};
       game_1->play(winner);
       current_user->reset();

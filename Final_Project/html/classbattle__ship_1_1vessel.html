@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Battleships: battle_ship::vessel Class Reference</title>
+<title>Battleship: battle_ship::vessel Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Battleships
+   <div id="projectname">Battleship
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">A C++ implementation of the Battleship board game</div>
   </td>
  </tr>
  </tbody>
@@ -72,18 +73,21 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Implements the methods for the abstract piece class.  
+ <a href="classbattle__ship_1_1vessel.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="vessel_8h_source.html">vessel.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for battle_ship::vessel:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbattle__ship_1_1vessel__inherit__graph.png" border="0" usemap="#battle__ship_1_1vessel_inherit__map" alt="Inheritance graph"/></div>
 <map name="battle__ship_1_1vessel_inherit__map" id="battle__ship_1_1vessel_inherit__map">
-<area shape="rect" id="node3" href="classbattle__ship_1_1carrier.html" title="battle_ship::carrier" alt="" coords="389,5,531,32"/>
-<area shape="rect" id="node4" href="classbattle__ship_1_1cruiser.html" title="battle_ship::cruiser" alt="" coords="389,56,531,83"/>
-<area shape="rect" id="node5" href="classbattle__ship_1_1destroyer.html" title="battle_ship::destroyer" alt="" coords="379,107,541,133"/>
-<area shape="rect" id="node6" href="classbattle__ship_1_1raft.html" title="battle_ship::raft" alt="" coords="399,157,521,184"/>
-<area shape="rect" id="node7" href="classbattle__ship_1_1submarine.html" title="battle_ship::submarine" alt="" coords="376,208,544,235"/>
-<area shape="rect" id="node2" href="classbattle__ship_1_1piece.html" title="battle_ship::piece" alt="" coords="5,107,140,133"/>
+<area shape="rect" id="node3" href="classbattle__ship_1_1carrier.html" title="A type of vessel. " alt="" coords="368,5,497,32"/>
+<area shape="rect" id="node4" href="classbattle__ship_1_1cruiser.html" title="A type of vessel. " alt="" coords="367,56,499,83"/>
+<area shape="rect" id="node5" href="classbattle__ship_1_1destroyer.html" title="A type of vessel. " alt="" coords="359,107,506,133"/>
+<area shape="rect" id="node6" href="classbattle__ship_1_1raft.html" title="A type of vessel. " alt="" coords="377,157,489,184"/>
+<area shape="rect" id="node7" href="classbattle__ship_1_1submarine.html" title="A type of vessel. " alt="" coords="356,208,509,235"/>
+<area shape="rect" id="node2" href="classbattle__ship_1_1piece.html" title="Abstract/Interface for classes of type piece. " alt="" coords="5,107,129,133"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -91,8 +95,8 @@ Collaboration diagram for battle_ship::vessel:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbattle__ship_1_1vessel__coll__graph.png" border="0" usemap="#battle__ship_1_1vessel_coll__map" alt="Collaboration graph"/></div>
 <map name="battle__ship_1_1vessel_coll__map" id="battle__ship_1_1vessel_coll__map">
-<area shape="rect" id="node2" href="classbattle__ship_1_1piece.html" title="battle_ship::piece" alt="" coords="5,5,140,32"/>
-<area shape="rect" id="node3" href="structbattle__ship_1_1coordinates.html" title="battle_ship::coordinates" alt="" coords="164,5,339,32"/>
+<area shape="rect" id="node2" href="classbattle__ship_1_1piece.html" title="Abstract/Interface for classes of type piece. " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node3" href="structbattle__ship_1_1coordinates.html" title="Used to define points on a board. " alt="" coords="154,5,314,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -100,32 +104,30 @@ Collaboration diagram for battle_ship::vessel:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6f3be9c2343940c262fb7add97402311"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a6f3be9c2343940c262fb7add97402311">vessel</a> ()=default</td></tr>
 <tr class="separator:a6f3be9c2343940c262fb7add97402311"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56fb6c51c60a66f2a85be6081f081388"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a56fb6c51c60a66f2a85be6081f081388">vessel</a> (std::string n, <a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a> p, std::size_t l, std::size_t w, std::string xy_rep_hor, std::string xy_rep_ver, <a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a> o, std::string u, std::size_t ap)</td></tr>
-<tr class="separator:a56fb6c51c60a66f2a85be6081f081388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36278b899be319a57cb728e8ecd2f340"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a36278b899be319a57cb728e8ecd2f340">load_image</a> () const override</td></tr>
-<tr class="separator:a36278b899be319a57cb728e8ecd2f340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade7f1d4ee4b458a715a0259e5211db20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#ade7f1d4ee4b458a715a0259e5211db20">vessel</a> (std::string n, <a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a> p, size_t l, size_t w, std::string xy_rep_hor, std::string xy_rep_ver, <a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a> o, size_t ap)</td></tr>
+<tr class="separator:ade7f1d4ee4b458a715a0259e5211db20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b99c5ed2629203985b25338df585234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a9b99c5ed2629203985b25338df585234">calculate_end</a> (<a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a> start, size_t distance, <a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a> o) override</td></tr>
+<tr class="memdesc:a9b99c5ed2629203985b25338df585234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a start coordinate calculate the end coordinate.  <a href="#a9b99c5ed2629203985b25338df585234">More...</a><br /></td></tr>
 <tr class="separator:a9b99c5ed2629203985b25338df585234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace0ec527147243b1fa6fa920d5a32a1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#ace0ec527147243b1fa6fa920d5a32a1f">modify_pose</a> (<a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a> new_coors, <a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a> new_orientation) override</td></tr>
+<tr class="memdesc:ace0ec527147243b1fa6fa920d5a32a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies position and orientation.  <a href="#ace0ec527147243b1fa6fa920d5a32a1f">More...</a><br /></td></tr>
 <tr class="separator:ace0ec527147243b1fa6fa920d5a32a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f36d687fbb87ced436d2d88847a1d5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a5f36d687fbb87ced436d2d88847a1d5c">has_sunk</a> () const override</td></tr>
 <tr class="separator:a5f36d687fbb87ced436d2d88847a1d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0da3c305902d55594b7aa5d20b69509"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#ab0da3c305902d55594b7aa5d20b69509">take_hit</a> () override</td></tr>
 <tr class="separator:ab0da3c305902d55594b7aa5d20b69509"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4f50939cb109b09c6b300313e193198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#aa4f50939cb109b09c6b300313e193198">display_yz</a> () override</td></tr>
-<tr class="separator:aa4f50939cb109b09c6b300313e193198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60924b058d686ebf545ae8f4d9f42d76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a60924b058d686ebf545ae8f4d9f42d76">display_xy</a> () override</td></tr>
+<tr class="memdesc:a60924b058d686ebf545ae8f4d9f42d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays what the top down view of this piece is.  <a href="#a60924b058d686ebf545ae8f4d9f42d76">More...</a><br /></td></tr>
 <tr class="separator:a60924b058d686ebf545ae8f4d9f42d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a398b4134137d9e11c13e6aee548e1802"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a398b4134137d9e11c13e6aee548e1802">get_action_points</a> () override</td></tr>
 <tr class="separator:a398b4134137d9e11c13e6aee548e1802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d84d8ad107db77ae601d4e29471dde"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a96d84d8ad107db77ae601d4e29471dde">get_length</a> () const override</td></tr>
-<tr class="separator:a96d84d8ad107db77ae601d4e29471dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a625d8f457a7afdafea7422ad89648123"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a625d8f457a7afdafea7422ad89648123">get_width</a> () const override</td></tr>
-<tr class="separator:a625d8f457a7afdafea7422ad89648123"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ab0850a3ccedf7e6083c7b494284289"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a3ab0850a3ccedf7e6083c7b494284289">get_uri</a> () const override</td></tr>
-<tr class="separator:a3ab0850a3ccedf7e6083c7b494284289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d7fb8fe8e4454850c1cd7dbb4c70d49"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a1d7fb8fe8e4454850c1cd7dbb4c70d49">get_hits</a> () const override</td></tr>
-<tr class="separator:a1d7fb8fe8e4454850c1cd7dbb4c70d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae166b521339b6a7b8c0be1a9d7861131"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#ae166b521339b6a7b8c0be1a9d7861131">get_length</a> () const override</td></tr>
+<tr class="separator:ae166b521339b6a7b8c0be1a9d7861131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84716baaafee9839292f67b03abc7272"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a84716baaafee9839292f67b03abc7272">get_width</a> () const override</td></tr>
+<tr class="separator:a84716baaafee9839292f67b03abc7272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a549dc0f3fc45f3b3f7fa247316900a9a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a549dc0f3fc45f3b3f7fa247316900a9a">get_hits</a> () const override</td></tr>
+<tr class="memdesc:a549dc0f3fc45f3b3f7fa247316900a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of hits already received from attacks.  <a href="#a549dc0f3fc45f3b3f7fa247316900a9a">More...</a><br /></td></tr>
+<tr class="separator:a549dc0f3fc45f3b3f7fa247316900a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84bfaba9be4f15f6ec934c925d11967d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a84bfaba9be4f15f6ec934c925d11967d">get_xy_representation</a> () const override</td></tr>
 <tr class="separator:a84bfaba9be4f15f6ec934c925d11967d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a698c7811878e56b7ba7eb6d88e6ac13f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a698c7811878e56b7ba7eb6d88e6ac13f">get_orientation</a> () const override</td></tr>
@@ -138,8 +140,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab24ee1fe21632b510833c8369ef3560a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadca1fe2ac265ed9f22e68490b6b22eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#aadca1fe2ac265ed9f22e68490b6b22eb">get_cost</a> () const override</td></tr>
 <tr class="separator:aadca1fe2ac265ed9f22e68490b6b22eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a281821b204a7fb93071ef75de5685a37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a281821b204a7fb93071ef75de5685a37">~vessel</a> ()=default</td></tr>
-<tr class="separator:a281821b204a7fb93071ef75de5685a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e2c9554b6ce2af6f4e6168d1cf6591b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a9e2c9554b6ce2af6f4e6168d1cf6591b">~vessel</a> ()=default</td></tr>
+<tr class="separator:a9e2c9554b6ce2af6f4e6168d1cf6591b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbattle__ship_1_1piece"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbattle__ship_1_1piece')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classbattle__ship_1_1piece.html">battle_ship::piece</a></td></tr>
+<tr class="memitem:a935d8c078457ff4327d83cc8fb43b06c inherit pub_methods_classbattle__ship_1_1piece"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1piece.html#a935d8c078457ff4327d83cc8fb43b06c">~piece</a> ()</td></tr>
+<tr class="memdesc:a935d8c078457ff4327d83cc8fb43b06c inherit pub_methods_classbattle__ship_1_1piece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needed since derived classes will call destructor at the end.  <a href="classbattle__ship_1_1piece.html#a935d8c078457ff4327d83cc8fb43b06c">More...</a><br /></td></tr>
+<tr class="separator:a935d8c078457ff4327d83cc8fb43b06c inherit pub_methods_classbattle__ship_1_1piece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -149,10 +155,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a32625627454fc279169a7d94ef460cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90baf292572ee968095c107ec656db32"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a90baf292572ee968095c107ec656db32">end_coordinates</a></td></tr>
 <tr class="separator:a90baf292572ee968095c107ec656db32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90930f7a8a9a45cb29ca434afa5e34ec"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a90930f7a8a9a45cb29ca434afa5e34ec">length</a></td></tr>
-<tr class="separator:a90930f7a8a9a45cb29ca434afa5e34ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fec62ed2032bb672db385ecc85339cb"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a5fec62ed2032bb672db385ecc85339cb">width</a></td></tr>
-<tr class="separator:a5fec62ed2032bb672db385ecc85339cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d62e0235c1c5b8116618a864d82929"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a51d62e0235c1c5b8116618a864d82929">length</a></td></tr>
+<tr class="memdesc:a51d62e0235c1c5b8116618a864d82929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined as distance on the x-axis.  <a href="#a51d62e0235c1c5b8116618a864d82929">More...</a><br /></td></tr>
+<tr class="separator:a51d62e0235c1c5b8116618a864d82929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac69519345fd0c9a39b55a15516506461"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#ac69519345fd0c9a39b55a15516506461">width</a></td></tr>
+<tr class="memdesc:ac69519345fd0c9a39b55a15516506461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined as distance on the y-axis.  <a href="#ac69519345fd0c9a39b55a15516506461">More...</a><br /></td></tr>
+<tr class="separator:ac69519345fd0c9a39b55a15516506461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a563ede7bcd45c64f897f727ce2ca50ff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a563ede7bcd45c64f897f727ce2ca50ff">xy_representation_horizontal</a></td></tr>
 <tr class="separator:a563ede7bcd45c64f897f727ce2ca50ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ab3092931ae7f230cb2cca77f2612c5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a7ab3092931ae7f230cb2cca77f2612c5">xy_representation_vertical</a></td></tr>
@@ -163,16 +171,19 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ae0e05c0f43e6fe6c01bf1534ebece971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf2677260fd0f0ce56678cd23b8a0591"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#aaf2677260fd0f0ce56678cd23b8a0591">cost</a> {100}</td></tr>
 <tr class="separator:aaf2677260fd0f0ce56678cd23b8a0591"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13cfef1f532ae80be7187a65e59c8b46"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a13cfef1f532ae80be7187a65e59c8b46">uri</a></td></tr>
-<tr class="separator:a13cfef1f532ae80be7187a65e59c8b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a14cc37d607ba7f3b710b36a11ff2e0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a1a14cc37d607ba7f3b710b36a11ff2e0">hits</a> {0}</td></tr>
 <tr class="separator:a1a14cc37d607ba7f3b710b36a11ff2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d2b710e2b58847818ba8e22794a97a4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1vessel.html#a5d2b710e2b58847818ba8e22794a97a4">action_points</a> {0}</td></tr>
+<tr class="memdesc:a5d2b710e2b58847818ba8e22794a97a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of turns this piece allows a player to attack if using it.  <a href="#a5d2b710e2b58847818ba8e22794a97a4">More...</a><br /></td></tr>
 <tr class="separator:a5d2b710e2b58847818ba8e22794a97a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00010">10</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<div class="textblock"><p>Implements the methods for the abstract piece class. </p>
+<dl class="section author"><dt>Author</dt><dd>Enrico Zammit Lonardelli</dd></dl>
+<p>Contact: <a href="#" onclick="location.href='mai'+'lto:'+'enr'+'ic'+'o.z'+'am'+'mit'+'l@'+'gma'+'il'+'.co'+'m'; return false;">enric<span style="display: none;">.nosp@m.</span>o.za<span style="display: none;">.nosp@m.</span>mmitl<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a></p>
+<p>Created on: Sun, 29 Mar 2020 21:50:33 </p>
+
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00021">21</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f3be9c2343940c262fb7add97402311"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f3be9c2343940c262fb7add97402311">&#9670;&nbsp;</a></span>vessel() <span class="overload">[1/2]</span></h2>
@@ -199,8 +210,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a56fb6c51c60a66f2a85be6081f081388"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56fb6c51c60a66f2a85be6081f081388">&#9670;&nbsp;</a></span>vessel() <span class="overload">[2/2]</span></h2>
+<a id="ade7f1d4ee4b458a715a0259e5211db20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade7f1d4ee4b458a715a0259e5211db20">&#9670;&nbsp;</a></span>vessel() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,19 +225,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structbattle__ship_1_1coordinates.html">battle_ship::coordinates</a>&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>l</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>w</em>, </td>
         </tr>
         <tr>
@@ -244,19 +255,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">battle_ship::orientation</a>&#160;</td>
           <td class="paramname"><em>o</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>u</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>ap</em>&#160;</td>
         </tr>
         <tr>
@@ -267,10 +272,12 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00009">9</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
+
 </div>
 </div>
-<a id="a281821b204a7fb93071ef75de5685a37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a281821b204a7fb93071ef75de5685a37">&#9670;&nbsp;</a></span>~vessel()</h2>
+<a id="a9e2c9554b6ce2af6f4e6168d1cf6591b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2c9554b6ce2af6f4e6168d1cf6591b">&#9670;&nbsp;</a></span>~vessel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +286,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">battle_ship::vessel::~vessel </td>
+          <td class="memname">virtual battle_ship::vessel::~vessel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -287,7 +294,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -307,7 +314,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structbattle__ship_1_1coordinates.html">battle_ship::coordinates</a> battle_ship::vessel::calculate_end </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structbattle__ship_1_1coordinates.html">battle_ship::coordinates</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a>&#160;</td>
           <td class="paramname"><em>start</em>, </td>
         </tr>
         <tr>
@@ -319,7 +326,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">battle_ship::orientation</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a>&#160;</td>
           <td class="paramname"><em>o</em>&#160;</td>
         </tr>
         <tr>
@@ -335,9 +342,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Given a start coordinate calculate the end coordinate. </p>
+
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a58092f7b1d663471204d7e51e68bbb2d">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00041">41</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00038">38</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
 
 </div>
 </div>
@@ -364,38 +373,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Displays what the top down view of this piece is. </p>
+
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a0f900b13641277ae9e809e4baa5c8c10">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00115">115</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aa4f50939cb109b09c6b300313e193198"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4f50939cb109b09c6b300313e193198">&#9670;&nbsp;</a></span>display_yz()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void battle_ship::vessel::display_yz </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#ad46ddc76d6e682a4f1fc8965a0c7813c">battle_ship::piece</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00107">107</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00078">78</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
 
 </div>
 </div>
@@ -424,7 +406,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a63f00d666a65cd41a11b592d55411b7f">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00041">41</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00050">50</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -453,7 +435,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a9193782bce8a697bd5d3cb391d5f1623">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00053">53</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00061">61</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -482,12 +464,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a4f7ac17a3ba66f104d2c5110e0fe51d4">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00052">52</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00060">60</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
-<a id="a1d7fb8fe8e4454850c1cd7dbb4c70d49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d7fb8fe8e4454850c1cd7dbb4c70d49">&#9670;&nbsp;</a></span>get_hits()</h2>
+<a id="a549dc0f3fc45f3b3f7fa247316900a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a549dc0f3fc45f3b3f7fa247316900a9a">&#9670;&nbsp;</a></span>get_hits()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,7 +478,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t battle_ship::vessel::get_hits </td>
+          <td class="memname">size_t battle_ship::vessel::get_hits </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -509,14 +491,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a27116e62c4ee91796349bbcb284e446d">battle_ship::piece</a>.</p>
+<p>Returns the amount of hits already received from attacks. </p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00045">45</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a51123474a964caa97a4c29b053ac0fad">battle_ship::piece</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00053">53</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
-<a id="a96d84d8ad107db77ae601d4e29471dde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96d84d8ad107db77ae601d4e29471dde">&#9670;&nbsp;</a></span>get_length()</h2>
+<a id="ae166b521339b6a7b8c0be1a9d7861131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae166b521339b6a7b8c0be1a9d7861131">&#9670;&nbsp;</a></span>get_length()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -525,7 +509,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t battle_ship::vessel::get_length </td>
+          <td class="memname">size_t battle_ship::vessel::get_length </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -538,9 +522,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a08cfb1d99d1804f42f87878bef19e7ff">battle_ship::piece</a>.</p>
+<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a0188cda34ef90374396c52595761ef08">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00042">42</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00051">51</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -569,7 +553,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a95531d660360ffc403a742db1b4f6413">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00050">50</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00058">58</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -598,7 +582,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a2cc01b1ec66bfb91df048401233e9618">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00049">49</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00057">57</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -627,12 +611,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#ab5010cea30b96f5afc758b2a9d0d43bc">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00051">51</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00059">59</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
-<a id="a3ab0850a3ccedf7e6083c7b494284289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ab0850a3ccedf7e6083c7b494284289">&#9670;&nbsp;</a></span>get_uri()</h2>
+<a id="a84716baaafee9839292f67b03abc7272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84716baaafee9839292f67b03abc7272">&#9670;&nbsp;</a></span>get_width()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -641,7 +625,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string battle_ship::vessel::get_uri </td>
+          <td class="memname">size_t battle_ship::vessel::get_width </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -654,38 +638,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#aeba6c5083cb05200850cee7578a81d09">battle_ship::piece</a>.</p>
+<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#abd5b9073f2fa6201c4dbc35b43942d2f">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00044">44</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
-
-</div>
-</div>
-<a id="a625d8f457a7afdafea7422ad89648123"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a625d8f457a7afdafea7422ad89648123">&#9670;&nbsp;</a></span>get_width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t battle_ship::vessel::get_width </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a680897abc6ae9c5e187003a1c24fc9a1">battle_ship::piece</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00043">43</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00052">52</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -714,7 +669,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#ad589faff3ce07b5130bfdd89da4269c1">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00046">46</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00054">54</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -743,36 +698,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#af22bd781f4206decd0beed89b014d1cc">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00037">37</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
-
-</div>
-</div>
-<a id="a36278b899be319a57cb728e8ecd2f340"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36278b899be319a57cb728e8ecd2f340">&#9670;&nbsp;</a></span>load_image()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; std::string &gt; battle_ship::vessel::load_image </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classbattle__ship_1_1piece.html#aad848540970833ae5eadd115cc531b6b">battle_ship::piece</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00081">81</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00047">47</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -788,13 +714,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void battle_ship::vessel::modify_pose </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structbattle__ship_1_1coordinates.html">battle_ship::coordinates</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structbattle__ship_1_1coordinates.html">coordinates</a>&#160;</td>
           <td class="paramname"><em>new_coors</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">battle_ship::orientation</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacebattle__ship.html#aed87488f0a73f0d0679fe343fb61c784">orientation</a>&#160;</td>
           <td class="paramname"><em>new_orientation</em>&#160;</td>
         </tr>
         <tr>
@@ -810,9 +736,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Modifies position and orientation. </p>
+
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a052305c855625732d3e5ba96d0fca5f9">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00057">57</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8cpp_source.html#l00054">54</a> of file <a class="el" href="vessel_8cpp_source.html">vessel.cpp</a>.</p>
 
 </div>
 </div>
@@ -841,7 +769,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classbattle__ship_1_1piece.html#a77642906503e12eb22fcfbc3eab98cb5">battle_ship::piece</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00038">38</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00048">48</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -866,7 +794,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00026">26</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p>The number of turns this piece allows a player to attack if using it. </p>
+
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00037">37</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -890,7 +820,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00023">23</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00034">34</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -914,7 +844,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00022">22</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00033">33</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -938,7 +868,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00021">21</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00032">32</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -962,7 +892,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00014">14</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00025">25</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -986,12 +916,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00025">25</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00035">35</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
-<a id="a90930f7a8a9a45cb29ca434afa5e34ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90930f7a8a9a45cb29ca434afa5e34ec">&#9670;&nbsp;</a></span>length</h2>
+<a id="a51d62e0235c1c5b8116618a864d82929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51d62e0235c1c5b8116618a864d82929">&#9670;&nbsp;</a></span>length</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1000,7 +930,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t battle_ship::vessel::length</td>
+          <td class="memname">size_t battle_ship::vessel::length</td>
         </tr>
       </table>
   </td>
@@ -1010,7 +940,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00016">16</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p>Defined as distance on the x-axis. </p>
+
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00027">27</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -1034,7 +966,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00012">12</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00023">23</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -1058,36 +990,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00013">13</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
-
-</div>
-</div>
-<a id="a13cfef1f532ae80be7187a65e59c8b46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13cfef1f532ae80be7187a65e59c8b46">&#9670;&nbsp;</a></span>uri</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string battle_ship::vessel::uri</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
 <p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00024">24</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
-<a id="a5fec62ed2032bb672db385ecc85339cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fec62ed2032bb672db385ecc85339cb">&#9670;&nbsp;</a></span>width</h2>
+<a id="ac69519345fd0c9a39b55a15516506461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69519345fd0c9a39b55a15516506461">&#9670;&nbsp;</a></span>width</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1096,7 +1004,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t battle_ship::vessel::width</td>
+          <td class="memname">size_t battle_ship::vessel::width</td>
         </tr>
       </table>
   </td>
@@ -1106,7 +1014,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00018">18</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p>Defined as distance on the y-axis. </p>
+
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00029">29</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -1130,7 +1040,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00019">19</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00030">30</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>
@@ -1154,7 +1064,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00020">20</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vessel_8h_source.html#l00031">31</a> of file <a class="el" href="vessel_8h_source.html">vessel.h</a>.</p>
 
 </div>
 </div>

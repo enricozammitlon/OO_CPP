@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['raft',['raft',['../classbattle__ship_1_1raft.html#acde3f010cdf8cb639c6c9996c4a31656',1,'battle_ship::raft::raft()=default'],['../classbattle__ship_1_1raft.html#ab76a787da1c470907eb7e166af6e0db8',1,'battle_ship::raft::raft(coordinates p, orientation o)']]],
-  ['remove_5fpiece',['remove_piece',['../classbattle__ship_1_1board.html#a19d236125f444778e5789109d9c1093b',1,'battle_ship::board::remove_piece()'],['../classbattle__ship_1_1human.html#a2638497165f4a593b3b597a785fc3ee0',1,'battle_ship::human::remove_piece()']]],
-  ['reset',['reset',['../classbattle__ship_1_1player.html#ae21fefa953f6a3a0476cabfae7084bbf',1,'battle_ship::player']]],
-  ['reset_5fnotifiations',['reset_notifiations',['../classbattle__ship_1_1notification__manager.html#ad5b73a016f63f919695dd8387c895d50',1,'battle_ship::notification_manager']]],
-  ['rules',['rules',['../classbattle__ship_1_1rules.html#af6031ef32ef2509ffc22d611be19bf32',1,'battle_ship::rules::rules()=default'],['../classbattle__ship_1_1rules.html#a3385bb490b9f69c7e2ccd4406f62c5d4',1,'battle_ship::rules::rules(std::string starting_p, std::size_t init_budget)']]]
+  ['save_5ffleet',['save_fleet',['../classbattle__ship_1_1human.html#a3d14bca9009f7cfb8d4501d428524416',1,'battle_ship::human']]],
+  ['save_5fhighscore',['save_highscore',['../classbattle__ship_1_1human.html#a5b7e6cad4d1f187907a205b767a2fd7d',1,'battle_ship::human::save_highscore()'],['../classbattle__ship_1_1npc.html#ab81843d30e5f8801a8fe479d44ead157',1,'battle_ship::npc::save_highscore()'],['../classbattle__ship_1_1player.html#a928538249678aea5402f8c673671e995',1,'battle_ship::player::save_highscore()']]],
+  ['sell_5fpiece',['sell_piece',['../classbattle__ship_1_1market__manager.html#abfdff8ba2f4098656d9c53140c34876c',1,'battle_ship::market_manager']]],
+  ['side_5fby_5fside',['side_by_side',['../classbattle__ship_1_1screen__manager.html#abb67a8f394b883d3f36136b40f35c3db',1,'battle_ship::screen_manager']]],
+  ['signin',['signin',['../classbattle__ship_1_1authentication.html#a27046f1ace46e91bd6412ed35ddf0242',1,'battle_ship::authentication']]],
+  ['signup',['signup',['../classbattle__ship_1_1authentication.html#aeb0c243e25547624235a562f657cfd63',1,'battle_ship::authentication']]],
+  ['submarine',['submarine',['../classbattle__ship_1_1submarine.html#a52a8062290d2f36e162fc033a3917c5a',1,'battle_ship::submarine::submarine()=default'],['../classbattle__ship_1_1submarine.html#a229d0577e45bd964f4d32b50506c9504',1,'battle_ship::submarine::submarine(coordinates p, orientation o)']]]
 ];

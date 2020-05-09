@@ -66,10 +66,12 @@
 The board game Battleship I chose to reproduce digitally is inspired from the early 20th century pencil and paper game which later
 became a success board game hit in the early 1960s.
 This board game in particular has always had a connection with the computer world, in fact being one of the world's ever
-computer games being released in 1979 on the Z80 Compucolor.
+computer games being released in 1979 on the Z80 Compucolor \cite{hinebaugh2009board}.
 Since then this game has been reproduced on many digital consoles and as a standalone game on PC and is a game I have personally played many
 times as a child so I decided it would be a good idea to reproduce a command-line version of it in C++.
 \subsection{Rules}
+The rules followed are according to the original Hasbro board game rules \cite{rules} with the exception of a
+raft instead of a destroyer ship.
 The game is played by two players.
 Each player has access to two grids representing their positioning of ships and the opponents' guess positions.
 At the start of the game each player has access to the following types ships:
@@ -125,10 +127,13 @@ The following are the objectives set out at the beginning of the project to be c
   \end{enumerate}
 \end{enumerate}
 \section{Code Design and Implementation}
-This program was run and tested using gcc version 6.3.0 on a x86\_64-linux-gnu target running 'Debian 6.3.0-18+deb9u1'.
+This program was run and tested using gcc version 6.3.0 on a x86\_64-linux-gnu target running 'Debian 6.3.0-18+deb9u1' with GNU Make 4.1.
 The make file in the src/ directory includes all the options needed and running 'make' in this directory followed
 by moving to the build/ directory and running ./battleship will execute the program.
-For a fully detailed documentation and how to access it please refer to instructions in Appendix 2.
+For a fully detailed documentation (not required but makes it easier for the reader)
+ and how to access it please refer to instructions in Appendix 2.
+Please note that most of the commenting explaining method motivation resides in
+the respective header files.
 \subsection{Navigation and Input Validation}
 \begin{figure}[H]
 \centering
@@ -193,7 +198,7 @@ and checking them one by one.
 \\
 \par The other special feature in this class is from the std::functional header; the hash method.
 This method accepts a key and applies a one way map which returns an std::size\_t number
-reprsentation for the key.
+representation for the key.
 Only the same key will produce the same hash map output.
 This is good security practice (not the best) to avoid saving passwords in plain text.
 Instead we save the password hash to a user profile file and whenever the user needs to login we hash their input and compare hashes.
@@ -211,8 +216,8 @@ battle\_ship::piece was created.
 Moreover as per C.129 of the C++ Core Guidelines the design of the inheritance hierarchy needs careful attention.
 I have implemented interface inheritance followed by implementation inheritance.
 The former is providing an interface which is detached from implementation
-to make it seemless when changing the actual logic of the methods for a particular implementer, without
-affecting the other implementers or derived classes.
+to make it seemless when changing the actual logic of the methods for a particular implementor, without
+affecting the other implementors or derived classes.
 The latter is providing a base class which will allow derived classes to inherit its methods.
 \\
 \par My solution is to create the battle\_ship::piece class as an abstract class/interface defining all the methods its derived classes should implement.
@@ -224,7 +229,7 @@ This is a clear case of object oriented features such as inheritance explicitly 
 and polymorphism with the use of dynamic linkage of the pure virtual methods defined in the base interface and implemented in the derived battle\_ship::vessel class.
 Individual ships defined in Table \ref{table:pieces} are then derived classes of battle\_ship::vessel.
 They are further defined only through header files since the implementation is inherited and need only to pass different parameters to the base class constructor.
-Finally, adding a new ship in the future is as easy as deifning a new header class which calls the base class' constructor with the new properties defining this ship.
+Finally, adding a new ship in the future is as easy as defining a new header class which calls the base class' constructor with the new properties defining this ship.
 
 \subsubsection{Player}
 \begin{figure}[H]
@@ -246,14 +251,14 @@ while in the NPC's case a random point is randomly selected when it is their tur
 \subsection{Manager Classes}
 I have implemented four classes known in the codebase as 'Manager Classes'.
 The purpose of these classes is to manage certain aspects such as notifications, highscores, market and screen output.
-Practically, these managers are used to hold data and methods frquently used by different classes through
+Practically, these managers are used to hold data and methods frequently used by different classes through
 leveraging static type member data and methods.
 \\
 \par The battle\_ship::screen\_manager class is used to produce the three columned output seen in the terminal
 so that any notifications can be shown to terminal together with the current board view.
 In this case it makes sense to use the static type member function since it would be unoptimized to
-have to instantiate this class everytime since no state needs to be maintained between calls anyways.
-It contains a general, repetedly used member function which needs to be accessible in different parts of the codebase.
+have to instantiate this class every time since no state needs to be maintained between calls anyways.
+It contains a general, repeatedly used member function which needs to be accessible in different parts of the codebase.
 With the same reasoning the battle\_ship::highscore\_manager does the same with no member data but just useful methods
 which are used in other places of the code. This class uses an advanced C++ feature which is a generic lambda function
 to custom sort a vector of tuples on the second element of that tuple.
@@ -272,7 +277,7 @@ coordinate (a blue tilde similar to a sea wave).
 The owner of the pieces is the board and the owner of the board is the player.
 \subsection{Geometry Class and Coordinates Struct}
 The battle\_ship::coordinates struct is used everywhere in the program and defines
-the coordinate system used (one could change this easily thorugh this struct).
+the coordinate system used (one could change this easily through this struct).
 Its member data consists of an enum class to define the x-axis (as this is made of letters A-J) while the y-axis is numbers (1-9).
 \\
 \par A very important class is the battle\_ship::geometry class whose public, static methods are used to calculate
@@ -297,7 +302,7 @@ The battle routine is the same as defined in the rules of Section 1.2.
 \end{figure}
 
 \subsection{Memory and Smart Pointers}
-The use of smart pointers was employed throughout to ensure no memory leaks occured, or at least minimise the possibility
+The use of smart pointers was employed throughout to ensure no memory leaks occurred, or at least minimise the possibility
 this might happen.
 Namely:
 \begin{enumerate}[label=\roman*.]
@@ -358,32 +363,32 @@ The following is a single run of the game visualised through screenshots of
 All required functionality set out at the beginning in Section 1.3 was completed successfully.
 The whole program was tested for input validation and sanitization
 together with memory checks to make sure no leaks occur.
-Finally, object oriented features such as inheritence, polymorphism,
+Finally, object oriented features such as inheritance, polymorphism,
 encapsulation and abstraction were all implemented.
 Advanced C++ features such as the use of generic lambda functions, hashmaps,
 tuples and all three types of smart pointers were used.
 \\
 \par As possible extensions, even though currently every piece has the same cost i.e 1 and the budget each player has is the number of pieces,
-one could very easily change this in the future by constraining the budget (through the battle\_ship::rules class) and maybe adding more vessels with different costs
+one could very easily change this in the future by constraining the budget and maybe adding more vessels with different costs
 opening a really big game element such as is choosing your fleet correctly.
 Moreover, since the game saves fleet state after closing, creating one's fleet wisely has even more value.
 Finally, implementing a smarter NPC strategy than random selection would be interesting possibly with
 different levels of opponent difficulty too.
 \\
-\par \hfill 2410 words\\
+\par \hfill 2480 words\\
 \printbibliography
 \newpage
 \section*{Appendix 1: Impact of COVID19 on the work completed and report}
 \subsection{Time lost travelling home}
-On the 16th of March I caught the first airplane home (Malta) I could find, due to news that airports back home were imminently closing.
+On the 16th of March I caught the first airplane home (Malta) I could find, due to news that airports back home were soon closing.
 As a matter of fact a week later they did close permanently and so have the UK soon after that.
-The time I did lose was not explicitly in travelling home although that was substaintial (around 10 hours all together)
+The time I did lose was not explicitly in travelling home although that was substantial (around 10 hours all together)
 it was more since I left almost imminently I left a lot of resources back in Manchester (such as books, documents) and it has
 been really painful trying to find alternatives to them.
 \subsection{Lack of access to computers and the internet}
 I am very lucky to have no problem on this end since I have a laptop I could take with me and
 I have a stable internet connection.
-In fact I attended all the lectures on BlackBoard Collaborate that occured for this and other modules.
+In fact I attended all the lectures on BlackBoard Collaborate that occurred for this and other modules.
 \subsection{Limitation in the outcome}
 I honestly do not think it has affected me in any way towards this particular module.
 The lecturer and lab assistants all have been very helpful online whenever I needed and learning resources, perhaps

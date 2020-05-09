@@ -1,7 +1,7 @@
 <map id="include/authentication.h" name="include/authentication.h">
-<area shape="rect" id="node2" href="$human_8h.html" title="human.h" alt="" coords="348,80,427,107"/>
-<area shape="rect" id="node3" href="$player_8h.html" title="player.h" alt="" coords="352,155,424,181"/>
-<area shape="rect" id="node4" href="$board_8h.html" title="board.h" alt="" coords="352,229,423,256"/>
-<area shape="rect" id="node5" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="340,379,449,405"/>
-<area shape="rect" id="node7" href="$piece_8h.html" title="piece.h" alt="" coords="318,304,386,331"/>
+<area shape="rect" id="node2" href="$human_8h.html" title="human.h" alt="" coords="283,80,355,107"/>
+<area shape="rect" id="node3" href="$player_8h.html" title="player.h" alt="" coords="161,155,229,181"/>
+<area shape="rect" id="node4" href="$board_8h.html" title="board.h" alt="" coords="325,229,391,256"/>
+<area shape="rect" id="node5" href="$coordinates_8h.html" title="coordinates.h" alt="" coords="431,379,531,405"/>
+<area shape="rect" id="node7" href="$piece_8h.html" title="piece.h" alt="" coords="417,304,481,331"/>
 </map>

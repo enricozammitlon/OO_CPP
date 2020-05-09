@@ -9,6 +9,7 @@ std::vector<std::string> battle_ship::notification_manager::all_notifications =
 namespace battle_ship {
 std::ostream &operator<<(std::ostream &os, const notification_manager &n) {
   std::vector<std::string>::iterator iterator_start;
+  // 12 is due to the board having 10 rows with upper and lower padding
   if (notification_manager::all_notifications.size() > 12) {
     iterator_start = notification_manager::all_notifications.end() - 12;
   } else {

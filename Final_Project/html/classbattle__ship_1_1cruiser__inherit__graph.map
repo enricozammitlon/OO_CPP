@@ -1,4 +1,4 @@
 <map id="battle_ship::cruiser" name="battle_ship::cruiser">
-<area shape="rect" id="node2" href="$classbattle__ship_1_1vessel.html" title="battle_ship::vessel" alt="" coords="7,80,147,107"/>
-<area shape="rect" id="node3" href="$classbattle__ship_1_1piece.html" title="battle_ship::piece" alt="" coords="9,5,144,32"/>
+<area shape="rect" id="node2" href="$classbattle__ship_1_1vessel.html" title="Implements the methods for the abstract piece class. " alt="" coords="6,80,137,107"/>
+<area shape="rect" id="node3" href="$classbattle__ship_1_1piece.html" title="Abstract/Interface for classes of type piece. " alt="" coords="9,5,133,32"/>
 </map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Battleships: battle_ship::npc Class Reference</title>
+<title>Battleship: battle_ship::npc Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Battleships
+   <div id="projectname">Battleship
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">A C++ implementation of the Battleship board game</div>
   </td>
  </tr>
  </tbody>
@@ -71,13 +72,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A type of player, implements methods targeted for non-playable characters (computer controlled)  
+ <a href="classbattle__ship_1_1npc.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="npc_8h_source.html">npc.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for battle_ship::npc:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbattle__ship_1_1npc__inherit__graph.png" border="0" usemap="#battle__ship_1_1npc_inherit__map" alt="Inheritance graph"/></div>
 <map name="battle__ship_1_1npc_inherit__map" id="battle__ship_1_1npc_inherit__map">
-<area shape="rect" id="node2" href="classbattle__ship_1_1player.html" title="battle_ship::player" alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="classbattle__ship_1_1player.html" title="Abstract class for a player. " alt="" coords="5,5,133,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -85,7 +89,7 @@ Collaboration diagram for battle_ship::npc:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbattle__ship_1_1npc__coll__graph.png" border="0" usemap="#battle__ship_1_1npc_coll__map" alt="Collaboration graph"/></div>
 <map name="battle__ship_1_1npc_coll__map" id="battle__ship_1_1npc_coll__map">
-<area shape="rect" id="node2" href="classbattle__ship_1_1player.html" title="battle_ship::player" alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="classbattle__ship_1_1player.html" title="Abstract class for a player. " alt="" coords="5,5,133,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -96,10 +100,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a5c77aa108694177865edb9c2d06947"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1npc.html#a6a5c77aa108694177865edb9c2d06947">npc</a> (std::string uname, size_t diff)</td></tr>
 <tr class="separator:a6a5c77aa108694177865edb9c2d06947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10c65edd38e75ac6be91ecd2dc9c9866"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1npc.html#a10c65edd38e75ac6be91ecd2dc9c9866">winning_line</a> ()</td></tr>
+<tr class="memdesc:a10c65edd38e75ac6be91ecd2dc9c9866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a line to be outputted when the user effectively loses.  <a href="#a10c65edd38e75ac6be91ecd2dc9c9866">More...</a><br /></td></tr>
 <tr class="separator:a10c65edd38e75ac6be91ecd2dc9c9866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb3ad1c27c948ae968697c795f10a6b9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1npc.html#acb3ad1c27c948ae968697c795f10a6b9">get_highscore</a> ()</td></tr>
+<tr class="memdesc:acb3ad1c27c948ae968697c795f10a6b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NPC should not be saved in the all time highscores.  <a href="#acb3ad1c27c948ae968697c795f10a6b9">More...</a><br /></td></tr>
 <tr class="separator:acb3ad1c27c948ae968697c795f10a6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab81843d30e5f8801a8fe479d44ead157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1npc.html#ab81843d30e5f8801a8fe479d44ead157">save_highscore</a> (size_t h)</td></tr>
+<tr class="memdesc:ab81843d30e5f8801a8fe479d44ead157"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NPC should not be saved in the all time highscores.  <a href="#ab81843d30e5f8801a8fe479d44ead157">More...</a><br /></td></tr>
 <tr class="separator:ab81843d30e5f8801a8fe479d44ead157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe6ec844c73c5410c2c4887fd50fac06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1npc.html#abe6ec844c73c5410c2c4887fd50fac06">attack</a> (<a class="el" href="classbattle__ship_1_1piece.html">piece</a> &amp;attacking_piece, <a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;<a class="el" href="classbattle__ship_1_1player.html#af01292346caaf209039b6490ae18d8aa">enemy</a>)</td></tr>
 <tr class="separator:abe6ec844c73c5410c2c4887fd50fac06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,10 +122,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3525c2934ea6a4bd7600385cb5fa6bfa inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a3525c2934ea6a4bd7600385cb5fa6bfa">assign_enemy</a> (std::shared_ptr&lt; <a class="el" href="classbattle__ship_1_1player.html">player</a> &gt; e)</td></tr>
 <tr class="separator:a3525c2934ea6a4bd7600385cb5fa6bfa inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5224958feae654d622f56523dc45ab83 inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a5224958feae654d622f56523dc45ab83">get_enemy</a> ()</td></tr>
+<tr class="memdesc:a5224958feae654d622f56523dc45ab83 inherit pub_methods_classbattle__ship_1_1player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Since enemy is a weak pointer it must be locked before using it.  <a href="classbattle__ship_1_1player.html#a5224958feae654d622f56523dc45ab83">More...</a><br /></td></tr>
 <tr class="separator:a5224958feae654d622f56523dc45ab83 inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade02279db7265558659c40f16c482df7 inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ade02279db7265558659c40f16c482df7">modify_budget</a> (int money)</td></tr>
 <tr class="separator:ade02279db7265558659c40f16c482df7 inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae21fefa953f6a3a0476cabfae7084bbf inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#ae21fefa953f6a3a0476cabfae7084bbf">reset</a> ()</td></tr>
+<tr class="memdesc:ae21fefa953f6a3a0476cabfae7084bbf inherit pub_methods_classbattle__ship_1_1player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to reset states between multiple battles.  <a href="classbattle__ship_1_1player.html#ae21fefa953f6a3a0476cabfae7084bbf">More...</a><br /></td></tr>
 <tr class="separator:ae21fefa953f6a3a0476cabfae7084bbf inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5373e08a637e9c21b3751eb02e07540 inherit pub_methods_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#af5373e08a637e9c21b3751eb02e07540">is_ready_to_play</a> ()</td></tr>
 <tr class="separator:af5373e08a637e9c21b3751eb02e07540 inherit pub_methods_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,11 +154,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a48a3f8c692c7ea1def384c39b9b65e85 inherit pro_attribs_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a48a3f8c692c7ea1def384c39b9b65e85">ready_to_play</a></td></tr>
 <tr class="separator:a48a3f8c692c7ea1def384c39b9b65e85 inherit pro_attribs_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cb155ee3d722244c44bf71e5e2440c4 inherit pro_attribs_classbattle__ship_1_1player"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbattle__ship_1_1player.html#a5cb155ee3d722244c44bf71e5e2440c4">subdir</a></td></tr>
+<tr class="memdesc:a5cb155ee3d722244c44bf71e5e2440c4 inherit pro_attribs_classbattle__ship_1_1player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to store subdirectory for saves, different for NPCs and Humans.  <a href="classbattle__ship_1_1player.html#a5cb155ee3d722244c44bf71e5e2440c4">More...</a><br /></td></tr>
 <tr class="separator:a5cb155ee3d722244c44bf71e5e2440c4 inherit pro_attribs_classbattle__ship_1_1player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00007">7</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
+<div class="textblock"><p>A type of player, implements methods targeted for non-playable characters (computer controlled) </p>
+<dl class="section author"><dt>Author</dt><dd>Enrico Zammit Lonardelli</dd></dl>
+<p>Contact: <a href="#" onclick="location.href='mai'+'lto:'+'enr'+'ic'+'o.z'+'am'+'mit'+'l@'+'gma'+'il'+'.co'+'m'; return false;">enric<span style="display: none;">.nosp@m.</span>o.za<span style="display: none;">.nosp@m.</span>mmitl<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a></p>
+<p>Created on: Wed, 15 Apr 2020 17:55:28 </p>
+
+<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00019">19</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab92a83aba6dbf1060ebdb666087790b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab92a83aba6dbf1060ebdb666087790b8">&#9670;&nbsp;</a></span>npc() <span class="overload">[1/2]</span></h2>
@@ -210,7 +224,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00013">13</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00026">26</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
 
 </div>
 </div>
@@ -252,13 +266,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void battle_ship::npc::attack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classbattle__ship_1_1piece.html">piece</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classbattle__ship_1_1piece.html">battle_ship::piece</a> &amp;&#160;</td>
           <td class="paramname"><em>attacking_piece</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classbattle__ship_1_1player.html">player</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classbattle__ship_1_1player.html">battle_ship::player</a> &amp;&#160;</td>
           <td class="paramname"><em>enemy</em>&#160;</td>
         </tr>
         <tr>
@@ -269,14 +283,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classbattle__ship_1_1player.html#a86be2256620cd5e20da6db7be8afdbc8">battle_ship::player</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00018">18</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="npc_8cpp_source.html#l00015">15</a> of file <a class="el" href="npc_8cpp_source.html">npc.cpp</a>.</p>
 
 </div>
 </div>
@@ -303,9 +317,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The NPC should not be saved in the all time highscores. </p>
+
 <p>Implements <a class="el" href="classbattle__ship_1_1player.html#a9b74e59f4b120d38ad591dba6a1d1ba7">battle_ship::player</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00016">16</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00031">31</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
 
 </div>
 </div>
@@ -333,9 +349,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The NPC should not be saved in the all time highscores. </p>
+
 <p>Implements <a class="el" href="classbattle__ship_1_1player.html#a928538249678aea5402f8c673671e995">battle_ship::player</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00017">17</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="npc_8h_source.html#l00033">33</a> of file <a class="el" href="npc_8h_source.html">npc.h</a>.</p>
 
 </div>
 </div>
@@ -362,9 +380,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a line to be outputted when the user effectively loses. </p>
+<p>The notifications are always addressing the user so npc winning is a negative message </p>
+
 <p>Implements <a class="el" href="classbattle__ship_1_1player.html#a3110ec708fd8fc7e02a6e88a63d57d2f">battle_ship::player</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="npc_8cpp_source.html#l00004">4</a> of file <a class="el" href="npc_8cpp_source.html">npc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="npc_8cpp_source.html#l00011">11</a> of file <a class="el" href="npc_8cpp_source.html">npc.cpp</a>.</p>
 
 </div>
 </div>

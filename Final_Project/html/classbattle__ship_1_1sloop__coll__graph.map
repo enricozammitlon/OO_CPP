@@ -1,5 +1,0 @@
-<map id="battle_ship::sloop" name="battle_ship::sloop">
-<area shape="rect" id="node2" href="$classbattle__ship_1_1vessel.html" title="battle_ship::vessel" alt="" coords="23,185,163,212"/>
-<area shape="rect" id="node3" href="$classbattle__ship_1_1piece.html" title="battle_ship::piece" alt="" coords="25,109,160,136"/>
-<area shape="rect" id="node4" href="$structbattle__ship_1_1coordinates.html" title="battle_ship::coordinates" alt="" coords="5,5,180,32"/>
-</map>

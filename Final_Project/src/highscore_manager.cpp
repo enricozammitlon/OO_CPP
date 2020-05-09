@@ -36,6 +36,7 @@ void battle_ship::highscore_manager::add_highscore(
   if (battle_ship::highscore_manager::all_highscores.size() > 10) {
     battle_ship::highscore_manager::all_highscores.resize(10);
   }
+  // Save the new highscores to file
   for (auto iterator = battle_ship::highscore_manager::all_highscores.begin();
        (iterator != battle_ship::highscore_manager::all_highscores.end());
        iterator++) {

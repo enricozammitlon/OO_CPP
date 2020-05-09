@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <iostream>
 
+/// The notifications are always addressing the user so npc winning is a
+/// negative message
 void battle_ship::npc::winning_line() {
   std::cout << "Commander...*cough*...we've been defated by " << username << "."
             << std::endl;

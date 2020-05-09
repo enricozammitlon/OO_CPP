@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Battleships: src/battle.cpp File Reference</title>
+<title>Battleship: src/battle.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Battleships
+   <div id="projectname">Battleship
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">A C++ implementation of the Battleship board game</div>
   </td>
  </tr>
  </tbody>
@@ -76,7 +77,6 @@ $(function() {
 <code>#include &quot;<a class="el" href="notification__manager_8h_source.html">notification_manager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="npc_8h_source.html">npc.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="rules_8h_source.html">rules.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="screen__manager_8h_source.html">screen_manager.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
@@ -87,18 +87,17 @@ Include dependency graph for battle.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="battle_8cpp__incl.png" border="0" usemap="#src_2battle_8cpp" alt=""/></div>
 <map name="src_2battle_8cpp" id="src_2battle_8cpp">
-<area shape="rect" id="node2" href="authentication_8h.html" title="authentication.h" alt="" coords="695,80,822,107"/>
-<area shape="rect" id="node3" href="human_8h.html" title="human.h" alt="" coords="678,155,757,181"/>
-<area shape="rect" id="node4" href="player_8h.html" title="player.h" alt="" coords="681,229,753,256"/>
-<area shape="rect" id="node15" href="game_8h.html" title="game.h" alt="" coords="949,155,1019,181"/>
-<area shape="rect" id="node16" href="rules_8h.html" title="rules.h" alt="" coords="1011,229,1077,256"/>
-<area shape="rect" id="node17" href="highscore__manager_8h.html" title="highscore_manager.h" alt="" coords="1215,80,1375,107"/>
-<area shape="rect" id="node19" href="notification__manager_8h.html" title="notification_manager.h" alt="" coords="763,379,931,405"/>
-<area shape="rect" id="node20" href="npc_8h.html" title="npc.h" alt="" coords="815,155,873,181"/>
-<area shape="rect" id="node21" href="screen__manager_8h.html" title="screen_manager.h" alt="" coords="1049,80,1191,107"/>
-<area shape="rect" id="node5" href="board_8h.html" title="board.h" alt="" coords="325,304,395,331"/>
-<area shape="rect" id="node6" href="coordinates_8h.html" title="coordinates.h" alt="" coords="316,453,425,480"/>
-<area shape="rect" id="node8" href="piece_8h.html" title="piece.h" alt="" coords="619,379,687,405"/>
+<area shape="rect" id="node2" href="authentication_8h.html" title="authentication.h" alt="" coords="596,80,711,107"/>
+<area shape="rect" id="node3" href="human_8h.html" title="human.h" alt="" coords="545,155,617,181"/>
+<area shape="rect" id="node4" href="player_8h.html" title="player.h" alt="" coords="487,229,555,256"/>
+<area shape="rect" id="node15" href="game_8h.html" title="game.h" alt="" coords="405,155,470,181"/>
+<area shape="rect" id="node16" href="highscore__manager_8h.html" title="highscore_manager.h" alt="" coords="785,80,932,107"/>
+<area shape="rect" id="node18" href="notification__manager_8h.html" title="notification_manager.h" alt="" coords="43,379,197,405"/>
+<area shape="rect" id="node19" href="npc_8h.html" title="npc.h" alt="" coords="693,155,747,181"/>
+<area shape="rect" id="node20" href="screen__manager_8h.html" title="screen_manager.h" alt="" coords="290,80,419,107"/>
+<area shape="rect" id="node5" href="board_8h.html" title="board.h" alt="" coords="489,304,554,331"/>
+<area shape="rect" id="node6" href="coordinates_8h.html" title="coordinates.h" alt="" coords="542,453,642,480"/>
+<area shape="rect" id="node8" href="piece_8h.html" title="piece.h" alt="" coords="773,379,837,405"/>
 </map>
 </div>
 </div>
@@ -107,6 +106,7 @@ Include dependency graph for battle.cpp:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="battle_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is where the main method resides.  <a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">More...</a><br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -125,7 +125,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="battle_8cpp_source.html#l00021">21</a> of file <a class="el" href="battle_8cpp_source.html">battle.cpp</a>.</p>
+<p>This is where the main method resides. </p>
+<dl class="section author"><dt>Author</dt><dd>Enrico Zammit Lonardelli</dd></dl>
+<p>This project was made for the PHYS30762 course in Object Oriented C++. Inspired by the early 20th Centruy board game Battleship, this is a c digital playable game for a human to play against a computer character. Its main aim is to showcase C++ advanced features and object oriented programming best practices.</p>
+<p>Contact: <a href="#" onclick="location.href='mai'+'lto:'+'enr'+'ic'+'o.z'+'am'+'mit'+'l@'+'gma'+'il'+'.co'+'m'; return false;">enric<span style="display: none;">.nosp@m.</span>o.za<span style="display: none;">.nosp@m.</span>mmitl<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a></p>
+<p>Created on: Sun, 29 Mar 2020 21:50:33 </p>
+
+<p class="definition">Definition at line <a class="el" href="battle_8cpp_source.html#l00030">30</a> of file <a class="el" href="battle_8cpp_source.html">battle.cpp</a>.</p>
 
 </div>
 </div>

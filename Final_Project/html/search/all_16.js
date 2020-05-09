@@ -8,8 +8,9 @@ var searchData=
   ['_7ehuman',['~human',['../classbattle__ship_1_1human.html#ad1c94c01291be1e1908301cffc41497d',1,'battle_ship::human']]],
   ['_7enotification_5fmanager',['~notification_manager',['../classbattle__ship_1_1notification__manager.html#ac6581333d9b6fb0fd4d66432bab5e1f4',1,'battle_ship::notification_manager']]],
   ['_7enpc',['~npc',['../classbattle__ship_1_1npc.html#ab548776b810769c0af009f1db0df4ede',1,'battle_ship::npc']]],
+  ['_7epiece',['~piece',['../classbattle__ship_1_1piece.html#a935d8c078457ff4327d83cc8fb43b06c',1,'battle_ship::piece']]],
   ['_7eplayer',['~player',['../classbattle__ship_1_1player.html#afbb6b6e880864bf7a36f21a95665a6c7',1,'battle_ship::player']]],
   ['_7eraft',['~raft',['../classbattle__ship_1_1raft.html#a4b381ef568f95e3fe097eeef75d2ac51',1,'battle_ship::raft']]],
   ['_7esubmarine',['~submarine',['../classbattle__ship_1_1submarine.html#a03b3a1b0c62de507e2b3a4d9ec1de06f',1,'battle_ship::submarine']]],
-  ['_7evessel',['~vessel',['../classbattle__ship_1_1vessel.html#a281821b204a7fb93071ef75de5685a37',1,'battle_ship::vessel']]]
+  ['_7evessel',['~vessel',['../classbattle__ship_1_1vessel.html#a9e2c9554b6ce2af6f4e6168d1cf6591b',1,'battle_ship::vessel']]]
 ];

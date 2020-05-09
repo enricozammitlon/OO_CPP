@@ -44,7 +44,7 @@ PROJECT_NUMBER         = 1.0.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = A C++ implementation of the Battleship board game
+PROJECT_BRIEF          = "A C++ implementation of the Battleship board game"
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
@@ -207,7 +207,7 @@ QT_AUTOBRIEF           = NO
 # not recognized any more.
 # The default value is: NO.
 
-MULTILINE_CPP_IS_BRIEF = YES
+MULTILINE_CPP_IS_BRIEF = NO
 
 # If the INHERIT_DOCS tag is set to YES then an undocumented member inherits the
 # documentation from any documented member that it re-implements.

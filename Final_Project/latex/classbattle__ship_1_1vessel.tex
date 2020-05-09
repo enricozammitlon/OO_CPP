@@ -2,6 +2,11 @@
 \label{classbattle__ship_1_1vessel}\index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 
 
+Implements the methods for the abstract piece class.  
+
+
+
+
 {\ttfamily \#include $<$vessel.\+h$>$}
 
 
@@ -21,7 +26,7 @@ Collaboration diagram for battle\+\_\+ship\+:\+:vessel\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=330pt]{classbattle__ship_1_1vessel__coll__graph}
+\includegraphics[width=312pt]{classbattle__ship_1_1vessel__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -29,32 +34,26 @@ Collaboration diagram for battle\+\_\+ship\+:\+:vessel\+:
 \item 
 \hyperlink{classbattle__ship_1_1vessel_a6f3be9c2343940c262fb7add97402311}{vessel} ()=default
 \item 
-\hyperlink{classbattle__ship_1_1vessel_a56fb6c51c60a66f2a85be6081f081388}{vessel} (std\+::string n, \hyperlink{structbattle__ship_1_1coordinates}{coordinates} p, std\+::size\+\_\+t l, std\+::size\+\_\+t w, std\+::string xy\+\_\+rep\+\_\+hor, std\+::string xy\+\_\+rep\+\_\+ver, \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation} o, std\+::string u, std\+::size\+\_\+t ap)
-\item 
-std\+::vector$<$ std\+::string $>$ \hyperlink{classbattle__ship_1_1vessel_a36278b899be319a57cb728e8ecd2f340}{load\+\_\+image} () const override
+\hyperlink{classbattle__ship_1_1vessel_ade7f1d4ee4b458a715a0259e5211db20}{vessel} (std\+::string n, \hyperlink{structbattle__ship_1_1coordinates}{coordinates} p, size\+\_\+t l, size\+\_\+t w, std\+::string xy\+\_\+rep\+\_\+hor, std\+::string xy\+\_\+rep\+\_\+ver, \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation} o, size\+\_\+t ap)
 \item 
 \hyperlink{structbattle__ship_1_1coordinates}{coordinates} \hyperlink{classbattle__ship_1_1vessel_a9b99c5ed2629203985b25338df585234}{calculate\+\_\+end} (\hyperlink{structbattle__ship_1_1coordinates}{coordinates} start, size\+\_\+t distance, \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation} o) override
-\item 
+\begin{DoxyCompactList}\small\item\em Given a start coordinate calculate the end coordinate. \end{DoxyCompactList}\item 
 void \hyperlink{classbattle__ship_1_1vessel_ace0ec527147243b1fa6fa920d5a32a1f}{modify\+\_\+pose} (\hyperlink{structbattle__ship_1_1coordinates}{coordinates} new\+\_\+coors, \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation} new\+\_\+orientation) override
-\item 
+\begin{DoxyCompactList}\small\item\em Modifies position and orientation. \end{DoxyCompactList}\item 
 bool \hyperlink{classbattle__ship_1_1vessel_a5f36d687fbb87ced436d2d88847a1d5c}{has\+\_\+sunk} () const override
 \item 
 void \hyperlink{classbattle__ship_1_1vessel_ab0da3c305902d55594b7aa5d20b69509}{take\+\_\+hit} () override
 \item 
-void \hyperlink{classbattle__ship_1_1vessel_aa4f50939cb109b09c6b300313e193198}{display\+\_\+yz} () override
-\item 
 void \hyperlink{classbattle__ship_1_1vessel_a60924b058d686ebf545ae8f4d9f42d76}{display\+\_\+xy} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Displays what the top down view of this piece is. \end{DoxyCompactList}\item 
 size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a398b4134137d9e11c13e6aee548e1802}{get\+\_\+action\+\_\+points} () override
 \item 
-std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a96d84d8ad107db77ae601d4e29471dde}{get\+\_\+length} () const override
+size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_ae166b521339b6a7b8c0be1a9d7861131}{get\+\_\+length} () const override
 \item 
-std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a625d8f457a7afdafea7422ad89648123}{get\+\_\+width} () const override
+size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a84716baaafee9839292f67b03abc7272}{get\+\_\+width} () const override
 \item 
-std\+::string \hyperlink{classbattle__ship_1_1vessel_a3ab0850a3ccedf7e6083c7b494284289}{get\+\_\+uri} () const override
-\item 
-std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a1d7fb8fe8e4454850c1cd7dbb4c70d49}{get\+\_\+hits} () const override
-\item 
+size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a549dc0f3fc45f3b3f7fa247316900a9a}{get\+\_\+hits} () const override
+\begin{DoxyCompactList}\small\item\em Returns the amount of hits already received from attacks. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classbattle__ship_1_1vessel_a84bfaba9be4f15f6ec934c925d11967d}{get\+\_\+xy\+\_\+representation} () const override
 \item 
 \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation} \hyperlink{classbattle__ship_1_1vessel_a698c7811878e56b7ba7eb6d88e6ac13f}{get\+\_\+orientation} () const override
@@ -67,7 +66,7 @@ std\+::string \hyperlink{classbattle__ship_1_1vessel_a623a1b35355db117b5381a3a0f
 \item 
 int \hyperlink{classbattle__ship_1_1vessel_aadca1fe2ac265ed9f22e68490b6b22eb}{get\+\_\+cost} () const override
 \item 
-\hyperlink{classbattle__ship_1_1vessel_a281821b204a7fb93071ef75de5685a37}{$\sim$vessel} ()=default
+virtual \hyperlink{classbattle__ship_1_1vessel_a9e2c9554b6ce2af6f4e6168d1cf6591b}{$\sim$vessel} ()=default
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -78,10 +77,10 @@ struct \hyperlink{structbattle__ship_1_1coordinates}{coordinates} \hyperlink{cla
 \item 
 struct \hyperlink{structbattle__ship_1_1coordinates}{coordinates} \hyperlink{classbattle__ship_1_1vessel_a90baf292572ee968095c107ec656db32}{end\+\_\+coordinates}
 \item 
-std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a90930f7a8a9a45cb29ca434afa5e34ec}{length}
-\item 
-std\+::size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a5fec62ed2032bb672db385ecc85339cb}{width}
-\item 
+size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a51d62e0235c1c5b8116618a864d82929}{length}
+\begin{DoxyCompactList}\small\item\em Defined as distance on the x-\/axis. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_ac69519345fd0c9a39b55a15516506461}{width}
+\begin{DoxyCompactList}\small\item\em Defined as distance on the y-\/axis. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classbattle__ship_1_1vessel_a563ede7bcd45c64f897f727ce2ca50ff}{xy\+\_\+representation\+\_\+horizontal}
 \item 
 std\+::string \hyperlink{classbattle__ship_1_1vessel_a7ab3092931ae7f230cb2cca77f2612c5}{xy\+\_\+representation\+\_\+vertical}
@@ -92,18 +91,23 @@ std\+::string \hyperlink{classbattle__ship_1_1vessel_ac49c1b9fd8b63846dac12053ce
 \item 
 int \hyperlink{classbattle__ship_1_1vessel_aaf2677260fd0f0ce56678cd23b8a0591}{cost} \{100\}
 \item 
-std\+::string \hyperlink{classbattle__ship_1_1vessel_a13cfef1f532ae80be7187a65e59c8b46}{uri}
-\item 
 size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a1a14cc37d607ba7f3b710b36a11ff2e0}{hits} \{0\}
 \item 
 size\+\_\+t \hyperlink{classbattle__ship_1_1vessel_a5d2b710e2b58847818ba8e22794a97a4}{action\+\_\+points} \{0\}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The number of turns this piece allows a player to attack if using it. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Implements the methods for the abstract piece class. 
 
+\begin{DoxyAuthor}{Author}
+Enrico Zammit Lonardelli
+\end{DoxyAuthor}
+Contact\+: \href{mailto:enrico.zammitl@gmail.com}{\tt enrico.\+zammitl@gmail.\+com}
 
-Definition at line 10 of file vessel.\+h.
+Created on\+: Sun, 29 Mar 2020 21\+:50\+:33 
+
+Definition at line 21 of file vessel.\+h.
 
 
 
@@ -114,17 +118,21 @@ Definition at line 10 of file vessel.\+h.
 \subsubsection{\texorpdfstring{vessel()}{vessel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily battle\+\_\+ship\+::vessel\+::vessel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a56fb6c51c60a66f2a85be6081f081388}\label{classbattle__ship_1_1vessel_a56fb6c51c60a66f2a85be6081f081388}} 
+\mbox{\Hypertarget{classbattle__ship_1_1vessel_ade7f1d4ee4b458a715a0259e5211db20}\label{classbattle__ship_1_1vessel_ade7f1d4ee4b458a715a0259e5211db20}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!vessel@{vessel}}
 \index{vessel@{vessel}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{vessel()}{vessel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily battle\+\_\+ship\+::vessel\+::vessel (\begin{DoxyParamCaption}\item[{std\+::string}]{n,  }\item[{\hyperlink{structbattle__ship_1_1coordinates}{coordinates}}]{p,  }\item[{std\+::size\+\_\+t}]{l,  }\item[{std\+::size\+\_\+t}]{w,  }\item[{std\+::string}]{xy\+\_\+rep\+\_\+hor,  }\item[{std\+::string}]{xy\+\_\+rep\+\_\+ver,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation}}]{o,  }\item[{std\+::string}]{u,  }\item[{std\+::size\+\_\+t}]{ap }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily battle\+\_\+ship\+::vessel\+::vessel (\begin{DoxyParamCaption}\item[{std\+::string}]{n,  }\item[{\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates}}]{p,  }\item[{size\+\_\+t}]{l,  }\item[{size\+\_\+t}]{w,  }\item[{std\+::string}]{xy\+\_\+rep\+\_\+hor,  }\item[{std\+::string}]{xy\+\_\+rep\+\_\+ver,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{battle\+\_\+ship\+::orientation}}]{o,  }\item[{size\+\_\+t}]{ap }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a281821b204a7fb93071ef75de5685a37}\label{classbattle__ship_1_1vessel_a281821b204a7fb93071ef75de5685a37}} 
+
+
+Definition at line 9 of file vessel.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1vessel_a9e2c9554b6ce2af6f4e6168d1cf6591b}\label{classbattle__ship_1_1vessel_a9e2c9554b6ce2af6f4e6168d1cf6591b}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!````~vessel@{$\sim$vessel}}
 \index{````~vessel@{$\sim$vessel}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{$\sim$vessel()}{~vessel()}}
-{\footnotesize\ttfamily battle\+\_\+ship\+::vessel\+::$\sim$vessel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+{\footnotesize\ttfamily virtual battle\+\_\+ship\+::vessel\+::$\sim$vessel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
@@ -133,7 +141,11 @@ Definition at line 10 of file vessel.\+h.
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!calculate\+\_\+end@{calculate\+\_\+end}}
 \index{calculate\+\_\+end@{calculate\+\_\+end}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{calculate\+\_\+end()}{calculate\_end()}}
-{\footnotesize\ttfamily \hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} battle\+\_\+ship\+::vessel\+::calculate\+\_\+end (\begin{DoxyParamCaption}\item[{\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates}}]{start,  }\item[{size\+\_\+t}]{distance,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{battle\+\_\+ship\+::orientation}}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates} battle\+\_\+ship\+::vessel\+::calculate\+\_\+end (\begin{DoxyParamCaption}\item[{\hyperlink{structbattle__ship_1_1coordinates}{coordinates}}]{start,  }\item[{size\+\_\+t}]{distance,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation}}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Given a start coordinate calculate the end coordinate. 
 
 
 
@@ -141,7 +153,7 @@ Implements \hyperlink{classbattle__ship_1_1piece_a58092f7b1d663471204d7e51e68bbb
 
 
 
-Definition at line 41 of file vessel.\+cpp.
+Definition at line 38 of file vessel.\+cpp.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a60924b058d686ebf545ae8f4d9f42d76}\label{classbattle__ship_1_1vessel_a60924b058d686ebf545ae8f4d9f42d76}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!display\+\_\+xy@{display\+\_\+xy}}
@@ -151,25 +163,15 @@ Definition at line 41 of file vessel.\+cpp.
 
 
 
+Displays what the top down view of this piece is. 
+
+
+
 Implements \hyperlink{classbattle__ship_1_1piece_a0f900b13641277ae9e809e4baa5c8c10}{battle\+\_\+ship\+::piece}.
 
 
 
-Definition at line 115 of file vessel.\+cpp.
-
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_aa4f50939cb109b09c6b300313e193198}\label{classbattle__ship_1_1vessel_aa4f50939cb109b09c6b300313e193198}} 
-\index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!display\+\_\+yz@{display\+\_\+yz}}
-\index{display\+\_\+yz@{display\+\_\+yz}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
-\subsubsection{\texorpdfstring{display\+\_\+yz()}{display\_yz()}}
-{\footnotesize\ttfamily void battle\+\_\+ship\+::vessel\+::display\+\_\+yz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \hyperlink{classbattle__ship_1_1piece_ad46ddc76d6e682a4f1fc8965a0c7813c}{battle\+\_\+ship\+::piece}.
-
-
-
-Definition at line 107 of file vessel.\+cpp.
+Definition at line 78 of file vessel.\+cpp.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a398b4134137d9e11c13e6aee548e1802}\label{classbattle__ship_1_1vessel_a398b4134137d9e11c13e6aee548e1802}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+action\+\_\+points@{get\+\_\+action\+\_\+points}}
@@ -183,7 +185,7 @@ Implements \hyperlink{classbattle__ship_1_1piece_a63f00d666a65cd41a11b592d55411b
 
 
 
-Definition at line 41 of file vessel.\+h.
+Definition at line 50 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_aadca1fe2ac265ed9f22e68490b6b22eb}\label{classbattle__ship_1_1vessel_aadca1fe2ac265ed9f22e68490b6b22eb}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+cost@{get\+\_\+cost}}
@@ -197,7 +199,7 @@ Implements \hyperlink{classbattle__ship_1_1piece_a9193782bce8a697bd5d3cb391d5f16
 
 
 
-Definition at line 53 of file vessel.\+h.
+Definition at line 61 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_ab24ee1fe21632b510833c8369ef3560a}\label{classbattle__ship_1_1vessel_ab24ee1fe21632b510833c8369ef3560a}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+end@{get\+\_\+end}}
@@ -211,35 +213,39 @@ Implements \hyperlink{classbattle__ship_1_1piece_a4f7ac17a3ba66f104d2c5110e0fe51
 
 
 
-Definition at line 52 of file vessel.\+h.
+Definition at line 60 of file vessel.\+h.
 
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a1d7fb8fe8e4454850c1cd7dbb4c70d49}\label{classbattle__ship_1_1vessel_a1d7fb8fe8e4454850c1cd7dbb4c70d49}} 
+\mbox{\Hypertarget{classbattle__ship_1_1vessel_a549dc0f3fc45f3b3f7fa247316900a9a}\label{classbattle__ship_1_1vessel_a549dc0f3fc45f3b3f7fa247316900a9a}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+hits@{get\+\_\+hits}}
 \index{get\+\_\+hits@{get\+\_\+hits}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{get\+\_\+hits()}{get\_hits()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::vessel\+::get\+\_\+hits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily size\+\_\+t battle\+\_\+ship\+::vessel\+::get\+\_\+hits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \hyperlink{classbattle__ship_1_1piece_a27116e62c4ee91796349bbcb284e446d}{battle\+\_\+ship\+::piece}.
+Returns the amount of hits already received from attacks. 
 
 
 
-Definition at line 45 of file vessel.\+h.
+Implements \hyperlink{classbattle__ship_1_1piece_a51123474a964caa97a4c29b053ac0fad}{battle\+\_\+ship\+::piece}.
 
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a96d84d8ad107db77ae601d4e29471dde}\label{classbattle__ship_1_1vessel_a96d84d8ad107db77ae601d4e29471dde}} 
+
+
+Definition at line 53 of file vessel.\+h.
+
+\mbox{\Hypertarget{classbattle__ship_1_1vessel_ae166b521339b6a7b8c0be1a9d7861131}\label{classbattle__ship_1_1vessel_ae166b521339b6a7b8c0be1a9d7861131}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+length@{get\+\_\+length}}
 \index{get\+\_\+length@{get\+\_\+length}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{get\+\_\+length()}{get\_length()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::vessel\+::get\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily size\+\_\+t battle\+\_\+ship\+::vessel\+::get\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \hyperlink{classbattle__ship_1_1piece_a08cfb1d99d1804f42f87878bef19e7ff}{battle\+\_\+ship\+::piece}.
+Implements \hyperlink{classbattle__ship_1_1piece_a0188cda34ef90374396c52595761ef08}{battle\+\_\+ship\+::piece}.
 
 
 
-Definition at line 42 of file vessel.\+h.
+Definition at line 51 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a623a1b35355db117b5381a3a0f5774eb}\label{classbattle__ship_1_1vessel_a623a1b35355db117b5381a3a0f5774eb}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+name@{get\+\_\+name}}
@@ -253,7 +259,7 @@ Implements \hyperlink{classbattle__ship_1_1piece_a95531d660360ffc403a742db1b4f64
 
 
 
-Definition at line 50 of file vessel.\+h.
+Definition at line 58 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a698c7811878e56b7ba7eb6d88e6ac13f}\label{classbattle__ship_1_1vessel_a698c7811878e56b7ba7eb6d88e6ac13f}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+orientation@{get\+\_\+orientation}}
@@ -267,7 +273,7 @@ Implements \hyperlink{classbattle__ship_1_1piece_a2cc01b1ec66bfb91df048401233e96
 
 
 
-Definition at line 49 of file vessel.\+h.
+Definition at line 57 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_aba133e1debe50caa9cbbae5e867b5995}\label{classbattle__ship_1_1vessel_aba133e1debe50caa9cbbae5e867b5995}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+start@{get\+\_\+start}}
@@ -281,35 +287,21 @@ Implements \hyperlink{classbattle__ship_1_1piece_ab5010cea30b96f5afc758b2a9d0d43
 
 
 
-Definition at line 51 of file vessel.\+h.
+Definition at line 59 of file vessel.\+h.
 
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a3ab0850a3ccedf7e6083c7b494284289}\label{classbattle__ship_1_1vessel_a3ab0850a3ccedf7e6083c7b494284289}} 
-\index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+uri@{get\+\_\+uri}}
-\index{get\+\_\+uri@{get\+\_\+uri}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
-\subsubsection{\texorpdfstring{get\+\_\+uri()}{get\_uri()}}
-{\footnotesize\ttfamily std\+::string battle\+\_\+ship\+::vessel\+::get\+\_\+uri (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \hyperlink{classbattle__ship_1_1piece_aeba6c5083cb05200850cee7578a81d09}{battle\+\_\+ship\+::piece}.
-
-
-
-Definition at line 44 of file vessel.\+h.
-
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a625d8f457a7afdafea7422ad89648123}\label{classbattle__ship_1_1vessel_a625d8f457a7afdafea7422ad89648123}} 
+\mbox{\Hypertarget{classbattle__ship_1_1vessel_a84716baaafee9839292f67b03abc7272}\label{classbattle__ship_1_1vessel_a84716baaafee9839292f67b03abc7272}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+width@{get\+\_\+width}}
 \index{get\+\_\+width@{get\+\_\+width}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{get\+\_\+width()}{get\_width()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::vessel\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily size\+\_\+t battle\+\_\+ship\+::vessel\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \hyperlink{classbattle__ship_1_1piece_a680897abc6ae9c5e187003a1c24fc9a1}{battle\+\_\+ship\+::piece}.
+Implements \hyperlink{classbattle__ship_1_1piece_abd5b9073f2fa6201c4dbc35b43942d2f}{battle\+\_\+ship\+::piece}.
 
 
 
-Definition at line 43 of file vessel.\+h.
+Definition at line 52 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a84bfaba9be4f15f6ec934c925d11967d}\label{classbattle__ship_1_1vessel_a84bfaba9be4f15f6ec934c925d11967d}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!get\+\_\+xy\+\_\+representation@{get\+\_\+xy\+\_\+representation}}
@@ -323,7 +315,7 @@ Implements \hyperlink{classbattle__ship_1_1piece_ad589faff3ce07b5130bfdd89da4269
 
 
 
-Definition at line 46 of file vessel.\+h.
+Definition at line 54 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a5f36d687fbb87ced436d2d88847a1d5c}\label{classbattle__ship_1_1vessel_a5f36d687fbb87ced436d2d88847a1d5c}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!has\+\_\+sunk@{has\+\_\+sunk}}
@@ -337,27 +329,17 @@ Implements \hyperlink{classbattle__ship_1_1piece_af22bd781f4206decd0beed89b014d1
 
 
 
-Definition at line 37 of file vessel.\+h.
-
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a36278b899be319a57cb728e8ecd2f340}\label{classbattle__ship_1_1vessel_a36278b899be319a57cb728e8ecd2f340}} 
-\index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!load\+\_\+image@{load\+\_\+image}}
-\index{load\+\_\+image@{load\+\_\+image}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
-\subsubsection{\texorpdfstring{load\+\_\+image()}{load\_image()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ battle\+\_\+ship\+::vessel\+::load\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \hyperlink{classbattle__ship_1_1piece_aad848540970833ae5eadd115cc531b6b}{battle\+\_\+ship\+::piece}.
-
-
-
-Definition at line 81 of file vessel.\+cpp.
+Definition at line 47 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_ace0ec527147243b1fa6fa920d5a32a1f}\label{classbattle__ship_1_1vessel_ace0ec527147243b1fa6fa920d5a32a1f}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!modify\+\_\+pose@{modify\+\_\+pose}}
 \index{modify\+\_\+pose@{modify\+\_\+pose}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{modify\+\_\+pose()}{modify\_pose()}}
-{\footnotesize\ttfamily void battle\+\_\+ship\+::vessel\+::modify\+\_\+pose (\begin{DoxyParamCaption}\item[{\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates}}]{new\+\_\+coors,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{battle\+\_\+ship\+::orientation}}]{new\+\_\+orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void battle\+\_\+ship\+::vessel\+::modify\+\_\+pose (\begin{DoxyParamCaption}\item[{\hyperlink{structbattle__ship_1_1coordinates}{coordinates}}]{new\+\_\+coors,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation}}]{new\+\_\+orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Modifies position and orientation. 
 
 
 
@@ -365,7 +347,7 @@ Implements \hyperlink{classbattle__ship_1_1piece_a052305c855625732d3e5ba96d0fca5
 
 
 
-Definition at line 57 of file vessel.\+cpp.
+Definition at line 54 of file vessel.\+cpp.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_ab0da3c305902d55594b7aa5d20b69509}\label{classbattle__ship_1_1vessel_ab0da3c305902d55594b7aa5d20b69509}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!take\+\_\+hit@{take\+\_\+hit}}
@@ -379,7 +361,7 @@ Implements \hyperlink{classbattle__ship_1_1piece_a77642906503e12eb22fcfbc3eab98c
 
 
 
-Definition at line 38 of file vessel.\+h.
+Definition at line 48 of file vessel.\+h.
 
 
 
@@ -392,7 +374,11 @@ Definition at line 38 of file vessel.\+h.
 
 
 
-Definition at line 26 of file vessel.\+h.
+The number of turns this piece allows a player to attack if using it. 
+
+
+
+Definition at line 37 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_aaf2677260fd0f0ce56678cd23b8a0591}\label{classbattle__ship_1_1vessel_aaf2677260fd0f0ce56678cd23b8a0591}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!cost@{cost}}
@@ -402,7 +388,7 @@ Definition at line 26 of file vessel.\+h.
 
 
 
-Definition at line 23 of file vessel.\+h.
+Definition at line 34 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_ae0e05c0f43e6fe6c01bf1534ebece971}\label{classbattle__ship_1_1vessel_ae0e05c0f43e6fe6c01bf1534ebece971}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!current\+\_\+orientation@{current\+\_\+orientation}}
@@ -412,7 +398,7 @@ Definition at line 23 of file vessel.\+h.
 
 
 
-Definition at line 22 of file vessel.\+h.
+Definition at line 33 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_ac49c1b9fd8b63846dac12053cebb1d00}\label{classbattle__ship_1_1vessel_ac49c1b9fd8b63846dac12053cebb1d00}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!current\+\_\+xy\+\_\+representation@{current\+\_\+xy\+\_\+representation}}
@@ -422,7 +408,7 @@ Definition at line 22 of file vessel.\+h.
 
 
 
-Definition at line 21 of file vessel.\+h.
+Definition at line 32 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a90baf292572ee968095c107ec656db32}\label{classbattle__ship_1_1vessel_a90baf292572ee968095c107ec656db32}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!end\+\_\+coordinates@{end\+\_\+coordinates}}
@@ -432,7 +418,7 @@ Definition at line 21 of file vessel.\+h.
 
 
 
-Definition at line 14 of file vessel.\+h.
+Definition at line 25 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a1a14cc37d607ba7f3b710b36a11ff2e0}\label{classbattle__ship_1_1vessel_a1a14cc37d607ba7f3b710b36a11ff2e0}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!hits@{hits}}
@@ -442,17 +428,21 @@ Definition at line 14 of file vessel.\+h.
 
 
 
-Definition at line 25 of file vessel.\+h.
+Definition at line 35 of file vessel.\+h.
 
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a90930f7a8a9a45cb29ca434afa5e34ec}\label{classbattle__ship_1_1vessel_a90930f7a8a9a45cb29ca434afa5e34ec}} 
+\mbox{\Hypertarget{classbattle__ship_1_1vessel_a51d62e0235c1c5b8116618a864d82929}\label{classbattle__ship_1_1vessel_a51d62e0235c1c5b8116618a864d82929}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!length@{length}}
 \index{length@{length}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{length}{length}}
-{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::vessel\+::length\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily size\+\_\+t battle\+\_\+ship\+::vessel\+::length\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line 16 of file vessel.\+h.
+Defined as distance on the x-\/axis. 
+
+
+
+Definition at line 27 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a7c7d199acda1b8914c1b014d7d2893b3}\label{classbattle__ship_1_1vessel_a7c7d199acda1b8914c1b014d7d2893b3}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!name@{name}}
@@ -462,7 +452,7 @@ Definition at line 16 of file vessel.\+h.
 
 
 
-Definition at line 12 of file vessel.\+h.
+Definition at line 23 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a32625627454fc279169a7d94ef460cd4}\label{classbattle__ship_1_1vessel_a32625627454fc279169a7d94ef460cd4}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!start\+\_\+coordinates@{start\+\_\+coordinates}}
@@ -472,27 +462,21 @@ Definition at line 12 of file vessel.\+h.
 
 
 
-Definition at line 13 of file vessel.\+h.
-
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a13cfef1f532ae80be7187a65e59c8b46}\label{classbattle__ship_1_1vessel_a13cfef1f532ae80be7187a65e59c8b46}} 
-\index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!uri@{uri}}
-\index{uri@{uri}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
-\subsubsection{\texorpdfstring{uri}{uri}}
-{\footnotesize\ttfamily std\+::string battle\+\_\+ship\+::vessel\+::uri\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
 Definition at line 24 of file vessel.\+h.
 
-\mbox{\Hypertarget{classbattle__ship_1_1vessel_a5fec62ed2032bb672db385ecc85339cb}\label{classbattle__ship_1_1vessel_a5fec62ed2032bb672db385ecc85339cb}} 
+\mbox{\Hypertarget{classbattle__ship_1_1vessel_ac69519345fd0c9a39b55a15516506461}\label{classbattle__ship_1_1vessel_ac69519345fd0c9a39b55a15516506461}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!width@{width}}
 \index{width@{width}!battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}}
 \subsubsection{\texorpdfstring{width}{width}}
-{\footnotesize\ttfamily std\+::size\+\_\+t battle\+\_\+ship\+::vessel\+::width\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily size\+\_\+t battle\+\_\+ship\+::vessel\+::width\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line 18 of file vessel.\+h.
+Defined as distance on the y-\/axis. 
+
+
+
+Definition at line 29 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a563ede7bcd45c64f897f727ce2ca50ff}\label{classbattle__ship_1_1vessel_a563ede7bcd45c64f897f727ce2ca50ff}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!xy\+\_\+representation\+\_\+horizontal@{xy\+\_\+representation\+\_\+horizontal}}
@@ -502,7 +486,7 @@ Definition at line 18 of file vessel.\+h.
 
 
 
-Definition at line 19 of file vessel.\+h.
+Definition at line 30 of file vessel.\+h.
 
 \mbox{\Hypertarget{classbattle__ship_1_1vessel_a7ab3092931ae7f230cb2cca77f2612c5}\label{classbattle__ship_1_1vessel_a7ab3092931ae7f230cb2cca77f2612c5}} 
 \index{battle\+\_\+ship\+::vessel@{battle\+\_\+ship\+::vessel}!xy\+\_\+representation\+\_\+vertical@{xy\+\_\+representation\+\_\+vertical}}
@@ -512,7 +496,7 @@ Definition at line 19 of file vessel.\+h.
 
 
 
-Definition at line 20 of file vessel.\+h.
+Definition at line 31 of file vessel.\+h.
 
 
 

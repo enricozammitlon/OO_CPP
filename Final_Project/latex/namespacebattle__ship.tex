@@ -4,45 +4,43 @@
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{classbattle__ship_1_1authentication}{authentication}
-\item 
+\begin{DoxyCompactList}\small\item\em Class used for login and signup. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1board}{board}
-\item 
+\begin{DoxyCompactList}\small\item\em Class used to handle board state. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1carrier}{carrier}
-\item 
+\begin{DoxyCompactList}\small\item\em A type of vessel. \end{DoxyCompactList}\item 
 struct \hyperlink{structbattle__ship_1_1coordinates}{coordinates}
-\item 
+\begin{DoxyCompactList}\small\item\em Used to define points on a board. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1cruiser}{cruiser}
-\item 
+\begin{DoxyCompactList}\small\item\em A type of vessel. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1destroyer}{destroyer}
-\item 
+\begin{DoxyCompactList}\small\item\em A type of vessel. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1game}{game}
-\item 
+\begin{DoxyCompactList}\small\item\em Holds the current battle state. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1geometry}{geometry}
-\item 
+\begin{DoxyCompactList}\small\item\em Used to hold geometrical algorithms. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1highscore__manager}{highscore\+\_\+manager}
-\item 
+\begin{DoxyCompactList}\small\item\em Used to hold all highscores and mange the highscore state. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1human}{human}
-\item 
-class \hyperlink{classbattle__ship_1_1market}{market}
-\item 
+\begin{DoxyCompactList}\small\item\em A type of player Implements methods targeted for playable characters (human controlled) \end{DoxyCompactList}\item 
+class \hyperlink{classbattle__ship_1_1market__manager}{market\+\_\+manager}
+\begin{DoxyCompactList}\small\item\em Used to manage available vessels and transactions via budget checking. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1notification__manager}{notification\+\_\+manager}
-\item 
+\begin{DoxyCompactList}\small\item\em Used to manage all notifications state. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1npc}{npc}
-\item 
+\begin{DoxyCompactList}\small\item\em A type of player, implements methods targeted for non-\/playable characters (computer controlled) \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1piece}{piece}
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract/\+Interface for classes of type piece. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1player}{player}
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract class for a player. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1raft}{raft}
-\item 
-class \hyperlink{classbattle__ship_1_1rules}{rules}
-\item 
+\begin{DoxyCompactList}\small\item\em A type of vessel. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1screen__manager}{screen\+\_\+manager}
-\item 
+\begin{DoxyCompactList}\small\item\em Class used to output to terminal in three coloumns. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1submarine}{submarine}
-\item 
+\begin{DoxyCompactList}\small\item\em A type of vessel. \end{DoxyCompactList}\item 
 class \hyperlink{classbattle__ship_1_1vessel}{vessel}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implements the methods for the abstract piece class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -97,7 +95,7 @@ vertical&\\
 \end{DoxyEnumFields}
 
 
-Definition at line 17 of file coordinates.\+h.
+Definition at line 19 of file coordinates.\+h.
 
 \mbox{\Hypertarget{namespacebattle__ship_ab3bfa90e413692dac2d4463364f80561}\label{namespacebattle__ship_ab3bfa90e413692dac2d4463364f80561}} 
 \index{battle\+\_\+ship@{battle\+\_\+ship}!x\+\_\+axis@{x\+\_\+axis}}
@@ -149,7 +147,7 @@ J&\\
 \end{DoxyEnumFields}
 
 
-Definition at line 5 of file coordinates.\+h.
+Definition at line 6 of file coordinates.\+h.
 
 
 
@@ -180,7 +178,7 @@ Definition at line 10 of file notification\+\_\+manager.\+cpp.
 \subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily std\+::ostream\& battle\+\_\+ship\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classbattle__ship_1_1board}{board} \&}]{b }\end{DoxyParamCaption})}
 
-
+Mostly self explanatory, the method used A\+N\+SI escape characters to display different colours to show a coordinate which is hit, miss, empty or poulated 
 
 Definition at line 211 of file board.\+cpp.
 
@@ -190,7 +188,7 @@ Definition at line 211 of file board.\+cpp.
 \subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
 {\footnotesize\ttfamily bool battle\+\_\+ship\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\hyperlink{structbattle__ship_1_1coordinates}{coordinates} \&}]{p }\end{DoxyParamCaption})}
 
+This method works by searching using Reg\+Ex for a specific letter and one to two digits. Validation on this for ranges is done and if all checks pass a coordinate is created. 
 
-
-Definition at line 15 of file coordinates.\+cpp.
+Definition at line 20 of file coordinates.\+cpp.
 

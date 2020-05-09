@@ -62,6 +62,9 @@ void battle_ship::human::modify_fleet() {
       }
     } break;
     }
+    // Only allow the user to start a new battle if they have all the pieces
+    // required ( conversley all of their budget has been used). In the future
+    // these two statements might not equivalent so change it in the future.
     if (budget == 0) {
       ready_to_play = true;
     } else {
@@ -69,7 +72,7 @@ void battle_ship::human::modify_fleet() {
     }
     save_fleet();
   } while (input != 4);
-  std::cout << "I will inform the troops,sir!" << std::endl;
+  std::cout << "I will inform the troops, sir!" << std::endl;
 }
 
 bool battle_ship::human::add_piece() {

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iterator>
 #include <regex>
+#include <sstream>
 #include <string>
 
 namespace battle_ship {
@@ -12,6 +13,11 @@ std::ostream &operator<<(std::ostream &os, const coordinates &p) {
   os << ")";
   return os;
 };
+/**
+ * This method works by searching using RegEx for a specific letter
+ * and one to two digits. Validation on this for ranges is done and
+ * if all checks pass a coordinate is created.
+ */
 bool operator>>(std::istream &is, coordinates &p) {
   std::string input;
   is >> input;
@@ -21,6 +27,7 @@ bool operator>>(std::istream &is, coordinates &p) {
 
   if (std::regex_search(input, match, find_coor)) {
     std::string x_coor{match[0].str()[0]};
+    // Capital 'A' in ASCII is value 65
     battle_ship::x_axis x{static_cast<battle_ship::x_axis>(x_coor.at(0) - 64)};
     std::string y_coor{match[0].str().substr(1)};
     std::stringstream temp_stream;

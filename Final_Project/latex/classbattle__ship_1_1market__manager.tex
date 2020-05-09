@@ -1,0 +1,106 @@
+\hypertarget{classbattle__ship_1_1market__manager}{}\section{battle\+\_\+ship\+:\+:market\+\_\+manager Class Reference}
+\label{classbattle__ship_1_1market__manager}\index{battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}}
+
+
+Used to manage available vessels and transactions via budget checking.  
+
+
+
+
+{\ttfamily \#include $<$market\+\_\+manager.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classbattle__ship_1_1market__manager_a7f0c8f8ddbf6f2e49b9004ea1f05bfe7}{get\+\_\+available\+\_\+pieces} (\hyperlink{classbattle__ship_1_1player}{player} \&p)
+\item 
+static std\+::tuple$<$ bool, std\+::string $>$ \hyperlink{classbattle__ship_1_1market__manager_afc7b9ed406cf2f728e658cec16232408}{buy\+\_\+piece} (\hyperlink{classbattle__ship_1_1player}{player} \&p, std\+::string piece\+\_\+name, \hyperlink{structbattle__ship_1_1coordinates}{coordinates} coors, \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation} \hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{orientation})
+\begin{DoxyCompactList}\small\item\em Here the returned tuple contains (Success in transaction?,Reason) \end{DoxyCompactList}\item 
+static std\+::tuple$<$ bool, std\+::string $>$ \hyperlink{classbattle__ship_1_1market__manager_abfdff8ba2f4098656d9c53140c34876c}{sell\+\_\+piece} (\hyperlink{classbattle__ship_1_1player}{player} \&p, std\+::string piece\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Here the returned tuple contains (Success in transaction?,Reason) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classbattle__ship_1_1market__manager_aa3d94799ba18b9a14edc9b2edc0ffd8d}{all\+\_\+pieces}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to manage available vessels and transactions via budget checking. 
+
+\begin{DoxyAuthor}{Author}
+Enrico Zammit Lonardelli
+\end{DoxyAuthor}
+Contact\+: \href{mailto:enrico.zammitl@gmail.com}{\tt enrico.\+zammitl@gmail.\+com}
+
+Created on\+: Mon, 13 Apr 2020 09\+:04\+:33 
+
+Definition at line 20 of file market\+\_\+manager.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1market__manager_afc7b9ed406cf2f728e658cec16232408}\label{classbattle__ship_1_1market__manager_afc7b9ed406cf2f728e658cec16232408}} 
+\index{battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}!buy\+\_\+piece@{buy\+\_\+piece}}
+\index{buy\+\_\+piece@{buy\+\_\+piece}!battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}}
+\subsubsection{\texorpdfstring{buy\+\_\+piece()}{buy\_piece()}}
+{\footnotesize\ttfamily std\+::tuple$<$ bool, std\+::string $>$ battle\+\_\+ship\+::market\+\_\+manager\+::buy\+\_\+piece (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{p,  }\item[{std\+::string}]{piece\+\_\+name,  }\item[{\hyperlink{structbattle__ship_1_1coordinates}{battle\+\_\+ship\+::coordinates}}]{coors,  }\item[{\hyperlink{namespacebattle__ship_aed87488f0a73f0d0679fe343fb61c784}{battle\+\_\+ship\+::orientation}}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Here the returned tuple contains (Success in transaction?,Reason) 
+
+
+
+Definition at line 42 of file market\+\_\+manager.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1market__manager_a7f0c8f8ddbf6f2e49b9004ea1f05bfe7}\label{classbattle__ship_1_1market__manager_a7f0c8f8ddbf6f2e49b9004ea1f05bfe7}} 
+\index{battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}!get\+\_\+available\+\_\+pieces@{get\+\_\+available\+\_\+pieces}}
+\index{get\+\_\+available\+\_\+pieces@{get\+\_\+available\+\_\+pieces}!battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+available\+\_\+pieces()}{get\_available\_pieces()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ battle\+\_\+ship\+::market\+\_\+manager\+::get\+\_\+available\+\_\+pieces (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This will return the subset of all the pieces which the player has not yet in their fleet
+
+Return the subset of all the available pieces, which includes pieces the player does not have already and are affordable given their budget 
+
+Definition at line 19 of file market\+\_\+manager.\+cpp.
+
+\mbox{\Hypertarget{classbattle__ship_1_1market__manager_abfdff8ba2f4098656d9c53140c34876c}\label{classbattle__ship_1_1market__manager_abfdff8ba2f4098656d9c53140c34876c}} 
+\index{battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}!sell\+\_\+piece@{sell\+\_\+piece}}
+\index{sell\+\_\+piece@{sell\+\_\+piece}!battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}}
+\subsubsection{\texorpdfstring{sell\+\_\+piece()}{sell\_piece()}}
+{\footnotesize\ttfamily std\+::tuple$<$ bool, std\+::string $>$ battle\+\_\+ship\+::market\+\_\+manager\+::sell\+\_\+piece (\begin{DoxyParamCaption}\item[{\hyperlink{classbattle__ship_1_1player}{battle\+\_\+ship\+::player} \&}]{p,  }\item[{std\+::string}]{piece\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Here the returned tuple contains (Success in transaction?,Reason) 
+
+
+
+Definition at line 69 of file market\+\_\+manager.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbattle__ship_1_1market__manager_aa3d94799ba18b9a14edc9b2edc0ffd8d}\label{classbattle__ship_1_1market__manager_aa3d94799ba18b9a14edc9b2edc0ffd8d}} 
+\index{battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}!all\+\_\+pieces@{all\+\_\+pieces}}
+\index{all\+\_\+pieces@{all\+\_\+pieces}!battle\+\_\+ship\+::market\+\_\+manager@{battle\+\_\+ship\+::market\+\_\+manager}}
+\subsubsection{\texorpdfstring{all\+\_\+pieces}{all\_pieces}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ battle\+\_\+ship\+::market\+\_\+manager\+::all\+\_\+pieces\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \textcolor{stringliteral}{"Submarine"}, \textcolor{stringliteral}{"Carrier"}, \textcolor{stringliteral}{"Raft"}, \textcolor{stringliteral}{"Cruiser"}, \textcolor{stringliteral}{"Destroyer"}\}
+\end{DoxyCode}
+
+
+Definition at line 22 of file market\+\_\+manager.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{market__manager_8h}{market\+\_\+manager.\+h}\item 
+src/\hyperlink{market__manager_8cpp}{market\+\_\+manager.\+cpp}\end{DoxyCompactItemize}

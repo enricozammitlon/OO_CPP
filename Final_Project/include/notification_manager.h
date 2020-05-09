@@ -5,6 +5,17 @@
 #include <string>
 #include <vector>
 namespace battle_ship {
+/*!
+ * \class notification_manager
+ *
+ * \author Enrico Zammit Lonardelli
+ *
+ * \brief Used to manage all notifications state
+ *
+ * Contact: enrico.zammitl@gmail.com
+ *
+ * Created on: Fri, 10 Apr 2020 16:31:44
+ */
 class notification_manager {
   friend std::ostream &operator<<(std::ostream &os,
                                   const notification_manager &n);

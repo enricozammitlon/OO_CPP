@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classbattle__ship_1_1player.html" title="battle_ship::player" alt="" coords="5,31,144,57"/>
-<area shape="rect" id="node2" href="$classbattle__ship_1_1human.html" title="battle_ship::human" alt="" coords="192,5,337,32"/>
-<area shape="rect" id="node3" href="$classbattle__ship_1_1npc.html" title="battle_ship::npc" alt="" coords="203,56,326,83"/>
+<area shape="rect" id="node1" href="$classbattle__ship_1_1player.html" title="Abstract class for a player. " alt="" coords="5,31,133,57"/>
+<area shape="rect" id="node2" href="$classbattle__ship_1_1human.html" title="A type of player Implements methods targeted for playable characters (human controlled) ..." alt="" coords="181,5,313,32"/>
+<area shape="rect" id="node3" href="$classbattle__ship_1_1npc.html" title="A type of player, implements methods targeted for non&#45;playable characters (computer controlled) ..." alt="" coords="190,56,305,83"/>
 </map>

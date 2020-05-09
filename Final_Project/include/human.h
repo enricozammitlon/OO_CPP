@@ -2,6 +2,18 @@
 #define HUMAN_H
 #include "player.h"
 namespace battle_ship {
+/*!
+ * \class human
+ *
+ * \author Enrico Zammit Lonardelli
+ *
+ * \brief A type of player
+ * Implements methods targeted for playable characters (human controlled)
+ *
+ * Contact: enrico.zammitl@gmail.com
+ *
+ * Created on: Wed, 15 Apr 2020 17:55:28
+ */
 class human : public virtual player {
 private:
   size_t password_hash;
