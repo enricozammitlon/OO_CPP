@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2020.5.8)  8 MAY 2020 08:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2020.5.8)  9 MAY 2020 09:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -173,6 +173,18 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count106
+\rotFPtop=\skip46
+\rotFPbot=\skip47
+\rot@float@box=\box28
+\rot@mess@toks=\toks22
+)
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
 
@@ -191,7 +203,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count106
+\etb@tempcnta=\count107
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -208,14 +220,11 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count107
+\lrq@indent=\count108
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -223,62 +232,62 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
-\integerpart=\count108
-\decimalpart=\count109
+\integerpart=\count109
+\decimalpart=\count110
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count110
-\c@listtotal=\count111
-\c@listcount=\count112
-\c@liststart=\count113
-\c@liststop=\count114
-\c@citecount=\count115
-\c@citetotal=\count116
-\c@multicitecount=\count117
-\c@multicitetotal=\count118
-\c@instcount=\count119
-\c@maxnames=\count120
-\c@minnames=\count121
-\c@maxitems=\count122
-\c@minitems=\count123
-\c@citecounter=\count124
-\c@savedcitecounter=\count125
-\c@uniquelist=\count126
-\c@uniquename=\count127
-\c@refsection=\count128
-\c@refsegment=\count129
-\c@maxextratitle=\count130
-\c@maxextratitleyear=\count131
-\c@maxextrayear=\count132
-\c@maxextraalpha=\count133
-\c@abbrvpenalty=\count134
-\c@highnamepenalty=\count135
-\c@lownamepenalty=\count136
-\c@maxparens=\count137
-\c@parenlevel=\count138
-\blx@tempcnta=\count139
-\blx@tempcntb=\count140
-\blx@tempcntc=\count141
-\blx@maxsection=\count142
-\blx@maxsegment@0=\count143
-\blx@notetype=\count144
-\blx@parenlevel@text=\count145
-\blx@parenlevel@foot=\count146
-\blx@sectionciteorder@0=\count147
-\labelnumberwidth=\skip46
-\labelalphawidth=\skip47
-\biblabelsep=\skip48
-\bibitemsep=\skip49
-\bibnamesep=\skip50
-\bibinitsep=\skip51
-\bibparsep=\skip52
-\bibhang=\skip53
+\c@tabx@nest=\count111
+\c@listtotal=\count112
+\c@listcount=\count113
+\c@liststart=\count114
+\c@liststop=\count115
+\c@citecount=\count116
+\c@citetotal=\count117
+\c@multicitecount=\count118
+\c@multicitetotal=\count119
+\c@instcount=\count120
+\c@maxnames=\count121
+\c@minnames=\count122
+\c@maxitems=\count123
+\c@minitems=\count124
+\c@citecounter=\count125
+\c@savedcitecounter=\count126
+\c@uniquelist=\count127
+\c@uniquename=\count128
+\c@refsection=\count129
+\c@refsegment=\count130
+\c@maxextratitle=\count131
+\c@maxextratitleyear=\count132
+\c@maxextrayear=\count133
+\c@maxextraalpha=\count134
+\c@abbrvpenalty=\count135
+\c@highnamepenalty=\count136
+\c@lownamepenalty=\count137
+\c@maxparens=\count138
+\c@parenlevel=\count139
+\blx@tempcnta=\count140
+\blx@tempcntb=\count141
+\blx@tempcntc=\count142
+\blx@maxsection=\count143
+\blx@maxsegment@0=\count144
+\blx@notetype=\count145
+\blx@parenlevel@text=\count146
+\blx@parenlevel@foot=\count147
+\blx@sectionciteorder@0=\count148
+\labelnumberwidth=\skip48
+\labelalphawidth=\skip49
+\biblabelsep=\skip50
+\bibitemsep=\skip51
+\bibnamesep=\skip52
+\bibinitsep=\skip53
+\bibparsep=\skip54
+\bibhang=\skip55
 \blx@bcfin=\read1
 \blx@bcfout=\write4
-\c@mincomprange=\count148
-\c@maxcomprange=\count149
-\c@mincompwidth=\count150
+\c@mincomprange=\count149
+\c@maxcomprange=\count150
+\c@mincompwidth=\count151
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -287,78 +296,78 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count151
-\c@savedafterword=\count152
-\c@annotator=\count153
-\c@savedannotator=\count154
-\c@author=\count155
-\c@savedauthor=\count156
-\c@bookauthor=\count157
-\c@savedbookauthor=\count158
-\c@commentator=\count159
-\c@savedcommentator=\count160
-\c@editor=\count161
-\c@savededitor=\count162
-\c@editora=\count163
-\c@savededitora=\count164
-\c@editorb=\count165
-\c@savededitorb=\count166
-\c@editorc=\count167
-\c@savededitorc=\count168
-\c@foreword=\count169
-\c@savedforeword=\count170
-\c@holder=\count171
-\c@savedholder=\count172
-\c@introduction=\count173
-\c@savedintroduction=\count174
-\c@namea=\count175
-\c@savednamea=\count176
-\c@nameb=\count177
-\c@savednameb=\count178
-\c@namec=\count179
-\c@savednamec=\count180
-\c@translator=\count181
-\c@savedtranslator=\count182
-\c@shortauthor=\count183
-\c@savedshortauthor=\count184
-\c@shorteditor=\count185
-\c@savedshorteditor=\count186
-\c@labelname=\count187
-\c@savedlabelname=\count188
-\c@institution=\count189
-\c@savedinstitution=\count190
-\c@lista=\count191
-\c@savedlista=\count192
-\c@listb=\count193
-\c@savedlistb=\count194
-\c@listc=\count195
-\c@savedlistc=\count196
-\c@listd=\count197
-\c@savedlistd=\count198
-\c@liste=\count199
-\c@savedliste=\count266
-\c@listf=\count267
-\c@savedlistf=\count268
-\c@location=\count269
-\c@savedlocation=\count270
-\c@organization=\count271
-\c@savedorganization=\count272
-\c@origlocation=\count273
-\c@savedoriglocation=\count274
-\c@origpublisher=\count275
-\c@savedorigpublisher=\count276
-\c@publisher=\count277
-\c@savedpublisher=\count278
-\c@language=\count279
-\c@savedlanguage=\count280
-\c@pageref=\count281
-\c@savedpageref=\count282
-\shorthandwidth=\skip54
-\shortjournalwidth=\skip55
-\shortserieswidth=\skip56
-\shorttitlewidth=\skip57
-\shortauthorwidth=\skip58
-\shorteditorwidth=\skip59
+\c@afterword=\count152
+\c@savedafterword=\count153
+\c@annotator=\count154
+\c@savedannotator=\count155
+\c@author=\count156
+\c@savedauthor=\count157
+\c@bookauthor=\count158
+\c@savedbookauthor=\count159
+\c@commentator=\count160
+\c@savedcommentator=\count161
+\c@editor=\count162
+\c@savededitor=\count163
+\c@editora=\count164
+\c@savededitora=\count165
+\c@editorb=\count166
+\c@savededitorb=\count167
+\c@editorc=\count168
+\c@savededitorc=\count169
+\c@foreword=\count170
+\c@savedforeword=\count171
+\c@holder=\count172
+\c@savedholder=\count173
+\c@introduction=\count174
+\c@savedintroduction=\count175
+\c@namea=\count176
+\c@savednamea=\count177
+\c@nameb=\count178
+\c@savednameb=\count179
+\c@namec=\count180
+\c@savednamec=\count181
+\c@translator=\count182
+\c@savedtranslator=\count183
+\c@shortauthor=\count184
+\c@savedshortauthor=\count185
+\c@shorteditor=\count186
+\c@savedshorteditor=\count187
+\c@labelname=\count188
+\c@savedlabelname=\count189
+\c@institution=\count190
+\c@savedinstitution=\count191
+\c@lista=\count192
+\c@savedlista=\count193
+\c@listb=\count194
+\c@savedlistb=\count195
+\c@listc=\count196
+\c@savedlistc=\count197
+\c@listd=\count198
+\c@savedlistd=\count199
+\c@liste=\count266
+\c@savedliste=\count267
+\c@listf=\count268
+\c@savedlistf=\count269
+\c@location=\count270
+\c@savedlocation=\count271
+\c@organization=\count272
+\c@savedorganization=\count273
+\c@origlocation=\count274
+\c@savedoriglocation=\count275
+\c@origpublisher=\count276
+\c@savedorigpublisher=\count277
+\c@publisher=\count278
+\c@savedpublisher=\count279
+\c@language=\count280
+\c@savedlanguage=\count281
+\c@pageref=\count282
+\c@savedpageref=\count283
+\shorthandwidth=\skip56
+\shortjournalwidth=\skip57
+\shortserieswidth=\skip58
+\shorttitlewidth=\skip59
+\shortauthorwidth=\skip60
+\shorteditorwidth=\skip61
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -370,13 +379,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count283
-\c@textcitetotal=\count284
-\c@textcitemaxnames=\count285
-\c@biburlnumpenalty=\count286
-\c@biburlucpenalty=\count287
-\c@biburllcpenalty=\count288
-\c@smartand=\count289
+\c@textcitecount=\count284
+\c@textcitetotal=\count285
+\c@textcitemaxnames=\count286
+\c@biburlnumpenalty=\count287
+\c@biburlucpenalty=\count288
+\c@biburllcpenalty=\count289
+\c@smartand=\count290
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -398,8 +407,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count290
-\c@bbx:relatedtotal=\count291
+\c@bbx:relatedcount=\count291
+\c@bbx:relatedtotal=\count292
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -411,8 +420,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 File: numeric-comp.cbx 2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
-\c@cbx@tempcnta=\count292
-\c@cbx@tempcntb=\count293
+\c@cbx@tempcnta=\count293
+\c@cbx@tempcntb=\count294
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -436,7 +445,15 @@ File: biblatex.cfg
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks22
+\@enLab=\toks23
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip62
+\enit@outerparindent=\dimen129
+\enit@toks=\toks24
+\enit@inbox=\box29
+\enitdp@description=\count295
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -448,11 +465,11 @@ Package color Info: Driver file: pdftex.def on input line 147.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count294
-\float@exts=\toks23
-\float@box=\box28
-\@float@everytoks=\toks24
-\@floatcapt=\box29
+\c@float@type=\count296
+\float@exts=\toks25
+\float@box=\box30
+\@float@everytoks=\toks26
+\@floatcapt=\box31
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subdepth/subdepth.sty
 Package: subdepth 2007/09/02 v0.1 Unify subscript depths
@@ -462,16 +479,16 @@ Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count295
-\calc@Bcount=\count296
-\calc@Adimen=\dimen129
-\calc@Bdimen=\dimen130
-\calc@Askip=\skip60
-\calc@Bskip=\skip61
+\calc@Acount=\count297
+\calc@Bcount=\count298
+\calc@Adimen=\dimen130
+\calc@Bdimen=\dimen131
+\calc@Askip=\skip63
+\calc@Bskip=\skip64
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count297
-\calc@Cskip=\skip62
+\calc@Ccount=\count299
+\calc@Cskip=\skip65
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
@@ -480,40 +497,40 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count298
-\l_MT_multwidth_dim=\dimen131
-\origjot=\skip63
-\l_MT_shortvdotswithinadjustabove_dim=\dimen132
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen133
-\l_MT_above_intertext_sep=\dimen134
-\l_MT_below_intertext_sep=\dimen135
-\l_MT_above_shortintertext_sep=\dimen136
-\l_MT_below_shortintertext_sep=\dimen137
+\g_MT_multlinerow_int=\count300
+\l_MT_multwidth_dim=\dimen132
+\origjot=\skip66
+\l_MT_shortvdotswithinadjustabove_dim=\dimen133
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen134
+\l_MT_above_intertext_sep=\dimen135
+\l_MT_below_intertext_sep=\dimen136
+\l_MT_above_shortintertext_sep=\dimen137
+\l_MT_below_shortintertext_sep=\dimen138
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen138
-\extrarowheight=\dimen139
-\NC@list=\toks25
-\extratabsurround=\skip64
-\backup@length=\skip65
+\col@sep=\dimen139
+\extrarowheight=\dimen140
+\NC@list=\toks27
+\extratabsurround=\skip67
+\backup@length=\skip68
 )
-\TX@col@width=\dimen140
-\TX@old@table=\dimen141
-\TX@old@col=\dimen142
-\TX@target=\dimen143
-\TX@delta=\dimen144
-\TX@cols=\count299
-\TX@ftn=\toks26
+\TX@col@width=\dimen141
+\TX@old@table=\dimen142
+\TX@old@col=\dimen143
+\TX@target=\dimen144
+\TX@delta=\dimen145
+\TX@cols=\count301
+\TX@ftn=\toks28
 )
 (/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen145
-\c@nlinenum=\count300
-\TeXr@lab=\toks27
+\rotheadsize=\dimen146
+\c@nlinenum=\count302
+\TeXr@lab=\toks29
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -521,26 +538,31 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count301
-\@quotereset=\count302
+\@quotelevel=\count303
+\@quotereset=\count304
 
-(./Solution.aux)
+(./Solution.aux
+
+LaTeX Warning: Label `fig:piece_class_diagram' multiply defined.
+
+)
 \openout1 = `Solution.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 *geometry* driver: auto-detecting
@@ -579,17 +601,17 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count303
-\scratchdimen=\dimen146
-\scratchbox=\box30
-\nofMPsegments=\count304
-\nofMParguments=\count305
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count306
-\MPscratchDim=\dimen147
-\MPnumerator=\count307
-\makeMPintoPDFobject=\count308
-\everyMPtoPDFconversion=\toks29
+\scratchcounter=\count305
+\scratchdimen=\dimen147
+\scratchbox=\box32
+\nofMPsegments=\count306
+\nofMParguments=\count307
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count308
+\MPscratchDim=\dimen148
+\MPnumerator=\count309
+\makeMPintoPDFobject=\count310
+\everyMPtoPDFconversion=\toks31
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -617,34 +639,361 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `Solution.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Solution.bbl' not found.
+Package biblatex Info: ... file 'Solution.bbl' found.
 
-No file Solution.bbl.
-Package biblatex Info: Reference section=0 on input line 33.
-Package biblatex Info: Reference segment=0 on input line 33.
-[1
+(./Solution.bbl)
+Package biblatex Info: Reference section=0 on input line 35.
+Package biblatex Info: Reference segment=0 on input line 35.
+LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 78.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Solution.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<images/input_validation.png, id=11, 728.7225pt x 284.06125pt>
+File: images/input_validation.png Graphic file (type png)
+
+<use images/input_validation.png>
+Package pdftex.def Info: images/input_validation.png used on input line 135.
+(pdftex.def)             Requested size: 437.23688pt x 170.43805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--147
+
+ []
+
+[2 <./images/input_validation.png>]
+<images/coordinate_validation.png, id=18, 612.2875pt x 251.94125pt>
+File: images/coordinate_validation.png Graphic file (type png)
+
+<use images/coordinate_validation.png>
+Package pdftex.def Info: images/coordinate_validation.png used on input line 16
+0.
+(pdftex.def)             Requested size: 367.37534pt x 151.16591pt.
+
+<images/board_validation.png, id=19, 683.55376pt x 113.42375pt>
+File: images/board_validation.png Graphic file (type png)
+
+<use images/board_validation.png>
+Package pdftex.def Info: images/board_validation.png used on input line 171.
+(pdftex.def)             Requested size: 410.13542pt x 68.05476pt.
+
+<images/menu.png, id=20, 753.81625pt x 753.81625pt>
+File: images/menu.png Graphic file (type png)
+ <use images/menu.png>
+Package pdftex.def Info: images/menu.png used on input line 179.
+(pdftex.def)             Requested size: 565.36081pt x 565.36081pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./images/coordinate_validation.png> <./images/board_validation.png>]
+[4 <./images/menu.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 185--194
+
+ []
+
+<images/piece.pdf, id=30, 485.815pt x 252.945pt>
+File: images/piece.pdf Graphic file (type pdf)
+ <use images/piece.pdf>
+Package pdftex.def Info: images/piece.pdf used on input line 205.
+(pdftex.def)             Requested size: 291.49124pt x 151.76816pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--218
+
+ []
+
+[5
+
+ <./images/piece.pdf>] <images/player.pdf, id=42, 301.125pt x 156.585pt>
+File: images/player.pdf Graphic file (type pdf)
+
+<use images/player.pdf>
+Package pdftex.def Info: images/player.pdf used on input line 232.
+(pdftex.def)             Requested size: 180.67638pt x 93.95172pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--261
+
+ []
+
+[6 <./images/player.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 274--278
+
+ []
+
+<images/game.png, id=54, 946.53625pt x 270.00874pt>
+File: images/game.png Graphic file (type png)
+ <use images/game.png>
+Package pdftex.def Info: images/game.png used on input line 294.
+(pdftex.def)             Requested size: 520.59656pt x 148.50525pt.
+
+Overfull \hbox (5.88618pt too wide) in paragraph at lines 294--295
+ [][] 
+ []
+
+<images/login_screen.png, id=55, 721.69624pt x 145.54375pt>
+File: images/login_screen.png Graphic file (type png)
+
+<use images/login_screen.png>
+Package pdftex.def Info: images/login_screen.png used on input line 319.
+(pdftex.def)             Requested size: 360.84724pt x 72.77168pt.
+ [7 <./images/game.png>]
+<images/main_screen.png, id=61, 777.90625pt x 104.39pt>
+File: images/main_screen.png Graphic file (type png)
+
+<use images/main_screen.png>
+Package pdftex.def Info: images/main_screen.png used on input line 324.
+(pdftex.def)             Requested size: 388.95216pt x 52.19485pt.
+
+<images/highscores.png, id=62, 408.52625pt x 96.36pt>
+File: images/highscores.png Graphic file (type png)
+
+<use images/highscores.png>
+Package pdftex.def Info: images/highscores.png used on input line 329.
+(pdftex.def)             Requested size: 204.26262pt x 48.17987pt.
+
+<images/edit_screen.png, id=63, 472.76625pt x 85.31876pt>
+File: images/edit_screen.png Graphic file (type png)
+
+<use images/edit_screen.png>
+Package pdftex.def Info: images/edit_screen.png used on input line 334.
+(pdftex.def)             Requested size: 236.38254pt x 42.65926pt.
+
+<images/add_piece.png, id=64, 678.535pt x 368.37625pt>
+File: images/add_piece.png Graphic file (type png)
+
+<use images/add_piece.png>
+Package pdftex.def Info: images/add_piece.png used on input line 339.
+(pdftex.def)             Requested size: 339.26666pt x 184.18767pt.
+
+<images/delete_piece.png, id=65, 557.08125pt x 363.3575pt>
+File: images/delete_piece.png Graphic file (type png)
+
+<use images/delete_piece.png>
+Package pdftex.def Info: images/delete_piece.png used on input line 344.
+(pdftex.def)             Requested size: 278.53995pt x 181.6783pt.
+
+<images/change_pos.png, id=66, 690.58pt x 429.605pt>
+File: images/change_pos.png Graphic file (type png)
+
+<use images/change_pos.png>
+Package pdftex.def Info: images/change_pos.png used on input line 349.
+(pdftex.def)             Requested size: 345.28915pt x 214.80197pt.
+ [8 <./images/login_screen.png> <./images/main_screen.png> <./images/highscores
+.png> <./images/edit_screen.png> <./images/add_piece.png>] <images/win_game.png
+, id=75, 924.45375pt x 305.14pt>
+File: images/win_game.png Graphic file (type png)
+
+<use images/win_game.png>
+Package pdftex.def Info: images/win_game.png used on input line 354.
+(pdftex.def)             Requested size: 462.22574pt x 152.56961pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--366
+
+ []
+
+[9 <./images/delete_piece.png> <./images/change_pos.png> <./images/win_game.png
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 366--373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
+
+ []
+
+[10] [11] (./valgrind-out.txt
+Overfull \hbox (42.91234pt too wide) in paragraph at lines 15--15
+[]\OT1/cmtt/m/n/10.95 --64058--   Linux version 4.19.76-linuxkit (root@d203b39a
+3d78) (gcc version 8.3.0 (Alpine 8.3.0))
+ []
+
+
+Overfull \hbox (37.16365pt too wide) in paragraph at lines 22--22
+[]\OT1/cmtt/m/n/10.95 --64058--   Considering /usr/lib/debug/.build-id/60/6df9c
+355103e82140d513bc7a25a635591c153.debug
+ []
+
+
+Overfull \hbox (60.1584pt too wide) in paragraph at lines 32--32
+[]\OT1/cmtt/m/n/10.95 ==64058== embedded gdbserver: reading from /tmp/vgdb-pipe
+-from-vgdb-to-64058-by-???-on-8c2541b3eaba 
+ []
+
+
+Overfull \hbox (60.1584pt too wide) in paragraph at lines 33--33
+[]\OT1/cmtt/m/n/10.95 ==64058== embedded gdbserver: writing to   /tmp/vgdb-pipe
+-to-vgdb-from-64058-by-???-on-8c2541b3eaba 
+ []
+
+
+Overfull \hbox (77.40446pt too wide) in paragraph at lines 34--34
+[]\OT1/cmtt/m/n/10.95 ==64058== embedded gdbserver: shared mem   /tmp/vgdb-pipe
+-shared-mem-vgdb-64058-by-???-on-8c2541b3eaba 
+ []
+
+
+Overfull \hbox (167.08398pt too wide) in paragraph at lines 47--47
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x401aec0 (ld-linux-x86-64.so.2:strlen) 
+redirected to 0x3809de81 (vgPlain[]amd64[]linux[]REDIR[]FOR[]strlen) 
+ []
+
+
+Overfull \hbox (155.58661pt too wide) in paragraph at lines 48--48
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x4019770 (ld-linux-x86-64.so.2:index) r
+edirected to 0x3809de9b (vgPlain[]amd64[]linux[]REDIR[]FOR[]index) 
+ []
+
+[12]
+Overfull \hbox (12.55927pt too wide) in paragraph at lines 57--57
+[]\OT1/cmtt/m/n/10.95 --64058--   Considering /usr/lib/debug/usr/lib/valgrind/v
+gpreload[]memcheck-amd64-linux.so .. 
+ []
+
+
+Overfull \hbox (132.59186pt too wide) in paragraph at lines 60--60
+[]\OT1/cmtt/m/n/10.95 --64058--     old: 0x0401aec0 (strlen              ) R-> 
+(0000.0) 0x3809de81 vgPlain[]amd64[]linux[]REDIR[]FOR[]strlen 
+ []
+
+
+Overfull \hbox (8.42021pt too wide) in paragraph at lines 63--63
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x401b9d0 (ld-linux-x86-64.so.2:mempcpy)
+ redirected to 0x4c33330 (mempcpy) 
+ []
+
+
+Overfull \hbox (37.16365pt too wide) in paragraph at lines 67--67
+[]\OT1/cmtt/m/n/10.95 --64058--   Considering /usr/lib/debug/.build-id/4e/49714
+c557ce0472c798f39365ca10f9c0e1933.debug
+ []
+
+
+Overfull \hbox (37.16365pt too wide) in paragraph at lines 72--72
+[]\OT1/cmtt/m/n/10.95 --64058--   Considering /usr/lib/debug/.build-id/77/5143e
+680ff0cd4cd51cce1ce8ca216e635a1d6.debug
+ []
+
+
+Overfull \hbox (26.58606pt too wide) in paragraph at lines 74--74
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x5759710 (libc.so.6:strcasecmp) redirec
+ted to 0x4a26740 ([]vgnU[]ifunc[]wrapper) 
+ []
+
+
+Overfull \hbox (9.34pt too wide) in paragraph at lines 75--75
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x57551b0 (libc.so.6:strcspn) redirected
+ to 0x4a26740 ([]vgnU[]ifunc[]wrapper) 
+ []
+
+
+Overfull \hbox (32.33475pt too wide) in paragraph at lines 76--76
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x575ba00 (libc.so.6:strncasecmp) redire
+cted to 0x4a26740 ([]vgnU[]ifunc[]wrapper) 
+ []
+
+
+Overfull \hbox (9.34pt too wide) in paragraph at lines 77--77
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x5757620 (libc.so.6:strpbrk) redirected
+ to 0x4a26740 ([]vgnU[]ifunc[]wrapper) 
+ []
+
+
+Overfull \hbox (3.59131pt too wide) in paragraph at lines 78--78
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x57579b0 (libc.so.6:strspn) redirected 
+to 0x4a26740 ([]vgnU[]ifunc[]wrapper) 
+ []
+
+
+Overfull \hbox (9.34pt too wide) in paragraph at lines 79--79
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x5758d80 (libc.so.6:memmove) redirected
+ to 0x4a26740 ([]vgnU[]ifunc[]wrapper) 
+ []
+
+
+Overfull \hbox (3.59131pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x5753c00 (libc.so.6:strcmp) redirected 
+to 0x4a26740 ([]vgnU[]ifunc[]wrapper) 
+ []
+
+
+Overfull \hbox (24.97643pt too wide) in paragraph at lines 85--85
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x5764520 (libc.so.6:[][]strcmp[]sse2[]u
+naligned) redirected to 0x4c2fe20 (strcmp) 
+ []
+
+
+Overfull \hbox (31.41496pt too wide) in paragraph at lines 86--86
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x4ec7790 (libstdc++.so.6:operator new(u
+nsigned long)) redirected to 0x4c2c1b0
+ []
+
+
+Overfull \hbox (24.28658pt too wide) in paragraph at lines 92--92
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x5818f80 (libc.so.6:[][]memcmp[]sse4[]1
+) redirected to 0x4c31ca0 ([][]memcmp[]sse4[]1) 
+ []
+
+
+Overfull \hbox (2.67152pt too wide) in paragraph at lines 94--94
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x4ec58c0 (libstdc++.so.6:operator delet
+e(void*)) redirected to 0x4c2d270
+ []
+
+[13]
+Overfull \hbox (14.1689pt too wide) in paragraph at lines 98--98
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x4ec58f0 (libstdc++.so.6:operator delet
+e[](void*)) redirected to 0x4c2d770
+ []
+
+
+Overfull \hbox (3.59131pt too wide) in paragraph at lines 105--105
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x5759230 (libc.so.6:memset) redirected 
+to 0x4a26740 ([]vgnU[]ifunc[]wrapper) 
+ []
+
+
+Overfull \hbox (0.37204pt too wide) in paragraph at lines 106--106
+[]\OT1/cmtt/m/n/10.95 --64058-- REDIR: 0x57fe470 (libc.so.6:[][]memset[]avx2[]u
+naligned[]erms) redirected to 0x4c324c0
+ []
+
+) [14] (./Solution.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'Solution.run.xml'.
 \openout1 = `Solution.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11107 strings out of 494945
- 186235 string characters out of 6181033
- 613639 words of memory out of 5000000
- 14274 multiletter control sequences out of 15000+600000
- 5795 words of font info for 21 fonts, out of 8000000 for 9000
+ 11786 strings out of 494945
+ 198442 string characters out of 6181033
+ 625015 words of memory out of 5000000
+ 14903 multiletter control sequences out of 15000+600000
+ 10619 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,5n,40p,1186b,702s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Solution.pdf (2 pages, 56555 bytes).
+ 42i,10n,45p,1186b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Solution.pdf (14 pages, 525449 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

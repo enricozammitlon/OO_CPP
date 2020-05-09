@@ -7,11 +7,10 @@
 #include <string>
 #include <vector>
 
-battle_ship::vessel::vessel(std::string n, battle_ship::coordinates p,
-                            std::size_t l, std::size_t w,
-                            std::string xy_rep_hor, std::string xy_rep_ver,
-                            battle_ship::orientation o, std::string u,
-                            size_t a) {
+battle_ship::vessel::vessel(std::string n, battle_ship::coordinates p, size_t l,
+                            size_t w, std::string xy_rep_hor,
+                            std::string xy_rep_ver, battle_ship::orientation o,
+                            std::string u, size_t a) {
   name = n;
   start_coordinates = {p.col, p.row};
   xy_representation_horizontal = xy_rep_hor;

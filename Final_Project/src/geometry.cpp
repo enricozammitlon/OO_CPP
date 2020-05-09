@@ -5,8 +5,8 @@
 bool battle_ship::geometry::on_segment(battle_ship::coordinates p,
                                        battle_ship::coordinates q,
                                        battle_ship::coordinates r) {
-  if (std::size_t(q.col) <= std::max(std::size_t(p.col), std::size_t(r.col)) &&
-      std::size_t(q.col) >= std::min(std::size_t(p.col), std::size_t(r.col)) &&
+  if (size_t(q.col) <= std::max(size_t(p.col), size_t(r.col)) &&
+      size_t(q.col) >= std::min(size_t(p.col), size_t(r.col)) &&
       q.row <= std::max(p.row, r.row) && q.row >= std::min(p.row, r.row))
     return true;
 
@@ -16,18 +16,15 @@ bool battle_ship::geometry::on_segment(battle_ship::coordinates p,
 int battle_ship::geometry::orientation(battle_ship::coordinates p,
                                        battle_ship::coordinates q,
                                        battle_ship::coordinates r) {
-  // See https://www.geeksforgeeks.org/orientation-3-ordered-coordinatess/
-  // for details of below formula.
-  int val = (q.row - p.row) * (std::size_t(r.col) - std::size_t(q.col)) -
-            (std::size_t(q.col) - std::size_t(p.col)) * (r.row - q.row);
+  int val = (q.row - p.row) * (size_t(r.col) - size_t(q.col)) -
+            (size_t(q.col) - size_t(p.col)) * (r.row - q.row);
 
   if (val == 0)
     return 0; // colinear
 
   return (val > 0) ? 1 : 2; // clock or counterclock wise
 };
-// See
-// https://www.geeksforgeeks.org/check-if-two-given-line-segments-intersect/
+
 bool battle_ship::geometry::do_intersect(battle_ship::coordinates start_1,
                                          battle_ship::coordinates end_1,
                                          battle_ship::coordinates start_2,

@@ -1,7 +1,7 @@
 #include "human.h"
 #include "geometry.h"
 #include "highscore_manager.h"
-#include "market.h"
+#include "market_manager.h"
 #include "notification_manager.h"
 #include "screen_manager.h"
 #include <fstream>
@@ -53,10 +53,10 @@ void battle_ship::human::modify_fleet() {
     } break;
     case 3: {
       if (player_board->get_pieces().size() > 0) {
-        bool result;
+        bool err;
         do {
-          result = edit_piece();
-        } while (!result);
+          err = edit_piece();
+        } while (err);
       } else {
         std::cout << "No pieces on board,sir." << std::endl;
       }
@@ -76,7 +76,7 @@ bool battle_ship::human::add_piece() {
   std::cout << "These are the available pieces to be added. Please select one:"
             << std::endl;
   std::vector<std::string> available_pieces =
-      battle_ship::market::get_available_pieces(*this);
+      battle_ship::market_manager::get_available_pieces(*this);
   for (auto iterator = available_pieces.begin();
        iterator != available_pieces.end(); iterator++) {
     std::cout << *iterator << std::endl;
@@ -103,7 +103,7 @@ bool battle_ship::human::add_piece() {
     orientation = battle_ship::orientation::horizontal;
   }
   std::tuple<bool, std::string> result =
-      battle_ship::market::buy_piece(*this, order, coors, orientation);
+      battle_ship::market_manager::buy_piece(*this, order, coors, orientation);
   std::cout << std::get<1>(result);
   return std::get<0>(result);
 }
@@ -121,59 +121,72 @@ bool battle_ship::human::remove_piece() {
   std::string order;
   std::cin >> order;
   std::tuple<bool, std::string> result =
-      battle_ship::market::sell_piece(*this, order);
+      battle_ship::market_manager::sell_piece(*this, order);
   std::cout << std::get<1>(result);
   return std::get<0>(result);
 }
 
 bool battle_ship::human::edit_piece() {
-  std::cout << "These are the available pieces to be edited. Please select one:"
-            << std::endl;
-  for (auto iterator = player_board->get_pieces().begin();
-       iterator != player_board->get_pieces().end(); iterator++) {
-    std::cout << (*iterator)->get_name() << std::endl;
-  }
-  std::cout << "Please enter the name of the piece you want:" << std::endl;
-  std::cin.ignore();
-  std::string piece_name;
-  std::cin >> piece_name;
-  std::cout << "Please enter the start coordinate of where you want the "
-               "piece to be:"
-            << std::endl;
-  std::cin.ignore();
-  battle_ship::coordinates new_coor;
-  std::cin >> new_coor;
-  std::cout << "Please enter the orientation for the piece you want: "
-               "(v)ertical or (h)orizontal?"
-            << std::endl;
-  battle_ship::orientation new_orientation;
-  std::string orientation_input;
-  std::cin >> orientation_input;
-  if (orientation_input == "v") {
-    new_orientation = battle_ship::orientation::vertical;
-  } else {
-    new_orientation = battle_ship::orientation::horizontal;
-  }
-
-  bool found = false;
-  size_t position_in_vector{0};
-  for (auto iterator = player_board->get_pieces().begin();
-       iterator != player_board->get_pieces().end(); iterator++) {
-    if (piece_name == (*iterator)->get_name()) {
-      player_board->edit_piece(**iterator, position_in_vector, new_coor,
-                               new_orientation);
-      found = true;
-      break;
+  bool err{false};
+  do {
+    err = false;
+    std::cout
+        << "These are the available pieces to be edited. Please select one:"
+        << std::endl;
+    for (auto iterator = player_board->get_pieces().begin();
+         iterator != player_board->get_pieces().end(); iterator++) {
+      std::cout << (*iterator)->get_name() << std::endl;
     }
-    position_in_vector += 1;
-  }
-  if (found) {
-    std::cout << "Transaction successful.";
-    return true;
-  } else {
-    std::cout << "Unknown piece name.";
-    return false;
-  }
+    std::cout << "Please enter the name of the piece you want:" << std::endl;
+    std::cin.ignore();
+    std::string piece_name;
+    std::cin >> piece_name;
+    std::cout << "Please enter the start coordinate of where you want the "
+                 "piece to be:"
+              << std::endl;
+    std::cin.ignore();
+    battle_ship::coordinates new_coor;
+    err = std::cin >> new_coor;
+    if (err) {
+      continue;
+    }
+    std::cout << "Please enter the orientation for the piece you want: "
+                 "(v)ertical or (h)orizontal?"
+              << std::endl;
+    battle_ship::orientation new_orientation;
+    std::string orientation_input;
+    std::cin >> orientation_input;
+    if (orientation_input == "v") {
+      new_orientation = battle_ship::orientation::vertical;
+    } else if (orientation_input == "h") {
+      new_orientation = battle_ship::orientation::horizontal;
+    } else {
+      std::cout << "Please enter a valid orientation v or h.";
+      err = true;
+      continue;
+    }
+
+    bool found = false;
+    size_t position_in_vector{0};
+    for (auto iterator = player_board->get_pieces().begin();
+         iterator != player_board->get_pieces().end(); iterator++) {
+      if (piece_name == (*iterator)->get_name()) {
+        player_board->edit_piece(**iterator, position_in_vector, new_coor,
+                                 new_orientation);
+        found = true;
+        break;
+      }
+      position_in_vector += 1;
+    }
+    if (found) {
+      err = false;
+    } else {
+      std::cout << "Unknown piece name.";
+      err = true;
+    }
+  } while (err);
+  std::cout << "Transaction successful.";
+  return err;
 }
 
 void battle_ship::human::attack(battle_ship::piece &attacking_piece,
@@ -250,8 +263,8 @@ void battle_ship::human::save_fleet() {
     if (iterator != player_board->get_pieces().end() - 1) {
       fleet_configuration << std::endl;
     }
-    fleet_configuration.close();
   }
+  fleet_configuration.close();
 }
 
 void battle_ship::human::winning_line() {

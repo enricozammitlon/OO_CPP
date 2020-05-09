@@ -7,7 +7,7 @@
 
 // read each input stream line by line, printing them side by side
 void battle_ship::screen_manager::side_by_side(battle_ship::game &current_game,
-                                               std::size_t width) {
+                                               size_t width) {
 
   battle_ship::notification_manager current_notifications;
   std::stringstream player_stream;

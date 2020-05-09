@@ -1,5 +1,6 @@
 #include "player.h"
-#include "market.h"
+#include "board.h"
+#include "market_manager.h"
 #include <fstream>
 #include <string>
 #include <tuple>
@@ -32,7 +33,8 @@ void battle_ship::player::reset() {
       }
       // Act on result
       std::tuple<bool, std::string> result =
-          battle_ship::market::buy_piece(*this, order, coors, orientation);
+          battle_ship::market_manager::buy_piece(*this, order, coors,
+                                                 orientation);
     }
     fleet_configuration.close();
   }

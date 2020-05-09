@@ -84,10 +84,10 @@ battle_ship::board &battle_ship::board::operator=(board &&b) {
   return *this;
 }
 
-std::size_t battle_ship::board::index(const battle_ship::coordinates &p) const {
-  if (p.row > 0 && p.row <= rows && std::size_t(p.col) > 0 &&
-      std::size_t(p.col) <= columns) {
-    return (std::size_t(p.col) - 1) + (p.row - 1) * columns;
+size_t battle_ship::board::index(const battle_ship::coordinates &p) const {
+  if (p.row > 0 && p.row <= rows && size_t(p.col) > 0 &&
+      size_t(p.col) <= columns) {
+    return (size_t(p.col) - 1) + (p.row - 1) * columns;
   } else {
     std::cerr << "Error: out of range" << std::endl;
     return std::string::npos;
@@ -116,9 +116,9 @@ void battle_ship::board::operator<<(std::unique_ptr<battle_ship::piece> p) {
       return;
     }
   }
-  std::size_t rep_i{};
+  size_t rep_i{};
   for (size_t i{p->get_start().row}; i <= p->get_end().row; i += 1) {
-    std::size_t rep_j{};
+    size_t rep_j{};
     for (size_t j{size_t(p->get_start().col)}; j <= size_t(p->get_end().col);
          j += 1) {
       battle_ship::coordinates current_coordinates{
@@ -129,14 +129,15 @@ void battle_ship::board::operator<<(std::unique_ptr<battle_ship::piece> p) {
     }
     rep_i += 1;
   }
+  // add_item(p);
   all_pieces.push_back(std::move(p));
 }
 
 void battle_ship::board::remove_piece(size_t pos) {
-  std::size_t rep_i{};
+  size_t rep_i{};
   for (size_t i{all_pieces[pos]->get_start().row};
        i <= all_pieces[pos]->get_end().row; i += 1) {
-    std::size_t rep_j{};
+    size_t rep_j{};
     for (size_t j{size_t(all_pieces[pos]->get_start().col)};
          j <= size_t(all_pieces[pos]->get_end().col); j += 1) {
       battle_ship::coordinates current_coordinates{
@@ -158,9 +159,9 @@ void battle_ship::board::modify_coordinate(
 void battle_ship::board::edit_piece(battle_ship::piece &p, size_t pos,
                                     battle_ship::coordinates new_coor,
                                     battle_ship::orientation new_orientation) {
-  std::size_t rep_i{};
+  size_t rep_i{};
   for (size_t i{p.get_start().row}; i <= p.get_end().row; i += 1) {
-    std::size_t rep_j{};
+    size_t rep_j{};
     for (size_t j{size_t(p.get_start().col)}; j <= size_t(p.get_end().col);
          j += 1) {
       battle_ship::coordinates current_coordinates{
@@ -173,7 +174,7 @@ void battle_ship::board::edit_piece(battle_ship::piece &p, size_t pos,
   p.modify_pose(new_coor, new_orientation);
   rep_i = 0;
   for (size_t i{p.get_start().row}; i <= p.get_end().row; i += 1) {
-    std::size_t rep_j{};
+    size_t rep_j{};
     for (size_t j{size_t(p.get_start().col)}; j <= size_t(p.get_end().col);
          j += 1) {
       battle_ship::coordinates current_coordinates{
@@ -203,7 +204,6 @@ battle_ship::board battle_ship::board::mask() const {
       }
     }
   }
-  std::cout << *masked_board;
   return *masked_board;
 }
 

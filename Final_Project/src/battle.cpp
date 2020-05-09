@@ -67,7 +67,7 @@ int main() {
     switch (input) {
     case 1: {
       std::shared_ptr<battle_ship::player> ai_1 =
-          std::make_shared<battle_ship::npc>("Pericles", 1);
+          std::make_shared<battle_ship::npc>("Nemo", 1);
       battle_ship::notification_manager::reset_notifiations();
       std::unique_ptr<battle_ship::game> game_1 =
           std::make_unique<battle_ship::game>(0, current_user, ai_1,

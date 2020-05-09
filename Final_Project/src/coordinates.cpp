@@ -7,7 +7,7 @@
 namespace battle_ship {
 std::ostream &operator<<(std::ostream &os, const coordinates &p) {
   os << "(";
-  os << char(std::size_t(p.col) + 64);
+  os << char(size_t(p.col) + 64);
   os << p.row;
   os << ")";
   return os;
@@ -25,12 +25,11 @@ bool operator>>(std::istream &is, coordinates &p) {
     std::string y_coor{match[0].str().substr(1)};
     std::stringstream temp_stream;
     temp_stream << y_coor;
-    std::size_t y;
+    size_t y;
     temp_stream >> y;
     p.col = x;
     p.row = y;
-    if (p.row <= 0 || p.row > 10 || std::size_t(p.col) <= 0 ||
-        std::size_t(p.col) > 10) {
+    if (p.row <= 0 || p.row > 10 || size_t(p.col) <= 0 || size_t(p.col) > 10) {
       std::cerr << "Coordinates out of range." << std::endl;
       return true;
     }
@@ -43,11 +42,11 @@ bool operator>>(std::istream &is, coordinates &p) {
 } // namespace battle_ship
 
 battle_ship::coordinates
-battle_ship::coordinates::boosted_x(std::size_t length) const {
+battle_ship::coordinates::boosted_x(size_t length) const {
   return battle_ship::coordinates{
-      static_cast<battle_ship::x_axis>(std::size_t(col) + length), row};
+      static_cast<battle_ship::x_axis>(size_t(col) + length), row};
 };
 battle_ship::coordinates
-battle_ship::coordinates::boosted_y(std::size_t width) const {
+battle_ship::coordinates::boosted_y(size_t width) const {
   return battle_ship::coordinates{col, row + width};
 };
