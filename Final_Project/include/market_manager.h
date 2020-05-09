@@ -6,7 +6,7 @@
 #include <tuple>
 #include <vector>
 namespace battle_ship {
-class market {
+class market_manager {
 public:
   static std::vector<std::string> all_pieces;
   static std::vector<std::string> get_available_pieces(player &p);

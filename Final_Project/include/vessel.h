@@ -7,15 +7,15 @@
 #include <string>
 
 namespace battle_ship {
-class vessel : public virtual piece {
+class vessel : public piece {
 protected:
   std::string name;
   struct coordinates start_coordinates;
   struct coordinates end_coordinates;
   // Defined as distance on the x-axis
-  std::size_t length;
+  size_t length;
   // Defined as distance on the y-axis
-  std::size_t width;
+  size_t width;
   std::string xy_representation_horizontal;
   std::string xy_representation_vertical;
   std::string current_xy_representation;
@@ -27,9 +27,9 @@ protected:
 
 public:
   vessel() = default;
-  vessel(std::string n, coordinates p, std::size_t l, std::size_t w,
+  vessel(std::string n, coordinates p, size_t l, size_t w,
          std::string xy_rep_hor, std::string xy_rep_ver, orientation o,
-         std::string u, std::size_t ap);
+         std::string u, size_t ap);
   std::vector<std::string> load_image() const override;
   coordinates calculate_end(coordinates start, size_t distance,
                             orientation o) override;
@@ -39,10 +39,10 @@ public:
   void display_yz() override;
   void display_xy() override;
   size_t get_action_points() override { return action_points; };
-  std::size_t get_length() const override { return length; };
-  std::size_t get_width() const override { return width; };
+  size_t get_length() const override { return length; };
+  size_t get_width() const override { return width; };
   std::string get_uri() const override { return uri; };
-  std::size_t get_hits() const override { return hits; };
+  size_t get_hits() const override { return hits; };
   std::string get_xy_representation() const override {
     return current_xy_representation;
   };
@@ -51,7 +51,7 @@ public:
   coordinates get_start() const override { return start_coordinates; };
   coordinates get_end() const override { return end_coordinates; };
   int get_cost() const override { return cost; };
-  ~vessel() = default;
+  virtual ~vessel() = default;
 };
 } // namespace battle_ship
 #endif

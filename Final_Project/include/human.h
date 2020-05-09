@@ -5,7 +5,7 @@ namespace battle_ship {
 class human : public virtual player {
 private:
   size_t password_hash;
-  std::size_t highscore{std::string::npos};
+  size_t highscore{std::string::npos};
 
 public:
   human() = default;

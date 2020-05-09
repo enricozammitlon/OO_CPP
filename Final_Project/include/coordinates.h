@@ -19,9 +19,9 @@ struct coordinates {
   friend std::ostream &operator<<(std::ostream &os, const coordinates &p);
   friend bool operator>>(std::istream &is, coordinates &p);
   x_axis col;
-  std::size_t row;
-  coordinates boosted_x(std::size_t length) const;
-  coordinates boosted_y(std::size_t width) const;
+  size_t row;
+  coordinates boosted_x(size_t length) const;
+  coordinates boosted_y(size_t width) const;
 };
 } // namespace battle_ship
 #endif

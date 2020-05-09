@@ -17,10 +17,10 @@ public:
   virtual void take_hit() = 0;
   virtual void display_yz() = 0;
   virtual void display_xy() = 0;
-  virtual std::size_t get_length() const = 0;
-  virtual std::size_t get_width() const = 0;
+  virtual size_t get_length() const = 0;
+  virtual size_t get_width() const = 0;
   virtual std::string get_uri() const = 0;
-  virtual std::size_t get_hits() const = 0;
+  virtual size_t get_hits() const = 0;
   virtual orientation get_orientation() const = 0;
   virtual std::string get_xy_representation() const = 0;
   virtual std::string get_name() const = 0;
@@ -28,6 +28,7 @@ public:
   virtual coordinates get_start() const = 0;
   virtual coordinates get_end() const = 0;
   virtual size_t get_action_points() = 0;
+  virtual ~piece(){};
 };
 } // namespace battle_ship
 #endif

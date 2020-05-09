@@ -15,7 +15,7 @@ public:
   void winning_line();
   size_t get_highscore() { return std::string::npos; };
   void save_highscore(size_t h){};
-  void attack(piece &attacking_piece, player &enemy){};
+  void attack(piece &attacking_piece, player &enemy);
   ~npc() = default;
 };
 } // namespace battle_ship
